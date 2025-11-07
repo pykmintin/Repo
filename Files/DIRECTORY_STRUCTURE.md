@@ -5,18 +5,18 @@
 
 ### Working-DIR Repository (CRITICAL)
 **`C:\Users\JoshMain\Documents\Working-DIR`**
-- **Purpose**: Git repository - primary development
-- **Action**: ✅ Edit files here
+- **Purpose**: Git repository = repo- primary development
+- **Action**: ✅ROOT = PRIVATE Edit files here
 - **Contents**: `Files/`, `README.md`, version controlled code
 
-### Soul_Algorithm Mirror (RUNTIME)
-**`C:\Soul_Algorithm\Scripts`**  
-- **Purpose**: Live execution environment
-- **WARNING**: ❌ DO NOT edit directly
+### Soul_Algorithm GoogleDrive Mirror (RUNTIME)
+**`C:\Soul_Algorithm\`**  
+- **Purpose**: Live environment
+- **WARNING**: ❌ DO NOT edit directly without archiving
 - **Action**: Use CoreLink.pyw update mechanism
 - **Mirror of**: `Working-DIR\Files\`
 
-### Backup Storage (ARCHIVE)
+### Backup Storage (FINAL BACKUP ARCHIVE)
 **`C:\Backups_Soul`**
 - **Purpose**: Historical data and snapshots
 - **Action**: Store backups here
