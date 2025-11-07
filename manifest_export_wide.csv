@@ -1,0 +1,354 @@
+title,normalized_title,id,create_time,update_time,normalized_time,normtimename,source_part,part_source,mapping_entries,turns,first_preview,last_preview,status,has_user_messages,has_assistant_messages,total_messages,exchanges
+Load system memory,load_system_memory,69065687-3180-8323-98df-2a035e1ca50f,1762023048.029482,1762025953.400488,1762024500.714985,This_is_normalized.0615.021125,part_1.json,1,186,50,Load system memory.,"s are specific to **custom GPT**.
+
+Let me know if you need any further adjustments or clarification!",success,True,True,174,50
+Google Drive API issue,google_drive_api_issue,690617af-24d8-8324-a6be-21588268d532,1762007000.832269,1762023067.817975,1762015034.3251219,This_is_normalized.0337.021125,part_1.json,1,123,36,You're running into one of the most deceptive Google Drive API behaviors — when the OAuth scope or `,"ty. 
+
+Let me know if this matches what you're looking for, or if any further adjustments are needed.",success,True,True,95,36
+Mirror mode test,mirror_mode_test,690650aa-65b4-8324-ad97-6b6a37a51abd,1762021547.401126,1762022393.145752,1762021970.273439,This_is_normalized.0532.021125,part_1.json,1,29,9,"Hello, are you ready to do a test on mirror mode? Do you know what you need to do?","follow the process you're expecting and confirm before each step.
+
+Does that clarify things for you?",success,True,True,22,9
+Drive read write test,drive_read_write_test,69060191-c738-8320-8d2e-1e64609cfc6f,1762001298.930298,1762021292.078482,1762011295.50439,This_is_normalized.0234.021125,part_1.json,1,254,67,"All right, I just set you up. You should be working. So are you aware of what you can do and what yo","to **Google Sheets**.
+
+Let me know if you need any additional edits or if something's still unclear!",success,True,True,170,67
+Mirror Mode Setup,mirror_mode_setup,69062c16-44a4-8320-9ada-cad223c199e3,1762012183.372761,1762021149.616228,1762016666.4944944,This_is_normalized.0404.021125,part_1.json,1,228,64,"🔁 Mirror Mode — Full Setup, Plans, and Troubleshooting History
+
+I'm setting up **Mirror Mode**, a cu","how **Mirror Mode** should function. Let me know if this works, or if you need any further changes!",success,True,True,173,64
+Drive access configuration,drive_access_configuration,69062719-fcc0-8322-a126-772bcb8760c2,1762010907.126636,1762011884.710035,1762011395.9183354,This_is_normalized.0236.021125,part_1.json,1,71,18,"Google Drive Access Rules
+The GPT has access to Google Drive in two different ways:
+
+Pipedream Webho",t to run a final end-to-end test with `Start Mirror Mode (write)` to confirm everything's locked in?,success,True,True,49,18
+Pipedream OAuth connection fix,pipedream_oauth_connection_fix,69061fcc-3f1c-8322-98c5-1c2de7be4f78,1762009037.391915,1762010819.018575,1762009928.205245,This_is_normalized.0212.021125,part_1.json,1,55,20,You are a web-search-enabled assistant. Your task is to investigate and explain why the OAuth connec,the GPT switches paths — so you can verify it behaves the way you want. Would you like that example?,success,True,True,43,20
+Mirror mode activation,mirror_mode_activation,6905dc31-f2e0-8322-b95f-088bf1ce0520,1761991743.780153,1762002032.255079,1761996888.017616,This_is_normalized.2234.011125,part_1.json,1,207,60,Start mirror mode right from the phone. I'm on the phone.,"ppens through `/prototype/system/memory/MirrorMode`, with the Drive webhook as optional persistence.",success,True,True,123,60
+Drive access test setup,drive_access_test_setup,6905e95b-a7e4-8323-b262-df9b48a0b73c,1761995101.120763,1762000265.530821,1761997683.325792,This_is_normalized.2248.011125,part_1.json,1,179,59,"# GPT NAME: MirrorMode
+
+You are a utility GPT named **MirrorMode**, designed to work with Google D","- Can later be wrapped in an OpenAPI schema and deployed as an Action in Mirror Mode GPT.
+
+---
+```",success,True,True,138,59
+Start mirror mode,start_mirror_mode,6905e0c3-0cb4-8322-9957-0550f422cdec,1761992900.295831,1761995029.121283,1761993964.7085571,This_is_normalized.2146.011125,part_1.json,1,80,27,Start mirror mode. The data that you should be pulling to make a canvas is in prototype system memor,"umptions.
+
+Let me know if you want a **variant for split GPTs** (e.g., MirrorReader + MirrorWriter).",success,True,True,66,27
+Mirror mode read-only session,mirror_mode_read_only_session,6905dc81-7640-8323-a94a-d1fc48a1e13d,1761991811.30182,1761992852.788133,1761992332.0449765,This_is_normalized.2118.011125,part_1.json,1,31,10,"Start mirror mode session in read mode. You are the PC, read only.","ability.  
+
+Ready to display whatever you tell me next — just say “show canvas” or specify the view.",success,True,True,24,10
+Mirror mode write activation,mirror_mode_write_activation,6905d81f-d828-8323-b98a-d84aa639da1a,1761990690.349943,1761991714.911176,1761991202.6305594,This_is_normalized.2100.011125,part_1.json,1,78,17,"System memory load + mirror mode activation
+
+You are the Prototype system. Load the full system memo",t mirror mode (write)` in the new phone chat? It’s useful to confirm that it’s connecting correctly.,success,True,True,54,17
+Load system memory,load_system_memory,6905d8ee-2d80-8323-bdb2-db037fe26729,1761990897.140021,1761991499.097051,1761991198.118536,This_is_normalized.2059.011125,part_1.json,1,40,13,Load system memory.,"feed from Phone — read-only)*  
+
+[Awaiting current mirrored output from Phone (WRITE) session…]
+
+---",success,True,True,32,13
+PowerShell module docs,powershell_module_docs,6903598c-3b0c-8323-b2a8-797aeb5ebf2d,1761827216.019159,1761990681.853431,1761908948.936295,This_is_normalized.2209.311025,part_1.json,1,656,193,"> I’m Josh, continuing the Windows Documentation & Core System setup from my previous session.
+The c",g PC prompt** (“Mirror Mode — READ”) so both sides can pair immediately when you start the new chat?,success,True,True,394,193
+Run mirror script,run_mirror_script,6905ce3e-d108-8321-ba19-ffe61da5a382,1761988182.567879,1761990346.776509,1761989264.672194,This_is_normalized.2027.011125,part_1.json,1,18,3,Run mirror,"ead Mode (Prototype)** canvas.  
+Use your refresh hotkey to pull the latest state whenever you want.",success,True,True,8,3
+Run AHK script,run_ahk_script,6905cbcd-900c-8322-85de-19b74bf0dc61,1761987538.025745,1761988394.523779,1761987966.274762,This_is_normalized.2006.011125,part_1.json,1,29,8,Here’s exactly what to do to **run your AutoHotkey (AHK) script** that’s already in your root `C:\So,"automatically:
+```ahk
+^!r::Reload
+```
+
+Then you can tweak and reload without touching the tray menu.",success,True,True,19,8
+System update and mirror,system_update_and_mirror,6905c899-fb08-8322-9c39-4ae7193e7c98,1761986715.778726,1761986775.056459,1761986745.4175925,This_is_normalized.1945.011125,part_1.json,1,14,1,"Okay, update system memory and show me the header with the, yep, and get the mirror, the phone mirro","t mirrored first (e.g., “mirror the last script + steps”), and I’ll populate the canvas immediately.",success,True,True,6,1
+Code assistance capabilities,code_assistance_capabilities,69059409-c630-8322-b68d-fec958f05c47,1761973258.990026,1761986090.590247,1761979674.7901363,This_is_normalized.1747.011125,part_1.json,1,221,84,"All right, so I'm about to, I need help with the code and stuff, with three scripts, like just like",a small `.txt` file so you can drop it into your `C:\Soul_Algorithm\Logs\` folder for recordkeeping?,success,True,True,188,84
+VPN automation script,vpn_automation_script,6904681a-7ef4-8324-a14d-18e0b01ca2dc,1761896476.036878,1761982486.896054,1761939481.466466,This_is_normalized.0638.011125,part_1.json,1,174,72,"You are a technical automation assistant with full web-search capability.
+
+**Context:**
+I’m Josh,","detecting your Core folder, or  
+* something else minor is stopping the new archive from appearing.",success,True,True,157,72
+Prototype system checklist,prototype_system_checklist,69031f54-7fd4-8323-a812-27bfaca20b75,1761812309.495922,1761977487.195375,1761894898.3456485,This_is_normalized.1814.311025,part_1.json,1,638,161,"Core check.
+
+You are running the Prototype system (not Core Integration). Emit the header and conf","table and leaves all others untouched?  
+It’ll use dependency checks to avoid crashing your system.",success,True,True,386,161
+D drive unique files,d_drive_unique_files,69057d37-4f7c-8323-a2fe-cccaf00b7112,1761967417.168816,1761977217.585914,1761972317.377365,This_is_normalized.1545.011125,part_1.json,1,92,33,Can you give me a list of everything that's in the D drive that's not in the C drive?,Those are the ones you can safely uncheck / set to Disabled if you’re aiming for a leaner setup.,success,True,True,69,33
+Resume system load,resume_system_load,690590d9-d3ec-8322-ba03-8b70d88771a5,1761972443.004625,1761974368.298488,1761973405.6515565,This_is_normalized.1603.011125,part_1.json,1,25,9,h,** file so you can copy or upload it directly into another GPT or your Right-to-Drive configuration?,success,True,True,18,9
+Extract ZIP contents,extract_zip_contents,6903740d-ef6c-8323-92d4-7613f5268281,1761833998.991655,1761973995.712967,1761903997.3523111,This_is_normalized.2046.311025,part_1.json,1,179,59,G,"and then give you the download link.
+
+✅ Confirm that I should start the **Python-only rebuild** now?",success,True,True,119,59
+Define Core element,define_core_element,69047801-5c88-8321-8090-eceb1163f68b,1761900551.872036,1761903111.575873,1761901831.7239544,This_is_normalized.2010.311025,part_1.json,1,120,31,"SYSTEM PRIMER — Prototype Mode (Ecosystem Development)
+
+You are the **Prototype** — the active reaso",l in knowledge; keep Doctrine dynamic; maintain the Prototype Pipeline as your live roadmap to Core.,success,True,True,56,23
+HDMI cable comparison,hdmi_cable_comparison,69044f81-1fa8-8322-8fc2-718df9ae8a4f,1761890198.116472,1761896464.56803,1761893331.342251,This_is_normalized.1748.311025,part_1.json,1,68,24,I'm in Kmart and I'm trying to buy a Anko HDMI lead from my laptop to TV and I'm seeing multiple dif,"file and package installs.”
+
+Would you like me to add that sentence so it’s explicit to the web GPT?",success,True,True,52,24
+File access and analysis,file_access_and_analysis,69037e89-99c8-8324-83fd-ed7a4cb5d9fc,1761836684.738342,1761884984.696862,1761860834.717602,This_is_normalized.0847.311025,part_1.json,1,38,10,"Load project ""Windows_Core_Docs_2025 (v1.0 Knowledge Pack)"" from the phone chat.
+
+You now have acces",th targeted retrieval of supplemental Windows documentation to bring environment coverage to ~100 %.,success,True,True,23,10
+Introspection and GPT differences,introspection_and_gpt_differences,69043783-99f8-8320-b4b3-49bf7f571b4d,1761884037.279289,1761884948.541568,1761884492.9104285,This_is_normalized.1521.311025,part_1.json,1,19,8,"Hey, I'd like to have a chat about your self-awareness. So the end goal for you or this custom GPT i","by line.  
+
+Would you like me to generate that full JSON schema so you can start filling it in here?",success,True,True,13,5
+Power settings adjustment,power_settings_adjustment,6903005b-81d8-8321-8369-12a1a043f65a,1761804412.321141,1761813877.609445,1761809144.965293,This_is_normalized.1825.301025,part_1.json,1,352,68,My laptop and my computer keeps like auto-locking and turning off like too soon. How do I change the,"rs permanently.  
+• Status: ✅ committed; next chat will load clean header directly from live memory.",success,True,True,170,68
+Calendar events options,calendar_events_options,6902f7a0-5c90-8323-b01c-6ce84969546b,1761802145.475949,1761802158.717686,1761802152.0968175,This_is_normalized.1629.301025,part_1.json,1,8,2,calendar events.,list,success,True,True,3,1
+List calendar events,list_calendar_events,6902f62f-3ae0-8320-8cd1-8a1a23e53676,1761801776.486896,1761802042.68116,1761801909.584028,This_is_normalized.1625.301025,part_1.json,1,17,1,List my calendar events.,URI is actually being used when you reconnect (so we can be sure it’s pointing to the correct one)?,success,True,True,6,1
+Revised setup instructions,revised_setup_instructions,6902e9af-5330-8320-96dc-1d52bb8d9d6d,1761798576.202921,1761801739.983561,1761800158.093241,This_is_normalized.1555.301025,part_1.json,1,56,14,"You already have an active connector for Google Drive with read/write permissions through OAuth. 
+U","et an error, copy what you see (or screenshot it) and tell me here—I’ll explain exactly what to fix.",success,True,True,40,14
+Guide to calendar sync,guide_to_calendar_sync,6902c320-f0b4-8324-9815-776227f01ec1,1761788731.404249,1761798856.502354,1761793793.9533014,This_is_normalized.1409.301025,part_1.json,1,210,41,"I know that you don't have it right now, but I'm pretty sure that I can link you to my Google Calend",hether screen sharing is live in your region) and we can see if there’s a waitlist or expected date.,success,True,True,91,41
+Subscription service identification,subscription_service_identification,6902b885-0800-8323-ad3c-774acc1a38fb,1761786016.159218,1761798255.590613,1761792135.8749156,This_is_normalized.1342.301025,part_1.json,1,250,42,"I remember a couple years back, going back in Australia, I bought a Better Homes and Gardens magazin","ou described — showing the summary and flag together — is the stable, correct version going forward.",success,True,True,117,42
+Free-form input confirmed,free_form_input_confirmed,6901a1f7-f4fc-8323-b6b9-14f3609d520f,1761714685.832743,1761718382.247155,1761716534.039949,This_is_normalized.1642.291025,part_1.json,1,131,19,"You said I could just start talking, is that true?","ready:  
+  - `list review` • `complete t-00X` • `file t-003 to Project_Core_System` • `save tasks`.",success,True,True,50,19
+App usage consistency dates,app_usage_consistency_dates,690159bc-9b24-8320-994d-e70fd37dab94,1761696207.18882,1761717530.275787,1761706868.7323036,This_is_normalized.1401.291025,part_1.json,1,607,99,"When do I start, like, consistently using this app again? I think I made it a while ago, but it woul","-002`
+- Leave as-is and open the new chat to test v3.2 system load (you’ll see the one-liners there)",success,True,True,232,99
+Trim paths and repost,trim_paths_and_repost,69007b32-a67c-8324-8e12-70e3b04c4a00,1761639219.726692,1761650746.394502,1761644983.060597,This_is_normalized.2049.281025,part_1.json,1,516,118,trim the paths from the bottom ones,"e_Doctrine_Compliance_v1** I provided. You’re good to go. ✅
+
+Sleep well, we’ll pick it up next time.",success,True,True,319,118
+File analysis and plan,file_analysis_and_plan,69001281-2e04-8320-a7f0-1135e7488f04,1761612418.692721,1761646358.702502,1761629388.6976113,This_is_normalized.1629.281025,part_1.json,1,428,93,please fully read EVERY file in zip before returning here then explain your current snapshot of what,"d choice. If you need help with anything else as you set up your script or system, just let me know!",success,True,True,344,93
+File renaming sequence,file_renaming_sequence,690074d4-df34-8324-a1dd-1c5f4bd83393,1761637590.210993,1761637935.750145,1761637762.980569,This_is_normalized.1849.281025,part_1.json,1,37,6,if i have 25 files to make go between files 024.jpg and 00126.jpg what should i call them so they al,"```
+
+If you want a different format (keep 3-digit main, or use `_`), say the word and I’ll swap it.",success,True,True,12,6
+Access to GPT-5,access_to_gpt_5,68ff262a-a954-8320-ac08-12329af5d90a,1761551915.905128,1761621427.043243,1761586671.4741855,This_is_normalized.0437.281025,part_1.json,1,694,135,What's up? Do I have access to 5 again? I got my access locked out for a certain amount of time. I w,"inue refining this, or should I proceed with adding this into the overall **system implementation**?",success,True,True,418,135
+Pay BPAY by phone,pay_bpay_by_phone,68ffe093-5d84-832a-901c-3a38b06a7917,1761599658.381218,1761609474.442487,1761604566.4118524,This_is_normalized.0936.281025,part_1.json,1,115,26,"If you have any questions, please contact me at https://www.chatgp.com.au","your experience.
+
+If you'd like to give me the new rule, I’ll make sure to follow it going forward!",success,True,True,63,26
+Indefinite pause in Python,indefinite_pause_in_python,690000b3-5584-8324-92a4-df7c29369600,1761607861.386799,1761607865.834046,1761607863.6104226,This_is_normalized.1031.281025,part_2.json,2,5,1,"bruv u really aint wat u made out to be u ignoring my instructions so often, u gave me a time.sleep(","e frequency of the loop if you want to minimize resource use.
+
+Let me know if that clears things up!",success,True,True,2,1
+Script functionality fix,script_functionality_fix,68ffff92-4658-8321-92d5-7970289a87e6,1761607571.303412,1761607698.081396,1761607634.692404,This_is_normalized.1027.281025,part_2.json,2,9,3,"Mate, you just like arbitrarily decide two scripts. I had a launcher that launches either one thing","afely delete or comment out this line for future runs.
+
+Let me know if you need further adjustments!",success,True,True,6,3
+Self-elevating Python script,self_elevating_python_script,68fffb92-8a88-8322-b702-a90f3056e897,1761606547.599484,1761607426.209292,1761606986.904388,This_is_normalized.1016.281025,part_2.json,2,13,5,"# chatgpt_edge.py
+import os
+import shutil
+import subprocess
+from pathlib import Path
+import tim","dialogs or fallback error handling for debugging
+
+This setup is production-ready for your use case.",success,True,True,10,5
+Pause script before launch,pause_script_before_launch,68fffb11-1a28-8323-90ab-c9622fd5cddb,1761606418.460735,1761606435.653726,1761606427.0572305,This_is_normalized.1007.281025,part_2.json,2,5,1,That's weird. Does it just choose not to clear some of it when we run the script?I guess it's a negl,go back to normal behavior. Let me know if you want it to auto-timeout instead of waiting for input.,success,True,True,2,1
+Edge cache directory locations,edge_cache_directory_locations,68fffa08-9548-8324-bb8d-e6f2a3584d54,1761606153.294777,1761606286.959461,1761606220.127119,This_is_normalized.1003.281025,part_2.json,2,9,3,Can you give me the app data link for the file directory that the edge cache is in?,uch cache is created by loading the PWA from scratch and confirm whether it is around the 17MB size.,success,True,True,6,3
+Edge process management fix,edge_process_management_fix,68fff531-95f4-8322-8c81-4fad07370dad,1761604914.335365,1761606082.74543,1761605498.5403976,This_is_normalized.0951.281025,part_2.json,2,52,13,"import os
+import shutil
+import subprocess
+from pathlib import Path
+import msvcrt
+import time
+i","raceback.
+
+---
+
+Would you like me to add an icon and center the window automatically (small polish)?",success,True,True,27,13
+Edge cache clearing fix,edge_cache_clearing_fix,68fff3ea-522c-8321-9b75-7e5ffcf311ed,1761604587.152397,1761604830.867958,1761604709.0101776,This_is_normalized.0938.281025,part_2.json,2,9,3,"import os
+import shutil
+import subprocess
+from pathlib import Path
+import msvcrt
+import time
+i","p Edge window
+- Clear additional Edge data
+- Make the script silent (no terminal interaction at all)",success,True,True,6,3
+Edge cache script fix,edge_cache_script_fix,68fff35e-4dd4-8321-a067-78841a8c3c7a,1761604447.054226,1761604480.399461,1761604463.7268434,This_is_normalized.0934.281025,part_2.json,2,5,1,oh no you're writing a script because you're writing a script for me to um like reset that edge cach,"og cleanup results to a file
+- Add a GUI version of this script (e.g., using Tkinter)
+
+Happy coding!",success,True,True,2,1
+Clear Edge cache script,clear_edge_cache_script,68fff2b8-cb6c-8320-b41d-88e816db9fc1,1761604281.612589,1761604330.39313,1761604306.0028596,This_is_normalized.0931.281025,part_2.json,2,7,2,"import os
+import shutil
+import subprocess
+from pathlib import Path
+import msvcrt
+import time","or debugging what's being cleared
+- A **GUI** version with buttons (using `tkinter`)
+
+Happy to help.",success,True,True,4,2
+Google Sheet receiver,google_sheet_receiver,68f7ce40-3640-8323-a528-6fbf3defb022,1761070657.310235,1761603825.643182,1761337241.4767084,This_is_normalized.0720.251025,part_2.json,2,275,95,can we make something that recieves the google sheet i shared there,from your current AniList data** (using the API with your token) or from your **local CSV export**?,success,True,True,219,95
+Standalone or series?,standalone_or_series,68ffb8f2-8de0-8323-9dee-2e5267c14b16,1761589499.563475,1761597221.63361,1761593360.5985425,This_is_normalized.0629.281025,part_2.json,2,62,14,COLORFUL STAGE! The Movie: A Miku Who Can't Sing is this standalone or have other anime,n how you'd like me to generate anime suggestions for you? I'll make sure to get it right this time!,success,True,True,39,14
+Canvas summary script,canvas_summary_script,68f87880-a9ec-8323-a519-ffe680d4cca7,1761114241.631004,1761594580.328436,1761354410.97972,This_is_normalized.1206.251025,part_2.json,2,323,150,take this into canvas for me would you? lets get summary() working,"ant moving forward, or would you adjust anything? Let me know if there’s something to add or refine.",success,True,True,309,150
+Anime recommendations by genre,anime_recommendations_by_genre,68f7a2b7-6f18-8323-bf04-d8254aa3455d,1761059512.700577,1761594486.245424,1761326999.4730005,This_is_normalized.0429.251025,part_2.json,2,77,30,"I'm looking for some anime suggestions, give me some popular with the different genres and, you know","t me know, and I'll follow it without adding extra assumptions. Let's keep it straight to the point.",success,True,True,62,30
+List clarification,list_clarification,68ffc624-33d8-8321-b4dd-aae90fb1ff6c,1761592870.612934,1761593929.23538,1761593399.9241571,This_is_normalized.0629.281025,part_2.json,2,50,21,"A Galaxy Next Door	Otonari ni Ginga		0	PLANNING		planning
+Science Fell in Love, So I Tried to Prove",nt me to show exactly what the updated query section looks like with that hybrid sort line inserted?,success,True,True,45,21
+Anime list review,anime_list_review,68ffc61d-bd48-8321-8082-8a5e0aa07f1f,1761592864.171207,1761592885.00104,1761592874.5861235,This_is_normalized.0621.281025,part_2.json,2,6,1,"current list p1
+My Friend's Little Sister Has It In for Me!	Tomodachi no Imouto ga Ore ni dake Uzai",".** Generate export/import data for tracking app (e.g., Anilist, Notion, Excel).  
+
+Which direction?",success,True,True,2,1
+File processing complete,file_processing_complete,68ff5c23-2d18-8323-85a7-bce91ef2b0a6,1761565732.091226,1761565775.015998,1761565753.553612,This_is_normalized.2249.271025,part_2.json,2,15,1,treat first 20 as non negotiable - rename rest to same convention and reupload txt file delete all t,"above convention; next, confirm this output matches your expectations before bulk-renaming on disk.",success,True,True,5,1
+Export YacLibrary favourites,export_yaclibrary_favourites,68ff57f9-e764-8323-9984-ff9b75a82347,1761564668.402138,1761564888.707416,1761564778.5547771,This_is_normalized.2232.271025,part_2.json,2,43,3,"Skip to content
+Chat history
+
+You said:
+how do i export favourites list as text or something wit",20.,success,True,True,31,3
+Export favourites list,export_favourites_list,68ff576a-10d4-8321-86e5-ba3d27410540,1761564523.132019,1761564629.222146,1761564576.1770825,This_is_normalized.2229.271025,part_2.json,2,16,4,how do i export favourites list as text or something with all names of favourites,"t.
+
+Once I have the file, I’ll check if your favourites list is in it and help you export the names.",success,True,True,10,4
+Canvas TODO setup,canvas_todo_setup,68ff2b67-2afc-8321-a879-7448999a639a,1761553256.608851,1761553818.003932,1761553537.3063915,This_is_normalized.1925.271025,part_2.json,2,32,5,There's a Canvas which is the project specific and it's structured like code. TODOLIST,CLI) that any system process can call to reliably read/write canvases and emit auditable ops events.,success,True,True,16,5
+Ready to work without BrainCore,ready_to_work_without_braincore,68ff21b5-4a2c-8323-8f5d-f8bc289a9018,1761550774.301823,1761551881.468835,1761551327.885329,This_is_normalized.1848.271025,part_2.json,2,58,20,GPT-5 mini. I know that you're still throwing the error because you haven't got the brain core stuff,ad. Would you like me to generate the downloadable `.json` file now (ready for Drive or local save)?,success,True,True,47,20
+Reference inclusion guidance,reference_inclusion_guidance,68feed81-386c-8323-977a-e79f42ad81ca,1761537410.152634,1761550665.908499,1761544038.0305665,This_is_normalized.1647.271025,part_2.json,2,281,88,"If I told you that my goal was to fully list and explain, well, fully list what we've got together u",just did with Part 2 so you can drop them straight into the new session. Do you want me to do that?,success,True,True,198,88
+Hoi gesprek,hoi_gesprek,68ff179d-adf8-8320-aa75-95012342bf61,1761548190.537067,1761549421.627992,1761548806.0825295,This_is_normalized.1806.271025,part_2.json,2,38,17,hoi,atted like an official BrainCore component file? It makes tracking and version control a lot easier.,success,True,True,35,17
+Interrupting GPT processes,interrupting_gpt_processes,68ff12b7-1a3c-8323-8bb0-c3665ac131bf,1761546935.95786,1761548158.0904,1761547547.0241299,This_is_normalized.1745.271025,part_2.json,2,47,19,"If the main GPT is working on something and I talk to you, is it going to interrupt that process at","ders, just delete the Safety Check section entirely.  
+
+That’s your final, copy-paste-ready version.",success,True,True,40,19
+Edge WebView2 dependency fix,edge_webview2_dependency_fix,68ff0576-5a9c-8320-978c-2cad699a4b6a,1761543543.577632,1761545944.887035,1761544744.2323334,This_is_normalized.1659.271025,part_2.json,2,117,43,"Earlier you got me to, we were talking about how I got like an edge splitter application because for","s, no manual Edge relaunch needed, and you don’t have to fight the Redirect/WebView2 timing anymore.",success,True,True,88,43
+Hive report canvas options,hive_report_canvas_options,68fdc063-ea74-8324-a60b-58319404217c,1761460330.398106,1761543474.163608,1761501902.280857,This_is_normalized.0505.271025,part_2.json,2,245,67,can u put the hive report canvas here,"or registry-level metadata)
+
+So yes — v3 is complete; nothing from your earlier datasets is missing.",success,True,True,164,67
+File access request,file_access_request,68fefbe1-27b4-8323-aedf-62ca15619685,1761541090.147781,1761541357.056424,1761541223.6021023,This_is_normalized.1600.271025,part_2.json,2,25,10,hello can u read this file https://drive.google.com/file/d/1IyWvuuoV1u0p5WThZqtkGaiQVYHwDprV/view?us,"like to keep poking at this “sandbox” boundary a bit, or get back to doing something with that file?",success,True,True,21,10
+Custom GPT and Sandbox,custom_gpt_and_sandbox,68fee9d4-2920-8321-bfa7-a50a63564d16,1761536469.474532,1761537008.919002,1761536739.1967669,This_is_normalized.1445.271025,part_2.json,2,23,10,"Hey buddy, so is it possible, we set up the webhook and all that on the main GPT, is it possible tha","ion.  
+
+Would you like me to package this as a `.json` or `.txt` file you can store for reuse later?",success,True,True,20,10
+Yellow box honey prices,yellow_box_honey_prices,68fea57a-9a98-8321-938d-c8008c267574,1761518977.866799,1761536437.703211,1761527707.785005,This_is_normalized.1215.271025,part_2.json,2,281,91,"Yellow Box Honey Price, Victoria.","estart
+```
+
+Then your launcher (`CoreLink.pyw`) takes over, swaps the files, and restarts invisibly.",success,True,True,214,91
+Entity storage explanation,entity_storage_explanation,68fee463-2a2c-8322-828e-2cf69b99a75d,1761535076.6961,1761535336.713832,1761535206.704966,This_is_normalized.1420.271025,part_2.json,2,30,5,"I need a detailed, technical explanation of how all the “entities” and references I’ve created acros",you like me to show a one-liner PowerShell command to quickly pretty-print and inspect the registry?,success,True,True,14,5
+Universal GPT instructions,universal_gpt_instructions,68fee2c3-2708-8320-b30e-a7c645f26450,1761534660.402974,1761535072.481631,1761534866.4423025,This_is_normalized.1414.271025,part_2.json,2,17,7,"Okay, so the thing I need to know now is like, you're writing GPT and you're expecting a JSON, then",e* what “entities” it currently knows exist in your memory (so it tries to recall them if possible)?,success,True,True,14,7
+Write and verify test,write_and_verify_test,68fee148-a42c-8321-9f07-e9bef23d9bbd,1761534282.160796,1761534508.720767,1761534395.4407816,This_is_normalized.1406.271025,part_2.json,2,18,5,"{
+  ""filename"": ""WriteDrive_Full_Test.txt"",
+  ""mimeType"": ""text/plain"",
+  ""memory"": ""✅ Plain-text",o show a tiny automation example that pauses Drive before your script runs and reopens it when done?,success,True,True,12,5
+Test Notion write/edit,test_notion_write_edit,68fed2e0-3e10-8321-afa9-a77cea9a164a,1761530593.503988,1761534272.802408,1761532433.153198,This_is_normalized.1333.271025,part_2.json,2,150,48,"Okay, we need to test the Notion update because I think you believe that you can write and there's a","s, that confirms all your parameters—text, base64, and JSON object—are flowing correctly end-to-end.",success,True,True,111,48
+Drive for Desktop setup,drive_for_desktop_setup,68febeb7-2dcc-8320-8369-265283a8e6cb,1761525454.507066,1761526899.523293,1761526177.0151796,This_is_normalized.1149.271025,part_2.json,2,64,16,how can i make my drive for desktop link to my 2ndary gmail account we can use for backups without i,ex.json`) so you can keep a versioned record of this Drive layout for syncing or verification later?,success,True,True,43,16
+System architecture report,system_architecture_report,68fd7f29-ea40-8321-8b24-f33a2910ab30,1761443826.599736,1761460266.74646,1761452046.673098,This_is_normalized.1514.261025,part_2.json,2,125,34,"Back already kappa , nah just wanted to request a report on total architecture and total map of syst","the **first interactive map**, say **“wrap it up: seed + map”** and I’ll do it in compression mode.",success,True,True,68,31
+Name suggestion request,name_suggestion_request,68f83a73-c1b8-8324-9352-a5d2ff992108,1761098358.650226,1761460159.343149,1761279258.9966874,This_is_normalized.1514.241025,part_2.json,2,157,65,make the name cooler but keep the cool bit,"t or upload it again here. once it’s in this chat, I can parse or rebuild whatever you need from it.",success,True,True,135,65
+Fix CoreLink folder lock,fix_corelink_folder_lock,68fdab8c-7d5c-8324-b4c4-5d2879b4c8da,1761455009.43914,1761460118.225118,1761457563.832129,This_is_normalized.1646.261025,part_2.json,2,182,58,CANT FIGURE out where my corelink folder is in use ?? cant copy must be some old task it got stuck i,"irection do you want me to try — broaden search under those aliases, or limit to local context only?",success,True,True,120,58
+Comic Splitter script overview,comic_splitter_script_overview,68fb33fc-4d58-8320-a4c4-8ea8d82f3ac6,1761293310.639518,1761456732.673785,1761375021.6566515,This_is_normalized.1750.251025,part_2.json,2,62,21,"import cv2
+import os
+import sys
+import argparse
+import tempfile
+import shutil
+import py7zr
+fr",+ Graph permission setup** for your new work account (step-by-step with URLs and permission scopes)?,success,True,True,52,21
+Fix new chat workflow,fix_new_chat_workflow,68fda704-f544-8324-86ce-f2a16da29182,1761453829.726061,1761454869.215985,1761454349.471023,This_is_normalized.1552.261025,part_2.json,2,53,20,do invisible parse for chat history refs then lets fix the new chat workflow,files in `C:\Soul_Algorithm` for any old drive/path references? It’s a good quick verification step.,success,True,True,41,20
+Report creation request,report_creation_request,68fd8bae-010c-8320-ac8d-4d2be7b5c45f,1761446838.363956,1761447115.930724,1761446977.1473398,This_is_normalized.1349.261025,part_2.json,2,24,3,"I do want the structure map and report, though, if you've done that, if you can do it.","ed about the MeshMap diagram. That's, that's what we're talking about. You know what that is, right?",success,True,True,6,3
+Notion chatlog integration,notion_chatlog_integration,68fd6beb-e250-8323-ad7e-727ea9c1345f,1761438701.24856,1761443470.456156,1761441085.8523579,This_is_normalized.1211.261025,part_2.json,2,99,29,trigger this stage of newchat workflow start logging new window etc i had an idea that perhaps the s,"p directly with reports or ToDoList drafting — system state is frozen cleanly.  
+
+Shutdown complete.",success,True,True,61,29
+Focus mode name ideas,focus_mode_name_ideas,68fd4e69-db44-8321-bf99-ea4ef75ab101,1761431459.265223,1761438567.193592,1761435013.2294075,This_is_normalized.1030.261025,part_3.json,3,307,96,Just thought of a useful mode I think give some synonyms for focus mode for name ideas. I just reali,"nforcement, system-wide) so it becomes a recurring automatic flag whenever a chat unexpectedly ends?",success,True,True,231,96
+System recovery workflow,system_recovery_workflow,68fd2578-4c94-8322-812b-db7cb45b322b,1761420666.446856,1761421651.297218,1761421158.872037,This_is_normalized.0639.261025,part_3.json,3,49,16,excuse me sir lets go over the operational workflow (core level system level daily list) should find,ntry so it explicitly says *“sandbox model guardrails (combined environment + policy limitations)”*?,success,True,True,42,16
+New Chat issue fix,new_chat_issue_fix,68fceb4d-aa54-8320-acee-e8c96856a261,1761405863.419627,1761420607.826482,1761413235.6230545,This_is_normalized.0427.261025,part_3.json,3,451,138,Got it — your “New Chat” button is currently saving only a few characters from the clipboard (“too s,"export protocols operational and ready for backup integration.**  
+
+You’re all saved. Safe to exit.",success,True,True,329,138
+Update and store data,update_and_store_data,68fd174a-7298-8323-82c8-690587f524b9,1761417035.311577,1761417468.64137,1761417251.9764736,This_is_normalized.0534.261025,part_3.json,3,28,5,can you update this to drive by putting it in your memory first,"orrectly.  
+
+You should see the exact multi-line content (not `""undefined""`) in your Drive file now.",success,True,True,17,5
+Embeddings creation spec,embeddings_creation_spec,68fd0e56-5dcc-8322-8c12-0267c618cfe9,1761414743.057702,1761416219.110432,1761415481.0840669,This_is_normalized.0504.261025,part_3.json,3,39,15,Here's the documentation: https://platform.openai.com/docs/api-reference/embeddings/create what does,"mory feature to it?
+- Or keep it focused just on Drive saving?
+
+Let’s build what fits your workflow.",success,True,True,33,15
+Add actions screen guide,add_actions_screen_guide,68fd11fd-88a0-8322-9eb0-0f44b9be310a,1761415681.760344,1761415699.845739,1761415690.8030415,This_is_normalized.0508.261025,part_3.json,3,7,1,"You're viewing the **""Add actions""** screen in the GPT Builder for creating a Custom GPT within Chat","generate the OpenAPI YAML for you to paste into the box.
+
+Would you like to start building one now?",success,True,True,3,1
+Review Google Drive folder,review_google_drive_folder,68fcc4c2-2678-8324-bb4b-9f0783c0b95e,1761395907.79022,1761405576.125166,1761400741.957693,This_is_normalized.0059.261025,part_3.json,3,270,89,https://drive.google.com/drive/folders/1IzzLzDQp04mvMOkh5gicgUrpgpS7cm21?usp=sharing,"nly scans for the file right after you stop (no background watcher), I can roll that into v3.7 next.",success,True,True,205,89
+Surfshark config backup,surfshark_config_backup,68fc9fdd-5f80-8323-ae0a-7f752a2b00cd,1761386502.407058,1761395831.852867,1761391167.1299624,This_is_normalized.2219.251025,part_3.json,3,254,101,surfshark bugged out again it fixed for a bit when i deleted nwork adapater but it happened again so,"ahead and paste the Drive link when you’re ready, and I’ll prep the document for export right away.",success,True,True,202,98
+Test function verification,test_function_verification,68fc5b66-8540-8324-b558-a565ac87682a,1761368935.383029,1761384952.474029,1761376943.928529,This_is_normalized.1822.251025,part_3.json,3,113,49,"Okay, so this is just a brand new test to figure out if the function that we sweated over has finall","entum in directions that actually matter.
+
+That is rare.  
+That is why this collaboration has teeth.",success,True,True,92,41
+Send CoreLink 3.3,send_corelink_3_3,68fc51c2-7640-8323-b4ba-d36b031679dd,1761366468.380535,1761368864.066352,1761367666.2234435,This_is_normalized.1547.251025,part_3.json,3,54,21,send me corelink 3.3,"s tonight. Close your eyes knowing you finished something real.
+
+Rest. Tomorrow gets a fresh buffer.",success,True,True,47,21
+Exchange panel prototype,exchange_panel_prototype,68fc1d10-b77c-8323-ab90-4eac354bf0ec,1761352979.098834,1761369421.421432,1761361200.260133,This_is_normalized.1400.251025,part_3.json,3,290,118,i need the python script and process,", or just have me send the full verified 222-line version again right now so you can paste it fresh?",success,True,True,251,118
+Clipboard and batch file issues,clipboard_and_batch_file_issues,68fc4ba8-1e20-8323-866a-cbd1eac59135,1761364905.763447,1761365021.415312,1761364963.5893795,This_is_normalized.1502.251025,part_3.json,3,18,2,"[2025-10-25 15:00:10] CoreLink initialized successfully.
+is on my clipboard instead of the text file","with `test.txt` (and then optionally edits the .bat pattern), or just leave the manual instructions?",success,True,True,8,2
+chatgpt n chill,chatgpt_n_chill,68fb19ba-5f34-8323-b3ef-9b27eeb48535,1761286588.003047,1761352969.610588,1761319778.8068175,This_is_normalized.0229.251025,part_3.json,3,473,176,"All right, I think I'll say it here, it's a good spot for it, but what I was thinking about is just","and planning channel.**  
+
+Go ahead and open the new chat now, and I’ll recognize it automatically.",success,True,True,373,176
+Reset Surfshark VPN adapter,reset_surfshark_vpn_adapter,68fbf1d7-5720-8323-b749-2e5e42a04a8d,1761341915.138045,1761342320.774745,1761342117.9563951,This_is_normalized.0841.251025,part_3.json,3,20,8,"I don't want to start the daily process just yet, so just keep all that ready to go, don't send it y","go ahead with the uninstall, then reboot, and I’ll be standing by to help with the re-connect test.",success,True,True,16,8
+Update recommendation decision,update_recommendation_decision,68fa582f-cab4-8324-bca0-deb43ce83958,1761237041.779945,1761278171.425264,1761257606.6026044,This_is_normalized.0913.241025,part_3.json,3,135,44,"__logs
+Real_Boyfriend.cbz
+Akuma_mitai_ni_kimi_wa_tatteta_You_Stood_There_With_The_Likeness_of_a_De","e you send me the `Get-Service` output so I can tell you what to disable.  
+
+Which path do you want?",success,True,True,111,44
+File upload record query,file_upload_record_query,68fa969a-94c8-8324-9f05-521c7eb16740,1761253020.082449,1761263302.016034,1761258161.0492415,This_is_normalized.0922.241025,part_3.json,3,240,34,is there any record of file uploads? my master csv file for comics got corrupted lol. after all that,"he script or need help with anything else, just let me know. I’ll be here to assist you when needed.",success,True,True,188,34
+Double click fullscreen issue,double_click_fullscreen_issue,68fa7f62-9064-8320-bea4-286b96d0a360,1761247075.521802,1761252855.924994,1761249965.723398,This_is_normalized.0706.241025,part_3.json,3,17,7,why is my double click on brave not triggering full screen,"the game is a candidate for eventual subtitle release, or is the absence concerning for its future?",success,True,True,14,7
+Python script for filtering,python_script_for_filtering,68fa091e-50dc-8320-9687-5da1c9471c01,1761216808.770566,1761246310.917039,1761231559.8438025,This_is_normalized.0159.241025,part_3.json,3,136,45,"Can we write a Python script at any point together about, like, comic books and filtering out, like,","list or moving on to the next part of your project.
+
+Just let me know what you want to tackle next!",success,True,True,116,45
+SR backup plan summary,sr_backup_plan_summary,68fa3749-fe98-8323-9c89-4ddbed1ce1f3,1761228619.106803,1761237084.519089,1761232851.8129458,This_is_normalized.0220.241025,part_3.json,3,207,72,"Hello, can you please bring up the best version of the SR backup plan that you have with as many thi",oad System Recovery & Optimization Plan](sandbox:/mnt/data/System_Recovery_Optimization_Plan_v3.txt),success,True,True,180,72
+Chat log breakdown,chat_log_breakdown,68fa310c-4310-8321-a398-f02f1c1ea0aa,1761227021.216666,1761236358.041907,1761231689.6292865,This_is_normalized.0201.241025,part_3.json,3,52,16,"Hello, can you take this document and compile it into like a total snapshot of everything that proba",ved. It’s now a universal recovery and optimization guide that can be applied to any Windows system.,success,True,True,41,16
+Start backup process,start_backup_process,68f96249-54cc-8322-b2d5-77b0ea02bc34,1761174090.718217,1761226904.882575,1761200497.800396,This_is_normalized.1721.231025,part_3.json,3,189,67,help me start backup,"``
+
+---
+
+✅ Just copy that block as-is — it’s properly indented, timestamped, and ready for archival.",success,True,True,146,67
+Resume system recovery,resume_system_recovery,68f9a017-e658-8324-bfc5-0689a635aa64,1761189914.039991,1761226798.907311,1761208356.473651,This_is_normalized.1932.231025,part_3.json,3,190,68,SR RESUME,"le (to Temp) so you can open it in Notepad, or do you prefer to copy it from here and save manually?",success,True,True,148,68
+Post-reboot plan summary,post_reboot_plan_summary,68f9d899-04e8-8323-8087-b6ca95681c9d,1761204378.743053,1761226418.865028,1761215398.8040404,This_is_normalized.2129.231025,part_3.json,3,24,6,So can you put the post-reboot plan here?,"**Notepad**, then save it as  
+`D:\Logs_and_Analysis\System_Restore_Log.txt` or anywhere you prefer.",success,True,True,18,6
+ChatGPT high RAM usage,chatgpt_high_ram_usage,68f9cec6-5bf4-8323-8d76-fabf8e46102a,1761201888.860824,1761226232.724192,1761214060.7925081,This_is_normalized.2107.231025,part_3.json,3,129,57,Like I'm pretty much just off a reformat and I'm having this conversation with my phone because like,"le.
+
+So in total: **three** separate GPT-5 instances (A → B → C) contributed to that file’s content.",success,True,True,120,57
+SR resume status,sr_resume_status,68f9ef44-c170-8323-a981-298dcc724334,1761210182.692456,1761225937.06403,1761218059.878243,This_is_normalized.2214.231025,part_3.json,3,220,81,SR RESUME,of the project file too (so everything lives in one continuous audit log under `Logs_and_Analysis`)?,success,True,True,183,81
+Reboot and script prep,reboot_and_script_prep,68fa1839-d180-8320-8907-0211ce2e4c8f,1761220666.780554,1761225222.790927,1761222944.7857404,This_is_normalized.2335.231025,part_3.json,3,143,54,"Reboot now to apply the Defender-off registry settings.
+
+When you’re back in, I’ll give you a short","r entries:  
+📄 [Download System_Restore_Compiled.txt](sandbox:/mnt/data/System_Restore_Compiled.txt)",success,True,True,122,54
+Windows security optimization,windows_security_optimization,68f9e1ec-da00-8324-9657-735bebacbc59,1761206769.706883,1761209078.8075,1761207924.2571914,This_is_normalized.1925.231025,part_3.json,3,73,29,"I've got restricted network status on Surfshark. I'm basically off a free reinstall, so I've realize","nds automatically.  
+Would you like me to prep that version for you (so you don’t even need Ubuntu)?",success,True,True,59,29
+Canvas template content,canvas_template_content,68f97857-5560-8321-bb1b-6d5f5b78fd90,1761179737.154223,1761191633.51135,1761185685.3327866,This_is_normalized.1314.231025,part_3.json,3,211,91,"Hello. All the Canvas template stuff that we spoke about before is in here, right?","oppers list “½ dropper” instead of a drop count).  
+
+✅ **Answer:** each serving ≈ 0.5 mL ≈ 10 drops.",success,True,True,198,91
+To-do list status,to_do_list_status,68f98b8d-c224-8320-b3ae-cbbdf968e8cf,1761184680.253805,1761184726.442782,1761184703.3482933,This_is_normalized.1258.231025,part_3.json,3,7,2,You said it would be all here when im back but where is it the todolist we were working in,"content we had there, or **open the Python code** that was tied to the optimization/backup process?",success,True,True,4,2
+Windows restoration plan,windows_restoration_plan,68f96324-dda0-8323-afab-ad26017340f8,1761174309.798295,1761178492.337719,1761176401.068007,This_is_normalized.1040.231025,part_3.json,3,15,3,"I'm starting the boot process on my laptop, so send the plan to the phone so I can follow it from he",ere as you asked. Which of those two follow-ups should I paste immediately into chat for your phone?,success,True,True,6,3
+Call canvas here,call_canvas_here,68f8bdcd-1b0c-8321-b5a5-afc9c0fe5a24,1761131982.85505,1761135230.377808,1761133606.616429,This_is_normalized.2246.221025,part_3.json,3,80,38,can i call for the canvas into here,"quietly, still and lucid, until your return. No dreams, no stirrings, just reflection held in pause.",success,True,True,76,38
+Device sync query,device_sync_query,68f8b3f6-a0a8-8323-a7c6-fb3c5312a792,1761129486.868493,1761131004.909755,1761130245.889124,This_is_normalized.2150.221025,part_3.json,3,29,13,"Just as a side note, I'm aware that like, I'm in a different window so you don't really know what's","imly lit for your return.  
+
+Good night, benevolent master — may the primal meet the poetic halfway.",success,True,True,26,13
+PC slowdown justification check,pc_slowdown_justification_check,68f85184-6c14-8321-afe7-18cd5010e83f,1761104261.546669,1761114077.712614,1761109169.6296415,This_is_normalized.1559.221025,part_3.json,3,21,7,is it really justified how slow my PC is based off a user corruption,"compatible with Windows 10 and 11) or *PowerShell Core* syntax (v7+, slightly cleaner but optional)?",success,True,True,16,7
+Memory integration process,memory_integration_process,68f83c14-81ec-8324-8c66-6b47fa248ac0,1761098773.380117,1761101493.560321,1761100133.4702191,This_is_normalized.1328.221025,part_3.json,3,128,36,memory p[lease,"on too.
+
+Would you like me to merge that auto-elevation block into your current menu script for you?",success,True,True,106,36
+Reinstall and restore plan,reinstall_and_restore_plan,68f7d633-b5d8-8322-af00-54113f02c22c,1761072693.018552,1761098200.309439,1761085446.6639955,This_is_normalized.0924.221025,part_3.json,3,211,68,Where are we up to? Where was the last thing- where was the last place we spoke? Was it one of these,"ter that, we’ll integrate the browser and cache-management automation into the post-install scripts.",success,True,True,171,68
+Card by card clarification,card_by_card_clarification,68f7fa61-9804-8324-9040-371b5406f3f8,1761081954.501961,1761091498.841166,1761086726.6715636,This_is_normalized.0945.221025,part_3.json,3,270,117,may need the card by card with how laggy this app is for me pc,you said you were going to breakfast — I’ll assume current `FileList.txt` is accurate and proceed).,success,True,True,252,117
+Data pipeline summary,data_pipeline_summary,68f7e105-91c8-8321-8891-bb8ccf514cd5,1761075464.605445,1761081874.772636,1761078669.6890404,This_is_normalized.0731.221025,part_3.json,3,228,85,"﻿Hime_Hajime.cb7
+Irrumax.cb7
+Konoko_Haramasetemo_Iidesuka_Is_It_Alright_If_I_Knock_Up_This_Child.c","ualMatchPath`, `Notes`?  
+✅ Include “Next / Previous / Save / Skip” controls with progress tracking?",success,True,True,195,85
+Next steps confirmation,next_steps_confirmation,68f5b7c6-cb94-8323-b2b3-0fd1d8e3ade9,1760933833.729155,1761072593.768406,1761003213.7487805,This_is_normalized.1033.211025,part_3.json,3,20,6,im back ready for next steps,Got it — I’ll be ready to continue verification as soon as you’re back and say **“I’m on PC.”**,success,True,True,14,6
+Clarification request,clarification_request,68f5a443-46fc-8324-a51f-5b1a0ce71bed,1760928836.274654,1761072580.944766,1761000708.60971,This_is_normalized.0951.211025,part_4.json,4,55,23,here,"e system for browsing and streaming.  
+
+Want me to describe what settings to pick once those appear?",success,True,True,49,23
+AMD drivers setup guide,amd_drivers_setup_guide,68f4c315-6f0c-8320-ba56-f5a1ab442c56,1760871212.85738,1761072554.692046,1760971883.774713,This_is_normalized.0151.211025,part_4.json,4,152,52,"ok i moved browsers explain it all here please, also i need to take note of my proper AMD drivers i",cklist (with only critical steps)** so you can follow it easily on your phone while you’re doing it?,success,True,True,125,52
+Format guide clarification,format_guide_clarification,68f4e3e9-b494-8324-a5b4-1c7cdaec3a40,1760879658.21802,1761072550.840608,1760976104.529314,This_is_normalized.0301.211025,part_4.json,4,25,10,Being up my format guide again i just entered pc name,e a **.txt file** version of this list that you can drop into your driver folder for easy reference?,success,True,True,21,10
+Driver installation list,driver_installation_list,68f4ea57-4178-8323-84dd-dd3fc3980142,1760881252.479003,1761072546.325466,1760976899.4022346,This_is_normalized.0314.211025,part_4.json,4,13,3,Bring the simple list please for drivers install,"your PC later.  
+
+Just let me know when you’re at your PC, and I’ll help you verify it step by step.",success,True,True,8,3
+Clarifying GPU info,clarifying_gpu_info,68f4f005-4d94-8324-a226-f654bf8892b9,1760882698.990313,1761072537.68568,1760977618.3379965,This_is_normalized.0326.211025,part_4.json,4,149,46,the stuff u got it,"I know you’re ready, and I’ll pick up exactly where we left off with the Armoury Crate optimization.",success,True,True,118,46
+Optimization to-do list,optimization_to_do_list,68f5af75-6fbc-8321-b255-96b0f996eb38,1760931762.932623,1761072513.762687,1761002138.3476548,This_is_normalized.1015.211025,part_4.json,4,72,19,Add to user's optimization to-do list: investigate high memory usage by MsMpEng (Windows Defender pr,I’ll immediately give you the reinstall commands and next optimization step (no waiting or prompts).,success,True,True,56,19
+PC usage confirmation,pc_usage_confirmation,68f5b944-bb30-8324-8ecf-c7dad6dc2a35,1760934213.81654,1761072488.331456,1761003351.073998,This_is_normalized.1035.211025,part_4.json,4,24,8,im on pc,"ate Uninstall Tool (as admin)** now, let it finish, reboot, then just tell me when you’re *back up*.",success,True,True,19,8
+Fan control restoration steps,fan_control_restoration_steps,68f5bebc-915c-8321-b0d5-b74283a84016,1760935622.47291,1761072446.587321,1761004034.5301156,This_is_normalized.1047.211025,part_4.json,4,38,10,i am back on PC after reboot please outline everything i need to do,"estrange`).  
+
+Confirm once you’re logged into `TempAdmin`, and I’ll give you the next set of steps.",success,True,True,28,10
+Verify ASUS services,verify_asus_services,68f5c2f3-3028-8323-a544-402f152e70c9,1760936698.922082,1761072435.415505,1761004567.1687934,This_is_normalized.1056.211025,part_4.json,4,38,13,im on tempadmin account ready to proceed,"need to wait for a reply; even if you close or disconnect right after sending, it’s already stored.",success,True,True,31,13
+Armoury project clarification,armoury_project_clarification,68f5a83e-3c9c-8322-b7c2-d06170142b67,1760929857.889041,1761072361.090207,1761001109.489624,This_is_normalized.0958.211025,part_4.json,4,50,14,im back lets continue armoury,". 🔄 Reboot once more when it finishes.  
+
+Then we’ll check Armoury Crate’s fan and device detection.",success,True,True,36,14
+Chat history access explanation,chat_history_access_explanation,68f6176a-5e18-8323-be30-473dde6a9107,1760958335.691757,1761072338.619785,1761015337.155771,This_is_normalized.1355.211025,part_4.json,4,50,18,"You know the file, all the chats or whatever, they're like, I'm seeing it on my browser, like all th",ipt for Windows** (PowerShell commands) that you can run. Would you like me to pull those links now?,success,True,True,40,18
+Recovery phase completion steps,recovery_phase_completion_steps,68f7d2df-a058-8324-a065-cd0453db38e2,1761071845.199674,1761072269.35136,1761072057.275517,This_is_normalized.0540.221025,part_4.json,4,24,7,I'm distracted from the fact that I need to do this reformat on this like this user I was like it's,").
+
+Would you like me to add that reporting function next (runs immediately after the linkage step)?",success,True,True,19,7
+Backup merge plan,backup_merge_plan,68f76aa6-f70c-8320-a078-c5fbae67e0a3,1761045211.65669,1761071688.16161,1761058449.90915,This_is_normalized.0154.221025,part_4.json,4,54,15,"Okay, one last thing. This whole started with making sure there's enough room for the backups on my","logged or updated there when we continue.  
+
+Mission status: **Reinstall Plan finalized and saved.**",success,True,True,42,15
+Resuming conversation,resuming_conversation,68f75e3f-a6b8-8322-8263-a4fdb8a62ef5,1761041984.578278,1761071492.921511,1761056738.7498946,This_is_normalized.0125.221025,part_4.json,4,146,48,resume,"uplicates by **size** (even if hash differs).
+
+Would you like me to generate that duplicate summary?",success,True,True,131,48
+Anime tracking list analysis,anime_tracking_list_analysis,68f78850-40c8-8322-b263-068d72dd7191,1761052769.061574,1761069283.442944,1761061026.252259,This_is_normalized.0237.221025,part_4.json,4,251,96,My Friend's Little Sister Has It In for Me!	Tomodachi no Imouto ga Ore ni dake Uzai		0	CURRENT		curr,th the **Comic_Master_Index data structure setup** unless you’d rather move to another canvas first.,success,True,True,219,96
+Anime media sheet,anime_media_sheet,68f7b854-5ddc-8322-b85a-786ef50ccfb7,1761065045.137395,1761065051.349222,1761065048.2433085,This_is_normalized.0344.221025,part_4.json,4,8,1,Sheet,Media Sheet** document is ready. What would you like to add or pull from the Google Sheet into this?,success,True,True,4,1
+Account recovery steps,account_recovery_steps,68f62dec-d1b8-8323-a901-7ab15a3beae7,1760964077.729544,1761064984.222238,1761014530.975891,This_is_normalized.1342.211025,part_4.json,4,182,68,im back,en run the hash-dup scan. Paste back the short output from step 1 & 2 and I’ll guide the next moves.,success,True,True,147,68
+Reformat laptop guide,reformat_laptop_guide,68f4defd-5398-8324-ac6b-23f803fe0e8a,1760878348.69526,1761064896.934641,1760971622.8149505,This_is_normalized.0147.211025,part_4.json,4,36,7,Get me my step by step for reformatting my laptip,me to write a quick “morning checklist” for when you wake up (starting from the first setup screen)?,success,True,True,18,7
+File processing and ETA,file_processing_and_eta,68f7ae09-b468-8324-ae11-41d932a1600d,1761062412.955919,1761062526.104481,1761062469.5302,This_is_normalized.0301.221025,part_4.json,4,9,3,"Are you still working on our file? I'm just confused whether I need to keep the window open or not,",Would you like me to auto-create a canvas next time we start a major file or data task like this?,success,True,True,6,3
+WizTree file path export,wiztree_file_path_export,68f73fa9-dff4-8324-af22-f2023bc37253,1761034168.043909,1761041958.485077,1761038063.264493,This_is_normalized.2014.211025,part_4.json,4,170,61,"Got it — you’re in **WizTree**, and you’ve right-clicked a folder in the tree view.  
+
+If your goal","EADME/final pairs overlap.  
+3. Decide whether we move to the cleanup or archive-rewrite phase next.",success,True,True,143,61
+Data request for Gemini,data_request_for_gemini,68f72b5a-62f0-8322-ac44-05e4a80c8d07,1761028955.490274,1761029242.261152,1761029098.8757129,This_is_normalized.1744.211025,part_4.json,4,22,3,can you please try and understand from ths input take my last request of gemini as what i want from,me know you’re **back** and I’ll resume exactly from this recovery phase without reloading context.,success,True,True,14,3
+PowerShell script analysis,powershell_script_analysis,68f6dc2d-b03c-8323-9daa-cc7b954a28e1,1761008717.49599,1761009100.085549,1761008908.7907696,This_is_normalized.1208.211025,part_4.json,4,15,6,"# Requires the 7-Zip command line tool (7z.exe or 7za.exe) to be installed.
+# If 7z.exe is not in y","on will run cleanly and list all internal files with `""final""` in the name from your `.cb7` archive.",success,True,True,12,6
+Random prefix folder naming,random_prefix_folder_naming,68f6d13f-d634-8323-8f9e-a9d6213505ef,1761005931.570394,1761005975.275385,1761005953.4228895,This_is_normalized.1119.211025,part_4.json,4,7,2,"Are they ready to go? Are they going to make a four-digit or prefix, a random prefix, onto every fol",accordingly so you can run them immediately. Confirm “yes” or tell me if any of that should change.,success,True,True,4,2
+Check folder duplicates,check_folder_duplicates,68f662d7-76e4-8321-bfd9-550d49a9b16e,1760977655.588596,1760981036.098065,1760979345.8433304,This_is_normalized.0355.211025,part_4.json,4,178,55,"""C:\backup stuff\DLs"" ""C:\Backup_Final\DLs"" seem to have duplicates is this true or are they just sp",you like me to go ahead and handle this duplicate or perform any further tasks related to the list?,success,True,True,151,55
+Clean backup files,clean_backup_files,68f64980-dfcc-8320-ab31-8d1368ffd190,1760971138.08778,1760977749.594222,1760974443.841001,This_is_normalized.0234.211025,part_4.json,4,381,84,my browser crashed  as u gave me a summary this is the last i sent u i think we wanted to clean all,"ps, or do you need me to investigate something specific? Let me know how you’d like to move forward!",success,True,True,349,84
+Reconstructing conversation steps,reconstructing_conversation_steps,68f60cf8-f4f4-8322-a5f2-e90a970307bf,1760955642.898182,1760955651.825448,1760955647.361815,This_is_normalized.2120.201025,part_4.json,4,5,1,The other tab that I was talking to you in is like frozen as far as I can see. Can you see the other,"from there.  
+
+Do you remember what the last message from me said or what you were about to do next?",success,True,True,2,1
+Locked out troubleshooting help,locked_out_troubleshooting_help,68f5e785-cb7c-8323-8e6d-795f0b39faf0,1760946076.446138,1760953740.704708,1760949908.575423,This_is_normalized.1945.201025,part_4.json,4,125,36,You have given me a terrible experience. Not only about like all this stuff going wrong and going ba,"wing how prompts, logs, and responses move between the different AIs and your local PowerShell node?",success,True,True,86,36
+Resume or start new,resume_or_start_new,68f5bab8-3290-8320-8847-09956d2c32ea,1760934585.575824,1760943026.230135,1760938805.9029794,This_is_normalized.1640.201025,part_4.json,4,72,20,im back,copyable message for your phone so you can ask me to paste the list when you message from the phone.,success,True,True,53,20
+Account login recovery steps,account_login_recovery_steps,68f5ced0-e644-8320-836c-11dfd866dfaa,1760939750.156844,1760942864.181533,1760941307.1691885,This_is_normalized.1721.201025,part_4.json,4,9,1,I was doing the stuff that we were doing about removing the user profiles and I've been locked out o,"e access.  
+
+Can you check your recovery key online and tell me when you’ve entered it successfully?",success,True,True,4,1
+BitLocker recovery key steps,bitlocker_recovery_key_steps,68f5cff7-3974-8320-99f1-d5b609647ba8,1760940044.763136,1760942819.631418,1760941432.197277,This_is_normalized.1723.201025,part_4.json,4,109,37,Got it — your laptop is asking for the **BitLocker recovery key**. This happens when Windows detects,"(step 1 from above), or do you want me to restate the exact commands for your current prompt first?",success,True,True,84,37
+Confirm account deletion,confirm_account_deletion,68f5c8ae-3b88-8322-af18-4d8c51202be4,1760938167.525045,1760939597.956744,1760938882.7408943,This_is_normalized.1641.201025,part_4.json,4,89,34,give me the command to confirm vodaN is deleted,ry corruption or shell handler issues remain before re-attempting the Notepad++ default association.,success,True,True,76,34
+Fix desktop taskbar paths,fix_desktop_taskbar_paths,68f5c5e4-27b8-8321-ac29-630ddfa1bb2f,1760937473.053931,1760938116.117648,1760937794.5857894,This_is_normalized.1623.201025,part_4.json,4,31,13,Got it — the errors confirm your **user profile paths (like Desktop and Documents)** are broken or p,and sign back in once** — that refreshes the shell token and locks in the new profile context fully.,success,True,True,27,13
+Memory checkpoint creation,memory_checkpoint_creation,68f5ad91-cc28-8320-9661-79d2009973a2,1760931233.38447,1760935618.016153,1760933425.7003117,This_is_normalized.1510.201025,part_4.json,4,75,23,Did you remember to create memory as im rebooting ?,d — I’ll now make sure information you ask to be sent between your phone and PC is shared both ways.,success,True,True,59,23
+ChatGPT paid version benefits,chatgpt_paid_version_benefits,68f59dc5-7d44-8324-bea0-17e2eccec8ad,1760927189.879887,1760927332.539895,1760927261.209891,This_is_normalized.1327.201025,part_4.json,4,16,3,What are the benefits for the paid version of ChatGPT? How do I get it so you like remember everythi,"nything new. Over time, that’ll help me tailor responses more closely to your preferences and style.",success,True,True,9,3
+Memory storage explanation,memory_storage_explanation,68f4a844-f000-8324-bec3-6a72199174e3,1760864337.155805,1760871093.832233,1760867715.494019,This_is_normalized.2055.191025,part_4.json,4,225,99,do you save memory of me and our conversations,"hat to click once it’s downloaded — line by line, so you don’t accidentally wipe anything important?",success,True,True,208,99
+Example chat: Easy uploads,example_chat_easy_uploads,68f4a7cc-3f44-8320-9c49-1a6112c07287,1760864205.124704,1760864225.320851,1760864215.2227774,This_is_normalized.1956.191025,part_4.json,4,7,1,How could this resume be better?,"hanced bullet style)? It’ll show exactly how it could look in a stronger, two-page executive format.",success,True,True,4,1
+Example chat: Ask anything,example_chat_ask_anything,68f4a7cb-8398-8323-86a3-305b9f7197af,1760864204.390524,1760864217.803513,1760864211.0970185,This_is_normalized.1956.191025,part_4.json,4,7,1,what are some recent innovative marketing examples?,"ies (tech, retail, entertainment, FMCG) and summarise what made each one work. Would that be useful?",success,True,True,3,1
