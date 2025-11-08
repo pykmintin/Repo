@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoreLink Action Schema",
+  "description": "Validates JSON payloads for CoreLink Bridge v3.7b",
+  "type": "object",
+  "required": [
+    "action"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "google_update",
+        "self_update",
+        "run_python",
+        "run_inline"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    }
+  }
+}
