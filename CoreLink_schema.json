@@ -1,11 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CoreLink Action Schema",
-  "description": "Validates JSON payloads for CoreLink Bridge v3.7b",
+  "title": "CoreLink Action Schema v3.12",
+  "description": "Validates JSON payloads for CoreLink Bridge v3.12",
   "type": "object",
-  "required": [
-    "action"
-  ],
+  "required": ["action"],
   "properties": {
     "action": {
       "type": "string",
@@ -13,14 +11,22 @@
         "google_update",
         "self_update",
         "run_python",
-        "run_inline"
+        "run_inline",
+        "save_file",
+        "run_queue",
+        "checkpoint"
       ]
     },
-    "description": {
-      "type": "string"
+    "description": { "type": "string" },
+    "version": { "type": "string" },
+    "queue": {
+      "type": "array",
+      "description": "Array of action objects for run_queue action",
+      "items": { "type": "object" }
     },
-    "version": {
-      "type": "string"
+    "message": {
+      "type": "string",
+      "description": "Message to display for checkpoint action"
     }
   }
 }

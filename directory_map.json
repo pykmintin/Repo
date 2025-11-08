@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-08T12:39:28.053990",
+  "generated_at": "2025-11-08T15:09:19.886031",
   "locations": {
     "C:\\Soul_Algorithm": {
       "metadata": {
@@ -13,7 +13,7 @@
         "exists": true,
         "size_bytes": 20480,
         "size_kb": 20.0,
-        "modified": "2025-11-08T12:33:20.566048",
+        "modified": "2025-11-08T14:58:15.772753",
         "created": "2025-10-26T15:58:16.029905",
         "children": [
           {
@@ -23,7 +23,7 @@
             "exists": true,
             "size_bytes": 8192,
             "size_kb": 8.0,
-            "modified": "2025-11-08T11:38:00.376292",
+            "modified": "2025-11-08T13:14:56.012054",
             "created": "2025-10-27T22:01:32.819150",
             "children": [
               {
@@ -31,9 +31,9 @@
                 "name": "Backups",
                 "type": "directory",
                 "exists": true,
-                "size_bytes": 0,
-                "size_kb": 0.0,
-                "modified": "2025-11-08T12:39:28.050908",
+                "size_bytes": 4096,
+                "size_kb": 4.0,
+                "modified": "2025-11-08T15:09:19.883507",
                 "created": "2025-10-28T21:17:43.038243",
                 "children": [
                   {
@@ -57,11 +57,22 @@
                     "modified": "2025-11-08T12:33:20.605754",
                     "created": "2025-11-08T12:39:28.050908",
                     "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Archive\\Backups\\directory_map_backup_20251108_150919.json",
+                    "name": "directory_map_backup_20251108_150919.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 410196,
+                    "size_kb": 400.58,
+                    "modified": "2025-11-08T12:39:28.161056",
+                    "created": "2025-11-08T15:09:19.883507",
+                    "children": []
                   }
                 ],
-                "total_size_bytes": 410391,
-                "total_size_kb": 400.77,
-                "file_count": 2,
+                "total_size_bytes": 820587,
+                "total_size_kb": 801.35,
+                "file_count": 3,
                 "directory_count": 0
               },
               {
@@ -4389,8 +4400,8 @@
                 "name": "Core",
                 "type": "directory",
                 "exists": true,
-                "size_bytes": 4096,
-                "size_kb": 4.0,
+                "size_bytes": 0,
+                "size_kb": 0.0,
                 "modified": "2025-11-08T06:25:43.898153",
                 "created": "2025-11-01T18:03:31.504012",
                 "children": [
@@ -4429,17 +4440,28 @@
                 "exists": true,
                 "size_bytes": 4096,
                 "size_kb": 4.0,
-                "modified": "2025-11-08T06:26:03.364888",
+                "modified": "2025-11-08T14:57:59.748185",
                 "created": "2025-10-28T22:02:02.006399",
                 "children": [
                   {
-                    "path": "C:\\Soul_Algorithm\\Archive\\CoreLink\\CoreLink.py",
-                    "name": "CoreLink.py",
+                    "path": "C:\\Soul_Algorithm\\Archive\\CoreLink\\CoreLink1.py",
+                    "name": "CoreLink1.py",
                     "type": "file",
                     "exists": true,
                     "size_bytes": 8871,
                     "size_kb": 8.66,
                     "modified": "2025-11-07T19:04:19.837250",
+                    "created": "2025-10-28T20:24:23.101994",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Archive\\CoreLink\\CoreLink2.py",
+                    "name": "CoreLink2.py",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 11594,
+                    "size_kb": 11.32,
+                    "modified": "2025-11-08T06:24:46.228070",
                     "created": "2025-10-28T20:24:23.101994",
                     "children": []
                   },
@@ -4455,9 +4477,9 @@
                     "children": []
                   }
                 ],
-                "total_size_bytes": 8977,
-                "total_size_kb": 8.77,
-                "file_count": 2,
+                "total_size_bytes": 20571,
+                "total_size_kb": 20.09,
+                "file_count": 3,
                 "directory_count": 0
               },
               {
@@ -4573,6 +4595,28 @@
                 "size_kb": 0.1,
                 "modified": "2025-11-08T11:34:14.062539",
                 "created": "2025-11-03T09:28:18.066114",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\detailed_chat_log_summary.json",
+                "name": "detailed_chat_log_summary.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 5913,
+                "size_kb": 5.77,
+                "modified": "2025-11-03T22:08:14.575640",
+                "created": "2025-11-03T22:08:14.085864",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\directory_map.json",
+                "name": "directory_map.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 410196,
+                "size_kb": 400.58,
+                "modified": "2025-11-08T12:39:28.143299",
+                "created": "2025-11-08T12:33:20.566048",
                 "children": []
               },
               {
@@ -4975,6 +5019,28 @@
                 "directory_count": 2
               },
               {
+                "path": "C:\\Soul_Algorithm\\Archive\\expanded_detailed_chat_log_summary_oct25_v2.json",
+                "name": "expanded_detailed_chat_log_summary_oct25_v2.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 10408,
+                "size_kb": 10.16,
+                "modified": "2025-11-03T23:13:31.262561",
+                "created": "2025-11-03T23:13:30.914779",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\expanded_detailed_chat_log_summary_updated_v2.json",
+                "name": "expanded_detailed_chat_log_summary_updated_v2.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 7064,
+                "size_kb": 6.9,
+                "modified": "2025-11-03T22:50:48.463324",
+                "created": "2025-11-03T22:50:48.114609",
+                "children": []
+              },
+              {
                 "path": "C:\\Soul_Algorithm\\Archive\\handoff_bundle_phase3.zip",
                 "name": "handoff_bundle_phase3.zip",
                 "type": "file",
@@ -4983,6 +5049,39 @@
                 "size_kb": 35052.56,
                 "modified": "2025-11-02T20:37:33.467935",
                 "created": "2025-11-02T20:24:48.056150",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\holiday (1).gdoc",
+                "name": "holiday (1).gdoc",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 174,
+                "size_kb": 0.17,
+                "modified": "2025-11-05T23:18:01.722000",
+                "created": "2025-11-05T23:21:35.241333",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\holiday.gdoc",
+                "name": "holiday.gdoc",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 174,
+                "size_kb": 0.17,
+                "modified": "2025-11-05T21:47:30.640000",
+                "created": "2025-11-05T21:47:44.301233",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Archive\\holiday.html",
+                "name": "holiday.html",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 9380,
+                "size_kb": 9.16,
+                "modified": "2025-11-05T23:17:39.841000",
+                "created": "2025-11-05T23:17:39.785958",
                 "children": []
               },
               {
@@ -4997,9 +5096,9 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 1068355355,
-            "total_size_kb": 1043315.78,
-            "file_count": 7,
+            "total_size_bytes": 1069220454,
+            "total_size_kb": 1044160.6,
+            "file_count": 14,
             "directory_count": 6
           },
           {
@@ -5175,83 +5274,6 @@
             "size_kb": 0.1,
             "modified": "2025-11-03T09:16:14.935417",
             "created": "2025-10-27T11:56:19.654913",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\detailed_chat_log_summary.json",
-            "name": "detailed_chat_log_summary.json",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 5913,
-            "size_kb": 5.77,
-            "modified": "2025-11-03T22:08:14.575640",
-            "created": "2025-11-03T22:08:14.085864",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\directory_map.json",
-            "name": "directory_map.json",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 410285,
-            "size_kb": 400.67,
-            "modified": "2025-11-08T12:33:20.587301",
-            "created": "2025-11-08T12:33:20.566048",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\expanded_detailed_chat_log_summary_oct25_v2.json",
-            "name": "expanded_detailed_chat_log_summary_oct25_v2.json",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 10408,
-            "size_kb": 10.16,
-            "modified": "2025-11-03T23:13:31.262561",
-            "created": "2025-11-03T23:13:30.914779",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\expanded_detailed_chat_log_summary_updated_v2.json",
-            "name": "expanded_detailed_chat_log_summary_updated_v2.json",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 7064,
-            "size_kb": 6.9,
-            "modified": "2025-11-03T22:50:48.463324",
-            "created": "2025-11-03T22:50:48.114609",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\holiday (1).gdoc",
-            "name": "holiday (1).gdoc",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 174,
-            "size_kb": 0.17,
-            "modified": "2025-11-05T23:18:01.722000",
-            "created": "2025-11-05T23:21:35.241333",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\holiday.gdoc",
-            "name": "holiday.gdoc",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 174,
-            "size_kb": 0.17,
-            "modified": "2025-11-05T21:47:30.640000",
-            "created": "2025-11-05T21:47:44.301233",
-            "children": []
-          },
-          {
-            "path": "C:\\Soul_Algorithm\\holiday.html",
-            "name": "holiday.html",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 9380,
-            "size_kb": 9.16,
-            "modified": "2025-11-05T23:17:39.841000",
-            "created": "2025-11-05T23:17:39.785958",
             "children": []
           },
           {
@@ -5522,13 +5544,24 @@
             "directory_count": 4
           },
           {
+            "path": "C:\\Soul_Algorithm\\README.txt",
+            "name": "README.txt",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 1319,
+            "size_kb": 1.29,
+            "modified": "2025-11-08T11:39:33.702198",
+            "created": "2025-11-08T13:14:49.501145",
+            "children": []
+          },
+          {
             "path": "C:\\Soul_Algorithm\\Scripts",
             "name": "Scripts",
             "type": "directory",
             "exists": true,
             "size_bytes": 4096,
             "size_kb": 4.0,
-            "modified": "2025-11-08T07:19:36.389539",
+            "modified": "2025-11-08T14:58:15.772753",
             "created": "2025-10-27T12:08:41.634867",
             "children": [
               {
@@ -5623,10 +5656,10 @@
                 "name": "CoreLink.py",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 11594,
-                "size_kb": 11.32,
-                "modified": "2025-11-08T06:24:46.228070",
-                "created": "2025-10-28T20:24:23.101994",
+                "size_bytes": 13455,
+                "size_kb": 13.14,
+                "modified": "2025-11-08T14:57:08.075228",
+                "created": "2025-11-08T14:57:08.075228",
                 "children": []
               },
               {
@@ -5645,9 +5678,9 @@
                 "name": "CoreLink_schema.json",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 526,
-                "size_kb": 0.51,
-                "modified": "2025-11-07T20:21:03.191579",
+                "size_bytes": 836,
+                "size_kb": 0.82,
+                "modified": "2025-11-08T15:08:38.847758",
                 "created": "2025-11-07T20:21:03.191579",
                 "children": []
               },
@@ -5667,9 +5700,9 @@
                 "name": "dirmapper.py",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 7233,
-                "size_kb": 7.06,
-                "modified": "2025-11-08T12:39:20.569730",
+                "size_bytes": 8945,
+                "size_kb": 8.74,
+                "modified": "2025-11-08T12:44:17.616712",
                 "created": "2025-11-08T06:36:26.699813",
                 "children": []
               },
@@ -5760,9 +5793,9 @@
                 "name": "logs",
                 "type": "directory",
                 "exists": true,
-                "size_bytes": 0,
-                "size_kb": 0.0,
-                "modified": "2025-11-01T17:52:39.745602",
+                "size_bytes": 4096,
+                "size_kb": 4.0,
+                "modified": "2025-11-08T14:59:13.143278",
                 "created": "2025-10-27T12:27:00.125096",
                 "children": [
                   {
@@ -5781,9 +5814,9 @@
                     "name": "corelink.log",
                     "type": "file",
                     "exists": true,
-                    "size_bytes": 13438,
-                    "size_kb": 13.12,
-                    "modified": "2025-11-08T07:20:07.901111",
+                    "size_bytes": 14901,
+                    "size_kb": 14.55,
+                    "modified": "2025-11-08T15:09:19.730244",
                     "created": "2025-10-27T16:27:32.511770",
                     "children": []
                   },
@@ -5799,6 +5832,17 @@
                     "children": []
                   },
                   {
+                    "path": "C:\\Soul_Algorithm\\Scripts\\logs\\diagnostic_debug.log",
+                    "name": "diagnostic_debug.log",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 191,
+                    "size_kb": 0.19,
+                    "modified": "2025-11-08T14:59:13.144717",
+                    "created": "2025-11-08T14:59:13.143278",
+                    "children": []
+                  },
+                  {
                     "path": "C:\\Soul_Algorithm\\Scripts\\logs\\grab_log.txt",
                     "name": "grab_log.txt",
                     "type": "file",
@@ -5810,9 +5854,9 @@
                     "children": []
                   }
                 ],
-                "total_size_bytes": 15055,
-                "total_size_kb": 14.7,
-                "file_count": 4,
+                "total_size_bytes": 16709,
+                "total_size_kb": 16.32,
+                "file_count": 5,
                 "directory_count": 0
               },
               {
@@ -5963,8 +6007,8 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 180518,
-            "total_size_kb": 176.29,
+            "total_size_bytes": 186055,
+            "total_size_kb": 181.69,
             "file_count": 16,
             "directory_count": 6
           },
@@ -6106,9 +6150,9 @@
             "directory_count": 0
           }
         ],
-        "total_size_bytes": 1132917298,
-        "total_size_kb": 1106364.55,
-        "file_count": 8,
+        "total_size_bytes": 1133345855,
+        "total_size_kb": 1106783.06,
+        "file_count": 2,
         "directory_count": 5
       }
     },
@@ -6124,7 +6168,7 @@
         "exists": true,
         "size_bytes": 4096,
         "size_kb": 4.0,
-        "modified": "2025-11-06T22:44:53.770899",
+        "modified": "2025-11-08T13:50:02.955387",
         "created": "2025-11-03T03:35:33.020694",
         "children": [
           {
@@ -6536,6 +6580,17 @@
             "total_size_kb": 830497.23,
             "file_count": 2,
             "directory_count": 2
+          },
+          {
+            "path": "C:\\Backups_Soul\\rebuild_manifest_complete.zip",
+            "name": "rebuild_manifest_complete.zip",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 5157629,
+            "size_kb": 5036.75,
+            "modified": "2025-11-07T11:29:15.135174",
+            "created": "2025-11-07T18:57:58.399132",
+            "children": []
           },
           {
             "path": "C:\\Backups_Soul\\Soul_Algorithm",
@@ -7826,9 +7881,9 @@
             "directory_count": 0
           }
         ],
-        "total_size_bytes": 1603460065,
-        "total_size_kb": 1565878.97,
-        "file_count": 3,
+        "total_size_bytes": 1608617694,
+        "total_size_kb": 1570915.72,
+        "file_count": 4,
         "directory_count": 3
       }
     },
@@ -7844,7 +7899,7 @@
         "exists": true,
         "size_bytes": 4096,
         "size_kb": 4.0,
-        "modified": "2025-11-08T11:39:32.462990",
+        "modified": "2025-11-08T14:59:04.653147",
         "created": "2025-11-08T10:39:02.073801",
         "children": [
           {
@@ -7870,6 +7925,17 @@
             "children": []
           },
           {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\convo_identity_structured.csv",
+            "name": "convo_identity_structured.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 32335,
+            "size_kb": 31.58,
+            "modified": "2025-11-08T14:23:05.723886",
+            "created": "2025-11-08T14:23:05.719597",
+            "children": []
+          },
+          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\desktop.ini",
             "name": "desktop.ini",
             "type": "file",
@@ -7878,6 +7944,17 @@
             "size_kb": 0.06,
             "modified": "2025-11-08T10:47:54.922590",
             "created": "2025-11-08T10:47:54.922590",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\diagnostic_v1.py",
+            "name": "diagnostic_v1.py",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 3285,
+            "size_kb": 3.21,
+            "modified": "2025-11-08T14:59:04.654147",
+            "created": "2025-11-08T14:59:04.653147",
             "children": []
           },
           {
@@ -7892,6 +7969,17 @@
             "children": []
           },
           {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Identify.csv",
+            "name": "Identify.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 23871,
+            "size_kb": 23.31,
+            "modified": "2025-11-08T14:14:33.785596",
+            "created": "2025-11-08T14:14:33.775254",
+            "children": []
+          },
+          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\manifest_export_wide.csv",
             "name": "manifest_export_wide.csv",
             "type": "file",
@@ -7903,13 +7991,35 @@
             "children": []
           },
           {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\NewTitles.csv",
+            "name": "NewTitles.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 5528,
+            "size_kb": 5.4,
+            "modified": "2025-11-08T14:37:25.966535",
+            "created": "2025-11-08T14:37:25.487743",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\raw_titles_with_ids.csv",
+            "name": "raw_titles_with_ids.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 16190,
+            "size_kb": 15.81,
+            "modified": "2025-11-08T14:00:21.896286",
+            "created": "2025-11-08T14:00:21.891706",
+            "children": []
+          },
+          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo",
             "name": "Repo",
             "type": "directory",
             "exists": true,
             "size_bytes": 4096,
             "size_kb": 4.0,
-            "modified": "2025-11-08T12:34:07.216682",
+            "modified": "2025-11-08T13:13:42.039515",
             "created": "2025-11-08T11:39:32.462990",
             "children": [
               {
@@ -7924,14 +8034,14 @@
                 "children": []
               },
               {
-                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\CORELINKSCHEMAMUSTREAD.json",
-                "name": "CORELINKSCHEMAMUSTREAD.json",
+                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\CoreLink_schema.json",
+                "name": "CoreLink_schema.json",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 160,
-                "size_kb": 0.16,
-                "modified": "2025-11-08T11:39:33.684425",
-                "created": "2025-11-08T11:39:33.684425",
+                "size_bytes": 836,
+                "size_kb": 0.82,
+                "modified": "2025-11-08T15:08:38.847758",
+                "created": "2025-11-08T13:04:04.974248",
                 "children": []
               },
               {
@@ -7939,21 +8049,10 @@
                 "name": "directory_map.json",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 410285,
-                "size_kb": 400.67,
-                "modified": "2025-11-08T12:33:20.605754",
+                "size_bytes": 410196,
+                "size_kb": 400.58,
+                "modified": "2025-11-08T12:39:28.161056",
                 "created": "2025-11-08T11:39:33.704197",
-                "children": []
-              },
-              {
-                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\DIRECTORY_STRUCTURE.md",
-                "name": "DIRECTORY_STRUCTURE.md",
-                "type": "file",
-                "exists": true,
-                "size_bytes": 3606,
-                "size_kb": 3.52,
-                "modified": "2025-11-08T11:39:33.685842",
-                "created": "2025-11-08T11:39:33.685842",
                 "children": []
               },
               {
@@ -8171,15 +8270,37 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 867588,
-            "total_size_kb": 847.25,
-            "file_count": 7,
+            "total_size_bytes": 864569,
+            "total_size_kb": 844.31,
+            "file_count": 6,
             "directory_count": 1
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\title_id_comparison.csv",
+            "name": "title_id_comparison.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 14444,
+            "size_kb": 14.11,
+            "modified": "2025-11-08T14:33:13.786568",
+            "created": "2025-11-08T14:33:13.784165",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\todo_conversations_by_id.json",
+            "name": "todo_conversations_by_id.json",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 108735256,
+            "size_kb": 106186.77,
+            "modified": "2025-11-08T14:19:58.576757",
+            "created": "2025-11-08T14:19:53.230703",
+            "children": []
           }
         ],
-        "total_size_bytes": 87885907,
-        "total_size_kb": 85826.08,
-        "file_count": 5,
+        "total_size_bytes": 196713797,
+        "total_size_kb": 192103.32,
+        "file_count": 12,
         "directory_count": 1
       }
     }
@@ -8187,6 +8308,6 @@
   "summary": {
     "total_scanned": 3,
     "total_exists": 3,
-    "total_size_mb": 2693.42734375
+    "total_size_mb": 2802.54111328125
   }
 }
