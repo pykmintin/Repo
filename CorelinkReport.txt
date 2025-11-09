@@ -1,3 +1,4 @@
+https://raw.githubusercontent.com/pykmintin/Repo/refs/heads/main/CoreLink.py https://raw.githubusercontent.com/pykmintin/Repo/refs/heads/main/CoreLink_schema.json https://raw.githubusercontent.com/pykmintin/Repo/refs/heads/main/ID%20Match%20DIagnostic%20chatlog.txt https://raw.githubusercontent.com/pykmintin/Repo/refs/heads/main/CorelinkReport.txt 
 # CoreLink v4.0 System Architecture Report
 Table of Contents
 Section 1: Technology Stack Deep Dive
