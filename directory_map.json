@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-08T22:17:59.063562",
+  "generated_at": "2025-11-10T20:20:08.854899",
   "locations": {
     "C:\\Soul_Algorithm": {
       "metadata": {
@@ -13,7 +13,7 @@
         "exists": true,
         "size_bytes": 20480,
         "size_kb": 20.0,
-        "modified": "2025-11-08T18:40:02.378414",
+        "modified": "2025-11-09T13:54:46.499207",
         "created": "2025-10-26T15:58:16.029905",
         "children": [
           {
@@ -33,7 +33,7 @@
                 "exists": true,
                 "size_bytes": 4096,
                 "size_kb": 4.0,
-                "modified": "2025-11-08T22:17:59.060861",
+                "modified": "2025-11-10T20:20:08.852647",
                 "created": "2025-10-28T21:17:43.038243",
                 "children": [
                   {
@@ -79,11 +79,33 @@
                     "modified": "2025-11-08T15:09:20.085419",
                     "created": "2025-11-08T22:17:59.060861",
                     "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Archive\\Backups\\directory_map_backup_20251109_142435.json",
+                    "name": "directory_map_backup_20251109_142435.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 418794,
+                    "size_kb": 408.98,
+                    "modified": "2025-11-08T22:17:59.236115",
+                    "created": "2025-11-09T14:24:35.176445",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Archive\\Backups\\directory_map_backup_20251110_202008.json",
+                    "name": "directory_map_backup_20251110_202008.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 426816,
+                    "size_kb": 416.81,
+                    "modified": "2025-11-09T14:24:35.368581",
+                    "created": "2025-11-10T20:20:08.852647",
+                    "children": []
                   }
                 ],
-                "total_size_bytes": 1235971,
-                "total_size_kb": 1207.0,
-                "file_count": 4,
+                "total_size_bytes": 2081581,
+                "total_size_kb": 2032.79,
+                "file_count": 6,
                 "directory_count": 0
               },
               {
@@ -137,7 +159,7 @@
                 "exists": true,
                 "size_bytes": 16384,
                 "size_kb": 16.0,
-                "modified": "2025-11-08T11:34:15.754220",
+                "modified": "2025-11-10T18:46:58.528273",
                 "created": "2025-10-25T15:00:22.464821",
                 "children": [
                   {
@@ -4335,6 +4357,17 @@
                     "children": []
                   },
                   {
+                    "path": "C:\\Soul_Algorithm\\Archive\\ChatLogs\\CoreCompile.txt",
+                    "name": "CoreCompile.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 0,
+                    "size_kb": 0.0,
+                    "modified": "2025-11-10T18:46:53.634123",
+                    "created": "2025-11-10T18:46:53.634123",
+                    "children": []
+                  },
+                  {
                     "path": "C:\\Soul_Algorithm\\Archive\\ChatLogs\\desktop.ini",
                     "name": "desktop.ini",
                     "type": "file",
@@ -4403,7 +4436,7 @@
                 ],
                 "total_size_bytes": 181575097,
                 "total_size_kb": 177319.43,
-                "file_count": 17,
+                "file_count": 18,
                 "directory_count": 2
               },
               {
@@ -4411,9 +4444,9 @@
                 "name": "Core",
                 "type": "directory",
                 "exists": true,
-                "size_bytes": 0,
-                "size_kb": 0.0,
-                "modified": "2025-11-08T06:25:43.898153",
+                "size_bytes": 4096,
+                "size_kb": 4.0,
+                "modified": "2025-11-09T11:46:31.797978",
                 "created": "2025-11-01T18:03:31.504012",
                 "children": [
                   {
@@ -4428,6 +4461,17 @@
                     "children": []
                   },
                   {
+                    "path": "C:\\Soul_Algorithm\\Archive\\Core\\Doctrine v1.md",
+                    "name": "Doctrine v1.md",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 3055,
+                    "size_kb": 2.98,
+                    "modified": "2025-11-08T19:47:42.685254",
+                    "created": "2025-11-08T19:47:41.780715",
+                    "children": []
+                  },
+                  {
                     "path": "C:\\Soul_Algorithm\\Archive\\Core\\system_snapshot.zip",
                     "name": "system_snapshot.zip",
                     "type": "file",
@@ -4439,9 +4483,9 @@
                     "children": []
                   }
                 ],
-                "total_size_bytes": 4507,
-                "total_size_kb": 4.4,
-                "file_count": 2,
+                "total_size_bytes": 7562,
+                "total_size_kb": 7.38,
+                "file_count": 3,
                 "directory_count": 0
               },
               {
@@ -5107,8 +5151,8 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 1069635838,
-            "total_size_kb": 1044566.25,
+            "total_size_bytes": 1070484503,
+            "total_size_kb": 1045395.02,
             "file_count": 14,
             "directory_count": 6
           },
@@ -5119,7 +5163,7 @@
             "exists": true,
             "size_bytes": 8192,
             "size_kb": 8.0,
-            "modified": "2025-11-08T19:47:42.580117",
+            "modified": "2025-11-09T10:46:44.072156",
             "created": "2025-10-28T21:01:04.961197",
             "children": [
               {
@@ -5167,26 +5211,48 @@
                 "children": []
               },
               {
-                "path": "C:\\Soul_Algorithm\\Core\\Doctrine.md",
-                "name": "Doctrine.md",
-                "type": "file",
-                "exists": true,
-                "size_bytes": 3055,
-                "size_kb": 2.98,
-                "modified": "2025-11-08T19:47:42.685254",
-                "created": "2025-11-08T19:47:41.780715",
-                "children": []
-              },
-              {
                 "path": "C:\\Soul_Algorithm\\Core\\Knowledge",
                 "name": "Knowledge",
                 "type": "directory",
                 "exists": true,
                 "size_bytes": 4096,
                 "size_kb": 4.0,
-                "modified": "2025-11-08T20:27:44.059372",
+                "modified": "2025-11-09T11:46:41.732576",
                 "created": "2025-11-03T08:30:48.673059",
                 "children": [
+                  {
+                    "path": "C:\\Soul_Algorithm\\Core\\Knowledge\\Blueprinting Documentation.md",
+                    "name": "Blueprinting Documentation.md",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 15785,
+                    "size_kb": 15.42,
+                    "modified": "2025-11-09T11:21:19.341680",
+                    "created": "2025-11-09T11:21:01.021276",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Core\\Knowledge\\CORE_Blueprint_Snapshot_v0_2.b64.txt",
+                    "name": "CORE_Blueprint_Snapshot_v0_2.b64.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 3052,
+                    "size_kb": 2.98,
+                    "modified": "2025-11-09T11:43:57.254775",
+                    "created": "2025-11-09T11:43:56.741284",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Core\\Knowledge\\CORE_Blueprint_Snapshot_v0_2_README.txt",
+                    "name": "CORE_Blueprint_Snapshot_v0_2_README.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 1238,
+                    "size_kb": 1.21,
+                    "modified": "2025-11-09T11:44:01.747358",
+                    "created": "2025-11-09T11:44:01.452517",
+                    "children": []
+                  },
                   {
                     "path": "C:\\Soul_Algorithm\\Core\\Knowledge\\desktop.ini",
                     "name": "desktop.ini",
@@ -5196,6 +5262,17 @@
                     "size_kb": 0.1,
                     "modified": "2025-11-08T11:34:14.017027",
                     "created": "2025-11-03T09:28:40.930262",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Core\\Knowledge\\Doctrine.md",
+                    "name": "Doctrine.md",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 6900,
+                    "size_kb": 6.74,
+                    "modified": "2025-11-09T11:46:41.831791",
+                    "created": "2025-11-08T19:47:41.780715",
                     "children": []
                   },
                   {
@@ -5214,9 +5291,9 @@
                     "name": "instructions.md",
                     "type": "file",
                     "exists": true,
-                    "size_bytes": 2921,
-                    "size_kb": 2.85,
-                    "modified": "2025-11-08T20:27:44.280271",
+                    "size_bytes": 1815,
+                    "size_kb": 1.77,
+                    "modified": "2025-11-09T10:53:12.023669",
                     "created": "2025-11-08T20:27:14.855218",
                     "children": []
                   },
@@ -5254,9 +5331,9 @@
                     "children": []
                   }
                 ],
-                "total_size_bytes": 15318,
-                "total_size_kb": 14.96,
-                "file_count": 6,
+                "total_size_bytes": 41187,
+                "total_size_kb": 40.22,
+                "file_count": 10,
                 "directory_count": 0
               },
               {
@@ -5293,9 +5370,9 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 29789,
-            "total_size_kb": 29.09,
-            "file_count": 8,
+            "total_size_bytes": 52603,
+            "total_size_kb": 51.37,
+            "file_count": 7,
             "directory_count": 1
           },
           {
@@ -5341,11 +5418,531 @@
             "name": "directory_map.json",
             "type": "file",
             "exists": true,
-            "size_bytes": 415384,
-            "size_kb": 405.65,
-            "modified": "2025-11-08T15:09:20.061368",
+            "size_bytes": 426816,
+            "size_kb": 416.81,
+            "modified": "2025-11-09T14:24:35.349634",
             "created": "2025-11-08T15:09:20.041710",
             "children": []
+          },
+          {
+            "path": "C:\\Soul_Algorithm\\Kimi K2",
+            "name": "Kimi K2",
+            "type": "directory",
+            "exists": true,
+            "size_bytes": 8192,
+            "size_kb": 8.0,
+            "modified": "2025-11-10T19:45:45.778017",
+            "created": "2025-11-09T13:54:38.120418",
+            "children": [
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Archive",
+                "name": "Archive",
+                "type": "directory",
+                "exists": true,
+                "size_bytes": 0,
+                "size_kb": 0.0,
+                "modified": "2025-11-10T18:48:35.803343",
+                "created": "2025-11-10T18:41:22.785697",
+                "children": [
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Archive\\blueprint_session_20241109.json",
+                    "name": "blueprint_session_20241109.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 1901,
+                    "size_kb": 1.86,
+                    "modified": "2025-11-09T13:55:17.513397",
+                    "created": "2025-11-10T18:48:35.803343",
+                    "children": []
+                  }
+                ],
+                "total_size_bytes": 1901,
+                "total_size_kb": 1.86,
+                "file_count": 1,
+                "directory_count": 0
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\blueprint_session_20241109.json",
+                "name": "blueprint_session_20241109.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 1901,
+                "size_kb": 1.86,
+                "modified": "2025-11-09T13:55:17.513397",
+                "created": "2025-11-09T13:55:17.513397",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\chat C chatlog.txt",
+                "name": "chat C chatlog.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 86266,
+                "size_kb": 84.24,
+                "modified": "2025-11-09T16:48:46.702406",
+                "created": "2025-11-09T16:48:46.701361",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\chat_condensed_for_D.json",
+                "name": "chat_condensed_for_D.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 124892,
+                "size_kb": 121.96,
+                "modified": "2025-11-09T17:09:50.185293",
+                "created": "2025-11-09T17:09:49.226040",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatBchatlog.txt",
+                "name": "ChatBchatlog.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 32766,
+                "size_kb": 32.0,
+                "modified": "2025-11-09T14:26:32.851134",
+                "created": "2025-11-09T14:26:04.553691",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\chatlog_20241109.md",
+                "name": "chatlog_20241109.md",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 180905,
+                "size_kb": 176.67,
+                "modified": "2025-11-09T13:56:41.981301",
+                "created": "2025-11-09T13:56:10.568685",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs",
+                "name": "ChatLogs",
+                "type": "directory",
+                "exists": true,
+                "size_bytes": 4096,
+                "size_kb": 4.0,
+                "modified": "2025-11-10T19:36:02.877451",
+                "created": "2025-11-10T18:41:22.783689",
+                "children": [
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\chat C chatlog.txt",
+                    "name": "chat C chatlog.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 86266,
+                    "size_kb": 84.24,
+                    "modified": "2025-11-09T16:48:46.702406",
+                    "created": "2025-11-10T18:48:35.736465",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\chat_condensed_for_D.json",
+                    "name": "chat_condensed_for_D.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 124892,
+                    "size_kb": 121.96,
+                    "modified": "2025-11-09T17:09:50.185293",
+                    "created": "2025-11-10T18:48:35.776746",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\ChatBchatlog.txt",
+                    "name": "ChatBchatlog.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 32766,
+                    "size_kb": 32.0,
+                    "modified": "2025-11-09T14:26:32.851134",
+                    "created": "2025-11-10T18:48:35.760696",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\chatlog_20241109.md",
+                    "name": "chatlog_20241109.md",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 180905,
+                    "size_kb": 176.67,
+                    "modified": "2025-11-09T13:56:41.981301",
+                    "created": "2025-11-10T18:48:35.769209",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\GPTOracleExperiment1Chatlog",
+                    "name": "GPTOracleExperiment1Chatlog",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 30913,
+                    "size_kb": 30.19,
+                    "modified": "2025-11-10T17:07:13.739620",
+                    "created": "2025-11-10T18:48:35.791649",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\MetaA.0735101125.txt",
+                    "name": "MetaA.0735101125.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 227372,
+                    "size_kb": 222.04,
+                    "modified": "2025-11-10T19:35:24.027251",
+                    "created": "2025-11-10T19:34:56.724823",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\MetaA0525.101125.txt",
+                    "name": "MetaA0525.101125.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 155360,
+                    "size_kb": 151.72,
+                    "modified": "2025-11-10T17:25:02.975836",
+                    "created": "2025-11-10T18:48:35.786877",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\ChatLogs\\Prompt1AssitantArchetectureReview",
+                    "name": "Prompt1AssitantArchetectureReview",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 87749,
+                    "size_kb": 85.69,
+                    "modified": "2025-11-10T12:25:34.963709",
+                    "created": "2025-11-10T18:48:35.797132",
+                    "children": []
+                  }
+                ],
+                "total_size_bytes": 926223,
+                "total_size_kb": 904.51,
+                "file_count": 8,
+                "directory_count": 0
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Combined_LLM_Summaries.txt",
+                "name": "Combined_LLM_Summaries.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 8548,
+                "size_kb": 8.35,
+                "modified": "2025-11-10T08:03:14.987473",
+                "created": "2025-11-10T08:03:14.640807",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Core Design DRAFT.txt",
+                "name": "Core Design DRAFT.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 16275,
+                "size_kb": 15.89,
+                "modified": "2025-11-09T16:24:23.660470",
+                "created": "2025-11-09T16:24:23.660470",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\GPTOracleExperiment1Chatlog",
+                "name": "GPTOracleExperiment1Chatlog",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 30913,
+                "size_kb": 30.19,
+                "modified": "2025-11-10T17:07:13.739620",
+                "created": "2025-11-10T17:07:13.739620",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\learning.json",
+                "name": "learning.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 4364,
+                "size_kb": 4.26,
+                "modified": "2025-11-10T18:22:57.224272",
+                "created": "2025-11-10T18:22:56.266917",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Logs",
+                "name": "Logs",
+                "type": "directory",
+                "exists": true,
+                "size_bytes": 0,
+                "size_kb": 0.0,
+                "modified": "2025-11-10T18:49:10.918592",
+                "created": "2025-11-10T18:41:22.789420",
+                "children": [
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Logs\\copy_report.json",
+                    "name": "copy_report.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 6002,
+                    "size_kb": 5.86,
+                    "modified": "2025-11-10T18:48:35.897943",
+                    "created": "2025-11-10T18:48:35.895941",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Logs\\verify_report.json",
+                    "name": "verify_report.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 5158,
+                    "size_kb": 5.04,
+                    "modified": "2025-11-10T18:49:10.919592",
+                    "created": "2025-11-10T18:49:10.918592",
+                    "children": []
+                  }
+                ],
+                "total_size_bytes": 11160,
+                "total_size_kb": 10.9,
+                "file_count": 2,
+                "directory_count": 0
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Meta_AIchatlog0525.101125.txt",
+                "name": "Meta_AIchatlog0525.101125.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 155360,
+                "size_kb": 151.72,
+                "modified": "2025-11-10T17:25:02.975836",
+                "created": "2025-11-10T17:25:02.975836",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\meta_master.json",
+                "name": "meta_master.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 4797,
+                "size_kb": 4.68,
+                "modified": "2025-11-10T18:10:27.711029",
+                "created": "2025-11-10T18:26:22.759584",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Prompt1_blueprint_reference.json.txt",
+                "name": "Prompt1_blueprint_reference.json.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 322,
+                "size_kb": 0.31,
+                "modified": "2025-11-10T18:04:17.545159",
+                "created": "2025-11-10T18:04:17.094053",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Prompt1_Test_Eval_Package_v1.json",
+                "name": "Prompt1_Test_Eval_Package_v1.json",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 2950,
+                "size_kb": 2.88,
+                "modified": "2025-11-10T18:09:58.328433",
+                "created": "2025-11-10T18:09:57.393865",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Prompt1AssitantArchetectureReview",
+                "name": "Prompt1AssitantArchetectureReview",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 87749,
+                "size_kb": 85.69,
+                "modified": "2025-11-10T12:25:34.963709",
+                "created": "2025-11-10T12:25:34.962275",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\R-Personal-Hybrid-LLM Web UI Framework",
+                "name": "R-Personal-Hybrid-LLM Web UI Framework",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 73639,
+                "size_kb": 71.91,
+                "modified": "2025-11-10T07:56:18.986372",
+                "created": "2025-11-10T07:56:18.985182",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports",
+                "name": "Reports",
+                "type": "directory",
+                "exists": true,
+                "size_bytes": 4096,
+                "size_kb": 4.0,
+                "modified": "2025-11-10T18:48:35.731968",
+                "created": "2025-11-10T18:41:22.726073",
+                "children": [
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Combined_LLM_Summaries.txt",
+                    "name": "Combined_LLM_Summaries.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 8548,
+                    "size_kb": 8.35,
+                    "modified": "2025-11-10T08:03:14.987473",
+                    "created": "2025-11-10T18:48:35.581625",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Core Design DRAFT.txt",
+                    "name": "Core Design DRAFT.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 16275,
+                    "size_kb": 15.89,
+                    "modified": "2025-11-09T16:24:23.660470",
+                    "created": "2025-11-10T18:48:35.560815",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\core_doctrine.json",
+                    "name": "core_doctrine.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 2761,
+                    "size_kb": 2.7,
+                    "modified": "2025-11-08T09:34:14",
+                    "created": "2025-11-10T18:48:35.647722",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\core_system_definition.json",
+                    "name": "core_system_definition.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 2523,
+                    "size_kb": 2.46,
+                    "modified": "2025-11-08T09:34:14",
+                    "created": "2025-11-10T18:48:35.658723",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\CorelinkReport.txt",
+                    "name": "CorelinkReport.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 22197,
+                    "size_kb": 21.68,
+                    "modified": "2025-11-08T09:34:12",
+                    "created": "2025-11-10T18:48:35.691257",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Industrial-Scale Prompt Engineering.txt",
+                    "name": "Industrial-Scale Prompt Engineering.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 66695,
+                    "size_kb": 65.13,
+                    "modified": "2025-11-10T07:53:11.468052",
+                    "created": "2025-11-10T18:48:35.696289",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf",
+                    "name": "Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 179890,
+                    "size_kb": 175.67,
+                    "modified": "2025-11-10T09:48:17.766139",
+                    "created": "2025-11-10T18:48:35.717636",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\learning.json",
+                    "name": "learning.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 4364,
+                    "size_kb": 4.26,
+                    "modified": "2025-11-10T18:22:57.224272",
+                    "created": "2025-11-10T18:48:35.506744",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Ledger.txt",
+                    "name": "Ledger.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 1884,
+                    "size_kb": 1.84,
+                    "modified": "2025-11-09T10:41:42.177222",
+                    "created": "2025-11-10T18:48:35.727254",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\meta_context_bundle.json",
+                    "name": "meta_context_bundle.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 4797,
+                    "size_kb": 4.68,
+                    "modified": "2025-11-10T18:10:27.711029",
+                    "created": "2025-11-10T18:48:35.464437",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Prompt1_blueprint_reference.json.txt",
+                    "name": "Prompt1_blueprint_reference.json.txt",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 322,
+                    "size_kb": 0.31,
+                    "modified": "2025-11-10T18:04:17.545159",
+                    "created": "2025-11-10T18:48:35.553018",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\Prompt1_Test_Eval_Package_v1.json",
+                    "name": "Prompt1_Test_Eval_Package_v1.json",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 2950,
+                    "size_kb": 2.88,
+                    "modified": "2025-11-10T18:09:58.328433",
+                    "created": "2025-11-10T18:48:35.531388",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\R-K2-Self-Hardening.html",
+                    "name": "R-K2-Self-Hardening.html",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 20228,
+                    "size_kb": 19.75,
+                    "modified": "2025-11-10T07:50:31.343776",
+                    "created": "2025-11-10T18:48:35.731968",
+                    "children": []
+                  },
+                  {
+                    "path": "C:\\Soul_Algorithm\\Kimi K2\\Reports\\R-Personal-Hybrid-LLM Web UI Framework",
+                    "name": "R-Personal-Hybrid-LLM Web UI Framework",
+                    "type": "file",
+                    "exists": true,
+                    "size_bytes": 73639,
+                    "size_kb": 71.91,
+                    "modified": "2025-11-10T07:56:18.986372",
+                    "created": "2025-11-10T18:48:35.617726",
+                    "children": []
+                  }
+                ],
+                "total_size_bytes": 407073,
+                "total_size_kb": 397.53,
+                "file_count": 14,
+                "directory_count": 0
+              }
+            ],
+            "total_size_bytes": 2158004,
+            "total_size_kb": 2107.43,
+            "file_count": 15,
+            "directory_count": 4
           },
           {
             "path": "C:\\Soul_Algorithm\\MemoryReconDATA - MASTER DIR",
@@ -5632,7 +6229,7 @@
             "exists": true,
             "size_bytes": 4096,
             "size_kb": 4.0,
-            "modified": "2025-11-08T20:36:22.767519",
+            "modified": "2025-11-10T18:23:01.738056",
             "created": "2025-10-27T16:27:32.646713",
             "children": [
               {
@@ -5680,20 +6277,53 @@
                 "children": []
               },
               {
+                "path": "C:\\Soul_Algorithm\\Reports\\Industrial-Scale Prompt Engineering.txt",
+                "name": "Industrial-Scale Prompt Engineering.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 66695,
+                "size_kb": 65.13,
+                "modified": "2025-11-10T07:53:11.468052",
+                "created": "2025-11-10T07:53:11.468052",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Reports\\Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf",
+                "name": "Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 179890,
+                "size_kb": 175.67,
+                "modified": "2025-11-10T09:48:17.766139",
+                "created": "2025-11-10T09:48:17.384478",
+                "children": []
+              },
+              {
                 "path": "C:\\Soul_Algorithm\\Reports\\Ledger.txt",
                 "name": "Ledger.txt",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 1972,
-                "size_kb": 1.93,
-                "modified": "2025-11-08T09:34:14",
+                "size_bytes": 1884,
+                "size_kb": 1.84,
+                "modified": "2025-11-09T10:41:42.177222",
                 "created": "2025-11-08T20:36:14.863085",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Reports\\R-K2-Self-Hardening.html",
+                "name": "R-K2-Self-Hardening.html",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 20228,
+                "size_kb": 19.75,
+                "modified": "2025-11-10T07:50:31.343776",
+                "created": "2025-11-10T07:50:31.343776",
                 "children": []
               }
             ],
-            "total_size_bytes": 29559,
-            "total_size_kb": 28.87,
-            "file_count": 5,
+            "total_size_bytes": 296284,
+            "total_size_kb": 289.34,
+            "file_count": 8,
             "directory_count": 0
           },
           {
@@ -5703,7 +6333,7 @@
             "exists": true,
             "size_bytes": 4096,
             "size_kb": 4.0,
-            "modified": "2025-11-08T19:58:16.700677",
+            "modified": "2025-11-10T18:45:53.211457",
             "created": "2025-10-27T12:08:41.634867",
             "children": [
               {
@@ -5764,6 +6394,17 @@
                 "size_kb": 3.51,
                 "modified": "2025-10-24T05:34:09.411328",
                 "created": "2025-10-22T14:32:06.210000",
+                "children": []
+              },
+              {
+                "path": "C:\\Soul_Algorithm\\Scripts\\CoreCompile.py",
+                "name": "CoreCompile.py",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 13939,
+                "size_kb": 13.61,
+                "modified": "2025-11-10T19:11:23.523341",
+                "created": "2025-11-10T18:45:32.950499",
                 "children": []
               },
               {
@@ -5924,9 +6565,9 @@
                     "name": "diagnostic_debug.log",
                     "type": "file",
                     "exists": true,
-                    "size_bytes": 191,
-                    "size_kb": 0.19,
-                    "modified": "2025-11-08T14:59:13.144717",
+                    "size_bytes": 332,
+                    "size_kb": 0.32,
+                    "modified": "2025-11-09T01:35:43.153572",
                     "created": "2025-11-08T14:59:13.143278",
                     "children": []
                   },
@@ -5942,8 +6583,8 @@
                     "children": []
                   }
                 ],
-                "total_size_bytes": 20675,
-                "total_size_kb": 20.19,
+                "total_size_bytes": 20816,
+                "total_size_kb": 20.33,
                 "file_count": 5,
                 "directory_count": 0
               },
@@ -5992,9 +6633,9 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 206352,
-            "total_size_kb": 201.52,
-            "file_count": 17,
+            "total_size_bytes": 220432,
+            "total_size_kb": 215.27,
+            "file_count": 18,
             "directory_count": 2
           },
           {
@@ -6135,10 +6776,10 @@
             "directory_count": 0
           }
         ],
-        "total_size_bytes": 1134234649,
-        "total_size_kb": 1107651.02,
+        "total_size_bytes": 1137556369,
+        "total_size_kb": 1110894.89,
         "file_count": 3,
-        "directory_count": 7
+        "directory_count": 8
       }
     },
     "C:\\Backups_Soul": {
@@ -7884,7 +8525,7 @@
         "exists": true,
         "size_bytes": 8192,
         "size_kb": 8.0,
-        "modified": "2025-11-08T19:04:20.375621",
+        "modified": "2025-11-09T02:06:22.393357",
         "created": "2025-11-08T10:39:02.073801",
         "children": [
           {
@@ -7896,6 +8537,17 @@
             "size_kb": 12.33,
             "modified": "2025-11-08T00:16:58.746317",
             "created": "2025-11-08T00:28:54.714579",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\conversation.json",
+            "name": "conversation.json",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 84361332,
+            "size_kb": 82384.11,
+            "modified": "2025-11-08T19:04:20.742318",
+            "created": "2025-11-08T19:04:20.375621",
             "children": []
           },
           {
@@ -7954,17 +8606,6 @@
             "children": []
           },
           {
-            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\convo_verified_87_minified.json",
-            "name": "convo_verified_87_minified.json",
-            "type": "file",
-            "exists": true,
-            "size_bytes": 84361332,
-            "size_kb": 82384.11,
-            "modified": "2025-11-08T19:04:20.742318",
-            "created": "2025-11-08T19:04:20.375621",
-            "children": []
-          },
-          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\desktop.ini",
             "name": "desktop.ini",
             "type": "file",
@@ -8009,6 +8650,28 @@
             "children": []
           },
           {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\filtered_conversations.json",
+            "name": "filtered_conversations.json",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 2,
+            "size_kb": 0.0,
+            "modified": "2025-11-09T02:14:18.941568",
+            "created": "2025-11-09T01:25:11.223774",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\filtered_conversations.zip",
+            "name": "filtered_conversations.zip",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 6866523,
+            "size_kb": 6705.59,
+            "modified": "2025-11-09T01:29:35.823480",
+            "created": "2025-11-09T01:29:35.008590",
+            "children": []
+          },
+          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\full242.csv",
             "name": "full242.csv",
             "type": "file",
@@ -8042,14 +8705,25 @@
             "children": []
           },
           {
-            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\manifest_half_3_preview.csv",
-            "name": "manifest_half_3_preview.csv",
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\manifest_half_3.json",
+            "name": "manifest_half_3.json",
             "type": "file",
             "exists": true,
-            "size_bytes": 16715,
-            "size_kb": 16.32,
-            "modified": "2025-11-08T18:39:29.570022",
-            "created": "2025-11-08T18:39:29.564897",
+            "size_bytes": 40935953,
+            "size_kb": 39976.52,
+            "modified": "2025-11-09T01:42:36.580403",
+            "created": "2025-11-09T01:42:35.146466",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\manifest_half_3_clean.json",
+            "name": "manifest_half_3_clean.json",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 521041,
+            "size_kb": 508.83,
+            "modified": "2025-11-09T02:03:22.920560",
+            "created": "2025-11-09T02:03:22.917561",
             "children": []
           },
           {
@@ -8064,6 +8738,28 @@
             "children": []
           },
           {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\manifest_with_hashes.csv",
+            "name": "manifest_with_hashes.csv",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 63415,
+            "size_kb": 61.93,
+            "modified": "2025-11-09T01:38:24.485554",
+            "created": "2025-11-09T01:38:24.483434",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\master_3clean.json",
+            "name": "master_3clean.json",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 40935953,
+            "size_kb": 39976.52,
+            "modified": "2025-11-09T01:38:24.009370",
+            "created": "2025-11-09T01:38:22.665158",
+            "children": []
+          },
+          {
             "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\NewTitles.csv",
             "name": "NewTitles.csv",
             "type": "file",
@@ -8072,6 +8768,17 @@
             "size_kb": 5.4,
             "modified": "2025-11-08T14:37:25.966535",
             "created": "2025-11-08T14:37:25.487743",
+            "children": []
+          },
+          {
+            "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\p.py",
+            "name": "p.py",
+            "type": "file",
+            "exists": true,
+            "size_bytes": 557,
+            "size_kb": 0.54,
+            "modified": "2025-11-09T01:42:59.305352",
+            "created": "2025-11-09T01:23:56.495672",
             "children": []
           },
           {
@@ -8092,7 +8799,7 @@
             "exists": true,
             "size_bytes": 4096,
             "size_kb": 4.0,
-            "modified": "2025-11-08T15:38:51.036544",
+            "modified": "2025-11-10T16:20:10.300196",
             "created": "2025-11-08T11:39:32.462990",
             "children": [
               {
@@ -8107,6 +8814,17 @@
                 "children": []
               },
               {
+                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\CoreLink.py",
+                "name": "CoreLink.py",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 14697,
+                "size_kb": 14.35,
+                "modified": "2025-11-08T15:37:37.705089",
+                "created": "2025-11-08T22:18:21.868942",
+                "children": []
+              },
+              {
                 "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\CoreLink_schema.json",
                 "name": "CoreLink_schema.json",
                 "type": "file",
@@ -8118,14 +8836,36 @@
                 "children": []
               },
               {
+                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\CorelinkReport.txt",
+                "name": "CorelinkReport.txt",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 22549,
+                "size_kb": 22.02,
+                "modified": "2025-11-08T22:24:10.357004",
+                "created": "2025-11-08T22:22:22.642002",
+                "children": []
+              },
+              {
                 "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\directory_map.json",
                 "name": "directory_map.json",
                 "type": "file",
                 "exists": true,
-                "size_bytes": 415384,
-                "size_kb": 405.65,
-                "modified": "2025-11-08T15:09:20.085419",
+                "size_bytes": 426816,
+                "size_kb": 416.81,
+                "modified": "2025-11-09T14:24:35.368581",
                 "created": "2025-11-08T11:39:33.704197",
+                "children": []
+              },
+              {
+                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\Doctrine.md",
+                "name": "Doctrine.md",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 6900,
+                "size_kb": 6.74,
+                "modified": "2025-11-09T11:46:41.831791",
+                "created": "2025-11-09T12:47:58.516588",
                 "children": []
               },
               {
@@ -8332,6 +9072,17 @@
                 "children": []
               },
               {
+                "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\pastebin",
+                "name": "pastebin",
+                "type": "file",
+                "exists": true,
+                "size_bytes": 102793,
+                "size_kb": 100.38,
+                "modified": "2025-11-10T16:20:10.300196",
+                "created": "2025-11-10T16:20:10.299181",
+                "children": []
+              },
+              {
                 "path": "C:\\Users\\JoshMain\\Documents\\Working-DIR\\Repo\\README.txt",
                 "name": "README.txt",
                 "type": "file",
@@ -8354,9 +9105,9 @@
                 "children": []
               }
             ],
-            "total_size_bytes": 917449,
-            "total_size_kb": 895.95,
-            "file_count": 7,
+            "total_size_bytes": 1075820,
+            "total_size_kb": 1050.61,
+            "file_count": 11,
             "directory_count": 1
           },
           {
@@ -8393,9 +9144,9 @@
             "children": []
           }
         ],
-        "total_size_bytes": 482647667,
-        "total_size_kb": 471335.61,
-        "file_count": 21,
+        "total_size_bytes": 572112767,
+        "total_size_kb": 558703.87,
+        "file_count": 27,
         "directory_count": 1
       }
     }
@@ -8403,6 +9154,6 @@
   "summary": {
     "total_scanned": 3,
     "total_exists": 3,
-    "total_size_mb": 3076.076513671875
+    "total_size_mb": 3164.564921875
   }
 }
