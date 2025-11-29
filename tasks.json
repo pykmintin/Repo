@@ -1,3 +1,11 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Etsy crystal bag",
+      "prio": "normal",
+      "done": false,
+      "created": "2025-11-29T12:31:17.279546"
+    }
+  ]
 }
