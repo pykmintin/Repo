@@ -1,3 +1,11 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Speak to Dr. Bruce and James about herbs\n!add n Organize with Scott or Tabby about money for Zyns\n!add n Do some research about buying Zyns online\n!add n Research how to clean your stainless steel enema kit\n!add n Get your green tracksuit pants from Scott\n!add n Research how Google Drive mirroring works\n!add n Research buying more RAM for the laptop\n!add n Research ocean-water supplements or other supplements to add to your morning lemon water\n!add h sort out pillcase\n!add h buy vial\n!add h Talk to Tabby about last night and information absorption\n!add h vacuuming tomorrow\n!add n Research and buy a backpack for travel\n!add h Incorporate the toss system with calling\n!add h Make calling-specific task list",
+      "prio": "normal",
+      "done": false,
+      "created": "2025-11-29T12:36:01.034962"
+    }
+  ]
 }
