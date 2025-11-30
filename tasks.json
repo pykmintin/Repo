@@ -76,6 +76,13 @@
       "prio": "high",
       "done": false,
       "created": "2025-11-30T02:46:39.646609"
+    },
+    {
+      "id": 13,
+      "text": "Research and buy a backpack for travel",
+      "prio": "normal",
+      "done": false,
+      "created": "2025-11-30T02:46:45.218666"
     }
   ]
 }
