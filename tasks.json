@@ -111,6 +111,13 @@
       "prio": "normal",
       "done": false,
       "created": "2025-11-30T23:32:19.000838"
+    },
+    {
+      "id": 18,
+      "text": "Oxy powder buy",
+      "prio": "high",
+      "done": false,
+      "created": "2025-11-30T23:42:10.225316"
     }
   ]
 }
