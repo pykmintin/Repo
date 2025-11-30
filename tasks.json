@@ -69,6 +69,13 @@
       "prio": "high",
       "done": false,
       "created": "2025-11-30T02:46:29.462019"
+    },
+    {
+      "id": 12,
+      "text": "Talk to Tabby about last night and information absorption",
+      "prio": "high",
+      "done": false,
+      "created": "2025-11-30T02:46:39.646609"
     }
   ]
 }
