@@ -41,6 +41,13 @@
       "prio": "normal",
       "done": false,
       "created": "2025-11-30T02:46:12.180463"
+    },
+    {
+      "id": 8,
+      "text": "Research buying more RAM for the laptop",
+      "prio": "normal",
+      "done": false,
+      "created": "2025-11-30T02:46:19.106653"
     }
   ]
 }
