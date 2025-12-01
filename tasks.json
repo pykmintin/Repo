@@ -132,6 +132,13 @@
       "prio": "high",
       "done": false,
       "created": "2025-12-01T05:03:50.360339"
+    },
+    {
+      "id": 21,
+      "text": "integrate disc bot with Google calendar? Multiple task lists, smarter script more options. Multiple commands per msg, other things",
+      "prio": "high",
+      "done": false,
+      "created": "2025-12-01T05:06:05.599425"
     }
   ]
 }
