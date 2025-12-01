@@ -139,6 +139,13 @@
       "prio": "high",
       "done": false,
       "created": "2025-12-01T05:06:05.599425"
+    },
+    {
+      "id": 22,
+      "text": "creating a system sales consultant agent packet",
+      "prio": "high",
+      "done": false,
+      "created": "2025-12-01T05:22:25.958229"
     }
   ]
 }
