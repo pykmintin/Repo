@@ -1,4 +1,0 @@
-367581971053805568
-1444296965188882533
-flyctl secrets set GITHUB_TOKEN=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 --app taskbot
-flyctl secrets set DISCORD_TOKEN=MTQ0NDI5NDkzODIyODY5MDk3Ng.GDxKVp.jv1TPGgRn9wD8uIlsiNXmnckhha1-snKHKQeA8 --app taskbot
