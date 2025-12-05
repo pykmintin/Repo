@@ -1,0 +1,215 @@
+# **Kimi Transcript Extractor - Design Specification v1.0**
+
+**Document Status:** Ready for Review  
+**Scope:** Design only. No code will be written until this spec is approved.  
+**Based on:** HTML structure observed in user-provided chat page snippet (2025-12-05)
+
+---
+
+## **1. System Overview**
+
+A locally-run GUI application that connects to your active Kimi session, displays your chat history, and allows you to extract full transcripts (including thinking traces and attachment metadata) into normalized files.
+
+**Core Principle:** Extract once, use forever. Files should be agent-ready.
+
+---
+
+## **2. User Journey (Exact Flow)**
+
+```
+1. Run `python scraper.py`
+2. Tool opens visible browser → navigates to kimi.com → verifies login
+3. GUI window appears with chat list (150 items, scrollable)
+4. User clicks a chat title → Tool opens chat in browser tab
+5. Auto-scroll runs (5s or until no new content) → you can watch it load
+6. Turn-by-turn extraction: User → Thinking → Output
+7. Files saved:
+   - `./transcripts/2025-01-05_HTML-Chunking.json` (structured)
+   - `./transcripts/2025-01-05_HTML-Chunking.md` (readable)
+8. GUI updates: Status → "✓ Done"
+9. User clicks next chat → repeat
+10. Checkpoint every 10 chats: "Continue? Y/N" (auto-Y after 10s)
+```
+
+---
+
+## **3. Data Model (Per Chat Turn)**
+
+Based on HTML snippet, a "turn" is a **User block + Assistant block**:
+
+```json
+{
+  "turn_number": 1,
+  "user_input": "The markdown packet...",
+  "kimi_thinking": "The user has provided...",
+  "kimi_output": "Issues I can identify...",
+  "attachments": [
+    {"filename": "tzon.ahk", "size": "32 Bytes"}
+  ]
+}
+```
+
+### **HTML → Field Mapping (Verified)**
+- `user_input`: `.chat-content-item-user .user-content p`
+- `kimi_thinking`: `.chat-content-item-assistant .thinking-container .markdown p`
+- `kimi_output`: `.chat-content-item-assistant .markdown-container .markdown p` (sibling of thinking)
+- `attachments`: `.file-card-info-name`, `.file-card-info-size`
+
+---
+
+## **4. Selector Map (From Evidence)**
+
+| Element | Selector (Primary) | Fallback | Confidence |
+|---------|-------------------|----------|------------|
+| Chat history item | `.history-part ul li a[href^="/chat/"]` | `[href*="/chat/"]` | 100% |
+| Chat title | `.chat-name` | `a` text | 100% |
+| **User message** | `.chat-content-item-user .user-content` | `[class*="user"]` | **95%** ⚠️ |
+| **Thinking block** | `.thinking-container .markdown` | `[class*="think"]` | **40%** ❌ |
+| **Assistant output** | `.chat-content-item-assistant .markdown-container .markdown` | `[class*="response"]` | **40%** ❌ |
+| Attachment name | `.file-card-info-name` | `[class*="name"]` | 100% |
+| Attachment size | `.file-card-info-size` | `[class*="size"]` | 100% |
+
+**Critical:** Thinking/output selectors are **unverified**. The HTML snippet shows them, but I haven't seen a **live K2 response** to confirm they're stable. **You must test these manually.**
+
+---
+
+## **5. GUI Design (Tkinter)**
+
+### **Layout (Single Window)**
+```
+┌─────────────────────────────────────────────┐
+│ Kimi Transcript Extractor v1.0              │
+├─────────────────────────────────────────────┤
+│ Chats: 150 total | 0 extracted              │
+│ [Progress Bar: 0%]                          │
+├─────────────────────────────────────────────┤
+│ Chat List (Scrollable)                      │
+│ ┌─────────────────────────────────────────┐ │
+│ │ ✓ HTML Chunking (Today)                │ │
+│ │ ✗ AHK v2.0.19 (Yesterday) - Failed    │ │
+│ │ ⏳ GitHub Sync (2 days ago) - Pending  │ │
+│ │ ○ Kimi K2 Bug (3 days ago)             │ │
+│ └─────────────────────────────────────────┘ │
+├─────────────────────────────────────────────┤
+│ [Scrape Selected] [Scrape All] [Pause]  │
+│ [Open Transcripts Folder]               │
+└─────────────────────────────────────────────┘
+```
+**Color Codes:** Green = Done, Red = Failed, Yellow = In Progress, Gray = Pending
+
+---
+
+## **6. Output Format Specification**
+
+### **JSON Format**
+Filename: `{date}_{sanitized_title}.json`
+```json
+{
+  "metadata": {
+    "chat_id": "19aeb807...",
+    "title": "HTML Chunking for Tokens",
+    "scraped_at": "2025-01-05T10:30:00Z",
+    "total_turns": 15,
+    "kimi_version": "K2" // Detected from presence of thinking blocks
+  },
+  "turns": [
+    {
+      "turn": 1,
+      "user": "The markdown packet...",
+      "thinking": "The user has provided...",
+      "output": "Issues I can identify...",
+      "attachments": [{"name": "tzon.ahk", "size": 32}]
+    }
+  ]
+}
+```
+
+### **Markdown Format**
+Filename: `{date}_{sanitized_title}.md`
+```markdown
+# HTML Chunking for Tokens
+**Scraped:** 2025-01-05  
+**Turns:** 15  
+**Version:** K2
+
+---
+
+## Turn 1
+
+**You:** The markdown packet...
+
+**Thinking:** The user has provided...
+
+**Output:** Issues I can identify...
+
+**Attachments:** tzon.ahk (32 Bytes)
+
+---
+
+## Turn 2
+...
+```
+
+---
+
+## **7. State Management (Resume Functionality)**
+
+**File:** `scraper_state.json`
+```json
+{
+  "session_id": "2025-01-05-run1",
+  "total_chats": 150,
+  "completed": ["19aeb807...", "19aeb72d..."],
+  "failed": [{"url": "19ae8678...", "error": "Selector failed"}],
+  "last_processed": "19aeb6a2...",
+  "config": {"gui_checkpoint": 10, "headless": false}
+}
+```
+
+**On Launch:** Tool loads state, skips `completed`, starts at `last_processed + 1`
+
+---
+
+## **8. Error Handling Strategy**
+
+| Error Type | Behavior | User Action |
+|------------|----------|-------------|
+| **Login failed** | Show "Open browser and log in" button | Manual login |
+| **Selector not found** | DBOX: "Inspect element and paste selector" | You update selector, retry |
+| **Network timeout** | Retry 3x with exponential backoff | If fails, log and skip |
+| **Thinking block missing** | Set `thinking: null`, continue | None (non-critical) |
+| **Uncaught exception** | Save error to state, pause | Review log, choose Skip/Retry/Abort |
+
+---
+
+## **9. Iteration Plan (Turn-by-Turn)**
+
+**Session 1 (Current):** Approve this spec.  
+**Session 2:** I deliver `scraper_v0.1.py` (GUI + list loading only). You run it → screenshot the GUI.  
+**Session 3:** You show me `chat.html` from a real K2 chat → I fix thinking selectors.  
+**Session 4:** Test extraction on 1 chat → you show me the saved JSON → I fix format.  
+**Session 5:** Batch test on 5 chats → you report errors → I fix.  
+**Session 6:** Full 150-chat run → you monitor → done.
+
+---
+
+## **10. Open Questions / Dependencies**
+
+1. **K2 Thinking Confirmation:** The HTML snippet shows thinking embedded in the assistant block. **If your live K2 chats use a different class structure, the spec must be updated.**
+2. **Attachment Location:** The snippet shows attachments in **history list**, not inside the chat. **If attachments appear only there, extraction logic changes.**
+3. **Rate Limits:** Moderato tier. **If scraping 150 chats triggers a ban, we need to add 2-3s delays.** I cannot test this without your feedback.
+
+---
+
+## **Your Approval Checklist**
+
+Before I write code, confirm:
+- [ ] GUI layout (Option 2) is acceptable
+- [ ] Output JSON/MD format contains all fields you need
+- [ ] Checkpoint every 10 chats is reasonable
+- [ ] Selector map confidence levels are acknowledged
+- [ ] Iteration plan (6 sessions) matches your timeline
+
+---
+
+**Status: Awaiting your approval or revision of this spec.**
