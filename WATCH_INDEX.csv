@@ -1,63 +1,108 @@
 file_path,description
-Reports\desktop.ini,pending
-Reports\Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf,pending
-Reports\Combined_LLM_Summaries.txt,pending
-Scripts\desktop.ini,pending
-TaskBot\requirements.txt,pending
-Workflows\design_strategist_entry.md,pending
-Reports\Prompt1AssitantArchetectureReview,pending
-Agents\Initialization Manifesto.txt,pending
-Synthesizing Plan.md,pending
-Scripts\exporter-markdown.js,pending
-Workflows\desktop.ini,pending
-Workflows\ExecutionWorkflow.md,pending
-Reports\ID Match DIagnostic chatlog.txt,pending
-Scripts\Corelink_schema.json,pending
-Scripts\vtt_processor.py,pending
-Agents\learning.json,pending
-Reports\LearningOBJCHATGPTRESEARCH.pdf,pending
-Outputs\CharterSystemErrorlogDUMP.txt,pending
-Outputs\system_initialization_briefcurrent.md,pending
-TaskBot\Design spec.md,pending
-Reports\pastebin.txt,pending
-The_Soul_Algorithm.md,pending
-Reports\system_state_map_FULL.json,pending
-TaskBot\fly.toml,pending
-Outputs\Condensed SystemBrief.txt,pending
-Scripts\.ArchiveScripts.lnk,pending
-Scripts\chat_processord.py,pending
-TaskBot\bot.py,pending
-Outputs\TrainingOBJReport.txt,pending
-Reports\Kimi K2 Optimization Manual_ Distillation, Meta-Prompting, and Long-Context Engineering.pdf,pending
-Reports\log.txt,pending
-Reports\learning.json,pending
-Scripts\CoreCompile.py,pending
-Reports\Designing an Advisor Agent for a Multi-Agent LLM System (Phase 1 Exploration).pdf,pending
-Agents\desktop.ini,pending
-Outputs\meta_designerinitialization_v1.2.json,pending
-Scripts\Corelink.pyw,pending
-TaskBot\Current status report.txt,pending
-TaskBot\Dockerfile,pending
-Reports\LearningReportsSummary.txt,pending
-Corelink Expansion.md,pending
 .Soul_Algorithm.lnk,pending
-Reports\CORELINKREPORT).md,pending
-Workflows\DesignRationalExecutionWF.txt,pending
-Reports\R-K2-Self-Hardening.html,pending
-Workflows\Workflows - Shortcut.lnk,pending
-Reports\R-Personal-Hybrid-LLM Web UI Framework,pending
-Scripts\Corelink.py,pending
-Scripts\chat_processor.py,pending
-Reports\GPTOracleExperiment1Chatlog,pending
-Workflows\AdvisorAgents.md,pending
-Reports\new 1.txt,pending
-Reports\Report.txt,pending
-Reports\Master Prompting Playbook for Kimi K2 Power Users.pdf,pending
-Reports\Exhaustive Survey of Free AI‑Powered Context Cleaning Pipelines for Voice Input.pdf,pending
-Workflows\ExecutionWorkflowneedsjsonfilled.md,pending
-Reports\Research Report_ Conceptual Design of a Stateless Advisor Agent for Multi-Agent Systems.pdf,pending
-Outputs\Blueprinting Documentation.md,pending
-TaskBot\tasks.json,pending
-Outputs\MetaArchetect.txt,pending
-Reports\LOResarchPrompt.txt,pending
-Outputs\desktop.ini,pending
+Corelink Expansion.md,pending
+HTML Grab DesignSPEC.txt,pending
+Meta convo analyser transcript.txt,pending
+python_3.14_full_env_report.txt,pending
+Synthesizing Plan.md,pending
+test agent summarisation packet_.txt,pending
+The_Soul_Algorithm.md,pending
+WATCH_INDEX.csv,pending
+Agents/Initialization Manifesto.txt,pending
+Agents/learning.json,pending
+Agents/Advisor.v1/ID.json,pending
+Agents/Advisor.v1/ID.v002.json,pending
+Agents/Advisor.v1/L02.json,pending
+Agents/Advisor.v1/README.md,pending
+Agents/Advisor.v1/SS.json,pending
+Outputs/Blueprinting Documentation.md,pending
+Outputs/CharterSystemErrorlogDUMP.txt,pending
+Outputs/Condensed SystemBrief.txt,pending
+Outputs/meta_designerinitialization_v1.2.json,pending
+Outputs/MetaArchetect.txt,pending
+Outputs/system_initialization_briefcurrent.md,pending
+Outputs/TrainingOBJReport.txt,pending
+Outputs/Learning OBJ from strings/advisor 1 full log .txt,pending
+Outputs/Learning OBJ from strings/Advisor Learning Reports.pdf,pending
+Outputs/Learning OBJ from strings/advisor_fragments_semantic.txt,pending
+Outputs/Learning OBJ from strings/advisor_fragments_sentence.txt,pending
+Outputs/Learning OBJ from strings/advisor_learning_weights.csv,pending
+Outputs/Learning OBJ from strings/advisor_learningOBJ.json,pending
+Outputs/Learning OBJ from strings/advisor1_chat.json,pending
+Outputs/Learning OBJ from strings/advisor1_code_map.json,pending
+Outputs/Learning OBJ from strings/learningobj.json,pending
+Outputs/Learning OBJ from strings/LearningOBJ1.json,pending
+Outputs/Learning OBJ from strings/LearningOBJCHATGPTRESEARCH.pdf,pending
+Outputs/Learning OBJ from strings/TrainingOBJReport.txt,pending
+Outputs/OK Computer/chat_processor_gui.py,pending
+Outputs/OK Computer/chat_processor_v2.py,pending
+Outputs/OK Computer/GUI_INTEGRATION_SUMMARY.md,pending
+Outputs/OK Computer/IMPLEMENTATION_SUMMARY.md,pending
+Outputs/OK Computer/test_chat_processor.py,pending
+Reports/Combined_LLM_Summaries.txt,pending
+Reports/CORELINKREPORT).md,pending
+Reports/Designing an Advisor Agent for a Multi-Agent LLM System (Phase 1 Exploration).pdf,pending
+Reports/Exhaustive Survey of Free AI‑Powered Context Cleaning Pipelines for Voice Input.pdf,pending
+Reports/GPTOracleExperiment1Chatlog,pending
+Reports/ID Match DIagnostic chatlog.txt,pending
+Reports/Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.pdf,pending
+Reports/Kimi K2 Optimization Manual_ Distillation, Meta-Prompting, and Long-Context Engineering.pdf,pending
+Reports/learning.json,pending
+Reports/LearningOBJCHATGPTRESEARCH.pdf,pending
+Reports/LearningReportsSummary.txt,pending
+Reports/log.txt,pending
+Reports/LOResarchPrompt.txt,pending
+Reports/Master Prompting Playbook for Kimi K2 Power Users.pdf,pending
+Reports/new 1.txt,pending
+Reports/pastebin.txt,pending
+Reports/Prompt1AssitantArchetectureReview,pending
+Reports/R-K2-Self-Hardening.html,pending
+Reports/R-Personal-Hybrid-LLM Web UI Framework,pending
+Reports/Report.txt,pending
+Reports/Research Report_ Conceptual Design of a Stateless Advisor Agent for Multi-Agent Systems.pdf,pending
+Reports/system_state_map_FULL.json,pending
+Reports/.txtReports/ComprehensiveLOReport.txt,pending
+Reports/.txtReports/Designing an Advisor Agent for a Multi-Agent LLM System (Phase 1 Exploration).txt,pending
+Reports/.txtReports/Industrial-Scale Prompt Engineering.txt,pending
+Reports/.txtReports/Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.txt,pending
+Reports/.txtReports/Kimi K2 Optimization Manual_ Distillation, Meta-Prompting, and Long-Context Engineering.txt,pending
+Reports/.txtReports/Master Prompting Playbook for Kimi K2 Power Users.txt,pending
+Reports/.txtReports/Research Report_ Conceptual Design of a Stateless Advisor Agent for Multi-Agent Systems.txt,pending
+Reports/.txtReports/WebUIAgentsReport.txt,pending
+Scripts/.ArchiveScripts.lnk,pending
+Scripts/chat_processor.py,pending
+Scripts/chat_processord.py,pending
+Scripts/CoreCompile.py,pending
+Scripts/Corelink_schema.json,pending
+Scripts/Corelink.py,pending
+Scripts/Corelink.pyw,pending
+Scripts/exporter-markdown.js,pending
+Scripts/vtt_processor.py,pending
+Scripts/logs/cache_clear_log.txt,pending
+Scripts/logs/compile.log,pending
+Scripts/logs/corelink.log,pending
+Scripts/logs/diagnostic_debug.log,pending
+Scripts/logs/grab_log.txt,pending
+Scripts/TaskBot/bot.py,pending
+Scripts/TaskBot/Current status report.txt,pending
+Scripts/TaskBot/Design spec.md,pending
+Scripts/TaskBot/Dockerfile,pending
+Scripts/TaskBot/fly.toml,pending
+Scripts/TaskBot/requirements.txt,pending
+Scripts/TaskBot/tasks.json,pending
+Scripts/__pycache__/chat_processor.cpython-314.pyc,pending
+Scripts/__pycache__/dirmapper.cpython-314.pyc,pending
+TaskBot/bot.py,pending
+TaskBot/Current status report.txt,pending
+TaskBot/Design spec.md,pending
+TaskBot/Dockerfile,pending
+TaskBot/fly.toml,pending
+TaskBot/requirements.txt,pending
+TaskBot/tasks.json,pending
+Workflows/AdvisorAgents.md,pending
+Workflows/design_strategist_entry.md,pending
+Workflows/DesignRationalExecutionWF.txt,pending
+Workflows/ExecutionWorkflow.md,pending
+Workflows/ExecutionWorkflowneedsjsonfilled.md,pending
+Workflows/Workflows - Shortcut.lnk,pending
+Workflows/MetaAnalystlearningpack/combined_artifacts.json,pending
