@@ -1,13 +1,12 @@
 file_path,description
-.Soul_Algorithm.lnk,pending
-Corelink Expansion.md,pending
-HTML Grab DesignSPEC.txt,pending
-Meta convo analyser transcript.txt,pending
-python_3.14_full_env_report.txt,pending
-Synthesizing Plan.md,pending
-test agent summarisation packet_.txt,pending
-The_Soul_Algorithm.md,pending
-WATCH_INDEX.csv,pending
+Corelink Expansion.md,Analysis of 3 agent plans for Corelink expansion: chat grabber processor and PWA launcher
+HTML Grab DesignSPEC.txt,Design specification for Kimi transcript extractor with GUI and HTML selectors
+Meta convo analyser transcript.txt,Conversation about stateless AI agents with pseudo-state and context management
+python_3.14_full_env_report.txt,Python 3.14 environment report showing installed packages and system info
+Synthesizing Plan.md,Charter for a synthesizer system to prevent insight loss across agent conversations
+test agent summarisation packet_.txt,Transcript of agent handoff for TaskBot system design with ADHD constraints
+The_Soul_Algorithm.md,Master blueprint v1.2 for meta-aware agent systems with roles and workflows
+WATCH_INDEX.csv,Master repository manifest tracking all files and their descriptions
 Agents/Initialization Manifesto.txt,pending
 Agents/learning.json,pending
 Agents/Advisor.v1/ID.json,pending
@@ -62,43 +61,33 @@ Reports/Report.txt,pending
 Reports/Research Report_ Conceptual Design of a Stateless Advisor Agent for Multi-Agent Systems.pdf,pending
 Reports/system_state_map_FULL.json,pending
 Reports/.txtReports/ComprehensiveLOReport.txt,pending
-Reports/.txtReports/Designing an Advisor Agent for a Multi-Agent LLM System (Phase 1 Exploration).txt,pending
+Reports/.txtReports/Designing an Advisor Agent for a Multi-Agent System (Phase 1 Exploration).txt,pending
 Reports/.txtReports/Industrial-Scale Prompt Engineering.txt,pending
 Reports/.txtReports/Kimi K2 Operational Modes_ A Design Guide for Multi-Candidate Generation and Synthesis.txt,pending
 Reports/.txtReports/Kimi K2 Optimization Manual_ Distillation, Meta-Prompting, and Long-Context Engineering.txt,pending
 Reports/.txtReports/Master Prompting Playbook for Kimi K2 Power Users.txt,pending
 Reports/.txtReports/Research Report_ Conceptual Design of a Stateless Advisor Agent for Multi-Agent Systems.txt,pending
 Reports/.txtReports/WebUIAgentsReport.txt,pending
-Scripts/.ArchiveScripts.lnk,pending
-Scripts/chat_processor.py,pending
-Scripts/chat_processord.py,pending
-Scripts/CoreCompile.py,pending
-Scripts/Corelink_schema.json,pending
-Scripts/Corelink.py,pending
-Scripts/Corelink.pyw,pending
-Scripts/exporter-markdown.js,pending
-Scripts/vtt_processor.py,pending
-Scripts/logs/cache_clear_log.txt,pending
-Scripts/logs/compile.log,pending
-Scripts/logs/corelink.log,pending
-Scripts/logs/diagnostic_debug.log,pending
-Scripts/logs/grab_log.txt,pending
-Scripts/TaskBot/bot.py,pending
-Scripts/TaskBot/Current status report.txt,pending
-Scripts/TaskBot/Design spec.md,pending
-Scripts/TaskBot/Dockerfile,pending
-Scripts/TaskBot/fly.toml,pending
-Scripts/TaskBot/requirements.txt,pending
-Scripts/TaskBot/tasks.json,pending
-Scripts/__pycache__/chat_processor.cpython-314.pyc,pending
-Scripts/__pycache__/dirmapper.cpython-314.pyc,pending
-TaskBot/bot.py,pending
-TaskBot/Current status report.txt,pending
-TaskBot/Design spec.md,pending
-TaskBot/Dockerfile,pending
-TaskBot/fly.toml,pending
-TaskBot/requirements.txt,pending
-TaskBot/tasks.json,pending
+Scripts/chat_processor.py,Core transcript pipeline for Kimi chat JSON extraction and markdown export
+Scripts/chat_processord.py,Duplicate/development version of chat_processor.py with minor variations
+Scripts/CoreCompile.py,Master orchestrator for Corelink queue-based file processing pipeline
+Scripts/Corelink_schema.json,JSON schema defining agent context and pipeline configuration structure
+Scripts/Corelink.py,Core agent linking system for conversational state management and task routing
+Scripts/Corelink.pyw,Windowed/no-console version of Corelink.py for GUI execution
+Scripts/exporter-markdown.js,JavaScript comparison table for dirmapper v6.3.1 vs v6.3 versions
+Scripts/vtt_processor.py,Voice-to-text processor with WhisperX integration for audio transcription
+Scripts/logs/cache_clear_log.txt,Cache clearing operation logs with file-by-file deletion records
+Scripts/logs/compile.log,CoreCompile execution logs showing queue processing and task completion
+Scripts/logs/corelink.log,Corelink agent execution logs with datetime stamps and operation traces
+Scripts/logs/diagnostic_debug.log,Detailed diagnostic logs for agent operations and error tracking
+Scripts/logs/grab_log.txt,HTML grabber tool execution logs for transcript extraction
+Scripts/TaskBot/bot.py,Discord task bot with GitHub API integration for personal task management
+Scripts/TaskBot/Current status report.txt,Current system state with 24 active tasks and user objectives
+Scripts/TaskBot/Design spec.md,Authority Plan v1.6 for multi-list Discord task bot with Google Calendar sync
+Scripts/TaskBot/Dockerfile,Docker configuration for Python 3.11-slim TaskBot deployment
+Scripts/TaskBot/fly.toml,Fly.io deployment config with 256MB RAM and environment variables
+Scripts/TaskBot/requirements.txt,Python dependencies: discord.py and requests
+Scripts/TaskBot/tasks.json,Live task data JSON with 24 tasks (8 high, 13 normal, 3 completed)
 Workflows/AdvisorAgents.md,pending
 Workflows/design_strategist_entry.md,pending
 Workflows/DesignRationalExecutionWF.txt,pending
