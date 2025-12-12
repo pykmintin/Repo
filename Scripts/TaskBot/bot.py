@@ -72,32 +72,68 @@ def parse_add(text):
     return priority, task_type, ' '.join(remaining)
 
 
-def parse_export(phrase):
-    phrase = phrase.lower()
-    now = datetime.utcnow()
-
-    if 'tomorrow' in phrase:
-        date = now + timedelta(days=1)
-    elif 'today' in phrase:
-        date = now
+def parse_tasks_query(message):
+    msg = message.lower()
+    if 'all' in msg:
+        status = 'all'
+    elif 'completed' in msg or re.search(r'\bc\b', msg):
+        status = 'completed'
     else:
-        return None, "Need phrase like 'tomorrow at 3pm'"
+        status = 'incomplete'
 
-    time_match = re.search(r'at\s+(\d{1,2}(?::\d{2})?)\s*(am|pm)?', phrase)
-    if time_match:
-        time_str, period = time_match.groups()
-        hour, minute = map(int, time_str.split(
-            ':')) if ':' in time_str else (int(time_str), 0)
-        if period == 'pm' and hour != 12:
-            hour += 12
-        date = date.replace(hour=hour, minute=minute, second=0)
-        return date.isoformat() + 'Z', None
-    return None, "What time?"
+    if 'both' in msg:
+        context = 'both'
+    elif 'work' in msg or re.search(r'\bw\b', msg):
+        context = 'work'
+    elif 'personal' in msg or re.search(r'\bp\b', msg):
+        context = 'personal'
+    else:
+        context = 'personal'
+
+    return context, status
+
+
+def get_filtered_tasks_with_mapping(context='personal', status='incomplete'):
+    all_tasks = get_tasks()
+
+    if context == 'personal':
+        tasks = [t for t in all_tasks if t['type'] == 'personal']
+    elif context == 'work':
+        tasks = [t for t in all_tasks if t['type'] == 'work']
+    else:
+        tasks = all_tasks
+
+    if status == 'incomplete':
+        tasks = [t for t in tasks if not t['completed']]
+        display_id_map = {i+1: t['id'] for i, t in enumerate(tasks)}
+    elif status == 'completed':
+        tasks = [t for t in tasks if t['completed']]
+        display_id_map = {}
+    else:
+        incomplete = [t for t in tasks if not t['completed']]
+        completed = [t for t in tasks if t['completed']]
+        display_id_map = {i+1: t['id'] for i, t in enumerate(incomplete)}
+        tasks = incomplete + completed
+
+    tasks.sort(key=lambda t: (0 if t['priority'] == 'high' else 1, t['id']))
+    return tasks, display_id_map
+
+
+def resolve_task_id(command_message, task_id, context_hint='personal'):
+    context = parse_tasks_query(command_message)[0]
+    if context == 'personal' and context_hint != 'personal':
+        context = context_hint
+
+    tasks, mapping = get_filtered_tasks_with_mapping(context, 'incomplete')
+    if task_id in mapping:
+        return mapping[task_id]
+    return task_id
 
 
 intents = discord.Intents.default()
 intents.message_content = True
-bot = commands.Bot(command_prefix=PREFIX, intents=intents)
+bot = commands.Bot(
+    command_prefix=commands.when_mentioned_or(''), intents=intents)
 
 
 def is_authorized(ctx):
@@ -131,62 +167,110 @@ async def add_cmd(ctx, *, text: str):
 
 @bot.command(name='tasks')
 @commands.check(is_authorized)
-async def tasks_cmd(ctx, filter: str = 'personal'):
-    all_tasks = get_tasks()
+async def tasks_cmd(ctx, *, query: str = ''):
+    context, status = parse_tasks_query(query or ctx.message.content)
 
-    if filter == 'personal':
-        tasks = [t for t in all_tasks if t['type'] == 'personal']
-        title = '📋 Personal Tasks'
-    elif filter == 'work':
-        tasks = [t for t in all_tasks if t['type'] == 'work']
-        title = '💼 Work Tasks'
-    elif filter == 'all':
-        tasks = all_tasks
-        title = '📋 All Tasks'
+    if context == 'personal':
+        tasks = [t for t in get_tasks() if t['type'] == 'personal']
+    elif context == 'work':
+        tasks = [t for t in get_tasks() if t['type'] == 'work']
     else:
-        return await ctx.send('❌ Use: tasks / tasks work / tasks all')
+        tasks = [t for t in get_tasks()]
+
+    if status == 'incomplete':
+        tasks = [t for t in tasks if not t['completed']]
+        display_id_map = {i+1: t['id'] for i, t in enumerate(tasks)}
+    elif status == 'completed':
+        tasks = [t for t in tasks if t['completed']]
+        display_id_map = {}
+    else:
+        incomplete = [t for t in tasks if not t['completed']]
+        completed = [t for t in tasks if t['completed']]
+        display_id_map = {i+1: t['id'] for i, t in enumerate(incomplete)}
+        tasks = incomplete + completed
+
+    tasks.sort(key=lambda t: (0 if t['priority'] == 'high' else 1, t['id']))
 
     if not tasks:
-        return await ctx.send(f'📭 No {filter} tasks')
+        return await ctx.send(f'📭 No {context} {status} tasks')
 
-    # Sort: high priority first, then incomplete before completed
-    tasks.sort(key=lambda t: (0 if t['priority']
-               == 'high' else 1, t['completed'], t['id']))
+    title_map = {
+        'personal': '📋 Personal Tasks',
+        'work': '💼 Work Tasks',
+        'both': '📋 All Tasks'
+    }
+    title = title_map.get(context, '📋 Tasks')
 
     lines = []
-    for t in tasks:
+    for i, t in enumerate(tasks):
         ctx_icon = '🏠' if t['type'] == 'personal' else '💼'
         prio_icon = '🔴' if t['priority'] == 'high' else '⚪'
         status_icon = '✅' if t['completed'] else '⏳'
-        lines.append(
-            f'{ctx_icon} {prio_icon} #{t["id"]} {status_icon} {t["text"]}')
+
+        if status == 'incomplete' or (status == 'all' and not t['completed']):
+            display_num = display_id_map.get(i+1, t['id'])
+            lines.append(
+                f'{ctx_icon} {prio_icon} #{display_num} {status_icon} {t["text"]}')
+        else:
+            lines.append(
+                f'{ctx_icon} {prio_icon} #{t["id"]} {status_icon} {t["text"]}')
 
     await ctx.send(f'**{title}**\n' + '\n'.join(lines))
 
 
-@bot.command(name='complete')
+@bot.command(name='complete', aliases=['done'])
 @commands.check(is_authorized)
-async def complete_cmd(ctx, task_id: int):
+async def complete_cmd(ctx, *, args: str):
+    parts = args.split(maxsplit=1)
+    if len(parts) < 1:
+        return await ctx.send('❌ Usage: complete <id>')
+
+    task_id_str = parts[0]
+    context_hint = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+
+    try:
+        task_id = int(task_id_str)
+    except ValueError:
+        return await ctx.send('❌ Invalid task ID')
+
+    real_id = resolve_task_id(ctx.message.content, task_id, context_hint)
     tasks = get_tasks()
+
     for t in tasks:
-        if t['id'] == task_id:
+        if t['id'] == real_id:
             t['completed'] = True
             t['completed_at'] = datetime.utcnow().isoformat() + 'Z'
             save_tasks(tasks)
-            return await ctx.send(f'✅ #{task_id} completed')
-    await ctx.send(f'❌ #{task_id} not found')
+            return await ctx.send(f'✅ #{task_id_str} completed')
+
+    await ctx.send(f'❌ #{task_id_str} not found')
 
 
 @bot.command(name='delete')
 @commands.check(is_authorized)
-async def delete_cmd(ctx, task_id: int):
+async def delete_cmd(ctx, *, args: str):
+    parts = args.split(maxsplit=1)
+    if len(parts) < 1:
+        return await ctx.send('❌ Usage: delete <id>')
+
+    task_id_str = parts[0]
+    context_hint = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+
+    try:
+        task_id = int(task_id_str)
+    except ValueError:
+        return await ctx.send('❌ Invalid task ID')
+
+    real_id = resolve_task_id(ctx.message.content, task_id, context_hint)
     tasks = get_tasks()
+
     for i, t in enumerate(tasks):
-        if t['id'] == task_id:
+        if t['id'] == real_id:
             removed = tasks.pop(i)
             save_tasks(tasks)
-            return await ctx.send(f'🗑️ Deleted: #{task_id} "{removed["text"]}"')
-    await ctx.send(f'❌ #{task_id} not found')
+            return await ctx.send(f'🗑️ Deleted: #{task_id_str} "{removed["text"]}"')
+
+    await ctx.send(f'❌ #{task_id_str} not found')
 
 
 @bot.command(name='edit')
@@ -198,6 +282,7 @@ async def edit_cmd(ctx, task_id: int, *, new_text: str):
             t['text'] = new_text
             save_tasks(tasks)
             return await ctx.send(f'✏️ #{task_id} updated: {new_text}')
+
     await ctx.send(f'❌ #{task_id} not found')
 
 
@@ -215,7 +300,31 @@ async def priority_cmd(ctx, task_id: int, level: str):
             t['priority'] = priority
             save_tasks(tasks)
             return await ctx.send(f'🎯 #{task_id} priority set to {priority}')
+
     await ctx.send(f'❌ #{task_id} not found')
+
+
+def parse_export(phrase):
+    phrase = phrase.lower()
+    now = datetime.utcnow()
+
+    if 'tomorrow' in phrase:
+        date = now + timedelta(days=1)
+    elif 'today' in phrase:
+        date = now
+    else:
+        return None, "Need phrase like 'tomorrow at 3pm'"
+
+    time_match = re.search(r'at\s+(\d{1,2}(?::\d{2})?)\s*(am|pm)?', phrase)
+    if time_match:
+        time_str, period = time_match.groups()
+        hour, minute = map(int, time_str.split(
+            ':')) if ':' in time_str else (int(time_str), 0)
+        if period == 'pm' and hour != 12:
+            hour += 12
+        date = date.replace(hour=hour, minute=minute, second=0)
+        return date.isoformat() + 'Z', None
+    return None, "What time?"
 
 
 @bot.command(name='export')
