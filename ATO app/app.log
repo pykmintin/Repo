@@ -1,0 +1,126 @@
+2025-12-11 16:15:12,736 - INFO - === NDIS ASSISTANT STARTUP ===
+2025-12-11 16:15:13,179 - INFO - All imports successful
+2025-12-11 16:15:13,254 - INFO - Config loaded: 1 categories
+2025-12-11 16:15:13,254 - INFO - Search root: 'C:/Users/alles/My Drive'
+2025-12-11 16:15:13,254 - INFO - Screenshot folder: 'C:/Users/alles/My Drive/ATO app/Screenshots'
+2025-12-11 16:15:13,257 - INFO - Loaded OCR cache: 106 entries
+2025-12-11 16:15:13,291 - INFO - Loaded 0 completed hashes
+2025-12-11 16:15:13,292 - INFO - Loaded 106 pending items
+2025-12-11 16:15:14,034 - INFO - === STARTING ORGANIZE AND SCAN ===
+2025-12-11 16:15:14,035 - INFO - Search root: C:/Users/alles/My Drive
+2025-12-11 16:15:14,035 - INFO - Screenshot folder: C:/Users/alles/My Drive/ATO app/Screenshots
+2025-12-11 16:15:14,036 - INFO - os.listdir found 6 items in search root
+2025-12-11 16:15:14,036 - INFO - os.scandir found 6 items in search root
+2025-12-11 16:15:14,046 - INFO - os.walk completed 11 directories
+2025-12-11 16:15:14,046 - INFO - Total screenshot files found: 106
+2025-12-11 16:15:14,297 - INFO - Used cache for: Screenshot_20250928_125011_Westpac.jpg
+2025-12-11 16:15:14,299 - INFO - Used cache for: Screenshot_20250928_125033_Westpac.jpg
+2025-12-11 16:15:14,303 - INFO - Used cache for: Screenshot_20250928_125242_Westpac.jpg
+2025-12-11 16:15:14,304 - INFO - Used cache for: Screenshot_20250928_125316_Westpac.jpg
+2025-12-11 16:15:14,305 - INFO - Used cache for: Screenshot_20250928_125519_Westpac.jpg
+2025-12-11 16:15:14,306 - INFO - Used cache for: Screenshot_20250928_125547_Westpac.jpg
+2025-12-11 16:15:14,306 - INFO - Used cache for: Screenshot_20250928_125640_Westpac.jpg
+2025-12-11 16:15:14,307 - INFO - Used cache for: Screenshot_20250928_125713_Westpac.jpg
+2025-12-11 16:15:14,307 - INFO - Used cache for: Screenshot_20250928_125752_Westpac.jpg
+2025-12-11 16:15:14,308 - INFO - Used cache for: Screenshot_20250928_125921_Westpac.jpg
+2025-12-11 16:15:14,309 - INFO - Used cache for: Screenshot_20250928_125953_Westpac.jpg
+2025-12-11 16:15:14,309 - INFO - Used cache for: Screenshot_20250928_130021_Westpac.jpg
+2025-12-11 16:15:14,310 - INFO - Used cache for: Screenshot_20250928_130111_Westpac.jpg
+2025-12-11 16:15:14,312 - INFO - Used cache for: Screenshot_20250928_130213_Westpac.jpg
+2025-12-11 16:15:14,313 - INFO - Used cache for: Screenshot_20250928_130339_Westpac.jpg
+2025-12-11 16:15:14,314 - INFO - Used cache for: Screenshot_20250928_130413_Westpac.jpg
+2025-12-11 16:15:14,314 - INFO - Used cache for: Screenshot_20250928_130437_Westpac.jpg
+2025-12-11 16:15:14,314 - INFO - Used cache for: Screenshot_20250928_130504_Westpac.jpg
+2025-12-11 16:15:14,315 - INFO - Used cache for: Screenshot_20250928_130547_Westpac.jpg
+2025-12-11 16:15:14,315 - INFO - Used cache for: Screenshot_20250928_130650_Westpac.jpg
+2025-12-11 16:15:14,316 - INFO - Used cache for: Screenshot_20250928_130720_Westpac.jpg
+2025-12-11 16:15:14,316 - INFO - Used cache for: Screenshot_20250928_130831_Westpac.jpg
+2025-12-11 16:15:14,317 - INFO - Used cache for: Screenshot_20250928_130859_Westpac.jpg
+2025-12-11 16:15:14,317 - INFO - Used cache for: Screenshot_20250928_130916_Westpac.jpg
+2025-12-11 16:15:14,317 - INFO - Used cache for: Screenshot_20250928_130936_Westpac.jpg
+2025-12-11 16:15:14,318 - INFO - Used cache for: Screenshot_20250928_131009_Westpac.jpg
+2025-12-11 16:15:14,318 - INFO - Used cache for: Screenshot_20250928_131029_Westpac.jpg
+2025-12-11 16:15:14,318 - INFO - Used cache for: Screenshot_20250928_131053_Westpac.jpg
+2025-12-11 16:15:14,319 - INFO - Used cache for: Screenshot_20250928_131155_Westpac.jpg
+2025-12-11 16:15:14,320 - INFO - Used cache for: Screenshot_20250928_131227_Westpac.jpg
+2025-12-11 16:15:14,320 - INFO - Used cache for: Screenshot_20250928_131251_Westpac.jpg
+2025-12-11 16:15:14,321 - INFO - Used cache for: Screenshot_20250928_131312_Westpac.jpg
+2025-12-11 16:15:14,321 - INFO - Used cache for: Screenshot_20250928_131414_Westpac.jpg
+2025-12-11 16:15:14,321 - INFO - Used cache for: Screenshot_20250928_131444_Westpac.jpg
+2025-12-11 16:15:14,322 - INFO - Used cache for: Screenshot_20250928_131546_Westpac.jpg
+2025-12-11 16:15:14,322 - INFO - Used cache for: Screenshot_20250928_131602_Westpac.jpg
+2025-12-11 16:15:14,322 - INFO - Used cache for: Screenshot_20250928_131620_Westpac.jpg
+2025-12-11 16:15:14,323 - INFO - Used cache for: Screenshot_20250928_131639_Westpac.jpg
+2025-12-11 16:15:14,323 - INFO - Used cache for: Screenshot_20250928_131703_Westpac.jpg
+2025-12-11 16:15:14,323 - INFO - Used cache for: Screenshot_20250928_142122_Westpac.jpg
+2025-12-11 16:15:14,324 - INFO - Used cache for: Screenshot_20250928_142203_Westpac.jpg
+2025-12-11 16:15:14,324 - INFO - Used cache for: Screenshot_20250928_142259_Westpac.jpg
+2025-12-11 16:15:14,324 - INFO - Used cache for: Screenshot_20250928_142437_Westpac.jpg
+2025-12-11 16:15:14,325 - INFO - Used cache for: Screenshot_20250928_142506_Westpac.jpg
+2025-12-11 16:15:14,325 - INFO - Used cache for: Screenshot_20250928_142539_Westpac.jpg
+2025-12-11 16:15:14,325 - INFO - Used cache for: Screenshot_20250928_142709_Westpac.jpg
+2025-12-11 16:15:14,325 - INFO - Used cache for: Screenshot_20250928_142737_Westpac.jpg
+2025-12-11 16:15:14,326 - INFO - Used cache for: Screenshot_20250928_142829_Westpac.jpg
+2025-12-11 16:15:14,326 - INFO - Used cache for: Screenshot_20250928_142855_Westpac.jpg
+2025-12-11 16:15:14,327 - INFO - Used cache for: Screenshot_20250928_143149_Westpac.jpg
+2025-12-11 16:15:14,328 - INFO - Used cache for: Screenshot_20250928_143221_Westpac.jpg
+2025-12-11 16:15:14,328 - INFO - Used cache for: Screenshot_20250928_143256_Westpac.jpg
+2025-12-11 16:15:14,328 - INFO - Used cache for: Screenshot_20250928_143347_Westpac.jpg
+2025-12-11 16:15:14,329 - INFO - Used cache for: Screenshot_20250928_143423_Westpac.jpg
+2025-12-11 16:15:14,329 - INFO - Used cache for: Screenshot_20250928_143451_Westpac.jpg
+2025-12-11 16:15:14,330 - INFO - Used cache for: Screenshot_20251019_201529_Westpac.jpg
+2025-12-11 16:15:14,330 - INFO - Used cache for: Screenshot_20251019_201631_Westpac.jpg
+2025-12-11 16:15:14,330 - INFO - Used cache for: Screenshot_20251019_201704_Westpac.jpg
+2025-12-11 16:15:14,331 - INFO - Used cache for: Screenshot_20251019_201737_Westpac.jpg
+2025-12-11 16:15:14,331 - INFO - Used cache for: Screenshot_20251019_201851_Westpac.jpg
+2025-12-11 16:15:14,331 - INFO - Used cache for: Screenshot_20251019_201916_Westpac.jpg
+2025-12-11 16:15:14,332 - INFO - Used cache for: Screenshot_20251019_201946_Westpac.jpg
+2025-12-11 16:15:14,332 - INFO - Used cache for: Screenshot_20251019_202001_Westpac.jpg
+2025-12-11 16:15:14,332 - INFO - Used cache for: Screenshot_20251019_202020_Westpac.jpg
+2025-12-11 16:15:14,333 - INFO - Used cache for: Screenshot_20251019_202114_Westpac.jpg
+2025-12-11 16:15:14,333 - INFO - Used cache for: Screenshot_20251019_202150_Westpac.jpg
+2025-12-11 16:15:14,334 - INFO - Used cache for: Screenshot_20251019_202217_Westpac.jpg
+2025-12-11 16:15:14,334 - INFO - Used cache for: Screenshot_20251019_202240_Westpac.jpg
+2025-12-11 16:15:14,335 - INFO - Used cache for: Screenshot_20251019_202315_Westpac.jpg
+2025-12-11 16:15:14,336 - INFO - Used cache for: Screenshot_20251019_202339_Westpac.jpg
+2025-12-11 16:15:14,336 - INFO - Used cache for: Screenshot_20251019_202408_Westpac.jpg
+2025-12-11 16:15:14,337 - INFO - Used cache for: Screenshot_20251019_202431_Westpac.jpg
+2025-12-11 16:15:14,339 - INFO - Used cache for: Screenshot_20251019_202451_Westpac.jpg
+2025-12-11 16:15:14,339 - INFO - Used cache for: Screenshot_20251019_202524_Westpac.jpg
+2025-12-11 16:15:14,339 - INFO - Used cache for: Screenshot_20251019_202546_Westpac.jpg
+2025-12-11 16:15:14,340 - INFO - Used cache for: Screenshot_20251019_202605_Westpac.jpg
+2025-12-11 16:15:14,340 - INFO - Used cache for: Screenshot_20251019_202635_Westpac.jpg
+2025-12-11 16:15:14,340 - INFO - Used cache for: Screenshot_20251019_202659_Westpac.jpg
+2025-12-11 16:15:14,340 - INFO - Used cache for: Screenshot_20251019_202724_Westpac.jpg
+2025-12-11 16:15:14,341 - INFO - Used cache for: Screenshot_20251019_202746_Westpac.jpg
+2025-12-11 16:15:14,341 - INFO - Used cache for: Screenshot_20251019_202912_Westpac.jpg
+2025-12-11 16:15:14,341 - INFO - Used cache for: Screenshot_20251019_202952_Westpac.jpg
+2025-12-11 16:15:14,341 - INFO - Used cache for: Screenshot_20251019_203027_Westpac.jpg
+2025-12-11 16:15:14,342 - INFO - Used cache for: Screenshot_20251019_203130_Westpac.jpg
+2025-12-11 16:15:14,342 - INFO - Used cache for: Screenshot_20251019_203211_Westpac.jpg
+2025-12-11 16:15:14,342 - INFO - Used cache for: Screenshot_20251019_203247_Westpac.jpg
+2025-12-11 16:15:14,342 - INFO - Used cache for: Screenshot_20251019_203303_Westpac.jpg
+2025-12-11 16:15:14,342 - INFO - Used cache for: Screenshot_20251019_203319_Westpac.jpg
+2025-12-11 16:15:14,343 - INFO - Used cache for: Screenshot_20251019_203401_Westpac.jpg
+2025-12-11 16:15:14,343 - INFO - Used cache for: Screenshot_20251019_203433_Westpac.jpg
+2025-12-11 16:15:14,343 - INFO - Used cache for: Screenshot_20251019_203446_Westpac.jpg
+2025-12-11 16:15:14,344 - INFO - Used cache for: Screenshot_20251019_203544_Westpac.jpg
+2025-12-11 16:15:14,345 - INFO - Used cache for: Screenshot_20251019_203621_Westpac.jpg
+2025-12-11 16:15:14,346 - INFO - Used cache for: Screenshot_20251019_203700_Westpac.jpg
+2025-12-11 16:15:14,346 - INFO - Used cache for: Screenshot_20251019_203726_Westpac.jpg
+2025-12-11 16:15:14,346 - INFO - Used cache for: Screenshot_20251019_203739_Westpac.jpg
+2025-12-11 16:15:14,347 - INFO - Used cache for: Screenshot_20251029_162735_Westpac.jpg
+2025-12-11 16:15:14,347 - INFO - Used cache for: Screenshot_20251029_162809_Westpac.jpg
+2025-12-11 16:15:14,348 - INFO - Used cache for: Screenshot_20251029_162844_Westpac.jpg
+2025-12-11 16:15:14,348 - INFO - Used cache for: Screenshot_20251029_162941_Westpac.jpg
+2025-12-11 16:15:14,348 - INFO - Used cache for: Screenshot_20251029_163012_Westpac.jpg
+2025-12-11 16:15:14,349 - INFO - Used cache for: Screenshot_20251029_163052_Westpac.jpg
+2025-12-11 16:15:14,349 - INFO - Used cache for: Screenshot_20251029_163117_Westpac.jpg
+2025-12-11 16:15:14,349 - INFO - Used cache for: Screenshot_20251029_163135_Westpac.jpg
+2025-12-11 16:15:14,349 - INFO - Used cache for: Screenshot_20251029_163202_Westpac.jpg
+2025-12-11 16:15:14,350 - INFO - Used cache for: Screenshot_20251029_163231_Westpac.jpg
+2025-12-11 16:15:14,429 - INFO - Pending CSV saved
+2025-12-11 16:15:14,436 - INFO - Saved OCR cache
+2025-12-11 16:15:14,437 - INFO - Loaded 106 completed hashes
+2025-12-11 16:15:14,471 - INFO - Loaded 212 pending items
+2025-12-11 16:15:14,884 - INFO - Processed 106, moved 0

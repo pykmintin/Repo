@@ -1,0 +1,3117 @@
+2025-12-11 13:11:34,137 - INFO - ==================================================
+2025-12-11 13:11:34,138 - INFO - NDIS ASSISTANT - STARTUP
+2025-12-11 13:11:34,914 - INFO - All imports successful
+2025-12-11 13:11:34,915 - INFO - Tesseract configured: C:\Program Files\Tesseract-OCR\tesseract.exe
+2025-12-11 13:11:34,983 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3ftl06z2_input.PNG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3ftl06z2', 'txt']
+2025-12-11 13:11:35,539 - INFO - ✓ Tesseract validation passed
+2025-12-11 13:11:35,540 - INFO - Creating QApplication
+2025-12-11 13:11:35,616 - INFO - Creating main window
+2025-12-11 13:11:35,617 - INFO - Initializing main window
+2025-12-11 13:11:35,620 - INFO - Configuration loaded
+2025-12-11 13:11:35,620 - DEBUG - Building UI
+2025-12-11 13:11:35,643 - INFO - Loading data files
+2025-12-11 13:11:36,025 - INFO - Entering event loop
+2025-12-11 13:11:39,404 - INFO - Scanning folder: C:\Users\alles\My Drive\ATO app\Screenshots
+2025-12-11 13:11:39,493 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:39,494 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:39,496 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:39,496 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:39,497 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:39,542 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_hyc5765z_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_hyc5765z', 'txt']
+2025-12-11 13:11:40,773 - DEBUG - OCR text for Screenshot_20250928_125011_Westpac.jpg:
+12:50 @@= - te 4 will 55%
+
+<
+
+YMCA (Gippsland Regional
+Aquatic Centre)
+
+-$5.60
+
+Thu 25 Sep 2025 (Sydney time)
+
+No similar transactions
+
+i
+g
+= I a |
+£ Woolworths Traralgon @)- I
++ of 6 oto IM Y ‘Seymou...
+2025-12-11 13:11:40,807 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:40,807 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:40,808 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:40,809 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:40,809 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:40,855 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_980f20v4_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_980f20v4', 'txt']
+2025-12-11 13:11:42,121 - DEBUG - OCR text for Screenshot_20250928_125033_Westpac.jpg:
+12550 B@@ - te $F ull 55%
+
+<
+
+New Rosedale Bakery Pty Ltd
+
+-§11.15
+
+Wed 24 Sep 2025 (Sydney time)
+
+No similar transactions
+
+aes i on @)- y == Seymour =
+
+I il l | I [|
+
+Account
+
+Westpac Choice Basic
+73...
+2025-12-11 13:11:42,148 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:42,148 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:42,149 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:42,149 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:42,150 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:42,186 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_42uf_uiv_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_42uf_uiv', 'txt']
+2025-12-11 13:11:43,209 - DEBUG - OCR text for Screenshot_20250928_125242_Westpac.jpg:
+12:52 F@@:
+
+6 Vo) 4G
+LTE Ife
+
+Bairnsdale’s Bakehouse
+
+-$6.10
+
+Thu 11 Sep 2025 (Sydney time)
+
+View 25 similar transactions
+
+55% =
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Uncategoris...
+2025-12-11 13:11:43,238 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:43,239 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:43,239 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:43,240 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:43,240 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:43,285 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_i85nxd9x_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_i85nxd9x', 'txt']
+2025-12-11 13:11:44,339 - DEBUG - OCR text for Screenshot_20250928_125316_Westpac.jpg:
+12:53 FA@@ - ie if ll 55%
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 8 Sep 2025 (Sydney time)
+
+View 5 similar transactions
+
+i Ray St
+If
+
+I
+|
+
+—e | | Were
+Traralgon Railway, » %
+' Wi
+Station (Traralgon) \
+a] { @...
+2025-12-11 13:11:44,366 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:44,367 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:44,367 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:44,367 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:44,368 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:44,401 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_n7b59v0g_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_n7b59v0g', 'txt']
+2025-12-11 13:11:45,685 - DEBUG - OCR text for Screenshot_20250928_125519_Westpac.jpg:
+12:55 FA@@ - B i? 18 il 54% oe
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-$11.50
+
+Tue 2 Sep 2025 (Sydney time)
+
+View 7 similar transactions
+
+2 Fm ,
+a | —o«61
+———_ lane z 'G (
+...
+2025-12-11 13:11:45,711 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:45,711 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:45,712 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:45,712 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:45,713 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:45,747 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__q5ui1kx_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__q5ui1kx', 'txt']
+2025-12-11 13:11:46,915 - DEBUG - OCR text for Screenshot_20250928_125547_Westpac.jpg:
+12:55 FB@@ : B i928 | 54%
+
+<
+
+endeavsur
+
+Endeavour Petroleum
+(Stratford)
+
+-S7.00
+
+Mon 1 Sep 2025 (Sydney time)
+
+No similar transactions
+i_ t/a
+3 Stratford Hobs |
+— QO
+—[—[—=}=}=}_V_.
+S
+
+| je
+
+reer Car...
+2025-12-11 13:11:46,945 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:46,946 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:46,946 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:46,947 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:46,947 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:46,981 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ofbfp0el_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ofbfp0el', 'txt']
+2025-12-11 13:11:48,004 - DEBUG - OCR text for Screenshot_20250928_125640_Westpac.jpg:
+12:56 B@O@ - B ie 18 ll 54%
+
+<
+
+Uniting Vic.Tas
+
+-$19.00
+
+Thu 28 Aug 2025 (Sydney time)
+
+No similar transactions
+
+< aries Pe (5)5) ~
+6 axe
+u
+
+Albert st
+
+4
+thinatown Melbourne @ Parliament Qe Fi
+
+Goigl...
+2025-12-11 13:11:48,027 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:48,027 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:48,029 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:48,029 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:48,030 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:48,069 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8h84utig_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8h84utig', 'txt']
+2025-12-11 13:11:49,653 - DEBUG - OCR text for Screenshot_20250928_125713_Westpac.jpg:
+12:57 A@@ > B ie 18 ll 54%
+
+<
+
+<>,
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$15.80
+
+Wed 27 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+a
+==
+oogle Canal Reserve \
+
+“a
+
+Account
+
+Westpac ...
+2025-12-11 13:11:49,692 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:49,693 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:49,694 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:49,695 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:49,696 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:49,749 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ouwyp2nk_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ouwyp2nk', 'txt']
+2025-12-11 13:11:51,146 - DEBUG - OCR text for Screenshot_20250928_125752_Westpac.jpg:
+12:57 A@@ > te $F will 54%
+
+<
+
+YMCA (Gippsland Regional
+Aquatic Centre)
+
+-$5.60
+
+Thu 25 Sep 2025 (Sydney time)
+
+No similar transactions
+
+=
+gs
+£ Woolworths Traralgon @)- I
+“Hen sis t L
+Gedgle——)__2 |
+a...
+2025-12-11 13:11:51,170 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:51,170 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:51,171 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:51,171 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:51,171 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:51,215 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_uzt7lk4b_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_uzt7lk4b', 'txt']
+2025-12-11 13:11:52,793 - DEBUG - OCR text for Screenshot_20250928_125921_Westpac.jpg:
+12:59 F@@ -: te $F will 53%
+
+<
+
+Qe CENTRAL
+= “= GIPPSLAND
+y= HEALTH
+
+Central Gippsland Health
+
+-$11.50
+
+Tue 2 Sep 2025 (Sydney time)
+
+View 7 similar transactions
+
+\ 3 4a 7
+|| so aluenb;—
+— os 3 i {|
+|...
+2025-12-11 13:11:52,804 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:52,804 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:52,805 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:52,805 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:52,806 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:52,847 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_98zr0bfy_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_98zr0bfy', 'txt']
+2025-12-11 13:11:54,296 - DEBUG - OCR text for Screenshot_20250928_125953_Westpac.jpg:
+12:59 F@@ -: B if? 9 wll 53% ms
+
+<
+
+to
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$15.80
+
+Wed 27 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+2 || __ The Criteridn Hotel U9
+i t | The Ma
+...
+2025-12-11 13:11:54,301 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:54,301 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:54,302 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:54,302 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:54,302 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:54,349 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8kkn57lq_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8kkn57lq', 'txt']
+2025-12-11 13:11:55,616 - DEBUG - OCR text for Screenshot_20250928_130021_Westpac.jpg:
+1:00 F@@ - Vo 48 11 53%
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 25 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+—] hay st
+| WV y VIL
+
+= I
+“Traralgon Railway,
+Station (Traralgon)
+
+Account
+
+Westpac Cho...
+2025-12-11 13:11:55,622 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:55,622 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:55,623 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:55,623 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:55,623 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:55,666 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_fxkvu9u0_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_fxkvu9u0', 'txt']
+2025-12-11 13:11:56,979 - DEBUG - OCR text for Screenshot_20250928_130111_Westpac.jpg:
+1:01 4A@@ > B if? 9 wll 53% ms
+
+<
+
+Aqua Energy
+
+-$6.30
+
+Mon 25 Aug 2025 (Sydney time)
+
+View 2 similar transactions
+
+—s spIMacanster ve
+
+maa
+
+_ LAntaree
+Bi HPI P
+__— irct wil
+=
+
+ZA
+Hutchison s—__ FoodW...
+2025-12-11 13:11:56,983 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:56,983 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:56,984 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:56,984 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:56,984 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:57,024 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_y7do7t3v_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_y7do7t3v', 'txt']
+2025-12-11 13:11:58,076 - DEBUG - OCR text for Screenshot_20250928_130213_Westpac.jpg:
+1:02 FA@@ - B if? 4f wll 53% ms
+
+<
+
+Heyfield Bakery
+
+-$6.30
+
+Wed 20 Aug 2025 (Sydney time)
+
+View 2 similar transactions
+
+Jeyfield ;
+fetlands a
+
+—~
+|
+bg
+
+f__N
+
+Account
+
+Westpac Choice Basic
+733-203 504...
+2025-12-11 13:11:58,081 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:58,081 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:58,082 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:58,082 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:58,082 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:58,120 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vh_ednn3_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vh_ednn3', 'txt']
+2025-12-11 13:11:59,166 - DEBUG - OCR text for Screenshot_20250928_130339_Westpac.jpg:
+1:03 B@@ - Vo 48 11 53%
+
+<
+
+Yarragon Bakery
+
+-$5.00
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+—] hay st
+| WV y VIL
+
+= I
+“Traralgon Railway,
+Station (Traralgon)
+
+Account
+
+Westpac Cho...
+2025-12-11 13:11:59,188 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:11:59,188 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:11:59,188 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:11:59,189 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:11:59,189 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:11:59,229 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7nvzx413_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7nvzx413', 'txt']
+2025-12-11 13:12:00,814 - DEBUG - OCR text for Screenshot_20250928_130413_Westpac.jpg:
+1:04 F@@: B ie 1 ll 53%
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-$6.00
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+|
+|
+
+\ de
+
+———— 0 Araluen Or——
+—8 fi =
+
+|...
+2025-12-11 13:12:00,849 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:00,850 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:00,850 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:00,851 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:00,851 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:00,899 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_u3f0ib0q_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_u3f0ib0q', 'txt']
+2025-12-11 13:12:02,453 - DEBUG - OCR text for Screenshot_20250928_130437_Westpac.jpg:
+1:04 F@@: B ie 1 ll 53%
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-§5.50
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+|
+|
+
+\ de
+
+———— 0 Araluen oOr——
+—8 fi =
+
+...
+2025-12-11 13:12:02,475 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:02,476 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:02,476 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:02,476 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:02,477 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:02,525 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d7ufvxd9_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d7ufvxd9', 'txt']
+2025-12-11 13:12:04,048 - DEBUG - OCR text for Screenshot_20250928_130504_Westpac.jpg:
+1:05 F@@ - Yo2 48 | 53% &
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-$6.00
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+|
+|
+
+\ de
+
+———— 0 Araluen oOr——
+—8 fi =...
+2025-12-11 13:12:04,075 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:04,076 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:04,076 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:04,077 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:04,078 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:04,122 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_08ft737b_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_08ft737b', 'txt']
+2025-12-11 13:12:05,313 - DEBUG - OCR text for Screenshot_20250928_130547_Westpac.jpg:
+1:05 FA@@ - te $F will 53%
+
+Muffin Break (Gippsland
+Centre)
+
+-$6.17
+
+Fri 15 Aug 2025 (Sydney time)
+
+View 3 similar transactions
+
+ighame || \ eee = Cunning}
+reet| 7
+
+king/
+“Gdsgle
+
+Account
+
+\ |
+The Cri...
+2025-12-11 13:12:05,322 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:05,322 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:05,322 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:05,323 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:05,323 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:05,366 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ke63z5el_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ke63z5el', 'txt']
+2025-12-11 13:12:06,497 - DEBUG - OCR text for Screenshot_20250928_130650_Westpac.jpg:
+1:06 F@@ - Bi 8 | 52% es
+
+<
+
+Yarragon Bakery
+
+-$6.30
+
+Tue 12 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+—] hay St
+| | V y VIL
+
+= I
+“Traralgon Railway,
+Station (Traralgon)
+
+Account
+
+Westpac C...
+2025-12-11 13:12:06,505 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:06,506 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:06,506 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:06,506 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:06,506 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:06,543 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7ww9y3tf_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7ww9y3tf', 'txt']
+2025-12-11 13:12:07,859 - DEBUG - OCR text for Screenshot_20250928_130720_Westpac.jpg:
+1:07 FA@@ - B 2 48 il 52% &
+
+<
+
+<>,
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$5.80
+
+Fri 8 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+] 2 || __, The Criterion Hotel.@9. =
+stern i
+
+gan ...
+2025-12-11 13:12:07,870 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:07,870 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:07,871 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:07,871 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:07,872 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:07,913 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_v2fsnwzo_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_v2fsnwzo', 'txt']
+2025-12-11 13:12:09,308 - DEBUG - OCR text for Screenshot_20250928_130831_Westpac.jpg:
+1:08 F@@ : Bi 8 | 52% es
+
+<
+
+Stratford Bakery
+
+-$5.66
+
+Thu 7 Aug 2025 (Sydney time)
+
+View 4 similar transactions
+
+= | J
+ae IW) '
+
+Ho i —
+
+ker @) 0 “| |
+
+Badger.& Hare Q)
+
+1 I
+
+"Geagievan Pak
+
+aiaen ——...
+2025-12-11 13:12:09,315 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:09,315 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:09,316 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:09,316 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:09,316 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:09,373 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_hhhoq6ag_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_hhhoq6ag', 'txt']
+2025-12-11 13:12:10,890 - DEBUG - OCR text for Screenshot_20250928_130859_Westpac.jpg:
+1:08 F@@ : Bi 8 | 52% es
+
+<
+
+<>,
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$5.80
+
+Wed 6 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+] 2 || __, The Criterion Hotel.€9. =
+stern i
+
+Agee pe...
+2025-12-11 13:12:10,896 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:10,897 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:10,898 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:10,898 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:10,898 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:10,943 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_x932_nwm_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_x932_nwm', 'txt']
+2025-12-11 13:12:12,239 - DEBUG - OCR text for Screenshot_20250928_130916_Westpac.jpg:
+1:09 A@@ >
+és
+
+Centre Bakery
+
+-$6.50
+
+Wed 6 Aug 2025 (Sydney time)
+
+No similar transactions
+
+[3] Vo) 4G
+LTE '
+
+52%e
+
+| || {ij
+
+a |
+TL See cs 1
+
+\
+—
+=|
+| ;
+
+==—==0) |
+3
+g | |
+3 |
+°
+Google. _The C Crite...
+2025-12-11 13:12:12,243 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:12,244 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:12,245 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:12,246 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:12,246 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:12,295 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_m2_0as3a_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_m2_0as3a', 'txt']
+2025-12-11 13:12:13,464 - DEBUG - OCR text for Screenshot_20250928_130936_Westpac.jpg:
+1:09 F@@ : Bi 8 | 52% es
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Tue 5 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+i Ray St
+If
+
+I
+|
+
+| Fe | \ vow"
+
+"Traralgon Railway, 4
+
+' Wi
+
+Station (Traralgon) Y
+par...
+2025-12-11 13:12:13,474 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:13,474 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:13,475 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:13,475 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:13,475 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:13,516 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_48lhhcq3_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_48lhhcq3', 'txt']
+2025-12-11 13:12:14,641 - DEBUG - OCR text for Screenshot_20250928_131009_Westpac.jpg:
+1:10 A@@ - 90 48 wll 52%
+
+<
+
+Aldi Mobile
+
+-§25.00
+
+Tue 5 Aug 2025 (Sydney time)
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+
+N...
+2025-12-11 13:12:14,650 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:14,650 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:14,651 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:14,651 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:14,652 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:14,692 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_whd8mibe_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_whd8mibe', 'txt']
+2025-12-11 13:12:16,243 - DEBUG - OCR text for Screenshot_20250928_131029_Westpac.jpg:
+1:10 A@@ > Bit? i ll 52% a
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-$11.00
+
+Tue 5 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+| ww
+—s ~Araluen Or——
+= —— il | jg i]
+...
+2025-12-11 13:12:16,250 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:16,250 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:16,251 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:16,251 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:16,252 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:16,293 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4uiitupi_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4uiitupi', 'txt']
+2025-12-11 13:12:17,965 - DEBUG - OCR text for Screenshot_20250928_131053_Westpac.jpg:
+1:10 B@@: 2 48 il 52%
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-§5.50
+
+Tue 5 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+| ww
+—s ~Araluen Or——
+= —— il | jg i]
+2 h
+| ...
+2025-12-11 13:12:17,973 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:17,974 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:17,974 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:17,975 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:17,975 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:18,018 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8ret03su_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_8ret03su', 'txt']
+2025-12-11 13:12:19,426 - DEBUG - OCR text for Screenshot_20250928_131155_Westpac.jpg:
+1:11 8B @@ > B v2 48 | 51%
+
+<
+
+Bow’s Traralgon
+
+-$13.17
+
+Wed 30 Jul 2025 (Sydney time)
+
+View 9 similar transactions
+
+i _
+Yallambee Trare
+Village for the
+
+Newman Park
+nt SS
+
+Account
+
+Westpac Choice Bas...
+2025-12-11 13:12:19,437 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:19,437 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:19,438 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:19,438 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:19,438 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:19,488 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_5jjnvk1c_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_5jjnvk1c', 'txt']
+2025-12-11 13:12:21,073 - DEBUG - OCR text for Screenshot_20250928_131227_Westpac.jpg:
+1:12 FA@@: B ie 18 il 51%
+
+<
+
+BokEis Delight
+
+Bakers Delight (Gippsland
+Centre)
+
+-$28.70
+
+Mon 28 Jul 2025 (Sydney time)
+
+No similar transactions
+\| \| ii
+
+\ |
+\ | i
+yt ea crt —-|_s4. oe! st
+
+ime || _ ...
+2025-12-11 13:12:21,078 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:21,079 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:21,080 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:21,080 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:21,081 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:21,133 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_70jdshd2_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_70jdshd2', 'txt']
+2025-12-11 13:12:22,590 - DEBUG - OCR text for Screenshot_20250928_131251_Westpac.jpg:
+1:12 B@@-: B 92 48 wll 51%
+
+<
+
+Stratford Bakery
+
+-$6.57
+
+Mon 28 Jul 2025 (Sydney time)
+
+View 4 similar transactions
+
+= | J
+ae IW) '
+
+Ho i —
+
+ker) 0 “| |
+
+Badger.& Hare Q)
+
+1 I
+
+"Geagievan Pak
+
+aiaen —...
+2025-12-11 13:12:22,594 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:22,595 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:22,596 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:22,597 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:22,598 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:22,642 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_42oec0dm_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_42oec0dm', 'txt']
+2025-12-11 13:12:24,286 - DEBUG - OCR text for Screenshot_20250928_131312_Westpac.jpg:
+1:13 B@@ - B v2 48 | 51%
+
+<
+
+Yarragon Bakery
+
+-$5.00
+
+Mon 28 Jul 2025 (Sydney time)
+
+No similar transactions
+
+Yarragon CMON (eo) Ss
+~ Waterloo Rd 4 es
+—— | g
+
+s same Ln= fi | 2
+
+§ Ee 4 ) é
+Google ey
+S...
+2025-12-11 13:12:24,291 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:24,291 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:24,292 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:24,292 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:24,292 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:24,333 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lo10dfuy_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lo10dfuy', 'txt']
+2025-12-11 13:12:25,626 - DEBUG - OCR text for Screenshot_20250928_131414_Westpac.jpg:
+1:14 BFO@-: BY? 8 il 51% &
+
+<
+
+Aldi Mobile
+
+-§25.00
+
+Tue 22 Jul 2025 (Sydney time)
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags...
+2025-12-11 13:12:25,636 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:25,637 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:25,637 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:25,638 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:25,638 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:25,685 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7qzmre6m_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7qzmre6m', 'txt']
+2025-12-11 13:12:27,023 - DEBUG - OCR text for Screenshot_20250928_131444_Westpac.jpg:
+1:14 B8@@-: Yoo 48 | 51%
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 21 Jul 2025 (Sydney time)
+
+View 2 similar transactions
+
+i I |
+~ Traralgon Railwayg (eR)
+Station (Traralgon)
+
+easate
+
+Account
+
+Westpac Choice B...
+2025-12-11 13:12:27,027 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:27,028 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:27,028 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:27,029 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:27,029 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:27,066 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d_ew0uqs_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d_ew0uqs', 'txt']
+2025-12-11 13:12:28,228 - DEBUG - OCR text for Screenshot_20250928_131546_Westpac.jpg:
+1:15 BA@@: B ie 18 il 51%
+
+<
+
+Aldi Mobile
+
+-§25.00
+
+Mon 7 Jul 2025 (Sydney time)
+
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+...
+2025-12-11 13:12:28,238 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:28,238 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:28,239 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:28,239 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:28,239 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:28,288 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_zenuoig9_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_zenuoig9', 'txt']
+2025-12-11 13:12:29,613 - DEBUG - OCR text for Screenshot_20250928_131602_Westpac.jpg:
+1:16 F@O@ > B v2 48 | 51%
+
+Maffra Hot Bake Bakery
+
+-$7.14
+
+Mon 7 Jul 2025 (Sydney time)
+
+No similar transactions
+
+ruu aul x Ms =
+g
+
+———
+
+NV
+M893 affra, ee yA
+WS sports C Club sd
+
+Account
+
+Westpac Choi...
+2025-12-11 13:12:29,623 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:29,623 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:29,624 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:29,624 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:29,624 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:29,670 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vcet0w2b_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vcet0w2b', 'txt']
+2025-12-11 13:12:31,219 - DEBUG - OCR text for Screenshot_20250928_131620_Westpac.jpg:
+1:16 A@@ > B ie 18 il 51%
+
+<
+
+Specsavers
+
+Specsavers (Bairnsdale)
+
+-$434.00
+
+Fri 4 Jul 2025 (Sydney time)
+
+No similar transactions
+
+at son’ o
+
+irnsdalé" Qo , @
+teDonald’s @ |
+
+ets" “Mitchell River Wal...
+2025-12-11 13:12:31,255 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:31,257 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:31,258 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:31,258 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:31,259 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:31,314 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_kv4g0ek2_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_kv4g0ek2', 'txt']
+2025-12-11 13:12:32,552 - DEBUG - OCR text for Screenshot_20250928_131639_Westpac.jpg:
+1:16 A@@ > B ie 18 il 51%
+
+<
+
+Yarragon Bakery
+
+-$10.00
+
+Tue 1 Jul 2025 (Sydney time)
+
+View 2 similar transactions
+
+—e | | \ =
+Traralgon Railway, » %
+' Wi
+Station (Traralgon) \
+| { @
+parade / | 5
+—— Il...
+2025-12-11 13:12:32,557 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:32,557 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:32,558 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:32,558 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:32,558 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:32,594 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d77_5v5m_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_d77_5v5m', 'txt']
+2025-12-11 13:12:34,068 - DEBUG - OCR text for Screenshot_20250928_131703_Westpac.jpg:
+1:17 B@@: B i 18 il 51%
+
+<
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-§5.50
+
+Tue 1 Jul 2025 (Sydney time)
+
+View 7 similar transactions
+
+| ww
+—s ~Araluen Or——
+= —— il | jg i]
+2 h
+...
+2025-12-11 13:12:34,073 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:34,073 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:34,073 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:34,074 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:34,074 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:34,112 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3am1ya5i_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3am1ya5i', 'txt']
+2025-12-11 13:12:35,449 - DEBUG - OCR text for Screenshot_20250928_142122_Westpac.jpg:
+2:21@@0- B te 48 ll 42% 5
+
+<
+
+ct >
+‘G)
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$12.50
+
+Wed 9 Apr 2025 (Sydney time)
+
+View 5 similar transactions
+
+] 2 || __, The Criterion Hotel.@9. =
+siterion...
+2025-12-11 13:12:35,459 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:35,459 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:35,460 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:35,460 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:35,460 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:35,499 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_llfwvqve_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_llfwvqve', 'txt']
+2025-12-11 13:12:36,639 - DEBUG - OCR text for Screenshot_20250928_142203_Westpac.jpg:
+2:22 A@@: 6 te tll 41% 5
+
+Aldi Mobile
+
+-§25.00
+
+Mon 14 Apr 2025 (Sydney time)
+
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic d))
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags...
+2025-12-11 13:12:36,645 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:36,646 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:36,646 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:36,647 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:36,647 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:36,688 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lily6ndb_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lily6ndb', 'txt']
+2025-12-11 13:12:38,046 - DEBUG - OCR text for Screenshot_20250928_142259_Westpac.jpg:
+2:22 A@@-> B i? 18 il 41% 5
+
+<
+
+WITHDRAWAL-OSKO
+PAYMENT 1237119 Partners
+In Training Cert 111
+
+Paid
+
+-$160.00
+
+Wed 16 Apr 2025 (Sydney time)
+Effective on Wed 16 Apr 2025 (Sydney time)
+
+No similar tran...
+2025-12-11 13:12:38,054 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:38,055 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:38,055 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:38,055 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:38,055 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:38,099 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_o8z75a56_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_o8z75a56', 'txt']
+2025-12-11 13:12:39,252 - DEBUG - OCR text for Screenshot_20250928_142437_Westpac.jpg:
+2:24 A@@-: B i? 8 il 41% 8
+
+<
+
+the
+beet.
+
+The Beet Baristas
+
+-$9.50
+
+Wed 30 Apr 2025 (Sydney time)
+
+No similar transactions
+
+° 2 —
+INNA Maffra Motor gor
+Goog we 4 a
+
+Account
+
+Westpac Choice Basic
+733-...
+2025-12-11 13:12:39,261 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:39,261 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:39,262 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:39,262 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:39,263 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:39,300 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ekrpbdl__input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ekrpbdl_', 'txt']
+2025-12-11 13:12:40,388 - DEBUG - OCR text for Screenshot_20250928_142506_Westpac.jpg:
+2:25 A@@- B te 48 ll 41% 8
+
+Aldi Mobile
+
+-§25.00
+
+Mon 5 May 2025 (Sydney time)
+
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+
+N...
+2025-12-11 13:12:40,398 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:40,398 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:40,399 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:40,399 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:40,399 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:40,446 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__pgkdpef_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__pgkdpef', 'txt']
+2025-12-11 13:12:41,656 - DEBUG - OCR text for Screenshot_20250928_142539_Westpac.jpg:
+2:25 A@O@: B 2 48 il 41% 8
+
+<
+
+to
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$10.80
+
+Wed 7 May 2025 (Sydney time)
+
+No similar transactions
+
+__The Criterion Hotel L@9
+aller) © The
+
+MatadorMo
+
+315...
+2025-12-11 13:12:41,665 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:41,665 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:41,666 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:41,666 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:41,667 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:41,707 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_l0da4d3j_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_l0da4d3j', 'txt']
+2025-12-11 13:12:42,859 - DEBUG - OCR text for Screenshot_20250928_142709_Westpac.jpg:
+2:27 A@@ - yo 48 11 41% B
+
+Sandwich Chefs
+
+-$12.03
+
+Tue 13 May 2025 (Sydney time)
+
+View 2 similar transactions
+
+Yallambeé Trarall
+Village for the A:
+
+Newman Park
+
+Account
+
+Westpac Choice Basic
+733-203...
+2025-12-11 13:12:42,864 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:42,865 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:42,865 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:42,866 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:42,866 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:42,905 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_97p0u_c4_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_97p0u_c4', 'txt']
+2025-12-11 13:12:44,115 - DEBUG - OCR text for Screenshot_20250928_142737_Westpac.jpg:
+2:27 A@@- 6 te tll 41% 5
+
+Aldi Mobile
+
+-§25.00
+
+Tue 13 May 2025 (Sydney time)
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic ep
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+
+...
+2025-12-11 13:12:44,120 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:44,121 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:44,121 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:44,121 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:44,122 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:44,172 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_rrqb2n8x_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_rrqb2n8x', 'txt']
+2025-12-11 13:12:45,317 - DEBUG - OCR text for Screenshot_20250928_142829_Westpac.jpg:
+2:28 A@@: Bi? ll 40%8
+
+<
+
+McDonald's (Traralgon East)
+
+-$9.70
+
+Tue 13 May 2025 (Sydney time)
+
+View 8 similar transactions
+
+prvonversions /
+
+SO
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategor...
+2025-12-11 13:12:45,326 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:45,326 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:45,327 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:45,327 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:45,327 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:45,368 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2jmxm1tb_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2jmxm1tb', 'txt']
+2025-12-11 13:12:46,443 - DEBUG - OCR text for Screenshot_20250928_142855_Westpac.jpg:
+2:28 F@@-: B 2 8 11 40%8
+
+RAL Sp
+xt 2,
+¥ es
+
+Seaspray
+
+Seaspray General Store
+
+-$10.42
+
+Wed 14 May 2025 (Sydney time)
+
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategor...
+2025-12-11 13:12:46,452 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:46,452 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:46,453 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:46,453 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:46,454 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:46,490 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_suqslkkt_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_suqslkkt', 'txt']
+2025-12-11 13:12:47,715 - DEBUG - OCR text for Screenshot_20250928_143149_Westpac.jpg:
+2:31 F@O@: Veo 48 | AO%B
+
+<
+
+Stratford Bakery
+
+-$8.89
+
+Wed 4 Jun 2025 (Sydney time) ee
+
+View 4 similar transactions
+
+/
+
+a
+
+Stratford- ah a A
+ford ©
+
+Badges Hare | | D
+
+ker)
+Ker ‘ard gleavan rar)
+
+Acco...
+2025-12-11 13:12:47,724 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:47,724 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:47,725 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:47,725 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:47,725 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:47,772 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__3a9rluj_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__3a9rluj', 'txt']
+2025-12-11 13:12:48,940 - DEBUG - OCR text for Screenshot_20250928_143221_Westpac.jpg:
+2:32 A@@ -: Yeo 48 1] AO%B
+
+Sandwich Chefs
+
+-$5.96
+
+Thu 5 Jun 2025 (Sydney time)
+
+View 2 similar transactions
+
+\\
+Yallambee Trarali
+
+Village for the A
+
+nN Newman Park
+
+Account
+
+Westpac Choice Basic
+73...
+2025-12-11 13:12:48,944 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:48,945 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:48,945 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:48,945 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:48,945 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:48,983 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jgh9xx2w_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jgh9xx2w', 'txt']
+2025-12-11 13:12:50,217 - DEBUG - OCR text for Screenshot_20250928_143256_Westpac.jpg:
+2:32 A@@-> te 48 ll 40%B
+
+@ aie? leuf ield
+
+Heyfield pakery
+
+-$8.84
+
+Wed 11 Jun 2025 (Sydney time)
+
+View 2 similar transactions
+
+jeyfield |
+fetlands y
+
+T
+
+||
+ee | |
+~River Stee
+
+Account
+
+Westpac Choic...
+2025-12-11 13:12:50,227 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:50,227 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:50,227 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:50,228 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:50,228 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:50,270 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_q51y54y3_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_q51y54y3', 'txt']
+2025-12-11 13:12:51,481 - DEBUG - OCR text for Screenshot_20250928_143347_Westpac.jpg:
+2:33 A@@ > B i? 48 il 39% 8
+
+Al Car Wash Bairnsdale
+
+-§8.35
+
+Wed 18 Jun 2025 (Sydney time)
+
+View 2 similar transactions
+
+J —— Hosia
+
+I
+H
+Bunnings BairNédale @
+|
+|
+
+Account
+
+Westpac Choice Basic
+733-20...
+2025-12-11 13:12:51,493 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:51,494 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:51,494 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:51,495 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:51,495 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:51,547 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_l2i91pow_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_l2i91pow', 'txt']
+2025-12-11 13:12:52,844 - DEBUG - OCR text for Screenshot_20250928_143423_Westpac.jpg:
+2:34 FA@@: B i? 48 il 39% 8
+
+Muffin Break (Gippsland
+Centre)
+
+-$13.55
+
+Wed 25 Jun 2025 (Sydney time)
+
+View 3 similar transactions
+
+ighame || \ eee = Cunning}
+reet 7
+
+king/
+“Gdsgle
+
+Account
+
+\ |
+The Cr...
+2025-12-11 13:12:52,854 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:52,854 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:52,854 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:52,855 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:52,855 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:52,903 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_qpg_xpac_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_qpg_xpac', 'txt']
+2025-12-11 13:12:54,282 - DEBUG - OCR text for Screenshot_20250928_143451_Westpac.jpg:
+2:34 FA@@: te $F wll 39%B
+
+<
+
+Sale Cinemas
+
+-$32.00
+
+Wed 25 Jun 2025 (Sydney time)
+
+View 2 similar transactions
+
+ax TH
+
+ww ae
+5====== Sale=macart
+
+mer
+== MacArthur St j
+= Lm |
+i -~@ = = Cunning
+
+|
+The...
+2025-12-11 13:12:54,293 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:54,293 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:54,294 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:54,294 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:54,294 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:54,333 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__p2pygxk_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__p2pygxk', 'txt']
+2025-12-11 13:12:55,946 - DEBUG - OCR text for Screenshot_20251019_201529_Westpac.jpg:
+8:15 @ 0@ ° BNA! 80%
+
+<
+
+BokEis Delight
+
+Bakers Delight (Gippsland
+Centre)
+
+-$28.70
+
+Mon 28 Jul 2025 (Sydney time)
+
+No similar transactions
+\| \| ii
+
+\ |
+\ | i
+yt actin —-|_cl. oe! st
+
+ime || _ _i —<—...
+2025-12-11 13:12:55,983 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:55,984 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:55,985 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:55,986 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:55,986 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:56,057 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7okph8td_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_7okph8td', 'txt']
+2025-12-11 13:12:57,502 - DEBUG - OCR text for Screenshot_20251019_201631_Westpac.jpg:
+8:16 FOO > ONO AS 80%m
+
+Muffin Break (Traralgon Centre
+Plaza)
+
+-$6.10
+
+Wed 30 Jul 2025 (Sydney time)
+
+View 3 similar transactions
+
+I] — Yallambeé Trara
+I] Village for the /
+igon@): Bh
+
+i | \/ 7
+|
+
+; =...
+2025-12-11 13:12:57,511 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:57,512 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:57,512 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:57,513 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:57,513 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:57,552 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_bdy0olhz_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_bdy0olhz', 'txt']
+2025-12-11 13:12:59,133 - DEBUG - OCR text for Screenshot_20251019_201704_Westpac.jpg:
+8:17 B00 > ON AS | 80%H
+
+<
+
+Bow’s Traralgon
+
+-$13.17
+
+Wed 30 Jul 2025 (Sydney time)
+
+View 9 similar transactions
+
+4 ——~e—— ~~ eMuntor
+[- © a
+
+Traralgon hl
+
+yy on Kay St.
+
+“7 a |
+
+Bet ogteon “0
+a i re
+...
+2025-12-11 13:12:59,140 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:12:59,141 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:12:59,141 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:12:59,141 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:12:59,142 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:12:59,184 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_993j6r9h_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_993j6r9h', 'txt']
+2025-12-11 13:13:00,647 - DEBUG - OCR text for Screenshot_20251019_201737_Westpac.jpg:
+8:17 B00 > ON AS | 80%H
+
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-§5.50
+
+Tue 5 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+|
+
+UO}SJOLU
+
+| Central Gippsland Healt
+|
+
+ES
+...
+2025-12-11 13:13:00,653 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:00,654 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:00,654 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:00,654 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:00,655 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:00,697 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4dfq9o0t_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4dfq9o0t', 'txt']
+2025-12-11 13:13:01,855 - DEBUG - OCR text for Screenshot_20251019_201851_Westpac.jpg:
+8:18 2 AO: BNA ll 80%H
+
+<
+
+Aldi Mobile
+
+-§25.00
+
+Tue 5 Aug 2025 (Sydney time)
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+
+Non...
+2025-12-11 13:13:01,860 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:01,860 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:01,861 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:01,861 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:01,861 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:01,901 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_eqexjuhh_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_eqexjuhh', 'txt']
+2025-12-11 13:13:03,083 - DEBUG - OCR text for Screenshot_20251019_201916_Westpac.jpg:
+8:19 FBO® ON AS | 80%H
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Tue 5 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+| | Newr
+| JB HF Tra
+| pe \
+| | pow
+a \
+AN
+4 &,
+f %
+| $
+Account
+Westpac Choice Basic
+733-...
+2025-12-11 13:13:03,095 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:03,095 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:03,096 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:03,096 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:03,096 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:03,137 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3ww7wyg8_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3ww7wyg8', 'txt']
+2025-12-11 13:13:04,589 - DEBUG - OCR text for Screenshot_20251019_201946_Westpac.jpg:
+8:19 FOO > ON AS | 80%H
+
+<
+
+Centre Bakery
+
+-$6.50
+
+Wed 6 Aug 2025 (Sydney time)
+
+No similar transactions
+
+i || iil | |
+ee Nac SAnhor i sales Macarthurse
+| lI \ \
+
+| ___
+| ‘in inn)
+|
+|
+===) |
+3 |
+| |
+2...
+2025-12-11 13:13:04,594 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:04,594 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:04,595 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:04,595 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:04,596 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:04,641 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_oxwbbfeb_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_oxwbbfeb', 'txt']
+2025-12-11 13:13:06,133 - DEBUG - OCR text for Screenshot_20251019_202001_Westpac.jpg:
+8:20 FOO: ON AS | 80%H
+
+ct >
+‘G)
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$5.80
+
+Wed 6 Aug 2025 (Sydney time)
+
+View 6 similar transactions
+
+] 2 || __, The Criterion Hotel.€9. =
+siteron i
+
+Agee...
+2025-12-11 13:13:06,142 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:06,143 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:06,143 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:06,143 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:06,144 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:06,185 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4dn8bhiy_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4dn8bhiy', 'txt']
+2025-12-11 13:13:07,755 - DEBUG - OCR text for Screenshot_20251019_202020_Westpac.jpg:
+8:20 FOO: ON a ul 80%H
+
+<
+
+Stratford Bakery
+
+-$5.66
+
+Thu 7 Aug 2025 (Sydney time)
+
+View 4 similar transactions
+
+/
+
+=
+
+Sy |]
+
+Ta
+
+Stratford [ |
+= Hobson —
+
+ford Qe “
+| —\»
+bd asin
+
+ker @)
+
+rGesgreaan r...
+2025-12-11 13:13:07,767 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:07,767 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:07,768 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:07,768 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:07,769 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:07,811 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_h4etp6pi_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_h4etp6pi', 'txt']
+2025-12-11 13:13:09,264 - DEBUG - OCR text for Screenshot_20251019_202114_Westpac.jpg:
+3:210R0> ON AS | 80%H
+
+ct >
+‘G)
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$5.80
+
+Fri 8 Aug 2025 (Sydney time)
+
+View 6 similar transactions
+
+] 2 || __, The Criterion Hotel.@9. =
+stern i
+
+gan pe
+...
+2025-12-11 13:13:09,274 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:09,274 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:09,274 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:09,275 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:09,275 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:09,316 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_9jc_bq2q_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_9jc_bq2q', 'txt']
+2025-12-11 13:13:10,617 - DEBUG - OCR text for Screenshot_20251019_202150_Westpac.jpg:
+8:21800> ON AS | 80%H
+
+<
+
+Yarragon Bakery
+
+-$6.30
+
+Tue 12 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+I |
+
+a =
+
+nay StH
+
+ye
+‘ \
+vost
+a \
+AN
+4 &,
+f %
+| $
+Account
+Westpac Choice Basic
+733-203 5...
+2025-12-11 13:13:10,626 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:10,627 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:10,627 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:10,627 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:10,628 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:10,684 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__oqyz4dq_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__oqyz4dq', 'txt']
+2025-12-11 13:13:11,906 - DEBUG - OCR text for Screenshot_20251019_202217_Westpac.jpg:
+8:22 FOO: BNA i] 80%H
+
+<
+
+SUBWAY’
+Subway (Bairnsdale)
+
+-$10.20
+
+Wed 13 Aug 2025 (Sydney time)
+
+View 2 similar transactions
+
+Grandslérminus
+
+SteliBaimnsdale
+
+Account
+
+Westpac Choice Basic
+733-203 50427...
+2025-12-11 13:13:11,911 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:11,912 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:11,912 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:11,913 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:11,913 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:11,957 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_i8siv2t8_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_i8siv2t8', 'txt']
+2025-12-11 13:13:13,337 - DEBUG - OCR text for Screenshot_20251019_202240_Westpac.jpg:
+8:22 FOO: ON AS | 80%H
+
+Muffin Break (Gippsland
+Centre)
+
+-$6.17
+
+Fri 15 Aug 2025 (Sydney time)
+
+View 3 similar transactions
+
+=== Sale=macartl
+
+= Cunning)
+
+ighame ||
+reet|
+
+g
+
+king/ =|
+rey Q
+“Gdsgle 7
+...
+2025-12-11 13:13:13,342 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:13,343 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:13,343 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:13,344 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:13,344 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:13,384 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_j41stobq_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_j41stobq', 'txt']
+2025-12-11 13:13:14,765 - DEBUG - OCR text for Screenshot_20251019_202315_Westpac.jpg:
+8:23 FOO: BNA i] 80%H
+
+<
+
+Sale Cinemas
+
+-$16.00
+
+Mon 18 Aug 2025 (Sydney time)
+
+View 2 similar transactions
+
+a TH
+
+ww ae
+=== Sale=macart
+
+mer
+== MacArthur St j
+a Lm |
+i ~@ = = Cunning
+
+|
+The Criterion...
+2025-12-11 13:13:14,774 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:14,775 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:14,775 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:14,776 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:14,776 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:14,816 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_674hntb9_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_674hntb9', 'txt']
+2025-12-11 13:13:16,343 - DEBUG - OCR text for Screenshot_20251019_202339_Westpac.jpg:
+8:23 FOO: ON AS | 80%H
+
+Pm
+Qe CENTRAL
+> S GIPPSLAND
+ays HEALTH
+
+Central Gippsland Health
+
+-$6.00
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 7 similar transactions
+
+- ~ ae
+
+| a
+
+y | et @ «.
+| Central Gippsla...
+2025-12-11 13:13:16,353 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:16,353 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:16,353 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:16,354 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:16,354 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:16,393 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jyol1xfq_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jyol1xfq', 'txt']
+2025-12-11 13:13:17,619 - DEBUG - OCR text for Screenshot_20251019_202408_Westpac.jpg:
+8:24BO0> ON AS | 80%H
+
+<
+
+Yarragon Bakery
+
+-$5.00
+
+Tue 19 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+| | Newr
+| JB HF Tra
+| pe \
+| | pow
+a \
+AN
+4 &,
+f %
+| $
+Account
+Westpac Choice Basic
+733-...
+2025-12-11 13:13:17,624 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:17,625 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:17,625 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:17,625 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:17,626 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:17,667 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ezvdu7vd_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ezvdu7vd', 'txt']
+2025-12-11 13:13:18,936 - DEBUG - OCR text for Screenshot_20251019_202431_Westpac.jpg:
+8:24BO0> ON AS | 80%H
+
+<
+
+@ aie? leuf ield
+
+Heyfield pakery
+
+-$6.30
+
+Wed 20 Aug 2025 (Sydney time)
+
+View 4 similar transactions
+
+_|
+1
+i
+|
+|
+=
+
+Zo
+
+jeyfield |
+fetlands
+
+Son St
+
+i
+
+~~ Pear:
+
+|
+a River S...
+2025-12-11 13:13:18,941 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:18,942 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:18,942 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:18,943 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:18,943 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:18,994 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vsntysrn_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_vsntysrn', 'txt']
+2025-12-11 13:13:20,384 - DEBUG - OCR text for Screenshot_20251019_202451_Westpac.jpg:
+8:24BO0> BNA ll 80%H
+
+St Vincent De Paul (Traralgon)
+
+-§8.00
+
+Thu 21 Aug 2025 (Sydney time)
+
+View 2 similar transactions
+
+ban =
+‘avidson st Fe
+
+uy Ydegq
+
+©
+yg Au8
+2
+5
+°
+Q
+&
+
+Yallambee Traralgon (eo)
+
+...
+2025-12-11 13:13:20,393 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:20,394 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:20,394 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:20,394 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:20,394 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:20,435 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jx3pizku_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_jx3pizku', 'txt']
+2025-12-11 13:13:21,833 - DEBUG - OCR text for Screenshot_20251019_202524_Westpac.jpg:
+8:25 FOO > ON AS | 80%H
+
+Muffin Break (Gippsland
+Centre)
+
+-$11.32
+
+Fri 22 Aug 2025 (Sydney time)
+
+View 3 similar transactions
+
+_ = === Sale=macart
+aghame i — IN \ ees == Cunning!
+fa z | i |
+Gah | 3 \ ...
+2025-12-11 13:13:21,838 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:21,839 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:21,839 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:21,839 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:21,840 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:21,881 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_gvvrel0m_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_gvvrel0m', 'txt']
+2025-12-11 13:13:23,348 - DEBUG - OCR text for Screenshot_20251019_202546_Westpac.jpg:
+8:25 ROO:
+€
+
+Aqua Energy
+
+-$6.30
+
+Mon 25 Aug 2025 (Sydney time)
+
+View 3 similar transactions
+
+—s spIMacanster ve ~
+
+‘urnbull St
+S=————ecakeside
+
+i
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcat...
+2025-12-11 13:13:23,357 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:23,358 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:23,358 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:23,359 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:23,359 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:23,401 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_my5d_w_r_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_my5d_w_r', 'txt']
+2025-12-11 13:13:24,740 - DEBUG - OCR text for Screenshot_20251019_202605_Westpac.jpg:
+8:26 BOO: ON AS | 80%H
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 25 Aug 2025 (Sydney time)
+
+View 5 similar transactions
+
+| | Newr
+| JB HF Tra
+| pe \
+| | pow
+a \
+AN
+F
+( %
+| G
+
+Account
+Westpac Choice Basic
+733-2...
+2025-12-11 13:13:24,750 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:24,751 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:24,751 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:24,752 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:24,753 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:24,811 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lx4w0stk_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_lx4w0stk', 'txt']
+2025-12-11 13:13:26,055 - DEBUG - OCR text for Screenshot_20251019_202635_Westpac.jpg:
+8:26 FOO: ON a ul 80%H
+
+Ge
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$15.80
+
+Wed 27 Aug 2025 (Sydney time)
+
+View 6 similar transactions
+
+g__|
+
+The ( Criterion Hotel L@G,
+
+bh
+Art | a
+
+\
+——
+Canal...
+2025-12-11 13:13:26,064 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:26,065 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:26,065 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:26,066 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:26,066 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:26,113 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__pp484m2_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__pp484m2', 'txt']
+2025-12-11 13:13:27,331 - DEBUG - OCR text for Screenshot_20251019_202659_Westpac.jpg:
+8:26 FOO: ON a ul 80%H
+
+<
+
+NeW 2c)
+New Leaf Cafe
+
+-$19.00
+
+Fri 29 Aug 2025 (Sydney time)
+
+View 31 similar transactions
+
+—=
+Lucke's-Fr
+Food Mal
+Account
+Westpac Choice Basic
+733-203 504274
+Subcategory
+C...
+2025-12-11 13:13:27,336 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:27,337 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:27,337 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:27,338 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:27,338 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:27,376 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_acyjbg7d_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_acyjbg7d', 'txt']
+2025-12-11 13:13:28,821 - DEBUG - OCR text for Screenshot_20251019_202724_Westpac.jpg:
+8:27 BOO: ON AS | 80%H
+
+endeavsur
+
+Endeavour Petroleum
+(Stratford)
+
+-S7.00
+
+Mon 1 Sep 2025 (Sydney time)
+
+No similar transactions
+
+bell /:
+
+g Market
+
+5 ors ae ip
+[- ord (2)
+
+a &. “T
+
+S—
+
+rend caravan ...
+2025-12-11 13:13:28,830 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:28,830 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:28,830 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:28,831 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:28,832 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:28,876 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_p8qsyrjf_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_p8qsyrjf', 'txt']
+2025-12-11 13:13:30,493 - DEBUG - OCR text for Screenshot_20251019_202746_Westpac.jpg:
+8:27 BOO: ON a ul 80%H
+
+Qe CENTRAL
+= “= GIPPSLAND
+y= HEALTH
+
+Central Gippsland Health
+
+-$11.50
+
+Tue 2 Sep 2025 (Sydney time)
+
+View 7 similar transactions
+
+\ 3 4a
+i Bog Araluen pp —
+1] 3 ie i
+| \) 2 Qa...
+2025-12-11 13:13:30,499 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:30,500 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:30,500 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:30,501 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:30,501 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:30,547 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_yaajlrze_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_yaajlrze', 'txt']
+2025-12-11 13:13:31,786 - DEBUG - OCR text for Screenshot_20251019_202912_Westpac.jpg:
+8:29 FOO: ON AS | 80%H
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 8 Sep 2025 (Sydney time)
+
+View 5 similar transactions
+
+| | Newr
+| JB HF Tra
+| pe \
+| | pow
+a \
+AN
+F
+( %
+| G
+
+Account
+Westpac Choice Basic
+733-20...
+2025-12-11 13:13:31,795 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:31,796 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:31,796 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:31,797 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:31,797 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:31,836 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_nllt11ec_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_nllt11ec', 'txt']
+2025-12-11 13:13:33,076 - DEBUG - OCR text for Screenshot_20251019_202952_Westpac.jpg:
+8:29 FOO:
+
+-$6.50
+
+Wed 10 Sep 2025 (Sydney time)
+
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+Coffee Shops
+
+Tags
+None
+
+Bills calendar
+
+None
+
+Tax relevant
+
+No
+
+We...
+2025-12-11 13:13:33,086 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:33,087 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:33,088 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:33,088 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:33,089 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:33,144 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_va6xbz8b_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_va6xbz8b', 'txt']
+2025-12-11 13:13:34,681 - DEBUG - OCR text for Screenshot_20251019_203027_Westpac.jpg:
+8:30 & AO - ON AS | 80%H
+
+Bairnsdale’ Bakehouse
+
+-$6.10
+
+Thu 11 Sep 2025 (Sydney time)
+
+View 23 similar transactions
+
+Ce Mitchell River Walk @
+
+s Bairnsdale
+\
+
+Grandslérminus (
+nogSeiea Tal 4
+
+Account...
+2025-12-11 13:13:34,687 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:34,688 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:34,688 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:34,688 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:34,689 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:34,733 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_c_d9svul_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_c_d9svul', 'txt']
+2025-12-11 13:13:36,112 - DEBUG - OCR text for Screenshot_20251019_203130_Westpac.jpg:
+8:31 BA &@O- ON AS | 80%H
+
+SYDNEY
+TOOLS
+
+Sydney Tools (Burleigh Heads)
+
+-$69.95
+
+Wed 17 Sep 2025 (Sydney time)
+
+No similar transactions
+
+} af Matilda st
+(eo) BOUNCEinc Gold C =
+inc Go S
+~ 2 Ocean
+e 3 ...
+2025-12-11 13:13:36,119 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:36,119 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:36,120 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:36,120 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:36,120 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:36,164 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2dy_bsin_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2dy_bsin', 'txt']
+2025-12-11 13:13:37,745 - DEBUG - OCR text for Screenshot_20251019_203211_Westpac.jpg:
+8:32 Am@ > BN AS ll 80%H
+
+<
+
+Stratford Bakery
+
+-$6.46
+
+Tue 23 Sep 2025 (Sydney time)
+
+View 4 similar transactions
+
+W
+
+é _ Childcare 7Strattord \=¥/
+— / Market
+8 Stratford _ ‘ies
+=
+
+z
+
+—_
+
+|
+|
+
+Badger:...
+2025-12-11 13:13:37,751 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:37,752 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:37,752 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:37,753 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:37,753 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:37,798 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3c7e_lnk_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3c7e_lnk', 'txt']
+2025-12-11 13:13:39,255 - DEBUG - OCR text for Screenshot_20251019_203247_Westpac.jpg:
+8:32 Am@ > BN AS il 80%H
+
+<
+
+New Rosedale Bakery Pty Ltd
+
+-§11.15
+
+Wed 24 Sep 2025 (Sydney time) eco
+
+No similar transactions
+
+\ oolworths Traralgon | i
+“Google | | | “iM Seymour g¢=
+I (rn re eee [ae ...
+2025-12-11 13:13:39,262 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:39,263 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:39,264 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:39,264 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:39,264 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:39,313 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_rx61ld0u_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_rx61ld0u', 'txt']
+2025-12-11 13:13:40,674 - DEBUG - OCR text for Screenshot_20251019_203303_Westpac.jpg:
+8:33 Am@ > BN AS ul 80%H
+
+<
+
+Aldi Mobile
+
+-§25.00
+
+Wed 24 Sep 2025 (Sydney time)
+View 75 similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Pay TV & Telephone Edit
+Tags
+
+...
+2025-12-11 13:13:40,679 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:40,679 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:40,680 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:40,680 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:40,681 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:40,731 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_c7o7ewoi_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_c7o7ewoi', 'txt']
+2025-12-11 13:13:42,202 - DEBUG - OCR text for Screenshot_20251019_203319_Westpac.jpg:
+8:33 Am@ > BN AS il 80%H
+
+<
+
+YMCA (Gippsland Regional
+Aquatic Centre)
+
+-$5.60
+
+Thu 25 Sep 2025 (Sydney time)
+
+No similar transactions
+
+\
+
+— Fairview St= \ \ —<
+
+Woolworths uel ‘O- —
+| pores
+| | |} |B ...
+2025-12-11 13:13:42,212 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:42,212 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:42,213 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:42,213 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:42,213 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:42,258 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2id8sm8s_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2id8sm8s', 'txt']
+2025-12-11 13:13:43,827 - DEBUG - OCR text for Screenshot_20251019_203401_Westpac.jpg:
+8:34 Am @ - BN AS il 80%H
+
+<
+
+Qe CENTRAL
+= GIPPSLAND
+as HEALTH
+
+Central Gippsland Health
+
+-$11.50
+
+Tue 30 Sep 2025 (Sydney time)
+
+No similar transactions
+
+i Ey f
+g [i
+= 1 s—_{s
+Hacer ee
+\| |
+Ve
+| Cent...
+2025-12-11 13:13:43,837 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:43,838 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:43,838 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:43,839 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:43,839 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:43,884 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_1iyorcfe_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_1iyorcfe', 'txt']
+2025-12-11 13:13:45,521 - DEBUG - OCR text for Screenshot_20251019_203433_Westpac.jpg:
+8:34 Am @ - BN AS il 80%H
+
+<
+
+Ss t gy icid
+
+Heyfield Bakery
+
+a a
+= away >
+
+“MacFarlan, eon I
+
+Heyfiel RV Park
+
+Fri 3 Oct 2025 (Sydney time)
+teyfield / é | |
+fetlands | = § & &
+Heyfield Pizza =~ s
+o oO...
+2025-12-11 13:13:45,521 - WARNING - Could not parse date/amount from C:\Users\alles\My Drive\ATO app\Screenshots\2025-10\Screenshot_20251019_203433_Westpac.jpg
+2025-12-11 13:13:45,530 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:45,531 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:45,531 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:45,531 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:45,532 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:45,574 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_q8mshgix_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_q8mshgix', 'txt']
+2025-12-11 13:13:46,863 - DEBUG - OCR text for Screenshot_20251019_203446_Westpac.jpg:
+8:34 Go FR m& - BN AS SO%eE
+
+<
+
+@ aie? leuf ield
+
+Heyfield pakery
+
+-S4.37
+
+Fri 3 Oct 2025 (Sydney time)
+
+View 4 similar transactions
+
+jeyfield |
+fetlands y
+
+River at]
+
+Account
+
+Westpac Choice Basic
+73...
+2025-12-11 13:13:46,869 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:46,870 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:46,870 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:46,871 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:46,871 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:46,912 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_gi0q7cj6_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_gi0q7cj6', 'txt']
+2025-12-11 13:13:48,087 - DEBUG - OCR text for Screenshot_20251019_203544_Westpac.jpg:
+8:35 Am @ > BNSC. 80%H
+
+Al Car Wash Bairnsdale
+
+-§8.35
+
+Mon 6 Oct 2025 (Sydney time)
+
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Petrol Edit
+Tags
+
+None Edit
+
+B...
+2025-12-11 13:13:48,097 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:48,098 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:48,098 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:48,099 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:48,100 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:48,146 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_pzaanzkd_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_pzaanzkd', 'txt']
+2025-12-11 13:13:49,445 - DEBUG - OCR text for Screenshot_20251019_203621_Westpac.jpg:
+8:36 Am @ - BN AS il 80%H
+
+The Wedge
+
+-$23.40
+
+Fri 10 Oct 2025 (Sydney time)
+
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Restaurants & Dining Edit
+Tags
+
+None E...
+2025-12-11 13:13:49,451 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:49,452 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:49,452 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:49,453 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:49,453 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:49,501 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_mkyjwc7g_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_mkyjwc7g', 'txt']
+2025-12-11 13:13:50,978 - DEBUG - OCR text for Screenshot_20251019_203700_Westpac.jpg:
+8:37 Fm@@- BN AS SO%eE
+
+<
+
+Stratford Bakery
+
+-$2.53
+
+Mon 13 Oct 2025 (Sydney time)
+
+No similar transactions
+
+pgblacare7Strattord —,
+lj |
+/. Market
+
+Badger:&.Ha
+)
+~
+aord Cpr: Sievewron |
+"Gesgierv Park...
+2025-12-11 13:13:50,987 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:50,988 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:50,988 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:50,989 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:50,989 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:51,039 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2a7t4py6_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_2a7t4py6', 'txt']
+2025-12-11 13:13:52,575 - DEBUG - OCR text for Screenshot_20251019_203726_Westpac.jpg:
+8:37 Fm@@- BN AS SO%eE
+
+ct >
+‘G)
+
+The Dock Espresso Bar
+(Gippsland Art Gallery)
+
+-$5.80
+
+Wed 15 Oct 2025 (Sydney time)
+
+View 6 similar transactions
+
+i rc The Criterion Hotel LO
+
+| pL
+
+\—i
+Canal Reserv...
+2025-12-11 13:13:52,582 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:52,583 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:52,584 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:52,585 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:52,586 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:52,651 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3gfb01_u_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_3gfb01_u', 'txt']
+2025-12-11 13:13:54,258 - DEBUG - OCR text for Screenshot_20251019_203739_Westpac.jpg:
+8:37 B&O-
+
+<
+
+Aqua Energy
+
+-$6.30
+
+Thu 16 Oct 2025 (Sydney time)
+
+View 3 similar transactions
+
+———s
+
+nin]
+=———— Lakeside
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+Other Utilities
+
+Tag...
+2025-12-11 13:13:54,267 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:54,267 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:54,268 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:54,268 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:54,268 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:54,307 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_0cfhrn27_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_0cfhrn27', 'txt']
+2025-12-11 13:13:55,702 - DEBUG - OCR text for Screenshot_20251029_162735_Westpac.jpg:
+4:27 @ B:
+
+<
+
+AS
+
+ye BMA ll 56%
+
+EZYPAY
+
+Ezypay
+
+-$65.00
+
+Mon 20 Oct 2025 (Sydney time)
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Other Expenses Edit
+Tags
+
+No...
+2025-12-11 13:13:55,711 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:55,711 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:55,712 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:55,712 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:55,712 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:55,758 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ub8inj9e_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_ub8inj9e', 'txt']
+2025-12-11 13:13:57,064 - DEBUG - OCR text for Screenshot_20251029_162809_Westpac.jpg:
+4:28 B@ ws BMA ll 56%
+
+<
+
+Yarragon Bakery
+
+-§5.30
+
+Mon 20 Oct 2025 (Sydney time) eco
+
+View 7 similar transactions
+
+yy sa
+
+sem
+a
+a ee
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Bakery ...
+2025-12-11 13:13:57,076 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:57,077 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:57,077 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:57,078 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:57,078 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:57,130 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_xshaonlw_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_xshaonlw', 'txt']
+2025-12-11 13:13:58,523 - DEBUG - OCR text for Screenshot_20251029_162844_Westpac.jpg:
+4:28 R@ % +
+
+ALDI (Sale)
+
+-$13.08
+
+Tue 21 Oct 2025 (Sydney time)
+
+View 4 similar transactions
+
+~ |jMansi\On) Raymond
+
+N IL
+
+ys Aopen
+
+j|
+\(
+)l
+
+ae epniina—=
+
+al
+=)
+|
+
+=== ae scars c=
+
+Google
+
+Account
+...
+2025-12-11 13:13:58,534 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:58,534 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:58,535 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:58,535 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:58,536 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:58,581 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_h3kop2hz_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_h3kop2hz', 'txt']
+2025-12-11 13:13:59,802 - DEBUG - OCR text for Screenshot_20251029_162941_Westpac.jpg:
+4:29 B@w- ON AS ul 55% eH
+
+Cafe 3847
+
+-$21.50
+
+Wed 22 Oct 2025 (Sydney time)
+
+No similar transactions
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Coffee Shops Edit
+Tags
+
+None Edit
+
+Bil...
+2025-12-11 13:13:59,807 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:13:59,808 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:13:59,808 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:13:59,809 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:13:59,809 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:13:59,863 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__aqtu359_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess__aqtu359', 'txt']
+2025-12-11 13:14:01,381 - DEBUG - OCR text for Screenshot_20251029_163012_Westpac.jpg:
+430M PR @ > BMS il 55%H
+
+CLOTHING
+
+Ghanda Clothing (Traralgon)
+
+-$28.00
+
+Fri 24 Oct 2025 (Sydney time)
+
+View 2 similar transactions
+
+2 ———
+Mi
+
+Yallambeé Tra
+Village for the
+
+- 2 ANSE Park
+
+Ge p \\ ee%...
+2025-12-11 13:14:01,393 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:14:01,394 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:14:01,394 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:14:01,394 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:14:01,395 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:14:01,438 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4n7_v60j_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_4n7_v60j', 'txt']
+2025-12-11 13:14:02,878 - DEBUG - OCR text for Screenshot_20251029_163052_Westpac.jpg:
+4:30 BAM@ > ON AS ul 55% eH
+
+<
+
+Yarragon Bakery
+
+-$7.20
+
+Mon 27 Oct 2025 (Sydney time)
+
+View 7 similar transactions
+
+| | Newr
+| JB HF Tra
+| pe \
+| | pow
+a \
+AN
+F
+( %
+| G
+
+Account
+Westpac Choice Basic
+...
+2025-12-11 13:14:02,883 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:14:02,884 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:14:02,885 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:14:02,885 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:14:02,886 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:14:02,937 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_r5nezgmh_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_r5nezgmh', 'txt']
+2025-12-11 13:14:04,167 - DEBUG - OCR text for Screenshot_20251029_163117_Westpac.jpg:
+4:31 AM @ ON AS ul 55% eH
+
+<
+
+Lazzaro Bros
+
+-$6.04
+
+Tue 28 Oct 2025 (Sydney time)
+
+No similar transactions
+
+|
+
+Se
+
+Account
+
+Westpac Choice Basic
+733-203 504274
+
+Subcategory
+
+Uncategorised Edit
+Tags
+
+N...
+2025-12-11 13:14:04,176 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:14:04,177 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:14:04,177 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:14:04,178 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:14:04,178 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:14:04,224 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_1bevasp5_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_1bevasp5', 'txt']
+2025-12-11 13:14:05,869 - DEBUG - OCR text for Screenshot_20251029_163135_Westpac.jpg:
+4:31 48M @ > ON AS ul 55% eH
+
+Qe CENTRAL
+= GIPPSLAND
+as HEALTH
+
+Central Gippsland Health
+
+-$4.00
+
+Tue 28 Oct 2025 (Sydney time)
+
+View 3 similar transactions
+
+i Ey f
+——<$ | s——_ js
+: | | i | d))
+| Cent...
+2025-12-11 13:14:05,874 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:14:05,874 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:14:05,875 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:14:05,875 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:14:05,875 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:14:05,924 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_o2bz6dpf_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_o2bz6dpf', 'txt']
+2025-12-11 13:14:07,776 - DEBUG - OCR text for Screenshot_20251029_163202_Westpac.jpg:
+4:32 AM@ >: ON AS ul 55% eH
+
+Qe CENTRAL
+= GIPPSLAND
+as HEALTH
+
+Central Gippsland Health
+
+-§5.50
+
+Tue 28 Oct 2025 (Sydney time)
+
+View 3 similar transactions
+
+| az
+—s ~Araluen Or——
+=} 2 ig fi
+| ents ccl...
+2025-12-11 13:14:07,782 - DEBUG - tag: ImageWidth (256) - type: short (3) - value: b'\x048'
+2025-12-11 13:14:07,784 - DEBUG - tag: ImageLength (257) - type: short (3) - value: b'\t`'
+2025-12-11 13:14:07,785 - DEBUG - tag: Software (305) - type: string (2) Tag Location: 46 - Data Location: 74 - value: <table: 38 bytes>
+2025-12-11 13:14:07,786 - DEBUG - tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00p'
+2025-12-11 13:14:07,786 - DEBUG - tag: Orientation (274) - type: long (4) - value: b'\x00\x00\x00\x00'
+2025-12-11 13:14:07,835 - DEBUG - ['C:\\Program Files\\Tesseract-OCR\\tesseract.exe', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_cft1sgxw_input.JPEG', 'C:\\Users\\alles\\AppData\\Local\\Temp\\tess_cft1sgxw', 'txt']
+2025-12-11 13:14:09,535 - DEBUG - OCR text for Screenshot_20251029_163231_Westpac.jpg:
+4:32 BM@ > ON AS ul 55% eH
+
+ALDI (Sale)
+
+-$1.99
+
+Tue 28 Oct 2025 (Sydney time)
+
+View 4 similar transactions
+
+— ~_|\MansiOn) ue more \I|
+| | |
+8 | | =
+3 ; fl |)
+Q_) Lo} = ay
+| ALDI 2 a
+La
+A —H —==Sale=...
+2025-12-11 13:14:09,543 - INFO - Pending CSV saved
+2025-12-11 13:14:09,975 - INFO - Scan complete: 105 new items

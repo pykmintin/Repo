@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDIS Expense Assistant - Final Locked Design Specification</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+            margin-top: 25px;
+        }
+        .version-badge {
+            background-color: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        nav.toc {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        nav.toc h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border: none;
+        }
+        nav.toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        nav.toc li {
+            margin: 8px 0;
+        }
+        nav.toc a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        nav.toc a:hover {
+            text-decoration: underline;
+        }
+        .path-box {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .workflow-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        code, pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .phase-table td:first-child {
+            font-weight: bold;
+            width: 20%;
+        }
+        .phase-table td:nth-child(2) {
+            width: 15%;
+        }
+        sup {
+            font-size: 0.75em;
+        }
+        .footnotes {
+            border-top: 2px solid #ecf0f1;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.9em;
+        }
+        .footnotes ol {
+            padding-left: 20px;
+        }
+        .footnotes li {
+            margin: 8px 0;
+        }
+        .footnotes a {
+            color: #2980b9;
+        }
+        .checklist {
+            list-style-type: '✓ ';
+            padding-left: 25px;
+        }
+        .checklist li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NDIS Expense Assistant - Final Locked Design Specification</h1>
+        <p>
+            <span class="version-badge">Version 1.0</span> 
+            <strong>Status:</strong> Production-Ready | 
+            <strong>Date:</strong> December 7, 2025
+        </p>
+
+        <nav class="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#path-correction">🚨 Path Correction - ROOT ONLY</a></li>
+                <li><a href="#workflow1">👩‍💼 Workflow 1: Mum's Sunday Ritual</a></li>
+                <li><a href="#workflow2">👩‍💼 Workflow 2: Mum's Monday Ritual</a></li>
+                <li><a href="#implementation">💻 Implementation: Technical Architecture</a></li>
+                <li><a href="#file-structure">📂 File Structure (FINAL - ROOT ONLY)</a></li>
+                <li><a href="#ui-design">🎨 UI Design Specification</a></li>
+                <li><a href="#data-schema">📋 Data Schema</a></li>
+                <li><a href="#phase-plan">📅 Implementation Phases (Locked)</a></li>
+                <li><a href="#success-criteria">🎯 Success Criteria</a></li>
+                <li><a href="#open-questions">⚠️ Open Questions</a></li>
+                <li><a href="#what-you-build">📦 What You Will Build</a></li>
+                <li><a href="#version-manifest">📦 Version Manifest</a></li>
+            </ul>
+        </nav>
+
+        <h2 id="path-correction">🚨 PATH CORRECTION - ROOT ONLY</h2>
+        <p><strong>The application and all data files live directly in:</strong></p>
+        <div class="path-box">
+C:\Users\alles\My Drive\ATO app\          # ROOT - NO SUBFOLDER<br>
+│<br>
+├── NDIS Assistant.exe                    # Executable (here)<br>
+├── config.ini                            # Settings (here)<br>
+├── pending.csv                           # Unprocessed (here)<br>
+├── completed.csv                         # Audit trail (here)<br>
+│<br>
+├── (40 JPG files - location resolved interactively)<br>
+├── Apr 25-Jun25\                         # 16 screenshots<br>
+└── June 25'-oct25'\                      # 53 screenshots
+        </div>
+        <div class="warning-box">
+            <strong><code>NDIS Assistant\</code> subfolder does NOT exist and will NOT be created.</strong>
+        </div>
+
+        <h2 id="workflow1">👩‍💼 Workflow 1: Mum's Sunday Ritual (Phone → Drive)</h2>
+        <div class="workflow-box">
+            <p><strong>Frequency:</strong> Every Sunday night | <strong>Duration:</strong> 5 minutes</p>
+            <ol>
+                <li><strong>During week:</strong> Mum takes screenshots on Android phone (business & personal mixed)</li>
+                <li><strong>Sunday 8pm:</strong> Opens Google Photos → Library → Screenshots</li>
+                <li><strong>Selects business screenshots:</strong> Taps each one (10-15 per week)</li>
+                <li><strong>Shares to Drive:</strong> Tap Share → Save to Drive → Selects "NDIS 2025" folder</li>
+                <li><strong>Waits 2 minutes:</strong> Google Drive syncs to PC (checks taskbar for green checkmark)</li>
+                <li><strong>Done:</strong> Screenshots now appear on her PC</li>
+            </ol>
+            <p><strong>Key Control Point:</strong> The manual "Share to Drive" step is the curation gate. Personal screenshots never leave her phone.</p>
+        </div>
+
+        <h2 id="workflow2">👩‍💼 Workflow 2: Mum's Monday Ritual (PC → myDeductions)</h2>
+        <div class="workflow-box">
+            <p><strong>Frequency:</strong> Every Monday morning | <strong>Duration:</strong> 20 minutes</p>
+            <ol>
+                <li><strong>Turn on PC:</strong> Google Drive already synced during boot</li>
+                <li><strong>Double-click desktop icon:</strong> <code>NDIS Assistant.exe</code> <em>(lives in ROOT)</em></li>
+                <li><strong>App opens directly to table:</strong> Shows all unscanned screenshots
+                    <pre style="font-size: 0.8em;">┌──────────────────────────────────────────────────────────────────┐
+│ NDIS Expense Assistant v1.0 | File Settings Help              │
+├──────────────────────────────────────────────────────────────────┤
+│ Screenshot Folder: [C:\...\ATO app\] [Browse]                │
+│ Found: 117 total | 12 new this week | 105 processed            │
+├──────────────────────────────────────────────────────────────────┤
+│ 📋 TODO (Pending)                                               │
+│ ┌─────────────────────────────────────────────────────────────┐ │
+│ │ ☐ 2025-12-05 | $34.50 | CAFE ROSA | [Sarah Mitchell ▼]    │ │
+│ │     [View Image] [Mark Done] [Skip]                        │ │
+│ │ ☐ 2025-12-04 | $12.00 | COLES SUPER | [Group Session ▼]   │ │
+│ │     [View Image] [Mark Done] [Skip]                        │ │
+│ └─────────────────────────────────────────────────────────────┘ │
+│                                                                 │
+│ ✅ Completed (This Session)                                     │
+│ ┌─────────────────────────────────────────────────────────────┐ │
+│ │ ✓ 2025-12-03 | $56.20 | SHELL PETROL | Sarah Mitchell      │ │
+│ └─────────────────────────────────────────────────────────────┘ │
+├──────────────────────────────────────────────────────────────────┤
+│ [Open myDeductions] [Export CSV] [Save & Exit]                │
+└──────────────────────────────────────────────────────────────────┘</pre>
+                </li>
+                <li><strong>Fills Client dropdown:</strong> Types or selects from list for each row</li>
+                <li><strong>Clicks "Mark Done":</strong> Row moves to "Completed" section below, <strong>immediately appends to <code>completed.csv</code> in ROOT</strong></li>
+                <li><strong>Opens myDeductions:</strong> Clicks <code>[Open myDeductions]</code> button (launches Phone Link)</li>
+                <li><strong>Manual entry:</strong> Enters each "Done" expense into myDeductions app using the table as reference</li>
+                <li><strong>Saves & Exits:</strong> Clicks <code>[Save & Exit]</code>. All progress saved to CSV in ROOT.</li>
+            </ol>
+            <p><strong>Fallback:</strong> If app crashes, Mum opens <code>completed.csv</code> <em>(in ROOT)</em> with Excel and uses it as a paper list.</p>
+        </div>
+
+        <h2 id="implementation">💻 Implementation: Technical Architecture</h2>
+        <h3>Core Stack (Version-Verified)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Version</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Python</strong></td>
+                    <td><strong>3.14</strong> (you have it)</td>
+                    <td>Use existing installation, zero setup</td>
+                </tr>
+                <tr>
+                    <td><strong>Tesseract OCR</strong></td>
+                    <td><strong>5.5.1</strong> (May 2025)</td>
+                    <td>Latest stable Windows build<sup><a href="#fn1">1</a></sup></td>
+                </tr>
+                <tr>
+                    <td><strong>PySide6</strong></td>
+                    <td><strong>6.10.0</strong> (Oct 2025)</td>
+                    <td>LGPL license, Qt6 GUI framework<sup><a href="#fn2">2</a></sup></td>
+                </tr>
+                <tr>
+                    <td><strong>PyInstaller</strong></td>
+                    <td><strong>6.17.0</strong> (Nov 2025)</td>
+                    <td>Single .exe output, no dependencies<sup><a href="#fn3">3</a></sup></td>
+                </tr>
+                <tr>
+                    <td><strong>Pillow</strong></td>
+                    <td><strong>11.0.0</strong></td>
+                    <td>Image preprocessing for OCR</td>
+                </tr>
+                <tr>
+                    <td><strong>Watchdog</strong></td>
+                    <td><strong>NOT USED</strong></td>
+                    <td>Google Drive mirroring handles sync</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Application Architecture</h3>
+        <ul>
+            <li><strong>Single executable:</strong> <code>NDIS Assistant.exe</code> (30-50 MB)</li>
+            <li><strong>Portable:</strong> All data files <strong>must</strong> be in same folder as .exe</li>
+            <li><strong>Read-only source:</strong> App scans screenshots but never modifies them</li>
+            <li><strong>Immediate persistence:</strong> CSV writes are atomic (no data loss)</li>
+            <li><strong>Offline-first:</strong> Zero network calls after installation</li>
+        </ul>
+
+        <h2 id="file-structure">📂 File Structure (FINAL - ROOT ONLY)</h2>
+        <div class="path-box">
+C:\Users\alles\My Drive\ATO app\          # ROOT FOLDER<br>
+│<br>
+├── NDIS Assistant.exe                    # Executable (YOU CREATE)<br>
+├── config.ini                           # Settings (APP CREATES)<br>
+├── pending.csv                          # Unprocessed (APP CREATES)<br>
+├── completed.csv                        # Audit trail (APP CREATES)<br>
+│<br>
+├── (screenshot location resolved interactively)<br>
+│   ├── *.jpg (40 files - location TBD in Phase 0)<br>
+│   ├── Apr 25-Jun25\                    # 16 files<br>
+│   └── June 25'-oct25'\                 # 53 files<br>
+│<br>
+└── (any other files you already have - IGNORED by app)
+        </div>
+        <div class="warning-box">
+            <p><strong>APP RULE:</strong> <code>os.path.dirname(sys.executable)</code> is the root. All CSV/config paths are relative to the .exe location.</p>
+        </div>
+
+        <h2 id="ui-design">🎨 UI Design Specification (Locked)</h2>
+        
+        <h3>Window 1: Main Application (Single Window)</h3>
+        <pre>┌──────────────────────────────────────────────────────────────────┐
+│ NDIS Expense Assistant v1.0 | File Settings Help              │
+├──────────────────────────────────────────────────────────────────┤
+│ Screenshot Folder: [C:\Users\alles\My Drive\ATO app\] [Browse]│
+│ Found: 117 total | 12 new this week | 105 processed            │
+├──────────────────────────────────────────────────────────────────┤
+│ 📋 TODO (Pending)                                               │
+│ ┌─────────────────────────────────────────────────────────────┐ │
+│ │ ☐ 2025-12-05 | $34.50 | CAFE ROSA | [Sarah Mitchell ▼]    │ │
+│ │     [View Image] [Mark Done] [Skip]                        │ │
+│ │ ☐ 2025-12-04 | $12.00 | COLES SUPER | [Group Session ▼]   │ │
+│ │     [View Image] [Mark Done] [Skip]                        │ │
+│ └─────────────────────────────────────────────────────────────┘ │
+│                                                                 │
+│ ✅ Completed (This Session)                                     │
+│ ┌─────────────────────────────────────────────────────────────┐ │
+│ │ ✓ 2025-12-03 | $56.20 | SHELL PETROL | Sarah Mitchell      │ │
+│ └─────────────────────────────────────────────────────────────┘ │
+├──────────────────────────────────────────────────────────────────┤
+│ [Open myDeductions] [Export CSV] [Save & Exit]                │
+└──────────────────────────────────────────────────────────────────┘</pre>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li><strong>Screenshot Folder:</strong> Browse button selects any path (defaults to .exe location)</li>
+            <li><strong>TODO Section:</strong> Only shows unscanned items from <code>pending.csv</code></li>
+            <li><strong>Completed Section:</strong> Shows items marked done in current session</li>
+            <li><strong>View Image:</strong> Opens original screenshot in default viewer</li>
+            <li><strong>Export CSV:</strong> Copies <code>completed.csv</code> to Desktop with date stamp</li>
+        </ul>
+
+        <h3>Window 2: Settings Dialog</h3>
+        <pre>┌──────────────────────────────────────────┐
+│ Settings                                 │
+├──────────────────────────────────────────┤
+│ Client Names (one per line):            │
+│ ┌────────────────────────────────────┐ │
+│ │ Sarah Mitchell                     │ │
+│ │ Johnson Family                     │ │
+│ │ Williams Group                     │ │
+│ │ Transport - General                │ │
+│ └────────────────────────────────────┘ │
+│                                          │
+│ myDeductions Launch:                    │
+│ (•) Phone Link  ( ) Scrcpy  ( ) Manual │
+│                                          │
+│ [Export All] [Reset] [Cancel] [OK]     │
+└──────────────────────────────────────────┘</pre>
+        <p><strong>Behaviors:</strong></p>
+        <ul>
+            <li><strong>Reset:</strong> Archives current CSVs with timestamp, creates fresh ones</li>
+            <li><strong>Export All:</strong> Copies entire <code>completed.csv</code> to Desktop</li>
+            <li><strong>Phone Link:</strong> Attempts to launch <code>ms-phone-link:</code> URI (Windows 11)</li>
+        </ul>
+
+        <h3>Window 3: First-Run Setup (One-time)</h3>
+        <pre>┌──────────────────────────────────────────┐
+│ First Time Setup                         │
+├──────────────────────────────────────────┤
+│ Where are your screenshots stored?      │
+│                                          │
+│ [C:\...\ATO app\] [Browse...]          │
+│                                          │
+│ ☑ Include subfolders in scan           │
+│                                          │
+│ [Cancel] [Start Scan]                  │
+└──────────────────────────────────────────┘</pre>
+
+        <h2 id="data-schema">📋 Data Schema (Locked)</h2>
+        
+        <h3><code>config.ini</code> (ROOT - editable in Notepad)</h3>
+        <pre><code>[Paths]
+screenshot_folder = C:\Users\alles\My Drive\ATO app
+include_subfolders = true
+
+[Clients]
+names = Sarah Mitchell; Johnson Family; Williams Group; Transport - General
+
+[MyDeductions]
+launch_method = phone_link</code></pre>
+
+        <h3><code>pending.csv</code> (ROOT - unprocessed items)</h3>
+        <pre><code>filename,filepath,date_raw,amount_raw,merchant_raw,client_name,notes
+Screenshot_20251205_142022.jpg,C:\...\Screenshot_...,2025-12-05,$34.50,CAFE ROSA,,</code></pre>
+
+        <h3><code>completed.csv</code> (ROOT - audit trail - append only)</h3>
+        <pre><code>completed_timestamp,filename,date,amount,merchant,client_name,notes,mydeductions_entered
+2025-12-07T10:30:00Z,Screenshot_20251205_142022.jpg,2025-12-05,34.50,CAFE ROSA,Sarah Mitchell,Coffee meeting,2025-12-07T11:00:00Z</code></pre>
+
+        <h2 id="phase-plan">📅 Implementation Phases (Locked)</h2>
+        <table class="phase-table">
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                    <th>Deliverable</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Phase 0: OCR Validation</td>
+                    <td>15 min</td>
+                    <td>Test Tesseract on 3 sample screenshots from your folder</td>
+                    <td><code>test_ocr.py</code> script + accuracy report</td>
+                </tr>
+                <tr>
+                    <td>Phase 1: GUI Skeleton</td>
+                    <td>20 min</td>
+                    <td>Build main window with table widget (empty), Browse button, Settings menu</td>
+                    <td><code>app.py</code> runs, shows UI, can select folder</td>
+                </tr>
+                <tr>
+                    <td>Phase 2: OCR Integration</td>
+                    <td>30 min</td>
+                    <td>Wire <code>scan_folder()</code> + <code>ocr_image()</code> into GUI</td>
+                    <td>Table populates with real data from your screenshots</td>
+                </tr>
+                <tr>
+                    <td>Phase 3: User Interaction</td>
+                    <td>30 min</td>
+                    <td>Add client dropdown, "Mark Done" button, CSV save/load</td>
+                    <td>Mum can edit client names and mark items done</td>
+                </tr>
+                <tr>
+                    <td>Phase 4: Polish & Package</td>
+                    <td>20 min</td>
+                    <td>Add "View Image", "Export CSV", Settings dialog</td>
+                    <td><code>PyInstaller</code> creates single .exe</td>
+                </tr>
+                <tr>
+                    <td>Phase 5: Mum Test</td>
+                    <td>15 min</td>
+                    <td>Mum runs end-to-end with 5 real expenses</td>
+                    <td>Any UI confusion or bugs fixed</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="success-criteria">🎯 Success Criteria (Locked)</h2>
+        <ul class="checklist">
+            <li><strong>EXE Location:</strong> <code>C:\Users\alles\My Drive\ATO app\NDIS Assistant.exe</code></li>
+            <li><strong>Data Location:</strong> All CSV/config in same folder as EXE</li>
+            <li><strong>Screenshot Location:</strong> Configured via Browse dialog (not hardcoded)</li>
+            <li><strong>Mum's Flow:</strong> Double-click → see table → type client → click Mark Done → close</li>
+            <li><strong>Fallback:</strong> <code>completed.csv</code> opens in Excel, contains all history</li>
+            <li><strong>No Command Line:</strong> Zero terminal interaction for Mum</li>
+            <li><strong>No Admin Rights:</strong> Portable app, no installation required</li>
+        </ul>
+
+        <h2 id="open-questions">⚠️ Open Questions (To Be Resolved Interactively)</h2>
+        <ol>
+            <li><strong>Screenshot Location:</strong> Are the 40 JPGs in root or subfolder? <em>(Resolved in Phase 0)</em></li>
+            <li><strong>Bank App:</strong> Confirm Westpac - need 1 sample for regex tuning <em>(Resolved in Phase 0)</em></li>
+            <li><strong>Client Names:</strong> Provide actual client list for dropdown <em>(Resolved in Phase 3)</em></li>
+            <li><strong>Phone Link:</strong> Does <code>ms-phone-link:</code> URI work on her PC? <em>(Resolved in Phase 4)</em></li>
+        </ol>
+
+        <h2 id="what-you-build">📦 What You Will Build (Summary)</h2>
+        <ol>
+            <li><strong>ONE Python file:</strong> <code>app.py</code> (all logic, ~200 lines)</li>
+            <li><strong>ONE requirements file:</strong> <code>requirements.txt</code> (5 dependencies)</li>
+            <li><strong>ONE build script:</strong> <code>build.bat</code> (runs PyInstaller)</li>
+            <li><strong>ONE executable:</strong> <code>NDIS Assistant.exe</code> (output, placed in ROOT)</li>
+        </ol>
+        <div class="success-box">
+            <p><strong>That's it. No subfolders. No complexity. No hallucinations.</strong></p>
+        </div>
+
+        <h2 id="version-manifest">📦 Version Manifest (Production Stack)</h2>
+        <pre><code>python --version                     # 3.14.x (your existing install)
+tesseract --version                  # 5.5.1 (install from GitHub)
+pip install pyside6==6.10.0          # GUI framework
+pip install pytesseract==0.3.13      # OCR wrapper
+pip install pillow==11.0.0           # Image processing
+pip install pyinstaller==6.17.0      # Executable builder</code></pre>
+        <p><strong>No watchdog. No JSON. No password. No admin rights.</strong> Just these 5 components.</p>
+
+        <div class="footnotes">
+            <h3>Footnotes</h3>
+            <ol>
+                <li id="fn1">Tesseract 5.5.1 release 2025: <a href="https://github.com/tesseract-ocr/tesseract/releases" target="_blank">github.com/tesseract-ocr/tesseract</a></li>
+                <li id="fn2">PySide6 6.10.0 release 2025: <a href="https://pypi.org/project/PySide6/6.10.0/" target="_blank">pypi.org/project/PySide6/6.10.0/</a></li>
+                <li id="fn3">PyInstaller 6.17.0 release 2025: <a href="https://pypi.org/project/pyinstaller/" target="_blank">pypi.org/project/pyinstaller/</a></li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

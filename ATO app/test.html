@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDIS Expense Assistant - Phase 0 Setup Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e74c3c;
+            border-bottom: 4px solid #e74c3c;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 25px;
+        }
+        .warning-box {
+            background-color: #ffe6e6;
+            border-left: 4px solid #e74c3c;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .warning-box strong {
+            color: #c0392b;
+        }
+        .step-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .info-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px 20px;
+            margin: 15px 0;
+        }
+        .checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            top: -5px;
+        }
+        code, pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        pre {
+            padding: 15px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .command {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #1f5f8b;
+        }
+        .toc {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .toc h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            border: none;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc li {
+            margin: 8px 0;
+        }
+        .toc a {
+            color: #2980b9;
+        }
+        .version-badge {
+            background-color: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .app-box {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        sup {
+            font-size: 0.75em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ BEFORE ANYTHING ELSE: DOWNLOAD AND INSTALL THESE PROGRAMS ⚠️</h1>
+        
+        <div class="warning-box">
+            <p><strong>Do these IN ORDER. Click each link, download, run installer, then tick the box.</strong></p>
+        </div>
+
+        <h2>📥 Step 0.0: Download & Install Required Software</h2>
+        
+        <ul class="checklist">
+            <li>
+                <strong>1. Python 3.14 (You Already Have This - Verify Only)</strong><br>
+                ✓ Python 3.14.x is already installed per your system<br>
+                Verify version: <a href="#" onclick="alert('Open Command Prompt and type: python --version');">How to verify</a>
+                <div class="command">python --version<br>
+                <em>Expected result: Python 3.14.x</em></div>
+            </li>
+            
+            <li>
+                <strong>2. Tesseract OCR 5.5.1</strong><br>
+                <a href="https://github.com/tesseract-ocr/tesseract/releases" target="_blank">Download Tesseract 5.5.1 Installer (GitHub)</a><br>
+                Install to default location: <code>C:\Program Files\Tesseract-OCR\</code>
+            </li>
+            
+            <li>
+                <strong>3. Google Drive for Desktop</strong><br>
+                <a href="https://www.google.com/drive/download/" target="_blank">Download Google Drive</a><br>
+                Sign in with Mum's Google account, enable sync for "My Drive"
+            </li>
+            
+            <li>
+                <strong>4. Verify Phone Link (Windows 11 Feature)</strong><br>
+                Built into Windows 11. May need to pair phone via QR code.<br>
+                Open Phone Link app and test connectivity.
+            </li>
+        </ul>
+
+        <div class="info-box">
+            <p><strong>STOP:</strong> Do not proceed until ALL boxes above are ticked and verified.</p>
+        </div>
+
+        <h1>Phase 0: Information Gathering - NDIS Workflow Setup</h1>
+        <p><strong>Objective:</strong> Gather all data needed before writing code.</p>
+        <div class="warning-box">
+            <p><strong>Do not write code until all checkboxes below are completed.</strong></p>
+        </div>
+
+        <h2 id="step-01">Step 0.1: Environment Inventory</h2>
+        <div class="step-box">
+            <ul class="checklist">
+                <li>
+                    Verify Python 3.14 in Command Prompt
+                    <div class="command">python --version<br>
+                    Expected: Python 3.14.x</div>
+                </li>
+                <li>
+                    Verify Windows build number
+                    <div class="command">Get-ComputerInfo \| Select WindowsProductName, WindowsVersion<br>
+                    Expected: Windows 11 Pro - Build 22621 or later</div>
+                </li>
+                <li>
+                    Confirm Google Drive sync path
+                    <div class="command"># Check in system tray:<br>
+                    # Right-click Drive icon → Settings → Preferences<br>
+                    # Note the "Google Drive streaming location"<br>
+                    Expected: C:\Users\alles\My Drive\</div>
+                </li>
+                <li>
+                    Confirm ROOT folder exists and is accessible
+                    <div class="command">dir "C:\Users\alles\My Drive\ATO app"<br>
+                    Expected: Should show 40 JPG files + 2 subfolders</div>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="step-02">Step 0.2: Screenshot Analysis</h2>
+        <div class="step-box">
+            <p><strong>Critical:</strong> These patterns determine OCR success. Be meticulous.</p>
+            
+            <ul class="checklist">
+                <li>
+                    Take 3-5 sample bank screenshots on Mum's phone<br>
+                    <em>Use actual Westpac app → different transactions (amounts, dates, merchants)</em>
+                </li>
+                <li>
+                    Share test screenshots to Drive<br>
+                    <em>Google Photos → Select 5 → Share → Save to Drive → "NDIS 2025\Test" folder</em>
+                </li>
+                <li>
+                    Verify screenshots synced to PC local folder<br>
+                    <div class="command">dir "C:\Users\alles\My Drive\NDIS 2025\Test"<br>
+                    Confirm all 5 appear. If not, wait or check Drive sync.</div>
+                </li>
+                <li>
+                    <strong>Analyze text layout at 200% zoom</strong><br>
+                    Open each → zoom → document patterns:
+                    <ul style="margin-left: 30px;">
+                        <li><strong>Date:</strong> [e.g., "12/05/2025" top-right, blue, 12pt]</li>
+                        <li><strong>Amount:</strong> [e.g., "$34.50" bold, green, 14pt]</li>
+                        <li><strong>Merchant:</strong> [e.g., "Cafe Rosa" below amount, black, 11pt]</li>
+                    </ul>
+                </li>
+                <li>
+                    Copy ONE best sample to ROOT folder for testing<br>
+                    <div class="command">copy "C:\Users\alles\My Drive\NDIS 2025\Test\*.jpg" "C:\Users\alles\My Drive\ATO app\"</div>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="step-03">Step 0.3: myDeductions Export Analysis</h2>
+        <div class="step-box">
+            <ul class="checklist">
+                <li>
+                    Export data from myDeductions app<br>
+                    <em>Phone: myDeductions → Settings → Export → Email → Send to yourself</em>
+                </li>
+                <li>
+                    Save export file to PC
+                    <div class="command">Save as: C:\temp\mydeductions_export.zip</div>
+                </li>
+                <li>
+                    Examine export file structure
+                    <div class="command">Expand-Archive -Path C:\temp\mydeductions_export.zip -DestinationPath C:\temp\export_unzip -Force<br>
+                    dir C:\temp\export_unzip</div>
+                    Expected files: [deductions.json, receipts/, etc.]
+                </li>
+                <li>
+                    Document export format<br>
+                    Open data file → note the field names and formats:
+                    <ul style="margin-left: 30px;">
+                        <li><strong>Date format:</strong> [e.g., "2025-12-05"]</li>
+                        <li><strong>Amount format:</strong> [e.g., 34.50 (no $)]</li>
+                        <li><strong>Receipt reference:</strong> [e.g., "filename": "Screenshot_20251205.png"]</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="step-04">Step 0.4: Phone Link Testing</h2>
+        <div class="step-box">
+            <ul class="checklist">
+                <li>
+                    Pair phone & launch myDeductions via Phone Link
+                    <div class="command">Open Phone Link → QR code → Connect → Apps → myDeductions</div>
+                </li>
+                <li>
+                    Test keyboard latency<br>
+                    <em>Type in myDeductions via Phone Link → note delay</em><br>
+                    <strong>Usable:</strong> [Yes/No - if No, fallback to direct phone entry]
+                </li>
+                <li>
+                    Screenshot Phone Link for reference
+                    <div class="command">Save as: C:\Users\alles\My Drive\ATO app\phonelink_reference.png</div>
+                </li>
+            </ul>
+        </div>
+
+        <h2 id="phase-0-lock">🛑 Phase 0 Lock</h2>
+        <div class="warning-box">
+            <p><strong>STOP HERE. Do not write code until all above boxes are ticked.</strong></p>
+            <p>Once complete, save this page (File → Save As) to preserve all notes.</p>
+        </div>
+
+        <h1>📦 Phase 1: Core Installations (Ready to Start)</h1>
+        <div class="success-box">
+            <p><strong>Prerequisites Complete?</strong> Then proceed with:</p>
+            <div class="command">
+                # Install Python packages (in Command Prompt)<br>
+                pip install pyside6==6.10.0<br>
+                pip install pytesseract==0.3.13<br>
+                pip install pillow==11.0.0<br>
+                pip install pyinstaller==6.17.0
+            </div>
+        </div>
+
+        <h1>🎯 Quick Reference: Locked Design Spec</h1>
+        
+        <h3>ROOT Folder (All Files Here)</h3>
+        <div class="app-box">
+C:\Users\alles\My Drive\ATO app\<br>
+├── NDIS Assistant.exe                    # Main executable (YOU BUILD)<br>
+├── config.ini                           # Settings (APP CREATES)<br>
+├── pending.csv                          # Unprocessed (APP CREATES)<br>
+├── completed.csv                        # Audit trail (APP CREATES)<br>
+├── (screenshots - location TBD)<br>
+├── Apr 25-Jun25\<br>
+└── June 25'-oct25'\
+        </div>
+
+        <h3>Core Stack (Version-Locked)</h3>
+        <ul>
+            <li>Python 3.14 (your existing install)</li>
+            <li>Tesseract OCR 5.5.1</li>
+            <li>PySide6 6.10.0 (GUI framework)</li>
+            <li>PyInstaller 6.17.0 (build .exe)</li>
+            <li>Pillow 11.0.0 (image processing)</li>
+        </ul>
+
+        <h3>Next Action Items</h3>
+        <ol>
+            <li><strong>Complete Phase 0 checkboxes above</strong></li>
+            <li><strong>Run Phase 1 installation commands</strong></li>
+            <li><strong>Proceed to OCR validation test</strong></li>
+        </ol>
+
+        <div class="info-box">
+            <p><strong>Total Implementation Time:</strong> ~2 hours once Phase 0 is complete</p>
+        </div>
+
+    </div>
+</body>
+</html>

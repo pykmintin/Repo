@@ -1,0 +1,4 @@
+[12/11/2025 13:09:03] --- LAUNCH STARTED ---
+[12/11/2025 13:09:04] Working directory: C:\Users\alles\My Drive\ATO app
+[12/11/2025 13:09:04] FATAL ERROR: A positional parameter cannot be found that accepts argument 'Python'.
+[12/11/2025 13:09:04] STACK: at <ScriptBlock>, C:\Users\alles\My Drive\ATO app\NDIS Assistant.ps1: line 29

@@ -1,0 +1,11 @@
+﻿C:\Users\alles\AppData\Local\Programs\Python\Python314\python.exe :   File "C:\Users\alles\My Drive\ATO app\app.py", 
+line 402
+At line:1 char:1
++ C:\Users\alles\AppData\Local\Programs\Python\Python314\python.exe app ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "C:\User...p.py", line 402:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    	    year = match.group(4)  # Full 4-digit year
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
