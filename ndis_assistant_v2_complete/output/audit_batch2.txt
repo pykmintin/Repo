@@ -1,0 +1,176 @@
+AUDIT REPORT - BATCH 2
+============================================================
+Generated: 2025-12-14T17:47:31.070713
+
+SUMMARY:
+  Total Images: 10
+  Successful Downloads: 10
+  Successful OCR: 10
+  Validation Errors: 10
+
+DOWNLOAD RESULTS:
+  ✅ batch2_1.jpg (402920 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_125953_Westpac.jpg
+     Hash: 0639e89d76e73acfe18351899d9e135ed227486b856b8e1c3e3a83327261f216
+  ✅ batch2_2.jpg (369821 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130021_Westpac.jpg
+     Hash: 748be9c747562bf4222cf51d226634f0a0e7b9c46db89c814d7610970036d5c3
+  ✅ batch2_3.jpg (320817 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130111_Westpac.jpg
+     Hash: b2dc2aeb52960c02c6ea918c5dae314cf78b6bb8b7c34e0bceb05cd779b5026c
+  ✅ batch2_4.jpg (351065 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130213_Westpac.jpg
+     Hash: 790413c11a0292d30346d8ed137a314e46cc209a395175a8dfe3412f0e6fd998
+  ✅ batch2_5.jpg (368768 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130339_Westpac.jpg
+     Hash: 2f703f2ed646a9adef9f52cda80038dc72f0c48d6249f6faafcc4916442fd7cf
+  ✅ batch2_6.jpg (377190 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130413_Westpac.jpg
+     Hash: 83918ed875ec8b77332b83e3f5337528b56db8dc23a04f97c6ee58a353ecd6cc
+  ✅ batch2_7.jpg (376969 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130437_Westpac.jpg
+     Hash: 1f0b25b5661e7deef6c46e9c91cdc5b841309c830c8344f9ffe7c74b1143fdc6
+  ✅ batch2_8.jpg (377392 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130504_Westpac.jpg
+     Hash: e1139d57205c8a60fba1d1aa2ba7316a20d52ef698164b593711b45892e306cb
+  ✅ batch2_9.jpg (353023 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130547_Westpac.jpg
+     Hash: 46b45f2e6cd2faf5cae9b5b1895aaaa9ecf24979b0baca33a580f92d93764855
+  ✅ batch2_10.jpg (369771 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-09/Screenshot_20250928_130650_Westpac.jpg
+     Hash: eda387063e2b8a765eb532826998bd17d817b0e6bf0eccf052e7365961b36a94
+
+OCR RESULTS:
+  📄 batch2_1.jpg:
+     Merchant: The Dock Espresso Bar
+     Amount: $0.00
+     Date: 27082025
+     Category: Restaurants & Dining
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Restaurants & Dining' not in allowed list
+
+  📄 batch2_2.jpg:
+     Merchant: Yarragon Bakery
+     Amount: $0.00
+     Date: 25082025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch2_3.jpg:
+     Merchant: Hutchison gy FoodWorks
+     Amount: $0.00
+     Date: 25082025
+     Category: Restaurants & Dining
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Restaurants & Dining' not in allowed list
+
+  📄 batch2_4.jpg:
+     Merchant: Sj =Bakery
+     Amount: $0.00
+     Date: 20082025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch2_5.jpg:
+     Merchant: Yarragon Bakery
+     Amount: $0.00
+     Date: 19082025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch2_6.jpg:
+     Merchant: 4. HEALTH
+     Amount: $0.00
+     Date: 19082025
+     Category: Healthcare
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Healthcare' not in allowed list
+
+  📄 batch2_7.jpg:
+     Merchant: 4. HEALTH
+     Amount: $0.00
+     Date: 19082025
+     Category: Healthcare
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Healthcare' not in allowed list
+
+  📄 batch2_8.jpg:
+     Merchant: 4. HEALTH
+     Amount: $0.00
+     Date: 19082025
+     Category: Healthcare
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Healthcare' not in allowed list
+
+  📄 batch2_9.jpg:
+     Merchant: PBREAK J
+     Amount: $0.00
+     Date: 15082025
+     Category: Restaurants & Dining
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Restaurants & Dining' not in allowed list
+
+  📄 batch2_10.jpg:
+     Merchant: Yarragon Bakery
+     Amount: $0.00
+     Date: 12082025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+KNOWLEDGE BASE:
+  (empty)
+
+DIRECTORY STRUCTURE:
+  Screenshots: /mnt/okcomputer/output/screenshots
+  Organized: /mnt/okcomputer/output/Screenshots
+    Uncategorised/: 5 files
+    Bakery/: 6 files
+    Healthcare/: 5 files
+    Restaurants & Dining/: 4 files
+
+TRANSACTION STATUS:
+  Pending: 20
+  Completed: 0
+
+ERRORS: None
+
+PENDING.CSV CONTENT:
+file_hash,filename,filepath,date_raw,amount_raw,MerchantOCRValue,category,description,status,completed_timestamp
+266b25c074e247197eb1fa4bdaf2eeb6dcce744ce92deae75533c87ecf591dcf,batch1_1.jpg,/mnt/okcomputer/output/screenshots/batch1_1.jpg,25092025,$0.00,YMCA (Gippsland Regional,Uncategorised,Uncategorised,attention,
+601210a868cbb3c23e61986af7d7faa5e267714bd9e687f38a338cdcb0ddbddf,batch1_2.jpg,/mnt/okcomputer/output/screenshots/batch1_2.jpg,24092025,$0.00,New Rosedale Bakery Pty Ltd,Bakery,Bakery,attention,
+db33cd627ea0d7c0a8623fb24a7e910caf89dbd52f43e7c9819052ee25b57c9e,batch1_3.jpg,/mnt/okcomputer/output/screenshots/batch1_3.jpg,11092025,$0.00,Ee xy,Uncategorised,Uncategorised,attention,
+e6daaa15f74468d9559b89ef4921c79f924dadc32d9c1b29fc91b5401444d7b8,batch1_4.jpg,/mnt/okcomputer/output/screenshots/batch1_4.jpg,08092025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+b788d31662daa8bffe4516bbee4fb567a381b3ff1c56e4866371afb9156dc9df,batch1_5.jpg,/mnt/okcomputer/output/screenshots/batch1_5.jpg,02092025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+1370129225aa03f200c45d364aaee426b8a2d5c4598e312b6a2cb86c2d7a4e82,batch1_6.jpg,/mnt/okcomputer/output/screenshots/batch1_6.jpg,01092025,$0.00,endeaverur,Uncategorised,Uncategorised,attention,
+05759802591168b375242082af2eae6e51ae29eef3d7e4deab30f814674670c0,batch1_7.jpg,/mnt/okcomputer/output/screenshots/batch1_7.jpg,28082025,$0.00,Uniting Vic.Tas,Uncategorised,Uncategorised,attention,
+5cefc359950575060871415efb1cd9520cc7c26a6970c25735d84b13336028da,batch1_8.jpg,/mnt/okcomputer/output/screenshots/batch1_8.jpg,27082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+458a707d3c4419592868854e65e5882ba1060bcd019819b31d0cb0627033d631,batch1_9.jpg,/mnt/okcomputer/output/screenshots/batch1_9.jpg,25092025,$0.00,YMCA (Gippsland Regional,Uncategorised,Uncategorised,attention,
+8af7371c975403ffa8a55af8ffa804e91f28519bd2531a5a9691fcd1f463179e,batch1_10.jpg,/mnt/okcomputer/output/screenshots/batch1_10.jpg,02092025,$0.00,4 «HEALTH,Healthcare,Healthcare,attention,
+
+
+COMPLETED.CSV CONTENT:
+file_hash,filename,filepath,date_raw,amount_raw,MerchantOCRValue,category,description,status,completed_timestamp

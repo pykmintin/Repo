@@ -1,0 +1,257 @@
+AUDIT REPORT - BATCH 9
+============================================================
+Generated: 2025-12-14T17:50:04.282120
+
+SUMMARY:
+  Total Images: 10
+  Successful Downloads: 10
+  Successful OCR: 10
+  Validation Errors: 10
+
+DOWNLOAD RESULTS:
+  ✅ batch9_1.jpg (378532 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_202912_Westpac.jpg
+     Hash: e74e3ea50387af500e4cff7ecc61e28046d9043a7403a7051d6986aea32b8411
+  ✅ batch9_2.jpg (219510 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_202952_Westpac.jpg
+     Hash: 370be8fb5169184925ce260fcfc7d2b8d26f01ab95abe805a44683a2821deeb8
+  ✅ batch9_3.jpg (443932 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203027_Westpac.jpg
+     Hash: 95d6b7255362a5aace42c91d3940cf50a94c94a4f48e53786f206d3e9d7d5350
+  ✅ batch9_4.jpg (372741 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203130_Westpac.jpg
+     Hash: 9cf61e1965b38562403087c26b722c1ec1118a9b72f4f389a837f0441e99ec21
+  ✅ batch9_5.jpg (347381 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203211_Westpac.jpg
+     Hash: 07d19865f1c425913169b0b7f17f650bfaba31f1b9503dabd766a1b780dfa4cd
+  ✅ batch9_6.jpg (374600 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203247_Westpac.jpg
+     Hash: 1ed913621c4dc359ca8c68a9e2fc63d59c338ae46e9fc64740f4c9f98b4ed923
+  ✅ batch9_7.jpg (229171 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203303_Westpac.jpg
+     Hash: e0e333876590ba3b0c35625f599bbfe94b0bc4872661bd7813d157b135b5055d
+  ✅ batch9_8.jpg (399218 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203319_Westpac.jpg
+     Hash: 7e3fdbcc1a0434400a4df9d6cb0a8c69a243ed09bf84c72f96cd0d6674e60105
+  ✅ batch9_9.jpg (358579 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203401_Westpac.jpg
+     Hash: 1e96ab7d51585b44d2bea75d98931d0a6b84bbf7747f0a198f2fa4090219150b
+  ✅ batch9_10.jpg (456766 bytes)
+     Source: https://raw.githubusercontent.com/pykmintin/Repo/main/ATO%20app/Screenshots/2025-10/Screenshot_20251019_203433_Westpac.jpg
+     Hash: fb662292837cf59d40732e5b27e44faa471d8f476d03febfeadb76cdba1cf5f9
+
+OCR RESULTS:
+  📄 batch9_1.jpg:
+     Merchant: Yarragon Bakery
+     Amount: $0.00
+     Date: 08092025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch9_2.jpg:
+     Merchant: Phone number
+     Amount: $0.00
+     Date: 10092025
+     Category: Restaurants & Dining
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Restaurants & Dining' not in allowed list
+
+  📄 batch9_3.jpg:
+     Merchant: s= ke
+     Amount: $0.00
+     Date: 11092025
+     Category: Uncategorised
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Uncategorised' not in allowed list
+
+  📄 batch9_4.jpg:
+     Merchant: SYDNEY
+     Amount: $0.00
+     Date: 17092025
+     Category: Uncategorised
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Uncategorised' not in allowed list
+
+  📄 batch9_5.jpg:
+     Merchant: Stratford Bakery
+     Amount: $0.00
+     Date: 23092025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch9_6.jpg:
+     Merchant: New Rosedale Bakery Pty Ltd
+     Amount: $0.00
+     Date: 24092025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+  📄 batch9_7.jpg:
+     Merchant: Aldi Mobile
+     Amount: $0.00
+     Date: 24092025
+     Category: Utilities
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Utilities' not in allowed list
+
+  📄 batch9_8.jpg:
+     Merchant: YMCA (Gippsland Regional
+     Amount: $0.00
+     Date: 25092025
+     Category: Uncategorised
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Uncategorised' not in allowed list
+
+  📄 batch9_9.jpg:
+     Merchant: 4 HEALTH
+     Amount: $0.00
+     Date: 30092025
+     Category: Healthcare
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Healthcare' not in allowed list
+
+  📄 batch9_10.jpg:
+     Merchant: j = Bakery
+     Amount: $0.00
+     Date: 03102025
+     Category: Bakery
+     Status: attention
+     ⚠️  Validation Errors:
+        - Amount validation: Invalid amount format: $0.00. Expected -$XX.XX
+        - Category validation: Category 'Bakery' not in allowed list
+
+KNOWLEDGE BASE:
+  (empty)
+
+DIRECTORY STRUCTURE:
+  Screenshots: /mnt/okcomputer/output/screenshots
+  Organized: /mnt/okcomputer/output/Screenshots
+    Utilities/: 8 files
+    Uncategorised/: 17 files
+    Bakery/: 29 files
+    Healthcare/: 12 files
+    Restaurants & Dining/: 24 files
+
+TRANSACTION STATUS:
+  Pending: 90
+  Completed: 0
+
+ERRORS: None
+
+PENDING.CSV CONTENT:
+file_hash,filename,filepath,date_raw,amount_raw,MerchantOCRValue,category,description,status,completed_timestamp
+266b25c074e247197eb1fa4bdaf2eeb6dcce744ce92deae75533c87ecf591dcf,batch1_1.jpg,/mnt/okcomputer/output/screenshots/batch1_1.jpg,25092025,$0.00,YMCA (Gippsland Regional,Uncategorised,Uncategorised,attention,
+601210a868cbb3c23e61986af7d7faa5e267714bd9e687f38a338cdcb0ddbddf,batch1_2.jpg,/mnt/okcomputer/output/screenshots/batch1_2.jpg,24092025,$0.00,New Rosedale Bakery Pty Ltd,Bakery,Bakery,attention,
+db33cd627ea0d7c0a8623fb24a7e910caf89dbd52f43e7c9819052ee25b57c9e,batch1_3.jpg,/mnt/okcomputer/output/screenshots/batch1_3.jpg,11092025,$0.00,Ee xy,Uncategorised,Uncategorised,attention,
+e6daaa15f74468d9559b89ef4921c79f924dadc32d9c1b29fc91b5401444d7b8,batch1_4.jpg,/mnt/okcomputer/output/screenshots/batch1_4.jpg,08092025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+b788d31662daa8bffe4516bbee4fb567a381b3ff1c56e4866371afb9156dc9df,batch1_5.jpg,/mnt/okcomputer/output/screenshots/batch1_5.jpg,02092025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+1370129225aa03f200c45d364aaee426b8a2d5c4598e312b6a2cb86c2d7a4e82,batch1_6.jpg,/mnt/okcomputer/output/screenshots/batch1_6.jpg,01092025,$0.00,endeaverur,Uncategorised,Uncategorised,attention,
+05759802591168b375242082af2eae6e51ae29eef3d7e4deab30f814674670c0,batch1_7.jpg,/mnt/okcomputer/output/screenshots/batch1_7.jpg,28082025,$0.00,Uniting Vic.Tas,Uncategorised,Uncategorised,attention,
+5cefc359950575060871415efb1cd9520cc7c26a6970c25735d84b13336028da,batch1_8.jpg,/mnt/okcomputer/output/screenshots/batch1_8.jpg,27082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+458a707d3c4419592868854e65e5882ba1060bcd019819b31d0cb0627033d631,batch1_9.jpg,/mnt/okcomputer/output/screenshots/batch1_9.jpg,25092025,$0.00,YMCA (Gippsland Regional,Uncategorised,Uncategorised,attention,
+8af7371c975403ffa8a55af8ffa804e91f28519bd2531a5a9691fcd1f463179e,batch1_10.jpg,/mnt/okcomputer/output/screenshots/batch1_10.jpg,02092025,$0.00,4 «HEALTH,Healthcare,Healthcare,attention,
+0639e89d76e73acfe18351899d9e135ed227486b856b8e1c3e3a83327261f216,batch2_1.jpg,/mnt/okcomputer/output/screenshots/batch2_1.jpg,27082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+748be9c747562bf4222cf51d226634f0a0e7b9c46db89c814d7610970036d5c3,batch2_2.jpg,/mnt/okcomputer/output/screenshots/batch2_2.jpg,25082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+b2dc2aeb52960c02c6ea918c5dae314cf78b6bb8b7c34e0bceb05cd779b5026c,batch2_3.jpg,/mnt/okcomputer/output/screenshots/batch2_3.jpg,25082025,$0.00,Hutchison gy FoodWorks,Restaurants & Dining,Restaurants & Dining,attention,
+790413c11a0292d30346d8ed137a314e46cc209a395175a8dfe3412f0e6fd998,batch2_4.jpg,/mnt/okcomputer/output/screenshots/batch2_4.jpg,20082025,$0.00,Sj =Bakery,Bakery,Bakery,attention,
+2f703f2ed646a9adef9f52cda80038dc72f0c48d6249f6faafcc4916442fd7cf,batch2_5.jpg,/mnt/okcomputer/output/screenshots/batch2_5.jpg,19082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+83918ed875ec8b77332b83e3f5337528b56db8dc23a04f97c6ee58a353ecd6cc,batch2_6.jpg,/mnt/okcomputer/output/screenshots/batch2_6.jpg,19082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+1f0b25b5661e7deef6c46e9c91cdc5b841309c830c8344f9ffe7c74b1143fdc6,batch2_7.jpg,/mnt/okcomputer/output/screenshots/batch2_7.jpg,19082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+e1139d57205c8a60fba1d1aa2ba7316a20d52ef698164b593711b45892e306cb,batch2_8.jpg,/mnt/okcomputer/output/screenshots/batch2_8.jpg,19082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+46b45f2e6cd2faf5cae9b5b1895aaaa9ecf24979b0baca33a580f92d93764855,batch2_9.jpg,/mnt/okcomputer/output/screenshots/batch2_9.jpg,15082025,$0.00,PBREAK J,Restaurants & Dining,Restaurants & Dining,attention,
+eda387063e2b8a765eb532826998bd17d817b0e6bf0eccf052e7365961b36a94,batch2_10.jpg,/mnt/okcomputer/output/screenshots/batch2_10.jpg,12082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+804e1165104641246b98cd1a23ab5f3e7f3db22db20426e6402c2d5bceefcefa,batch3_1.jpg,/mnt/okcomputer/output/screenshots/batch3_1.jpg,08082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+d04e37db11bb402657be33a31c0f704c975057a651d2b9bb956fdf5b0601a79f,batch3_2.jpg,/mnt/okcomputer/output/screenshots/batch3_2.jpg,07082025,$0.00,Stratford Bakery,Bakery,Bakery,attention,
+a57ed310253815856b963b6bf5c009a5d860e836a35548b96d967f9368c3e968,batch3_3.jpg,/mnt/okcomputer/output/screenshots/batch3_3.jpg,06082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+3960c07072d938e162dba19ba2cd0fc59dfcd15ca7ba05df291fcae07d6bd48a,batch3_4.jpg,/mnt/okcomputer/output/screenshots/batch3_4.jpg,06082025,$0.00,Centre Bakery,Bakery,Bakery,attention,
+4ff60664ae08754da84db070fa0ed4fcd5bf170505d1f3cd3a6bcbc9a0576f7b,batch3_5.jpg,/mnt/okcomputer/output/screenshots/batch3_5.jpg,05082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+8dcd7e9c7b7cb76ab8fc95a1b4ba6289df99488ed99cca2383333a62b058aeba,batch3_6.jpg,/mnt/okcomputer/output/screenshots/batch3_6.jpg,05082025,$0.00,ALDI,Utilities,Utilities,attention,
+73e42e4883fca7dcef21c8309c002c21a9bf985751b60e0b535911cea7c2b89c,batch3_7.jpg,/mnt/okcomputer/output/screenshots/batch3_7.jpg,05082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+b525c64a86e1f89dfbae3cbccda40037595f1409e2b04184c482c8c7d89c4581,batch3_8.jpg,/mnt/okcomputer/output/screenshots/batch3_8.jpg,05082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+6480a3b30013029b53d370136706526745e47ff1becb8ce4f1b8bbb32577ae8c,batch3_9.jpg,/mnt/okcomputer/output/screenshots/batch3_9.jpg,30072025,$0.00,ow’s Traralgon,Uncategorised,Uncategorised,attention,
+0c92e23ceaa3a6dbac1c32bc7ed7f7a6accffc052427fc42ca94eabbe5bbb561,batch3_10.jpg,/mnt/okcomputer/output/screenshots/batch3_10.jpg,28072025,$0.00,Cakes Delight,Bakery,Bakery,attention,
+f57f0cdb34f675c67f736c1970d163f42b610dfebc5dd01151ebc6f68c38c4ab,batch4_1.jpg,/mnt/okcomputer/output/screenshots/batch4_1.jpg,28072025,$0.00,Stratford Bakery,Bakery,Bakery,attention,
+39ac2b6d176a95a955b4921764dfe3e0c3e6404741744dd2cd41de9c83d94ade,batch4_2.jpg,/mnt/okcomputer/output/screenshots/batch4_2.jpg,28072025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+36f4ac3704286dc30ddddb8b40a2a22f30b1c96eb5b2f59e3f2ce6087b41c6a1,batch4_3.jpg,/mnt/okcomputer/output/screenshots/batch4_3.jpg,22072025,$0.00,ALDI,Utilities,Utilities,attention,
+efa01bb646faccdec702ff04837705aaa92786746d1f8a2cac71145d375c2f4b,batch4_4.jpg,/mnt/okcomputer/output/screenshots/batch4_4.jpg,21072025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+96953dd8a0f26e818cab52716ebf077dce4f0197e03f06061802f00fa61afe3c,batch4_5.jpg,/mnt/okcomputer/output/screenshots/batch4_5.jpg,07072025,$0.00,ALDI,Utilities,Utilities,attention,
+a484abee21431fc7214d003e2be959de00bfcdc4c5ae14e29c3d047208e19540,batch4_6.jpg,/mnt/okcomputer/output/screenshots/batch4_6.jpg,07072025,$0.00,BAKERY,Bakery,Bakery,attention,
+940b9b871623379815e6c010dab53a8bc13a4f5e723e75d960428e434d0024ea,batch4_7.jpg,/mnt/okcomputer/output/screenshots/batch4_7.jpg,04072025,$0.00,ao gle 0° he A Food Marke,Restaurants & Dining,Restaurants & Dining,attention,
+cfb1e01b65c43a0930eb5ab0ef5913dce2fcf1fcb1ac47fc48dc9e93d661c104,batch4_8.jpg,/mnt/okcomputer/output/screenshots/batch4_8.jpg,01072025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+2f91d0c3ed0cd2d2a36868c361b48c77c67356a6871f54ef563cfb2b7473058b,batch4_9.jpg,/mnt/okcomputer/output/screenshots/batch4_9.jpg,01072025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+1be3a5ae7bb937abbef0c16685a30e4146ebbf6b2386b3a56948efa0a6b5383c,batch4_10.jpg,/mnt/okcomputer/output/screenshots/batch4_10.jpg,09042025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+9c952735573a1ef8ecabdb849cc96a1bbbd6a83942f60a15da8fa7beee4ddcf8,batch5_1.jpg,/mnt/okcomputer/output/screenshots/batch5_1.jpg,14042025,$0.00,ALDI,Utilities,Utilities,attention,
+ca4aa64abbf8946ada9c9b879622e50888cb3e738e2814fc02b0db985fab4840,batch5_2.jpg,/mnt/okcomputer/output/screenshots/batch5_2.jpg,16042025,$0.00,WITHDRAWAL-OSKO,Uncategorised,Uncategorised,attention,
+e0f5ca9672659072479d401be8f2f470b44d2f62f4bc72073f4a718b089f055e,batch5_3.jpg,/mnt/okcomputer/output/screenshots/batch5_3.jpg,30042025,$0.00,the,Restaurants & Dining,Restaurants & Dining,attention,
+3a917775fada96c9de162f22be9a3969f676bdee3407bdc4255f6474d0e99b82,batch5_4.jpg,/mnt/okcomputer/output/screenshots/batch5_4.jpg,05052025,$0.00,ALDI,Utilities,Utilities,attention,
+6bbe353a4bb86e7c6c396220101c49d8839944a2d5067999e4a49b8fbb1786c8,batch5_5.jpg,/mnt/okcomputer/output/screenshots/batch5_5.jpg,07052025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+c762848757580fa74a8f6db81c88df1419ccaf9c2770af513d3f1305d9f557d2,batch5_6.jpg,/mnt/okcomputer/output/screenshots/batch5_6.jpg,13052025,$0.00,SANDWICH,Restaurants & Dining,Restaurants & Dining,attention,
+065fe2613d0c3a48b0769cee532c088555c4f6ee82caf0174bf7245e8a788666,batch5_7.jpg,/mnt/okcomputer/output/screenshots/batch5_7.jpg,13052025,$0.00,ALDI,Utilities,Utilities,attention,
+e39b95ff2f6d2b32eb93049a96ecf61280a2a5d942fd238b9bc26b818385f713,batch5_8.jpg,/mnt/okcomputer/output/screenshots/batch5_8.jpg,13052025,$0.00,McDonald's (Traralgon East,Restaurants & Dining,Restaurants & Dining,attention,
+a6552404575540ee859046a88b9bf9718416fc2f5435cb3497125b99517d2e0b,batch5_9.jpg,/mnt/okcomputer/output/screenshots/batch5_9.jpg,14052025,$0.00,Scaspray,Uncategorised,Uncategorised,attention,
+5dca60f86d5514cf65d85a996986ad8bedae562732f78b67ccf4386f628c62ee,batch5_10.jpg,/mnt/okcomputer/output/screenshots/batch5_10.jpg,04062025,$0.00,Stratford Bakery,Bakery,Bakery,attention,
+16f4ba6d950aae3bdf1c53d3a705aa1ccd3ce593dfb3da0890cd840d2e660a9a,batch6_1.jpg,/mnt/okcomputer/output/screenshots/batch6_1.jpg,05062025,$0.00,SANDWICH,Restaurants & Dining,Restaurants & Dining,attention,
+5502a2754ec4a620a21ddf480f11a633f400e6acd940575a64257c39dce9950d,batch6_2.jpg,/mnt/okcomputer/output/screenshots/batch6_2.jpg,11062025,$0.00,Sj =Bakery,Bakery,Bakery,attention,
+68f6e20c5f3e12e782e28c38f989c89b9b7060afe24f0bc4692ccba0bf1d6d4f,batch6_3.jpg,/mnt/okcomputer/output/screenshots/batch6_3.jpg,18062025,$0.00,y eal,Uncategorised,Uncategorised,attention,
+ee8b0620d31927ebbbded7f4fa1cd043bd8d9ae5cd76812667cb378be975bb49,batch6_4.jpg,/mnt/okcomputer/output/screenshots/batch6_4.jpg,25062025,$0.00,PBREAK J,Restaurants & Dining,Restaurants & Dining,attention,
+48fbd11a65e2c3deb7736558c7b4cb2898a3e088b044bbba149ae11024e9f099,batch6_5.jpg,/mnt/okcomputer/output/screenshots/batch6_5.jpg,25062025,$0.00,Sale Cinemas,Uncategorised,Uncategorised,attention,
+40a6afe174e2a4fb7437c42e1b9decf6170a3a56780e2fd9e0dc2ece497058e8,batch6_6.jpg,/mnt/okcomputer/output/screenshots/batch6_6.jpg,28072025,$0.00,Cakes Delight,Bakery,Bakery,attention,
+a33dc39e1eda424b4034fd7dc19b40407972780a4a2561e43858f98b605b9c81,batch6_7.jpg,/mnt/okcomputer/output/screenshots/batch6_7.jpg,30072025,$0.00,[BREAK,Restaurants & Dining,Restaurants & Dining,attention,
+ce5169fd791b6da66c2094b256b31ce114249549c8469fc110ac3da7d0e3c496,batch6_8.jpg,/mnt/okcomputer/output/screenshots/batch6_8.jpg,30072025,$0.00,ow's Traralgon,Uncategorised,Uncategorised,attention,
+2c554301c92c1dbba73c4a62470601884c514187e1d7a0b4731d704ae3bb32b7,batch6_9.jpg,/mnt/okcomputer/output/screenshots/batch6_9.jpg,05082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+94e3a9695b6ac2853880f201b47145789825cc558e291137190086154249f448,batch6_10.jpg,/mnt/okcomputer/output/screenshots/batch6_10.jpg,05082025,$0.00,ALDI,Utilities,Utilities,attention,
+3f3c484598052db66336e7cf21565ebbbcc66bff22faf9f9e95a938431af46fa,batch7_1.jpg,/mnt/okcomputer/output/screenshots/batch7_1.jpg,05082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+bf326eb21d999bb4c6956c4702d6aa625eb32201a3bea975f033171b008b0e30,batch7_2.jpg,/mnt/okcomputer/output/screenshots/batch7_2.jpg,06082025,$0.00,Centre Bakery,Bakery,Bakery,attention,
+92d8223d05d3200f41df00b65008ce675aafe786961f9ec429f983a8dcc0eb4b,batch7_3.jpg,/mnt/okcomputer/output/screenshots/batch7_3.jpg,06082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+385a26b235b6e27c741894e58895eb65857fa09627cfd2574d88061dd8b00649,batch7_4.jpg,/mnt/okcomputer/output/screenshots/batch7_4.jpg,07082025,$0.00,Stratford Bakery,Bakery,Bakery,attention,
+fd32d1a0768929bb1449dffd693f553db9f5d5d0e8bb0be346f2b84acfd724cb,batch7_5.jpg,/mnt/okcomputer/output/screenshots/batch7_5.jpg,08082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+b8da087f5b5bf98045211c7b423087b3a8cf27916c95208358e592e3cd2812b6,batch7_6.jpg,/mnt/okcomputer/output/screenshots/batch7_6.jpg,12082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+9592a1900378065d7173622d3735bf4a03748dc56ad9dadb7113c92c026e0f78,batch7_7.jpg,/mnt/okcomputer/output/screenshots/batch7_7.jpg,13082025,$0.00,Subway (Bairnsdale,Restaurants & Dining,Restaurants & Dining,attention,
+ce6c948d6727ece30649c1850ba24400f46271e9cdfae753e0f822ebea60af4c,batch7_8.jpg,/mnt/okcomputer/output/screenshots/batch7_8.jpg,15082025,$0.00,PBREAK J,Restaurants & Dining,Restaurants & Dining,attention,
+95e69a41db80432645e2d4f4df8ce6d1df2d17cc6e9a3a03484343b89b9b3577,batch7_9.jpg,/mnt/okcomputer/output/screenshots/batch7_9.jpg,18082025,$0.00,Sale Cinemas,Uncategorised,Uncategorised,attention,
+982e3f3ae35a4490e48f871863b8517042e6853cf879ac1aa0fccef956ff1ae4,batch7_10.jpg,/mnt/okcomputer/output/screenshots/batch7_10.jpg,19082025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+271dc0a93a7d1f50891e64c37ed9bf6294c7c45561e5e6ca6606efe7e21ad4ee,batch8_1.jpg,/mnt/okcomputer/output/screenshots/batch8_1.jpg,19082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+670f4fc79e8358a009c701df87dcf79cd2e5fd7bcd7337330302da5105e2e576,batch8_2.jpg,/mnt/okcomputer/output/screenshots/batch8_2.jpg,20082025,$0.00,Sj =Bakery,Bakery,Bakery,attention,
+763c959e141a572a7325ee1272f87909e5cb1ff8bbd3ecd34c261d048f76afdd,batch8_3.jpg,/mnt/okcomputer/output/screenshots/batch8_3.jpg,21082025,$0.00,a EX.,Uncategorised,Uncategorised,attention,
+e704c73d0bb012263788703a0fa3ae89d295df7b3ffcd09a98399ef2c18a767e,batch8_4.jpg,/mnt/okcomputer/output/screenshots/batch8_4.jpg,22082025,$0.00,PBREAK J,Restaurants & Dining,Restaurants & Dining,attention,
+b01783cc41a7776aa9ff07fca6402d989674c5e290097bf52bd0c1eec3ff87e3,batch8_5.jpg,/mnt/okcomputer/output/screenshots/batch8_5.jpg,25082025,$0.00,Hutchison gy FoodWorks,Restaurants & Dining,Restaurants & Dining,attention,
+57f0065ab3c66e6be90868d6b828d4ec054924084d3615a4292f458771153658,batch8_6.jpg,/mnt/okcomputer/output/screenshots/batch8_6.jpg,25082025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+77876a4a1a5d2a7a9973c1410f8a037bbe9e1d841da92b70e81b906ff87bae4e,batch8_7.jpg,/mnt/okcomputer/output/screenshots/batch8_7.jpg,27082025,$0.00,The Dock Espresso Bar,Restaurants & Dining,Restaurants & Dining,attention,
+d09f9f89a6896634324b67aff3ecb50adf74b5006f52cf5a24be048d91cd4698,batch8_8.jpg,/mnt/okcomputer/output/screenshots/batch8_8.jpg,29082025,$0.00,New Leaf Cafe,Restaurants & Dining,Restaurants & Dining,attention,
+b41bc8122b5b93827d3e635c2b254bd66378ff1a8140f7c4a01316f61ee3d5a3,batch8_9.jpg,/mnt/okcomputer/output/screenshots/batch8_9.jpg,01092025,$0.00,endeaverur,Uncategorised,Uncategorised,attention,
+7b66ab028abbaa2efe093656f63d653b79837f8bd6e6d95334017858c0237d7e,batch8_10.jpg,/mnt/okcomputer/output/screenshots/batch8_10.jpg,02092025,$0.00,4. HEALTH,Healthcare,Healthcare,attention,
+e74e3ea50387af500e4cff7ecc61e28046d9043a7403a7051d6986aea32b8411,batch9_1.jpg,/mnt/okcomputer/output/screenshots/batch9_1.jpg,08092025,$0.00,Yarragon Bakery,Bakery,Bakery,attention,
+370be8fb5169184925ce260fcfc7d2b8d26f01ab95abe805a44683a2821deeb8,batch9_2.jpg,/mnt/okcomputer/output/screenshots/batch9_2.jpg,10092025,$0.00,Phone number,Restaurants & Dining,Restaurants & Dining,attention,
+95d6b7255362a5aace42c91d3940cf50a94c94a4f48e53786f206d3e9d7d5350,batch9_3.jpg,/mnt/okcomputer/output/screenshots/batch9_3.jpg,11092025,$0.00,s= ke,Uncategorised,Uncategorised,attention,
+9cf61e1965b38562403087c26b722c1ec1118a9b72f4f389a837f0441e99ec21,batch9_4.jpg,/mnt/okcomputer/output/screenshots/batch9_4.jpg,17092025,$0.00,SYDNEY,Uncategorised,Uncategorised,attention,
+07d19865f1c425913169b0b7f17f650bfaba31f1b9503dabd766a1b780dfa4cd,batch9_5.jpg,/mnt/okcomputer/output/screenshots/batch9_5.jpg,23092025,$0.00,Stratford Bakery,Bakery,Bakery,attention,
+1ed913621c4dc359ca8c68a9e2fc63d59c338ae46e9fc64740f4c9f98b4ed923,batch9_6.jpg,/mnt/okcomputer/output/screenshots/batch9_6.jpg,24092025,$0.00,New Rosedale Bakery Pty Ltd,Bakery,Bakery,attention,
+e0e333876590ba3b0c35625f599bbfe94b0bc4872661bd7813d157b135b5055d,batch9_7.jpg,/mnt/okcomputer/output/screenshots/batch9_7.jpg,24092025,$0.00,Aldi Mobile,Utilities,Utilities,attention,
+7e3fdbcc1a0434400a4df9d6cb0a8c69a243ed09bf84c72f96cd0d6674e60105,batch9_8.jpg,/mnt/okcomputer/output/screenshots/batch9_8.jpg,25092025,$0.00,YMCA (Gippsland Regional,Uncategorised,Uncategorised,attention,
+1e96ab7d51585b44d2bea75d98931d0a6b84bbf7747f0a198f2fa4090219150b,batch9_9.jpg,/mnt/okcomputer/output/screenshots/batch9_9.jpg,30092025,$0.00,4 HEALTH,Healthcare,Healthcare,attention,
+fb662292837cf59d40732e5b27e44faa471d8f476d03febfeadb76cdba1cf5f9,batch9_10.jpg,/mnt/okcomputer/output/screenshots/batch9_10.jpg,03102025,$0.00,j = Bakery,Bakery,Bakery,attention,
+
+
+COMPLETED.CSV CONTENT:
+file_hash,filename,filepath,date_raw,amount_raw,MerchantOCRValue,category,description,status,completed_timestamp
