@@ -1,5 +1,8 @@
-pytesseract==0.3.13
-Pillow>=8.0.0
-opencv-python>=4.5.0
-numpy>=1.19.0
-PySide6>=6.0.0
+# Core GUI Framework
+PySide6>=6.5.0
+
+# OCR Engine
+pytesseract>=0.3.13
+Pillow>=10.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
