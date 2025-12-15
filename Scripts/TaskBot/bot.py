@@ -3,19 +3,24 @@ import json
 import base64
 import os
 import requests
-import re
-from datetime import datetime, timedelta
+import logging
+from datetime import datetime, timezone
 from discord.ext import commands
 
+# Setup logging
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s [%(levelname)s] %(message)s')
+
+# Configuration - NO PREFIX
 GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
 GITHUB_REPO = os.environ.get('GITHUB_REPO', 'pykmintin/Repo')
 DISCORD_TOKEN = os.environ['DISCORD_TOKEN']
-PREFIX = os.environ.get('PREFIX', '!')
 AUTHORIZED_USER = int(os.environ.get('AUTHORIZED_USER', '0'))
 TASKS_PATH = 'Scripts/TaskBot/tasks.json'
 GITHUB_API = f'https://api.github.com/repos/{GITHUB_REPO}/contents'
 
 
+# GitHub Integration
 def get_file_sha(path):
     url = f'{GITHUB_API}/{path}'
     headers = {'Authorization': f'token {GITHUB_TOKEN}'}
@@ -51,41 +56,49 @@ def save_tasks(tasks):
     github_put(TASKS_PATH, content, 'Update tasks')
 
 
+# Smart Natural Language Parsing
 def parse_add(text):
-    words = text.lower().split()
+    """Extract priority and type from anywhere in text"""
+    text_lower = text.lower()
+    words = text.split()
     priority = 'normal'
     task_type = 'personal'
-    remaining = []
+    remaining_words = []
+
+    if any(word in text_lower for word in ['high', 'h', 'urgent', 'important']):
+        priority = 'high'
+
+    if any(word in text_lower for word in ['work', 'w', 'corelink', 'job']):
+        task_type = 'work'
+
+    skip_words = {'high', 'h', 'urgent', 'important', 'normal', 'n',
+                  'work', 'w', 'corelink', 'job', 'personal', 'p'}
 
     for word in words:
-        if word in ['high', 'h', 'urgent']:
-            priority = 'high'
-        elif word in ['work', 'w', 'corelink']:
-            task_type = 'work'
-        elif word in ['normal', 'n']:
-            priority = 'normal'
-        elif word in ['personal', 'p']:
-            task_type = 'personal'
-        else:
-            remaining.append(word)
+        if word.lower() not in skip_words:
+            remaining_words.append(word)
 
-    return priority, task_type, ' '.join(remaining)
+    return priority, task_type, ' '.join(remaining_words)
 
 
-def parse_tasks_query(message):
-    msg = message.lower()
-    if 'all' in msg:
+def parse_tasks_query(query):
+    """Understand natural language view requests"""
+    msg = query.lower() if query else ''
+
+    if msg in ['a', 'all'] or 'all' in msg:
         status = 'all'
-    elif 'completed' in msg or re.search(r'\bc\b', msg):
+    elif msg in ['c', 'complete', 'completed'] or any(word in msg for word in ['complete', 'done', 'finished']):
         status = 'completed'
+    elif msg in ['i', 'incomplete', 'pending']:
+        status = 'incomplete'
     else:
         status = 'incomplete'
 
-    if 'both' in msg:
-        context = 'both'
-    elif 'work' in msg or re.search(r'\bw\b', msg):
+    if msg in ['h', 'high'] or 'high' in msg:
+        context = 'high'
+    elif msg in ['w', 'work'] or 'work' in msg:
         context = 'work'
-    elif 'personal' in msg or re.search(r'\bp\b', msg):
+    elif msg in ['p', 'personal'] or 'personal' in msg:
         context = 'personal'
     else:
         context = 'personal'
@@ -93,69 +106,213 @@ def parse_tasks_query(message):
     return context, status
 
 
-def get_filtered_tasks_with_mapping(context='personal', status='incomplete'):
+# Display ID System: T1-Tx, H1-Hx, C1-Cx
+def generate_display_ids(tasks, status='incomplete'):
+    """Create human-friendly display IDs that reset each time"""
+    display_map = {}
+
+    if status == 'completed':
+        for i, _ in enumerate(tasks):
+            display_map[i] = f"C{i+1}"
+    else:
+        normal_count = 1
+        high_count = 1
+        for i, task in enumerate(tasks):
+            if not task['completed']:
+                if task['priority'] == 'high':
+                    display_map[i] = f"H{high_count}"
+                    high_count += 1
+                else:
+                    display_map[i] = f"T{normal_count}"
+                    normal_count += 1
+
+    return display_map
+
+
+def get_filtered_tasks(context='personal', status='incomplete'):
+    """Get tasks with proper filtering, sorting, and display IDs"""
     all_tasks = get_tasks()
 
-    if context == 'personal':
-        tasks = [t for t in all_tasks if t['type'] == 'personal']
-    elif context == 'work':
-        tasks = [t for t in all_tasks if t['type'] == 'work']
+    if context == 'work':
+        filtered = [t for t in all_tasks if t['type'] == 'work']
+    elif context == 'personal':
+        filtered = [t for t in all_tasks if t['type'] == 'personal']
+    elif context == 'high':
+        filtered = [t for t in all_tasks if t['priority'] == 'high']
     else:
-        tasks = all_tasks
+        filtered = all_tasks
 
     if status == 'incomplete':
-        tasks = [t for t in tasks if not t['completed']]
-        display_id_map = {i+1: t['id'] for i, t in enumerate(tasks)}
+        filtered = [t for t in filtered if not t['completed']]
     elif status == 'completed':
-        tasks = [t for t in tasks if t['completed']]
-        display_id_map = {}
-    else:
-        incomplete = [t for t in tasks if not t['completed']]
-        completed = [t for t in tasks if t['completed']]
-        display_id_map = {i+1: t['id'] for i, t in enumerate(incomplete)}
-        tasks = incomplete + completed
+        filtered = [t for t in filtered if t['completed']]
 
-    tasks.sort(key=lambda t: (0 if t['priority'] == 'high' else 1, t['id']))
-    return tasks, display_id_map
+    # Sort: normal first (oldest), then high (oldest)
+    filtered.sort(key=lambda t: (
+        0 if t['priority'] == 'normal' else 1, t['id']))
 
+    display_map = generate_display_ids(filtered, status)
 
-def resolve_task_id(command_message, task_id, context_hint='personal'):
-    context = parse_tasks_query(command_message)[0]
-    if context == 'personal' and context_hint != 'personal':
-        context = context_hint
-
-    tasks, mapping = get_filtered_tasks_with_mapping(context, 'incomplete')
-    if task_id in mapping:
-        return mapping[task_id]
-    return task_id
+    return filtered, display_map
 
 
+def resolve_task_id(display_id, context='personal'):
+    """Convert display ID (T1, H2) or permanent ID (#107) to permanent ID"""
+    if not display_id:
+        return None
+
+    if str(display_id).startswith('#') or str(display_id).isdigit():
+        try:
+            return int(str(display_id).replace('#', ''))
+        except ValueError:
+            return None
+
+    display_id = str(display_id).strip().upper()
+    tasks, display_map = get_filtered_tasks(context, 'incomplete')
+
+    for i, task in enumerate(tasks):
+        if display_map[i] == display_id:
+            return task['id']
+
+    if context == 'personal':
+        tasks, display_map = get_filtered_tasks('work', 'incomplete')
+        for i, task in enumerate(tasks):
+            if display_map[i] == display_id:
+                return task['id']
+
+    return None
+
+
+# Discord Bot Setup - NO PREFIX
 intents = discord.Intents.default()
 intents.message_content = True
+intents.reactions = True
+
 bot = commands.Bot(
-    command_prefix=commands.when_mentioned_or(''), intents=intents)
+    command_prefix=commands.when_mentioned_or(''),
+    intents=intents
+)
 
 
 def is_authorized(ctx):
-    return ctx.author.id == AUTHORIZED_USER
+    if ctx.author.id != AUTHORIZED_USER:
+        logging.warning(f"Unauthorized access attempt by {ctx.author.id}")
+        return False
+    return True
 
 
-@bot.command(name='add')
+# Bot Events
+@bot.event
+async def on_ready():
+    logging.info(f'{bot.user} ready - V5 Enhanced (No Prefix)')
+    print(f'{bot.user} ready - V5 Enhanced (No Prefix)')
+
+
+@bot.event
+async def on_command(ctx):
+    logging.info(f"COMMAND: {ctx.command.name} by {ctx.author}")
+
+
+@bot.event
+async def on_command_completion(ctx):
+    logging.info(f"SUCCESS: {ctx.command.name} completed")
+
+
+@bot.event
+async def on_reaction_add(reaction, user):
+    """Any reaction on any bot message shows tasks"""
+    if user.id != bot.user.id and reaction.message.author.id == bot.user.id:
+        if user.id == AUTHORIZED_USER:
+            logging.info(f"REACTION: {user} triggered task list")
+            tasks, display_map = get_filtered_tasks('personal', 'incomplete')
+
+            if not tasks:
+                await reaction.message.channel.send("📭 No tasks")
+                return
+
+            lines = []
+            for i, task in enumerate(tasks):
+                ctx_icon = '🏠' if task['type'] == 'personal' else '💼'
+                prio_icon = '🔴' if task['priority'] == 'high' else '⚪'
+                display_id = display_map[i]
+                lines.append(
+                    f'{ctx_icon} {prio_icon} {display_id} {task["text"]}')
+
+            await reaction.message.channel.send(f'**📋 Your Tasks**\n' + '\n'.join(lines))
+
+
+# Helper to avoid repetition
+def get_task_by_display_id(display_id, context='personal'):
+    """Convert display ID to task and its list index"""
+    if not display_id:
+        return None, None, "Missing task ID"
+
+    real_id = resolve_task_id(display_id, context)
+    if not real_id:
+        return None, None, f"Can't find task '{display_id}'. Use `tasks` to see IDs like T1, H2."
+
+    tasks = get_tasks()
+    for i, t in enumerate(tasks):
+        if t['id'] == real_id:
+            return t, i, None
+
+    return None, None, f"Task #{real_id} not found"
+
+
+# Commands
+@bot.command(name='help', aliases=['h'])
 @commands.check(is_authorized)
-async def add_cmd(ctx, *, text: str):
+async def help_cmd(ctx):
+    help_text = (
+        "**TaskBot Commands** (no prefix needed, just type directly)\n\n"
+        "**Add:** `add [h] <task>` or `a [h] <task>`\n"
+        "*Shortcuts: h=high, w=work*\n\n"
+        "**View:** `tasks` or `t`\n"
+        "**View all:** `tasks all` or `t a`\n"
+        "**View completed:** `tasks complete` or `t c`\n"
+        "**View high only:** `tasks high` or `t h`\n\n"
+        "**Done:** `done <id>` or `d <id>`\n"
+        "*Use display ID like T1, H2, or #107*\n\n"
+        "**Edit:** `edit <id> <new text>`\n"
+        "**Edit priority:** `edit <id> priority <high/normal>`\n"
+        "**Delete:** `delete <id>`\n"
+        "**Prio:** `prio <id> <high/normal>`\n\n"
+        "**Tip:** React to any bot message to see tasks!"
+    )
+    await ctx.send(help_text)
+    logging.info("Help command executed")
+
+
+@bot.command(name='add', aliases=['a'])
+@commands.check(is_authorized)
+async def add_cmd(ctx, *, text: str = ''):
+    if not text.strip():
+        await ctx.send("❌ Need a task description")
+        logging.warning("Add failed: no description")
+        return
+
     text = text.strip()
     if text.lower().startswith('add '):
         text = text[4:].strip()
 
     priority, task_type, clean = parse_add(text)
-    if not clean:
-        return await ctx.send('❌ Need description')
+
+    if not clean.strip():
+        await ctx.send("❌ Couldn't find task description. Try: `add h Buy milk`")
+        logging.warning("Add failed: no clean description")
+        return
 
     tasks = get_tasks()
-    task_id = max([t['id'] for t in tasks], default=0) + 1
+    task_id = max([t['id'] for t in tasks], default=99) + 1
+
     task = {
-        'id': task_id, 'text': clean, 'priority': priority, 'type': task_type,
-        'completed': False, 'created_at': datetime.utcnow().isoformat() + 'Z', 'completed_at': None
+        'id': task_id,
+        'text': clean,
+        'priority': priority,
+        'type': task_type,
+        'completed': False,
+        'created_at': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+        'completed_at': None
     }
     tasks.append(task)
     save_tasks(tasks)
@@ -163,187 +320,166 @@ async def add_cmd(ctx, *, text: str):
     icon = '🔴' if priority == 'high' else '⚪'
     ctx_icon = '🏠' if task_type == 'personal' else '💼'
     await ctx.send(f'{ctx_icon} ✅ #{task_id} [{icon}] {clean}')
+    logging.info(f"Added task {task_id}: {clean}")
 
 
-@bot.command(name='tasks')
+@bot.command(name='tasks', aliases=['t'])
 @commands.check(is_authorized)
 async def tasks_cmd(ctx, *, query: str = ''):
-    context, status = parse_tasks_query(query or ctx.message.content)
-
-    if context == 'personal':
-        tasks = [t for t in get_tasks() if t['type'] == 'personal']
-    elif context == 'work':
-        tasks = [t for t in get_tasks() if t['type'] == 'work']
-    else:
-        tasks = [t for t in get_tasks()]
-
-    if status == 'incomplete':
-        tasks = [t for t in tasks if not t['completed']]
-        display_id_map = {i+1: t['id'] for i, t in enumerate(tasks)}
-    elif status == 'completed':
-        tasks = [t for t in tasks if t['completed']]
-        display_id_map = {}
-    else:
-        incomplete = [t for t in tasks if not t['completed']]
-        completed = [t for t in tasks if t['completed']]
-        display_id_map = {i+1: t['id'] for i, t in enumerate(incomplete)}
-        tasks = incomplete + completed
-
-    tasks.sort(key=lambda t: (0 if t['priority'] == 'high' else 1, t['id']))
+    context, status = parse_tasks_query(query)
+    tasks, display_map = get_filtered_tasks(context, status)
 
     if not tasks:
-        return await ctx.send(f'📭 No {context} {status} tasks')
+        status_word = "incomplete" if status == "incomplete" else status
+        await ctx.send(f'📭 No {context} {status_word} tasks')
+        logging.info(f"No tasks to display ({context}/{status})")
+        return
 
-    title_map = {
-        'personal': '📋 Personal Tasks',
-        'work': '💼 Work Tasks',
-        'both': '📋 All Tasks'
-    }
-    title = title_map.get(context, '📋 Tasks')
+    if context == 'high':
+        title = '🔴 High Priority Tasks'
+    elif context == 'work':
+        title = '💼 Work Tasks'
+    elif context == 'personal':
+        title = '📋 Personal Tasks'
+    else:
+        title = '📋 All Tasks'
 
     lines = []
-    for i, t in enumerate(tasks):
-        ctx_icon = '🏠' if t['type'] == 'personal' else '💼'
-        prio_icon = '🔴' if t['priority'] == 'high' else '⚪'
-        status_icon = '✅' if t['completed'] else '⏳'
-
-        if status == 'incomplete' or (status == 'all' and not t['completed']):
-            display_num = display_id_map.get(i+1, t['id'])
-            lines.append(
-                f'{ctx_icon} {prio_icon} #{display_num} {status_icon} {t["text"]}')
-        else:
-            lines.append(
-                f'{ctx_icon} {prio_icon} #{t["id"]} {status_icon} {t["text"]}')
+    for i, task in enumerate(tasks):
+        ctx_icon = '🏠' if task['type'] == 'personal' else '💼'
+        prio_icon = '🔴' if task['priority'] == 'high' else '⚪'
+        status_icon = '✅' if task['completed'] else '⏳'
+        display_id = display_map[i]
+        lines.append(
+            f'{ctx_icon} {prio_icon} {display_id} {status_icon} {task["text"]}')
 
     await ctx.send(f'**{title}**\n' + '\n'.join(lines))
+    logging.info(f"Displayed {len(tasks)} tasks ({context}/{status})")
 
 
-@bot.command(name='complete', aliases=['done'])
+@bot.command(name='done', aliases=['d', 'complete'])
 @commands.check(is_authorized)
-async def complete_cmd(ctx, *, args: str):
-    parts = args.split(maxsplit=1)
-    if len(parts) < 1:
-        return await ctx.send('❌ Usage: complete <id>')
+async def done_cmd(ctx, *, args: str = ''):
+    if not args.strip():
+        await ctx.send("❌ Usage: `done <id>` (e.g., T1, H2, or #107)")
+        logging.warning("Done failed: no ID")
+        return
 
-    task_id_str = parts[0]
-    context_hint = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    display_id = args.strip().split()[0]
+    context = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    task, index, error = get_task_by_display_id(display_id, context)
 
-    try:
-        task_id = int(task_id_str)
-    except ValueError:
-        return await ctx.send('❌ Invalid task ID')
+    if error:
+        await ctx.send(f"❌ {error}")
+        logging.warning(f"Done failed: {error}")
+        return
 
-    real_id = resolve_task_id(ctx.message.content, task_id, context_hint)
+    if task['completed']:
+        await ctx.send(f"⚠️ Task #{task['id']} already completed")
+        logging.info(f"Done failed: task {task['id']} already completed")
+        return
+
     tasks = get_tasks()
-
-    for t in tasks:
-        if t['id'] == real_id:
-            t['completed'] = True
-            t['completed_at'] = datetime.utcnow().isoformat() + 'Z'
-            save_tasks(tasks)
-            return await ctx.send(f'✅ #{task_id_str} completed')
-
-    await ctx.send(f'❌ #{task_id_str} not found')
+    tasks[index]['completed'] = True
+    tasks[index]['completed_at'] = datetime.now(
+        timezone.utc).isoformat().replace('+00:00', 'Z')
+    save_tasks(tasks)
+    await ctx.send(f'✅ Completed task #{task["id"]}')
+    logging.info(f"Completed task {task['id']}")
 
 
 @bot.command(name='delete')
 @commands.check(is_authorized)
-async def delete_cmd(ctx, *, args: str):
-    parts = args.split(maxsplit=1)
-    if len(parts) < 1:
-        return await ctx.send('❌ Usage: delete <id>')
+async def delete_cmd(ctx, *, args: str = ''):
+    if not args.strip():
+        await ctx.send("❌ Usage: `delete <id>` (e.g., T1, H2, or #107)")
+        logging.warning("Delete failed: no ID")
+        return
 
-    task_id_str = parts[0]
-    context_hint = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    display_id = args.strip().split()[0]
+    context = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    task, index, error = get_task_by_display_id(display_id, context)
 
-    try:
-        task_id = int(task_id_str)
-    except ValueError:
-        return await ctx.send('❌ Invalid task ID')
+    if error:
+        await ctx.send(f"❌ {error}")
+        logging.warning(f"Delete failed: {error}")
+        return
 
-    real_id = resolve_task_id(ctx.message.content, task_id, context_hint)
     tasks = get_tasks()
-
-    for i, t in enumerate(tasks):
-        if t['id'] == real_id:
-            removed = tasks.pop(i)
-            save_tasks(tasks)
-            return await ctx.send(f'🗑️ Deleted: #{task_id_str} "{removed["text"]}"')
-
-    await ctx.send(f'❌ #{task_id_str} not found')
+    removed = tasks.pop(index)
+    save_tasks(tasks)
+    await ctx.send(f'🗑️ Deleted task #{task["id"]}: "{removed["text"]}"')
+    logging.info(f"Deleted task {task['id']}: {removed['text']}")
 
 
 @bot.command(name='edit')
 @commands.check(is_authorized)
-async def edit_cmd(ctx, task_id: int, *, new_text: str):
+async def edit_cmd(ctx, *, args: str = ''):
+    parts = args.split(maxsplit=1)
+    if len(parts) != 2:
+        await ctx.send("❌ Usage: `edit <id> <new text>` or `edit <id> priority <high/normal>`")
+        logging.warning("Edit failed: missing arguments")
+        return
+
+    display_id, action = parts
+
+    # Handle priority change: edit 127 priority high
+    if action.lower().startswith('priority') or action.lower().startswith('prio'):
+        level = action.split()[-1]  # Get last word (high/normal)
+        # Redirect to prio command
+        await ctx.invoke(bot.get_command('prio'), args=f"{display_id} {level}")
+        return
+
+    # Regular text edit
+    context = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    task, index, error = get_task_by_display_id(display_id, context)
+
+    if error:
+        await ctx.send(f"❌ {error}")
+        logging.warning(f"Edit failed: {error}")
+        return
+
     tasks = get_tasks()
-    for t in tasks:
-        if t['id'] == task_id:
-            t['text'] = new_text
-            save_tasks(tasks)
-            return await ctx.send(f'✏️ #{task_id} updated: {new_text}')
-
-    await ctx.send(f'❌ #{task_id} not found')
+    old_text = tasks[index]['text']
+    tasks[index]['text'] = action
+    save_tasks(tasks)
+    await ctx.send(f'✏️ Updated task #{task["id"]}:\n**Before:** {old_text}\n**After:** {action}')
+    logging.info(f"Edited task {task['id']}: '{old_text}' → '{action}'")
 
 
-@bot.command(name='priority', aliases=['prio'])
+@bot.command(name='prio', aliases=['priority'])
 @commands.check(is_authorized)
-async def priority_cmd(ctx, task_id: int, level: str):
+async def prio_cmd(ctx, *, args: str = ''):
+    parts = args.split(maxsplit=1)
+    if len(parts) != 2:
+        await ctx.send("❌ Usage: `prio <id> <high/normal>`")
+        logging.warning("Prio failed: missing arguments")
+        return
+
+    display_id, level = parts
     level = level.lower()
     if level not in ['high', 'h', 'normal', 'n']:
-        return await ctx.send('❌ Use: high/normal')
+        await ctx.send("❌ Use: high/normal (or h/n)")
+        logging.warning(f"Prio failed: invalid level '{level}'")
+        return
+
     priority = 'high' if level in ['high', 'h'] else 'normal'
+    context = 'work' if 'work' in ctx.message.content.lower() else 'personal'
+    task, index, error = get_task_by_display_id(display_id, context)
+
+    if error:
+        await ctx.send(f"❌ {error}")
+        logging.warning(f"Prio failed: {error}")
+        return
 
     tasks = get_tasks()
-    for t in tasks:
-        if t['id'] == task_id:
-            t['priority'] = priority
-            save_tasks(tasks)
-            return await ctx.send(f'🎯 #{task_id} priority set to {priority}')
-
-    await ctx.send(f'❌ #{task_id} not found')
-
-
-def parse_export(phrase):
-    phrase = phrase.lower()
-    now = datetime.utcnow()
-
-    if 'tomorrow' in phrase:
-        date = now + timedelta(days=1)
-    elif 'today' in phrase:
-        date = now
-    else:
-        return None, "Need phrase like 'tomorrow at 3pm'"
-
-    time_match = re.search(r'at\s+(\d{1,2}(?::\d{2})?)\s*(am|pm)?', phrase)
-    if time_match:
-        time_str, period = time_match.groups()
-        hour, minute = map(int, time_str.split(
-            ':')) if ':' in time_str else (int(time_str), 0)
-        if period == 'pm' and hour != 12:
-            hour += 12
-        date = date.replace(hour=hour, minute=minute, second=0)
-        return date.isoformat() + 'Z', None
-    return None, "What time?"
+    old_prio = tasks[index]['priority']
+    tasks[index]['priority'] = priority
+    save_tasks(tasks)
+    await ctx.send(f'🎯 Task #{task["id"]} priority: {old_prio} → {priority}')
+    logging.info(
+        f"Changed task {task['id']} priority: {old_prio} → {priority}")
 
 
-@bot.command(name='export')
-@commands.check(is_authorized)
-async def export_cmd(ctx, *, args: str):
-    parts = args.split(maxsplit=1)
-    if len(parts) < 2:
-        return await ctx.send('❌ Usage: export <id> <when>')
-
-    task_id_str, phrase = parts
-    date_result, error = parse_export(phrase)
-    if error:
-        return await ctx.send(f'❌ {error}')
-
-    await ctx.send(f'📅 Export #{task_id_str} scheduled for {date_result}\n*(Google Calendar integration pending)*')
-
-
-@bot.event
-async def on_ready():
-    print(f'{bot.user} ready - V4')
-
+# Run the bot
 bot.run(DISCORD_TOKEN)

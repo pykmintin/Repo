@@ -3,7 +3,6 @@ primary_region = "iad"
 
 [env]
   GITHUB_REPO = "pykmintin/Repo"
-  PREFIX = "!"
   AUTHORIZED_USER = 367581971053805568
 
 [build]

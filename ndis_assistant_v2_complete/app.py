@@ -1,1066 +1,1084 @@
 #!/usr/bin/env python3
-# NDIS Expense Assistant v2.0 - COMPLETE WITH PHASES 2-3
+"""
+NDIS Expense Assistant v3.0
+Synthesized from both versions: Threaded architecture + clean system separation
+"""
 
 import os
 import sys
 import csv
 import re
 import hashlib
-import logging
-import shutil
 import json
+import shutil
+import logging
 import traceback
 from datetime import datetime
 from pathlib import Path
+from collections import defaultdict
+from typing import Dict, List, Optional, Any, Callable
 
 # === LOGGING SETUP ===
-EXE_DIR = os.path.dirname(os.path.abspath(__file__))
-LOG_FILE = os.path.join(EXE_DIR, "app.log")
+EXE_DIR = Path(__file__).parent.resolve()
+LOG_FILE = EXE_DIR / "app.log"
 
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler(LOG_FILE, mode='a', encoding='utf-8')]
+    handlers=[
+        logging.FileHandler(LOG_FILE, encoding='utf-8'),
+        logging.StreamHandler()
+    ]
 )
-logging.info("=== NDIS ASSISTANT v2.0 - PHASES 2-3 IMPLEMENTED ===")
+logging.info("=== NDIS EXPENSE ASSISTANT v3.0 STARTUP ===")
 
+# === IMPORTS ===
 try:
-    from PySide6.QtWidgets import *
-    from PySide6.QtCore import Qt, QSettings
+    from PySide6.QtWidgets import (
+        QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
+        QTableWidget, QTableWidgetItem, QLabel, QPushButton, QComboBox,
+        QFileDialog, QMessageBox, QDialog, QLineEdit, QTextEdit,
+        QDialogButtonBox, QCheckBox, QHeaderView
+    )
+    from PySide6.QtCore import Qt, QSettings, QTimer, QObject, Signal, QThread
+    from PySide6.QtGui import QCloseEvent
     from PIL import Image
-    logging.info("All imports successful")
-except Exception as e:
+    logging.info("✅ All GUI imports successful")
+except ImportError as e:
     logging.critical(f"Import error: {e}\n{traceback.format_exc()}")
     sys.exit(1)
 
-# === BULLETPROOF OCR INTEGRATION ===
-import cv2
-import numpy as np
-import pytesseract
+try:
+    import cv2
+    import numpy as np
+    import pytesseract
+    logging.info("✅ OCR engine imports successful")
+except ImportError as e:
+    logging.error(f"OCR dependency missing: {e}")
+    sys.exit(1)
 
-class CompleteWestpacExtractor:
-    """Complete OCR extractor with all features integrated"""
-    
+
+# === SYSTEM CLASSES (From v2's clean architecture) ===
+
+class LearningSystem:
+    """Handles merchant-to-category learning with frequency-based confidence"""
+
+    def __init__(self, knowledge_file: Path):
+        self.knowledge_file = knowledge_file
+        self.knowledge_file_bak = knowledge_file.with_suffix('.json.bak')
+        self.knowledge_file_tmp = knowledge_file.with_suffix('.json.tmp')
+        self.merchant_knowledge: List[Dict] = []
+        self.load_knowledge()
+
+    def load_knowledge(self) -> None:
+        """Load merchant knowledge from JSON file"""
+        if self.knowledge_file.exists():
+            try:
+                with open(self.knowledge_file, 'r', encoding='utf-8') as f:
+                    self.merchant_knowledge = json.load(f)
+                logging.info(
+                    f"📚 Loaded {len(self.merchant_knowledge)} knowledge entries")
+            except Exception as e:
+                logging.error(f"Failed to load knowledge: {e}")
+                self.merchant_knowledge = []
+        else:
+            self.merchant_knowledge = []
+
+    def save_knowledge_atomic(self) -> bool:
+        """Atomic write for knowledge base"""
+        try:
+            if self.knowledge_file.exists():
+                shutil.copy2(self.knowledge_file, self.knowledge_file_bak)
+
+            with open(self.knowledge_file_tmp, 'w', encoding='utf-8') as f:
+                json.dump(self.merchant_knowledge, f, indent=2)
+
+            os.replace(self.knowledge_file_tmp, self.knowledge_file)
+
+            if self.knowledge_file_bak.exists():
+                self.knowledge_file_bak.unlink()
+
+            logging.info(
+                f"💾 Saved {len(self.merchant_knowledge)} knowledge entries")
+            return True
+        except Exception as e:
+            logging.error(f"Save failed: {e}")
+            if self.knowledge_file_bak.exists():
+                shutil.copy2(self.knowledge_file_bak, self.knowledge_file)
+            return False
+
+    def learn_confirmation(self, merchant: str, category: str) -> None:
+        """Record merchant-category confirmation (append-only with frequency tracking)"""
+        normalized = merchant.lower().strip()
+        category = category.strip()
+
+        if not normalized or not category:
+            return
+
+        # Find existing entry for this pair
+        for entry in self.merchant_knowledge:
+            if entry['merchant'] == normalized and entry['category'] == category:
+                entry['confirmations'] = entry.get('confirmations', 1) + 1
+                entry['last_confirmed'] = datetime.utcnow().isoformat() + 'Z'
+                logging.info(
+                    f"⬆️  Updated {normalized} -> {category} (count: {entry['confirmations']})")
+                self.save_knowledge_atomic()
+                return
+
+        # New entry
+        self.merchant_knowledge.append({
+            "merchant": normalized,
+            "category": category,
+            "confirmations": 1,
+            "first_seen": datetime.utcnow().isoformat() + 'Z',
+            "last_confirmed": datetime.utcnow().isoformat() + 'Z'
+        })
+        logging.info(f"✏️  Learned {normalized} -> {category}")
+        self.save_knowledge_atomic()
+
+    def get_suggested_category(self, merchant: str, threshold: int = 2) -> Optional[str]:
+        """Get suggested category if confidence meets threshold"""
+        normalized = merchant.lower().strip()
+        if not normalized:
+            return None
+
+        # Count frequencies
+        category_counts = defaultdict(int)
+        for entry in self.merchant_knowledge:
+            if entry['merchant'] == normalized:
+                category_counts[entry['category']
+                                ] += entry.get('confirmations', 1)
+
+        if category_counts:
+            most_frequent, count = max(
+                category_counts.items(), key=lambda x: x[1])
+            if count >= threshold:
+                logging.debug(
+                    f"💡 Suggesting '{most_frequent}' for '{merchant}' (confidence: {count})")
+                return most_frequent
+
+        return None
+
+
+class DescriptionSystem:
+    """Handles dynamic {Category} - {UserNote} description format"""
+
+    @staticmethod
+    def format_description(category: str, user_note: str = "") -> str:
+        """Format as 'Category - UserNote' or just 'Category' if note empty"""
+        if not user_note or user_note.strip() == category.strip():
+            return category
+        return f"{category} - {user_note}"
+
+    @staticmethod
+    def extract_parts(description: str) -> tuple[str, str]:
+        """Extract (category, user_note) from description"""
+        if not description:
+            return "", ""
+
+        if " - " in description:
+            parts = description.split(" - ", 1)
+            return parts[0], parts[1]
+        return "", description
+
+    @staticmethod
+    def update_description(current_desc: str, new_category: str) -> str:
+        """Update category while preserving user note"""
+        if not current_desc:
+            return new_category
+
+        if " - " in current_desc:
+            _, user_note = current_desc.split(" - ", 1)
+            return f"{new_category} - {user_note}"
+        else:
+            # Assume current_desc is user note
+            return f"{new_category} - {current_desc}"
+
+
+class WestpacOCREngine:
+    """Production-grade OCR engine for Westpac screenshots"""
+
     def __init__(self):
-        """Initialize with all patterns and corrections"""
-        
         # Amount patterns
         self.amount_patterns = [
-            r'\-\$\d+\.\d{2}',           # Standard: -$28.70
-            r'\$\-\d+\.\d{2}',           # Alternative: $-28.70
-            r'\-\d+\.\d{2}',            # Just negative: -28.70
-            r'\d+\.\d{2}',              # Just number: 28.70
+            r'\-\$\d+\.\d{2}',  # -$28.70
+            r'\$\-\d+\.\d{2}',  # $-28.70
+            r'\-\d+\.\d{2}',    # -28.70
+            r'\d+\.\d{2}',      # 28.70
         ]
-        
+
         # Date patterns
         self.date_patterns = [
             r'(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})',
             r'(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{4})',
         ]
-        
-        # Content-based merchant corrections
-        self.content_corrections = {
+
+        # Merchant name corrections
+        self.merchant_corrections = {
             'bokeies delight': 'Bakers Delight',
             'bokees delight': 'Bakers Delight',
             'bokies delight': 'Bakers Delight',
             'delightt': 'Delight',
             'traralgongon': 'Traralgon',
-            'center': 'Centre',
             '4ae. health': 'Central Gippsland Health',
             'mn,': 'ALDI Mobile',
             'alid': 'ALDI',
         }
-        
-        # NDIS categories
-        self.categories = {
-            'bakery': 'Bakery',
-            'baker': 'Bakery',
-            'delight': 'Bakery',
-            'muffin': 'Restaurants & Dining',
-            'break': 'Restaurants & Dining',
-            'restaurant': 'Restaurants & Dining',
-            'dining': 'Restaurants & Dining',
-            'food': 'Restaurants & Dining',
-            'cafe': 'Restaurants & Dining',
-            'coffee': 'Restaurants & Dining',
-            'espresso': 'Restaurants & Dining',
-            'bar': 'Restaurants & Dining',
-            'health': 'Healthcare',
-            'medical': 'Healthcare',
-            'mobile': 'Utilities',
-            'phone': 'Utilities',
-            'aldi': 'Utilities',
+
+        # Keyword to category mapping
+        self.keyword_categories = {
+            'bakery': 'Bakery', 'baker': 'Bakery', 'delight': 'Bakery',
+            'muffin': 'Restaurants & Dining', 'break': 'Restaurants & Dining',
+            'restaurant': 'Restaurants & Dining', 'dining': 'Restaurants & Dining',
+            'food': 'Restaurants & Dining', 'cafe': 'Restaurants & Dining',
+            'coffee': 'Restaurants & Dining', 'espresso': 'Restaurants & Dining',
+            'health': 'Healthcare', 'medical': 'Healthcare',
+            'mobile': 'Utilities', 'phone': 'Utilities', 'aldi': 'Utilities',
         }
-        
-        # Skip patterns
+
+        # Lines to skip
         self.skip_patterns = [
             r'%', r'8:', r'@', r'\|', r'Westpac', r'Account', r'Subcategory',
             r'\d{1,2}:\d{2}', r'\d{1,3}%', r'\d{4}-\d{3}',
             r'Edit$', r'Tags$', r'None$', r'time$', r'transaction$',
             r'^\d+$', r'^\W+$',
         ]
-    
+
     def preprocess_image(self, image: Image.Image) -> np.ndarray:
-        """Preprocess image for optimal OCR accuracy"""
+        """Preprocess image for optimal OCR"""
         img = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-        
+
         # Auto-orient
         height, width = img.shape[:2]
         if width > height:
             img = cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE)
-        
+
         # Resize
         target_height = 2400
         scale = target_height / img.shape[0]
-        img = cv2.resize(img, None, fx=scale, fy=scale, interpolation=cv2.INTER_CUBIC)
-        
-        # Convert to grayscale
+        img = cv2.resize(img, None, fx=scale, fy=scale,
+                         interpolation=cv2.INTER_CUBIC)
+
+        # Grayscale and threshold
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        
-        # Apply adaptive thresholding
-        _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-        
-        # Noise reduction
+        _, thresh = cv2.threshold(
+            gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         denoised = cv2.fastNlMeansDenoising(thresh, None, 10, 7, 21)
-        
+
         return denoised
-    
+
     def correct_merchant_name(self, merchant: str) -> str:
-        """Apply content-based corrections (no image_num dependency)"""
+        """Apply content-based corrections"""
         merchant_clean = merchant.strip()
         merchant_lower = merchant_clean.lower()
-        
-        # Apply content-based corrections
-        for error, correction in self.content_corrections.items():
+
+        for error, correction in self.merchant_corrections.items():
             if error in merchant_lower:
                 return correction
-        
-        # Clean up common OCR artifacts
+
+        # Clean artifacts
         merchant = re.sub(r'[~*]', '', merchant)
         merchant = re.sub(r'\s+', ' ', merchant)
         merchant = merchant.strip(' -_()<>')
-        
+
         return merchant
-    
+
     def extract_amount(self, text: str) -> str:
-        """Extract transaction amount - bulletproof"""
+        """Extract transaction amount"""
         lines = [line.strip() for line in text.split('\n') if line.strip()]
-        
+
         for pattern in self.amount_patterns:
             for line in lines:
                 matches = re.findall(pattern, line)
                 if matches:
                     amount = matches[0]
-                    
-                    # Extract the numeric part
                     number_match = re.search(r'(\d+\.\d{2})', amount)
                     if number_match:
                         number = number_match.group(1)
                         return f"-${number}"
-        
+
         return "$0.00"
-    
+
     def extract_date(self, text: str) -> str:
-        """Extract transaction date in DDMMYYYY format"""
+        """Extract date in DDMMYYYY format"""
         lines = [line.strip() for line in text.split('\n') if line.strip()]
-        
+
+        month_dict = {
+            "Jan": "01", "Feb": "02", "Mar": "03", "Apr": "04",
+            "May": "05", "Jun": "06", "Jul": "07", "Aug": "08",
+            "Sep": "09", "Oct": "10", "Nov": "11", "Dec": "12"
+        }
+
         for pattern in self.date_patterns:
             for line in lines:
                 matches = re.findall(pattern, line, re.IGNORECASE)
                 if matches:
                     match = matches[0]
-                    
                     if isinstance(match, tuple):
                         if len(match) == 4:  # DayName, Day, Month, Year
                             day = match[1].zfill(2)
-                            month_dict = {"Jan":"01","Feb":"02","Mar":"03","Apr":"04","May":"05","Jun":"06",
-                                         "Jul":"07","Aug":"08","Sep":"09","Oct":"10","Nov":"11","Dec":"12"}
                             month = month_dict.get(match[2], "01")
                             year = match[3]
                             return f"{day}{month}{year}"
                         elif len(match) == 3:  # Day, Month, Year
                             day = match[0].zfill(2)
-                            month_dict = {"Jan":"01","Feb":"02","Mar":"03","Apr":"04","May":"05","Jun":"06",
-                                         "Jul":"07","Aug":"08","Sep":"09","Oct":"10","Nov":"11","Dec":"12"}
                             month = month_dict.get(match[1], "01")
                             year = match[2]
                             return f"{day}{month}{year}"
-                    
-                    return str(match)
-        
-        return "01012025"  # Default fallback
-    
+
+        return "01012025"  # Fallback
+
     def extract_merchant_name(self, text: str) -> str:
-        """Extract merchant name with intelligent filtering (no image_num)"""
+        """Extract merchant name with intelligent filtering"""
         lines = [line.strip() for line in text.split('\n') if line.strip()]
-        
         candidates = []
-        
-        for i, line in enumerate(lines):
-            # Skip unwanted lines
-            skip_line = False
-            for pattern in self.skip_patterns:
-                if re.search(pattern, line, re.IGNORECASE):
-                    skip_line = True
-                    break
-            
-            if skip_line:
+
+        for line in lines:
+            # Skip patterns
+            skip = any(re.search(pattern, line, re.IGNORECASE)
+                       for pattern in self.skip_patterns)
+            if skip:
                 continue
-            
-            # Skip very short lines or lines that are likely not merchant names
-            if (len(line) < 3 or 
-                line.isdigit() or 
+
+            # Skip invalid
+            if (len(line) < 3 or line.isdigit() or
                 line in ['Edit', 'Tags', 'None', 'Account', 'Subcategory'] or
-                'time' in line.lower() or
-                'transaction' in line.lower() or
-                'View' in line or
-                'similar' in line.lower()):
+                    'time' in line.lower() or 'transaction' in line.lower()):
                 continue
-            
-            # Clean up merchant name
-            merchant = re.sub(r'\s+', ' ', line)
-            merchant = merchant.strip(' -_()<>')
-            
+
+            merchant = re.sub(r'\s+', ' ', line).strip(' -_()<>')
             if len(merchant) >= 3:
-                candidates.append((i, merchant))
-        
-        # Find the best candidate
+                candidates.append(merchant)
+
+        # Find best candidate
         if candidates:
-            # Look for the most merchant-like name
-            for i, candidate in candidates:
-                if any(word in candidate.lower() for word in ['delight', 'bakery', 'mobile', 'break', 'health', 'aldi', 'dock', 'espresso', 'bar']):
+            for candidate in candidates:
+                if any(word in candidate.lower() for word in self.keyword_categories.keys()):
                     return self.correct_merchant_name(candidate)
-            
-            # If no obvious business words, return the first reasonable candidate
-            return self.correct_merchant_name(candidates[0][1])
-        
+            return self.correct_merchant_name(candidates[0])
+
         return "Unknown Merchant"
-    
+
     def extract_subcategory(self, text: str, merchant: str) -> str:
-        """Extract subcategory based on merchant name and keywords"""
+        """Extract subcategory based on keywords"""
         text_lower = text.lower()
         merchant_lower = merchant.lower()
-        
-        # Look for known categories in merchant name first
-        for keyword, category in self.categories.items():
+
+        # Check merchant first
+        for keyword, category in self.keyword_categories.items():
             if keyword in merchant_lower:
                 return category
-        
-        # Look in the full text
-        for keyword, category in self.categories.items():
+
+        # Check full text
+        for keyword, category in self.keyword_categories.items():
             if keyword in text_lower:
                 return category
-        
+
         return "Uncategorised"
-    
-    def extract_transaction(self, image_path: str) -> Dict[str, str]:
-        """Main extraction method - returns needs_attention flag"""
+
+    def extract_transaction(self, image_path: Path) -> Dict[str, Any]:
+        """Main extraction method"""
         try:
             with Image.open(image_path) as img:
-                # Preprocess image
-                processed_img = self.preprocess_image(img)
-                
-                # Extract text
-                text = pytesseract.image_to_string(processed_img)
-                
-                # Extract merchant first
+                processed = self.preprocess_image(img)
+                text = pytesseract.image_to_string(processed)
+
                 merchant = self.extract_merchant_name(text)
-                
-                # Extract other fields
                 amount = self.extract_amount(text)
                 date = self.extract_date(text)
                 subcategory = self.extract_subcategory(text, merchant)
-                
-                # Check if needs attention
+
                 needs_attention = (
                     merchant == "Unknown Merchant" or
                     amount == "$0.00" or
                     date == "01012025"
                 )
-                
-                result = {
+
+                return {
                     'merchant': merchant,
                     'amount': amount,
                     'date': date,
                     'subcategory': subcategory,
-                    'source_image': image_path,
                     'needs_attention': needs_attention
                 }
-                
-                return result
-                
         except Exception as e:
+            logging.error(f"OCR failed on {image_path}: {e}")
             return {
                 'merchant': 'Error',
                 'amount': 'Error',
                 'date': 'Error',
                 'subcategory': 'Error',
-                'source_image': image_path,
                 'needs_attention': True,
                 'error': str(e)
             }
 
-# === PHASE 2: LEARNING SYSTEM IMPLEMENTATION ===
-class LearningSystem:
-    """Handles merchant-to-category learning and knowledge persistence"""
-    
-    def __init__(self):
-        self.merchant_knowledge = []
-        self.load_merchant_knowledge()
-        
-    def load_merchant_knowledge(self):
-        """Load merchant knowledge from JSON file"""
-        knowledge_file = "merchant_knowledge.json"
-        if os.path.exists(knowledge_file):
-            try:
-                with open(knowledge_file, 'r', encoding='utf-8') as f:
-                    self.merchant_knowledge = json.load(f)
-                logging.info(f"Loaded {len(self.merchant_knowledge)} merchant knowledge entries")
-            except Exception as e:
-                logging.error(f"Failed to load merchant knowledge: {e}")
-                self.merchant_knowledge = []
-        else:
-            self.merchant_knowledge = []
-            logging.info("No existing merchant knowledge found")
-    
-    def save_merchant_knowledge_atomic(self):
-        """Save merchant knowledge with atomic write"""
-        try:
-            # Atomic write pattern
-            temp_path = "merchant_knowledge.json.tmp"
-            backup_path = "merchant_knowledge.json.bak"
-            
-            # Create backup
-            if os.path.exists("merchant_knowledge.json"):
-                shutil.copy2("merchant_knowledge.json", backup_path)
-            
-            # Write to temp file
-            with open(temp_path, 'w', encoding='utf-8') as f:
-                json.dump(self.merchant_knowledge, f, indent=2)
-            
-            # Atomic replace
-            os.replace(temp_path, "merchant_knowledge.json")
-            
-            # Remove backup on success
-            if os.path.exists(backup_path):
-                os.remove(backup_path)
-                
-            logging.info(f"Saved {len(self.merchant_knowledge)} merchant knowledge entries")
-        except Exception as e:
-            logging.error(f"Failed to save merchant knowledge: {e}")
-            # Restore backup
-            if os.path.exists(backup_path):
-                shutil.copy2(backup_path, "merchant_knowledge.json")
-    
-    def learn_confirmation(self, merchant, category):
-        """Add merchant-category confirmation to knowledge base"""
-        normalized = merchant.lower().strip()
-        
-        # Check if this exact combination already exists
-        for entry in self.merchant_knowledge:
-            if entry['merchant'] == normalized and entry['category'] == category:
-                logging.debug(f"Merchant-category combination already exists: {normalized} -> {category}")
-                return
-        
-        # Add new entry (never modify existing, only append)
-        self.merchant_knowledge.append({
-            "merchant": normalized,
-            "category": category,
-            "timestamp": datetime.utcnow().isoformat()
-        })
-        
-        logging.info(f"Learned: {normalized} -> {category}")
-        self.save_merchant_knowledge_atomic()
-    
-    def get_preselected_category(self, merchant, threshold=2):
-        """Get pre-selected category based on learned knowledge"""
-        normalized = merchant.lower().strip()
-        
-        # Count frequency of each category for this merchant
-        category_counts = {}
-        for entry in self.merchant_knowledge:
-            if entry['merchant'] == normalized:
-                category_counts[entry['category']] = category_counts.get(entry['category'], 0) + 1
-        
-        # Return most frequent category if meets threshold
-        if category_counts:
-            most_frequent = max(category_counts.items(), key=lambda x: x[1])
-            if most_frequent[1] >= threshold:
-                logging.info(f"Pre-selecting category for {merchant}: {most_frequent[0]} (confidence: {most_frequent[1]})")
-                return most_frequent[0]
-        
-        return None
-
-# === PHASE 3: DYNAMIC DESCRIPTION SYSTEM ===
-class DescriptionSystem:
-    """Handles dynamic description field with category prefix preservation"""
-    
-    @staticmethod
-    def format_description(category, user_note=""):
-        """Format description as {Category} - {UserNote}"""
-        if not user_note:
-            return category
-        return f"{category} - {user_note}"
-    
-    @staticmethod
-    def extract_parts(description):
-        """Extract category prefix and user note from description"""
-        if not description:
-            return "", ""
-        
-        if " - " in description:
-            parts = description.split(" - ", 1)
-            return parts[0], parts[1]
-        else:
-            # No dash found, assume it's just the category or user note
-            # We'll handle this in the update logic
-            return "", description
-    
-    @staticmethod
-    def update_description(current_desc, new_category):
-        """Update description with new category while preserving user note"""
-        if not current_desc:
-            return new_category
-        
-        if " - " in current_desc:
-            category_part, user_note = current_desc.split(" - ", 1)
-            return f"{new_category} - {user_note}"
-        else:
-            # No dash found, assume current_desc is user note
-            return f"{new_category} - {current_desc}"
 
 # === ATOMIC WRITE UTILITIES ===
-def atomic_write_csv(filepath, data, fieldnames):
-    """Atomic write for CSV files with backup protection"""
-    temp_path = f"{filepath}.tmp"
-    backup_path = f"{filepath}.bak"
-    
+def atomic_write_file(filepath: Path, data: Any, serializer: Callable) -> bool:
+    """Generic atomic write with backup protection"""
+    bak_path = filepath.with_suffix(filepath.suffix + '.bak')
+    tmp_path = filepath.with_suffix(filepath.suffix + '.tmp')
+
     try:
-        # Create backup
-        if os.path.exists(filepath):
-            shutil.copy2(filepath, backup_path)
-        
-        # Write to temp file
-        with open(temp_path, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            if os.path.getsize(filepath) == 0 if os.path.exists(filepath) else True:
-                writer.writeheader()
-            for row in data:
-                writer.writerow(row)
-        
-        # Atomic replace
-        os.replace(temp_path, filepath)
-        
-        # Remove backup on success
-        if os.path.exists(backup_path):
-            os.remove(backup_path)
-            
+        if filepath.exists():
+            shutil.copy2(filepath, bak_path)
+
+        serializer(tmp_path, data)
+
+        os.replace(tmp_path, filepath)
+
+        if bak_path.exists():
+            bak_path.unlink()
+
         return True
-        
     except Exception as e:
         logging.error(f"Atomic write failed for {filepath}: {e}")
-        # Restore backup
-        if os.path.exists(backup_path):
-            shutil.copy2(backup_path, filepath)
-        # Clean up temp file
-        if os.path.exists(temp_path):
-            os.remove(temp_path)
+        if bak_path.exists():
+            shutil.copy2(bak_path, filepath)
+        if tmp_path.exists():
+            tmp_path.unlink()
         return False
 
-# === MAIN APPLICATION CLASS ===
-class NDISAssistant(QMainWindow):
-    """Main application window with complete functionality"""
-    
-    def __init__(self):
-        """Initialize main window with all systems"""
+
+def atomic_serialize_json(tmp_path: Path, data: Any):
+    with open(tmp_path, 'w', encoding='utf-8') as f:
+        json.dump(data, f, indent=2)
+
+
+def atomic_serialize_csv(tmp_path: Path, rows: List[Dict], fieldnames: List[str]):
+    with open(tmp_path, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+# === BACKGROUND WORKER (From v1's threading model) ===
+class ScanWorker(QObject):
+    """Background worker for non-blocking OCR processing"""
+    progress = Signal(str)
+    finished = Signal()
+    item_processed = Signal(dict)
+    error = Signal(str)
+    scan_complete = Signal(int, int, int)
+
+    def __init__(self, search_root: Path, screenshot_folder: Path, ocr_engine: WestpacOCREngine, file_hashes: set):
         super().__init__()
-        self.setWindowTitle("NDIS Expense Assistant v2.0 - Complete")
-        self.resize(1100, 700)
-        
-        # Initialize all systems
-        self.ocr_engine = CompleteWestpacExtractor()
-        self.learning_system = LearningSystem()
-        self.description_system = DescriptionSystem()
-        
-        # Data storage
-        self.pending_data = []
-        self.completed_data = []
-        self.current_view = "pending"
-        self.file_hashes = set()
-        self.categories = []
-        self.screenshot_folder = ""
-        self.search_root = ""
-        self.ocr_cache = {}
-        
-        # Load configuration
-        self.load_config()
-        self.load_ocr_cache()
-        self.ensure_csv_files()
-        self.init_ui()
-        self.load_data()
-        
-        logging.info("Complete application initialized")
-        
-    def load_config(self):
-        """Load configuration from config.ini"""
-        settings = QSettings("config.ini", QSettings.IniFormat)
-        
-        self.screenshot_folder = str(settings.value("Paths/screenshot_folder", 
-            os.path.join(os.path.dirname(os.path.abspath(__file__)), "Screenshots")))
-        self.search_root = str(settings.value("Paths/search_root", 
-            os.path.dirname(os.path.abspath(__file__))))
-        
-        categories_str = str(settings.value("Categories/list", 
-            "Food;Transport;Medical;Client Session;Supplies;Other"))
-        if isinstance(categories_str, str):
-            self.categories = [c.strip() for c in categories_str.split(";") if c.strip()]
-        
-        logging.info(f"Config loaded: {len(self.categories)} categories")
-        logging.info(f"Search root: {repr(self.search_root)}")
-        logging.info(f"Screenshot folder: {repr(self.screenshot_folder)}")
-        
-    def save_config(self):
-        """Save configuration to config.ini"""
-        settings = QSettings("config.ini", QSettings.IniFormat)
-        settings.setValue("Paths/screenshot_folder", self.screenshot_folder)
-        settings.setValue("Categories/list", ";".join(self.categories))
-        
-    def load_ocr_cache(self):
-        """Load OCR results cache to avoid re-processing files"""
-        cache_path = "ocr_cache.json"
-        if os.path.exists(cache_path):
+        self.search_root = search_root
+        self.screenshot_folder = screenshot_folder
+        self.ocr_engine = ocr_engine
+        self.file_hashes = file_hashes
+        self.should_stop = False
+        self.ocr_cache_file = EXE_DIR / "ocr_cache.json"
+
+    def stop(self):
+        self.should_stop = True
+
+    def load_ocr_cache(self) -> Dict[str, Any]:
+        if self.ocr_cache_file.exists():
             try:
-                with open(cache_path, 'r', encoding='utf-8') as f:
-                    self.ocr_cache = json.load(f)
-                logging.info(f"Loaded OCR cache: {len(self.ocr_cache)} entries")
-            except Exception as e:
-                logging.warning(f"Failed to load OCR cache: {e}")
-                self.ocr_cache = {}
-        else:
-            self.ocr_cache = {}
-        
-    def save_ocr_cache(self):
-        """Save OCR cache to disk for future sessions"""
-        try:
-            with open("ocr_cache.json", 'w', encoding='utf-8') as f:
-                json.dump(self.ocr_cache, f, indent=2)
-            logging.info("Saved OCR cache")
-        except Exception as e:
-            logging.error(f"Failed to save OCR cache: {e}")
-    
-    def ensure_csv_files(self):
-        """Create CSV files with headers if they don't exist"""
-        pending_path = "pending.csv"
-        completed_path = "completed.csv"
-        
-        if not os.path.exists(pending_path):
-            with open(pending_path, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                writer.writerow(['file_hash', 'filename', 'filepath', 'date_raw', 'amount_raw', 
-                               'MerchantOCRValue', 'category', 'description', 'status'])
-        
-        if not os.path.exists(completed_path):
-            with open(completed_path, 'w', newline='', encoding='utf-8') as f:
-                writer = csv.writer(f)
-                writer.writerow(['file_hash', 'completed_timestamp', 'filename', 'date_raw', 
-                               'amount_raw', 'MerchantOCRValue', 'category', 'description', 'status'])
-    
-    def init_ui(self):
-        """Initialize user interface"""
-        central = QWidget()
-        self.setCentralWidget(central)
-        layout = QVBoxLayout(central)
-        
-        # Top bar
-        top_bar = QHBoxLayout()
-        self.folder_label = QLabel(f"[Folder] {os.path.basename(self.screenshot_folder)}")
-        self.folder_label.setToolTip(self.screenshot_folder)
-        top_bar.addWidget(self.folder_label)
-        
-        browse_btn = QPushButton("📂 Browse Folder...")
-        browse_btn.clicked.connect(self.browse_folder)
-        top_bar.addWidget(browse_btn)
-        
-        scan_btn = QPushButton("🔍 Scan Now")
-        scan_btn.clicked.connect(self.organize_and_scan)
-        top_bar.addWidget(scan_btn)
-        
-        settings_btn = QPushButton("⚙️ Settings")
-        settings_btn.clicked.connect(self.edit_categories)
-        top_bar.addWidget(settings_btn)
-        
-        layout.addLayout(top_bar)
-        
-        # Status label
-        self.status_label = QLabel("Ready with Complete Features")
-        layout.addWidget(self.status_label)
-        
-        # Toggle button
-        self.toggle_btn = QPushButton("Show Completed")
-        self.toggle_btn.setCheckable(True)
-        self.toggle_btn.clicked.connect(self.toggle_view)
-        layout.addWidget(self.toggle_btn)
-        
-        # Main table
-        self.table = QTableWidget(0, 6)
-        self.table.setHorizontalHeaderLabels([
-            "Date (DDMMYYYY)", "Amount", "MerchantOCRValue", "Category", "Description", "Actions"
-        ])
-        self.table.horizontalHeader().setStretchLastSection(True)
-        layout.addWidget(self.table)
-        
-        # Button bar
-        button_bar = QHBoxLayout()
-        
-        phone_btn = QPushButton("📱 Open Phone Link")
-        phone_btn.clicked.connect(self.open_phone_link)
-        button_bar.addWidget(phone_btn)
-        
-        export_btn = QPushButton("📤 Export History")
-        export_btn.clicked.connect(self.export_history)
-        button_bar.addWidget(export_btn)
-        
-        exit_btn = QPushButton("💾 Save & Exit")
-        exit_btn.clicked.connect(self.save_and_exit)
-        button_bar.addWidget(exit_btn)
-        
-        layout.addLayout(button_bar)
-        
-    def load_data(self):
-        """Load data from CSV files into memory"""
-        # Load completed hashes for fast lookup
-        if os.path.exists("completed.csv"):
-            try:
-                with open("completed.csv", 'r', newline='', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    for row in reader:
-                        self.file_hashes.add(row.get('file_hash', ''))
-                        self.completed_data.append(row)
-                logging.info(f"Loaded {len(self.file_hashes)} completed hashes")
-            except Exception as e:
-                logging.error(f"Error loading completed.csv: {e}")
-        
-        # Load pending items
-        if os.path.exists("pending.csv"):
-            try:
-                with open("pending.csv", 'r', newline='', encoding='utf-8') as f:
-                    reader = csv.DictReader(f)
-                    self.pending_data = [row for row in reader if row.get('status') == 'pending']
-                logging.info(f"Loaded {len(self.pending_data)} pending items")
-            except Exception as e:
-                logging.error(f"Error loading pending.csv: {e}")
-        
-        self.refresh_table()
-        
-    def organize_and_scan(self):
-        """Main pipeline: search → OCR → organize → update CSV with atomic writes"""
-        logging.info("=== STARTING ORGANIZE AND SCAN ===")
-        
-        # Discover all screenshot files
-        all_files = []
-        for root, dirs, files in os.walk(self.search_root):
-            for file in files:
-                if file.startswith("Screenshot_") and file.endswith(".jpg"):
-                    full_path = os.path.join(root, file)
-                    all_files.append(full_path)
-                    logging.debug(f"Found: {full_path}")
-        
-        logging.info(f"Total screenshot files found: {len(all_files)}")
-        
-        # Filter to only new files (by hash)
-        new_files = []
-        for filepath in all_files:
-            file_hash = self.calculate_hash(filepath)
-            if file_hash not in self.file_hashes:
-                new_files.append((filepath, file_hash))
-        
-        if not new_files:
-            status_msg = f"Found {len(all_files)} screenshots, 0 new to process"
-            self.status_label.setText(status_msg)
-            logging.info(status_msg)
-            return
-        
-        # Process new files with bulletproof OCR
-        processed = []
-        needs_attention_files = []
-        
-        for i, (filepath, file_hash) in enumerate(new_files):
-            # Check cache first
-            if file_hash in self.ocr_cache:
-                parsed = self.ocr_cache[file_hash]
-                parsed['file_hash'] = file_hash
-                parsed['filepath'] = filepath
-                parsed['filename'] = os.path.basename(filepath)
-                
-                if parsed.get('needs_attention', False):
-                    needs_attention_files.append(filepath)
-                else:
-                    processed.append(parsed)
-                logging.info(f"Used cache for: {os.path.basename(filepath)}")
-            else:
-                parsed = self.parse_and_ocr(filepath, file_hash)
-                if parsed:
-                    if parsed.get('needs_attention', False):
-                        needs_attention_files.append(filepath)
-                    else:
-                        processed.append(parsed)
-                    self.ocr_cache[file_hash] = parsed
-        
-        # Handle needs_attention files
-        if needs_attention_files:
-            self.handle_needs_attention(needs_attention_files)
-        
-        # Move files to dated folders and update CSV with atomic writes
-        moved_count = 0
-        for item in processed:
-            try:
-                src = item['filepath']
-                filename = os.path.basename(src)
-                
-                # Extract date components for folder organization
-                date_raw = item['date_raw']
-                if len(date_raw) == 8:
-                    year = date_raw[4:8]
-                    month = date_raw[2:4]
-                    target_dir = os.path.join(self.screenshot_folder, f"{year}-{month}")
-                else:
-                    target_dir = os.path.join(self.screenshot_folder, "Organized")
-                
-                os.makedirs(target_dir, exist_ok=True)
-                dst = os.path.join(target_dir, filename)
-                
-                if not os.path.exists(dst):
-                    shutil.move(src, dst)
-                    item['filepath'] = dst
-                    moved_count += 1
-                    logging.info(f"Moved {filename} → {target_dir}")
-                
-                self.pending_data.append(item)
-                self.file_hashes.add(item['file_hash'])
-                
-            except Exception as e:
-                logging.error(f"Move failed for {filename}: {e}")
-        
-        # Save all changes with atomic writes
-        if processed:
-            self.save_pending_csv_atomic()
-            self.save_ocr_cache()
-        
-        self.load_data()
-        final_msg = f"Processed {len(processed)}, moved {moved_count}, needs attention: {len(needs_attention_files)}"
-        self.status_label.setText(final_msg)
-        logging.info(final_msg)
-        
-    def parse_and_ocr(self, filepath, file_hash):
-        """Perform OCR using bulletproof engine and check needs_attention"""
-        try:
-            logging.debug(f"OCR: {os.path.basename(filepath)}")
-            
-            # Use bulletproof OCR engine
-            result = self.ocr_engine.extract_transaction(filepath)
-            
-            if result.get('error'):
-                logging.error(f"OCR failed for {filepath}: {result['error']}")
-                return None
-            
-            # Check if needs attention
-            if result.get('needs_attention', False):
-                logging.warning(f"OCR needs attention for {filepath}: {result}")
-                return result  # Will be handled by needs_attention logic
-            
-            # Convert to our data format
-            item = {
-                'file_hash': file_hash,
-                'filename': os.path.basename(filepath),
-                'filepath': filepath,
-                'date_raw': result['date'],
-                'amount_raw': result['amount'],
-                'MerchantOCRValue': result['merchant'],
-                'category': '',  # Will be set by user
-                'description': '',  # Will be set by user
-                'status': 'pending',
-                'needs_attention': False
-            }
-            
-            logging.info(f"OCR successful: {os.path.basename(filepath)} -> {result['merchant']}")
-            return item
-            
-        except Exception as e:
-            logging.error(f"OCR error on {filepath}: {e}")
-            return None
-    
-    def handle_needs_attention(self, needs_attention_files):
-        """Handle files that need manual attention"""
-        needs_attention_dir = os.path.join(self.screenshot_folder, "NEEDS_ATTENTION")
-        os.makedirs(needs_attention_dir, exist_ok=True)
-        
-        for filepath in needs_attention_files:
-            try:
-                filename = os.path.basename(filepath)
-                dst = os.path.join(needs_attention_dir, filename)
-                shutil.move(filepath, dst)
-                logging.info(f"Moved {filename} to NEEDS_ATTENTION folder")
-            except Exception as e:
-                logging.error(f"Failed to move {filepath} to NEEDS_ATTENTION: {e}")
-        
-        # Prompt for manual entry
-        self.prompt_manual_entry(needs_attention_files)
-    
-    def calculate_hash(self, filepath):
-        """Calculate MD5 hash of file for unique identification"""
+                with open(self.ocr_cache_file, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+            except:
+                pass
+        return {}
+
+    def save_ocr_cache(self, cache: Dict[str, Any]):
+        atomic_write_file(self.ocr_cache_file, cache, atomic_serialize_json)
+
+    @staticmethod
+    def calculate_hash(filepath: Path) -> str:
         hasher = hashlib.md5()
         with open(filepath, 'rb') as f:
             for chunk in iter(lambda: f.read(4096), b""):
                 hasher.update(chunk)
         return hasher.hexdigest()
-    
-    def prompt_manual_entry(self, failed_files):
-        """Prompt user for manual entry of OCR-failed screenshots"""
-        msg = f"{len(failed_files)} screenshots need manual attention. Would you like to enter them manually?"
-        reply = QMessageBox.question(self, "Manual Entry Required", msg, 
-                                    QMessageBox.Yes | QMessageBox.No)
-        
-        if reply == QMessageBox.Yes:
-            for filepath in failed_files:
-                self.manual_entry_popup(filepath)
-    
-    def manual_entry_popup(self, filepath):
-        """Show popup form for manual data entry of failed OCR"""
-        dialog = QDialog(self)
-        dialog.setWindowTitle(f"Manual Entry - {os.path.basename(filepath)}")
-        dialog.resize(400, 300)
-        
-        layout = QVBoxLayout(dialog)
-        
-        # Date field
-        layout.addWidget(QLabel("Date (DDMMYYYY):"))
-        date_edit = QLineEdit()
-        date_edit.setPlaceholderText("25092025")
-        layout.addWidget(date_edit)
-        
-        # Amount field
-        layout.addWidget(QLabel("Amount (e.g., -34.50):"))
-        amount_edit = QLineEdit()
-        amount_edit.setPlaceholderText("-34.50")
-        layout.addWidget(amount_edit)
-        
-        # Merchant field
-        layout.addWidget(QLabel("Merchant:"))
-        merchant_edit = QLineEdit()
-        merchant_edit.setPlaceholderText("e.g., YMCA, Shell")
-        layout.addWidget(merchant_edit)
-        
-        # Buttons
-        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
-        buttons.accepted.connect(dialog.accept)
-        buttons.rejected.connect(dialog.reject)
-        layout.addWidget(buttons)
-        
-        if dialog.exec() == QDialog.Accepted:
-            # Create manual entry item
-            file_hash = self.calculate_hash(filepath)
+
+    def run(self):
+        """Main scanning loop with progress reporting"""
+        try:
+            logging.info("=== BEGINNING SCAN ===")
+
+            # Discover files
+            all_files = []
+            for root, dirs, files in os.walk(self.search_root):
+                for file in files:
+                    if file.startswith("Screenshot_") and file.endswith((".jpg", ".jpeg")):
+                        all_files.append(Path(root) / file)
+
+            if not all_files:
+                self.progress.emit("No screenshots found")
+                self.scan_complete.emit(0, 0, 0)
+                self.finished.emit()
+                return
+
+            # Filter new files
+            new_files = []
+            for filepath in all_files:
+                file_hash = self.calculate_hash(filepath)
+                if file_hash not in self.file_hashes:
+                    new_files.append((filepath, file_hash))
+
+            if not new_files:
+                self.progress.emit("No new files to process")
+                self.scan_complete.emit(0, 0, 0)
+                self.finished.emit()
+                return
+
+            total = len(new_files)
+            self.progress.emit(f"Found {total} new files")
+
+            # Load cache
+            ocr_cache = self.load_ocr_cache()
+
+            processed = 0
+            attention = 0
+
+            # Process each file
+            for i, (filepath, file_hash) in enumerate(new_files):
+                if self.should_stop:
+                    break
+
+                try:
+                    self.progress.emit(
+                        f"Processing ({i+1}/{total}): {filepath.name}")
+
+                    # Check cache first
+                    if file_hash in ocr_cache:
+                        result = ocr_cache[file_hash].copy()
+                        result['file_hash'] = file_hash
+                        result['filepath'] = str(filepath)
+                        result['filename'] = filepath.name
+                    else:
+                        # Perform OCR
+                        result = self.ocr_engine.extract_transaction(filepath)
+                        result['file_hash'] = file_hash
+                        result['filepath'] = str(filepath)
+                        result['filename'] = filepath.name
+                        ocr_cache[file_hash] = result
+
+                    # Check quality gate
+                    if result.get('needs_attention', False):
+                        attention += 1
+                        self.item_processed.emit({
+                            'file_hash': file_hash,
+                            'filepath': str(filepath),
+                            'needs_attention': True
+                        })
+                        continue
+
+                    # Emit for processing
+                    self.item_processed.emit(result)
+                    processed += 1
+
+                except Exception as e:
+                    logging.error(f"Failed to process {filepath}: {e}")
+                    self.error.emit(f"Error on {filepath.name}")
+
+            # Save cache updates
+            self.save_ocr_cache(ocr_cache)
+
+            # Final progress
+            self.progress.emit(
+                f"Scan complete: {processed} processed, {attention} need attention")
+            self.scan_complete.emit(processed, attention, total)
+            self.finished.emit()
+
+        except Exception as e:
+            logging.critical(
+                f"Scan worker critical error: {e}\n{traceback.format_exc()}")
+            self.error.emit(f"Critical error: {e}")
+            self.finished.emit()
+
+
+# === MAIN APPLICATION ===
+class NDISAssistant(QMainWindow):
+    """Main application with threaded scanning and clean system separation"""
+
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("NDIS Expense Assistant v3.0")
+        self.resize(1300, 800)
+
+        # Initialize systems
+        self.ocr_engine = WestpacOCREngine()
+        self.learning_system = LearningSystem(
+            EXE_DIR / "merchant_knowledge.json")
+        self.description_system = DescriptionSystem()
+
+        # Data storage
+        self.pending_data: List[Dict] = []
+        self.completed_data: List[Dict] = []
+        self.file_hashes: set = set()
+        self.categories: List[str] = []
+
+        # Config paths
+        self.config_file = EXE_DIR / "config.ini"
+        self.pending_csv = EXE_DIR / "pending.csv"
+        self.completed_csv = EXE_DIR / "completed.csv"
+        self.ocr_cache_file = EXE_DIR / "ocr_cache.json"
+
+        # Worker thread
+        self.scan_thread: Optional[QThread] = None
+        self.scan_worker: Optional[ScanWorker] = None
+
+        # UI timer for debounced saves
+        self.save_timer = QTimer()
+        self.save_timer.setSingleShot(True)
+        self.save_timer.timeout.connect(self.save_pending_csv)
+
+        # Load everything
+        self.load_config()
+        self.ensure_data_files()
+        self.load_data()
+
+        # Build UI
+        self.init_ui()
+
+        logging.info("✅ Application fully initialized")
+
+    def load_config(self):
+        """Load configuration from QSettings"""
+        settings = QSettings(str(self.config_file), QSettings.IniFormat)
+
+        self.screenshot_folder = Path(settings.value(
+            "Paths/screenshot_folder", str(EXE_DIR / "Screenshots")))
+        self.search_root = Path(settings.value(
+            "Paths/search_root", str(EXE_DIR)))
+
+        categories_str = settings.value(
+            "Categories/list", "Food;Transport;Medical;Client Session;Supplies;Other")
+        self.categories = [c.strip()
+                           for c in categories_str.split(";") if c.strip()]
+
+        self.learning_threshold = int(settings.value("Learning/threshold", 2))
+
+        logging.info(f"📁 Screenshot folder: {self.screenshot_folder}")
+        logging.info(f"🔍 Search root: {self.search_root}")
+        logging.info(f"🏷️  {len(self.categories)} categories loaded")
+        logging.info(f"🎯 Learning threshold: {self.learning_threshold}")
+
+    def save_config(self):
+        """Save configuration via QSettings"""
+        settings = QSettings(str(self.config_file), QSettings.IniFormat)
+        settings.setValue("Paths/screenshot_folder",
+                          str(self.screenshot_folder))
+        settings.setValue("Paths/search_root", str(self.search_root))
+        settings.setValue("Categories/list", ";".join(self.categories))
+        settings.setValue("Learning/threshold", self.learning_threshold)
+
+    def ensure_data_files(self):
+        """Create CSV files and directories if missing"""
+        # Create directories
+        self.screenshot_folder.mkdir(parents=True, exist_ok=True)
+        (self.screenshot_folder / "NEEDS_ATTENTION").mkdir(exist_ok=True)
+
+        # Create CSV files with headers
+        if not self.pending_csv.exists():
+            with open(self.pending_csv, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    'file_hash', 'filename', 'filepath', 'date_raw', 'amount_raw',
+                    'MerchantOCRValue', 'category', 'description', 'status'
+                ])
+
+        if not self.completed_csv.exists():
+            with open(self.completed_csv, 'w', newline='', encoding='utf-8') as f:
+                writer = csv.writer(f)
+                writer.writerow([
+                    'file_hash', 'completed_timestamp', 'filename', 'date_raw',
+                    'amount_raw', 'MerchantOCRValue', 'category', 'description', 'status'
+                ])
+
+    def load_data(self):
+        """Load all data from storage"""
+        # Load completed data and hashes
+        if self.completed_csv.exists() and self.completed_csv.stat().st_size > 0:
+            try:
+                with open(self.completed_csv, 'r', newline='', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    self.completed_data = [row for row in reader]
+                self.file_hashes.update(row['file_hash']
+                                        for row in self.completed_data)
+                logging.info(
+                    f"✅ Loaded {len(self.completed_data)} completed items")
+            except Exception as e:
+                logging.error(f"Failed to load completed.csv: {e}")
+
+        # Load pending data
+        if self.pending_csv.exists() and self.pending_csv.stat().st_size > 0:
+            try:
+                with open(self.pending_csv, 'r', newline='', encoding='utf-8') as f:
+                    reader = csv.DictReader(f)
+                    self.pending_data = [
+                        row for row in reader if row.get('status') == 'pending']
+                self.file_hashes.update(row['file_hash']
+                                        for row in self.pending_data)
+                logging.info(
+                    f"✅ Loaded {len(self.pending_data)} pending items")
+            except Exception as e:
+                logging.error(f"Failed to load pending.csv: {e}")
+
+    def init_ui(self):
+        """Initialize user interface"""
+        central = QWidget()
+        self.setCentralWidget(central)
+        layout = QVBoxLayout(central)
+
+        # === TOP BAR ===
+        top_bar = QHBoxLayout()
+
+        self.folder_label = QLabel(f"📁 {self.screenshot_folder.name}")
+        self.folder_label.setToolTip(str(self.screenshot_folder))
+        top_bar.addWidget(self.folder_label)
+
+        browse_btn = QPushButton("📂 Browse Folder...")
+        browse_btn.clicked.connect(self.browse_folder)
+        top_bar.addWidget(browse_btn)
+
+        self.scan_btn = QPushButton("🔍 Scan Now")
+        self.scan_btn.clicked.connect(self.start_scan)
+        top_bar.addWidget(self.scan_btn)
+
+        settings_btn = QPushButton("⚙️ Settings")
+        settings_btn.clicked.connect(self.edit_settings)
+        top_bar.addWidget(settings_btn)
+
+        layout.addLayout(top_bar)
+
+        # === STATUS BAR ===
+        status_widget = QWidget()
+        status_layout = QHBoxLayout(status_widget)
+        status_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.status_label = QLabel("Ready")
+        self.status_label.setStyleSheet("font-weight: bold; padding: 5px;")
+        status_layout.addWidget(self.status_label, stretch=1)
+
+        self.progress_label = QLabel("")
+        self.progress_label.setStyleSheet("color: #666; padding: 5px;")
+        status_layout.addWidget(self.progress_label)
+
+        layout.addWidget(status_widget)
+
+        # === TOGGLE BUTTON ===
+        self.toggle_btn = QPushButton("Show Completed")
+        self.toggle_btn.setCheckable(True)
+        self.toggle_btn.clicked.connect(self.toggle_view)
+        layout.addWidget(self.toggle_btn)
+
+        # === MAIN TABLE ===
+        self.table = QTableWidget(0, 6)
+        self.table.setHorizontalHeaderLabels([
+            "Date (DDMMYYYY)", "Amount", "Merchant", "Category", "Description", "Actions"
+        ])
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table.horizontalHeader().setSectionResizeMode(
+            5, QHeaderView.ResizeToContents)
+        layout.addWidget(self.table)
+
+        # === BUTTON BAR ===
+        button_bar = QHBoxLayout()
+
+        export_btn = QPushButton("📤 Export Completed")
+        export_btn.clicked.connect(self.export_history)
+        button_bar.addWidget(export_btn)
+
+        button_bar.addStretch()
+
+        exit_btn = QPushButton("💾 Save & Exit")
+        exit_btn.clicked.connect(self.save_and_exit)
+        button_bar.addWidget(exit_btn)
+
+        layout.addLayout(button_bar)
+
+        # === INITIAL LOAD ===
+        self.refresh_table()
+
+    def start_scan(self):
+        """Start background scan thread"""
+        self.scan_btn.setEnabled(False)
+        self.status_label.setText("⏳ Scanning in background...")
+        self.progress_label.setText("")
+
+        # Create worker and thread
+        self.scan_thread = QThread()
+        self.scan_worker = ScanWorker(
+            self.search_root,
+            self.screenshot_folder,
+            self.ocr_engine,
+            self.file_hashes
+        )
+        self.scan_worker.moveToThread(self.scan_thread)
+
+        # Connect signals
+        self.scan_thread.started.connect(self.scan_worker.run)
+        self.scan_worker.progress.connect(self.progress_label.setText)
+        self.scan_worker.item_processed.connect(self.on_item_processed)
+        self.scan_worker.scan_complete.connect(self.on_scan_complete)
+        self.scan_worker.error.connect(self.show_error)
+        self.scan_worker.finished.connect(self.scan_thread.quit)
+
+        self.scan_thread.finished.connect(self.scan_thread.deleteLater)
+        self.scan_thread.finished.connect(self.scan_worker.deleteLater)
+
+        self.scan_thread.start()
+
+    def on_item_processed(self, result: dict):
+        """Handle processed item from worker thread"""
+        if result.get('needs_attention'):
+            # Move to attention folder
+            src = Path(result['filepath'])
+            dst = self.screenshot_folder / "NEEDS_ATTENTION" / src.name
+            try:
+                shutil.move(src, dst)
+                logging.warning(f"⚠️  Moved {src.name} to NEEDS_ATTENTION")
+            except Exception as e:
+                logging.error(f"Failed to move {src}: {e}")
+        else:
+            # Suggest category from learning system
+            merchant = result['MerchantOCRValue']
+            suggested = self.learning_system.get_suggested_category(
+                merchant, self.learning_threshold)
+
             item = {
-                'file_hash': file_hash,
-                'filename': os.path.basename(filepath),
-                'filepath': filepath,
-                'date_raw': date_edit.text(),
-                'amount_raw': amount_edit.text(),
-                'MerchantOCRValue': merchant_edit.text(),
-                'category': '',
-                'description': '',
+                'file_hash': result['file_hash'],
+                'filename': result['filename'],
+                'filepath': result['filepath'],
+                'date_raw': result['date'],
+                'amount_raw': result['amount'],
+                'MerchantOCRValue': merchant,
+                'category': suggested or "",
+                'description': self.description_system.format_description(suggested or "", ""),
                 'status': 'pending'
             }
+
             self.pending_data.append(item)
-            self.file_hashes.add(file_hash)
-            self.save_pending_csv_atomic()
-            self.refresh_table()
-    
-    def save_pending_csv_atomic(self):
-        """Save pending data to CSV file with atomic write"""
-        fieldnames = ['file_hash', 'filename', 'filepath', 'date_raw', 'amount_raw', 
-                     'MerchantOCRValue', 'category', 'description', 'status']
-        
-        data = []
-        for item in self.pending_data:
-            data.append({
-                'file_hash': item.get('file_hash', ''),
-                'filename': item.get('filename', ''),
-                'filepath': item.get('filepath', ''),
-                'date_raw': item.get('date_raw', ''),
-                'amount_raw': item.get('amount_raw', ''),
-                'MerchantOCRValue': item.get('MerchantOCRValue', ''),
-                'category': item.get('category', ''),
-                'description': item.get('description', ''),
-                'status': item.get('status', 'pending')
-            })
-        
-        success = atomic_write_csv("pending.csv", data, fieldnames)
-        if not success:
-            self.show_error("Failed to save pending data")
-    
+            self.file_hashes.add(item['file_hash'])
+
+            # Auto-save every 10 items
+            if len(self.pending_data) % 10 == 0:
+                self.save_pending_csv()
+
+    def on_scan_complete(self, processed: int, attention: int, total: int):
+        """Handle scan completion"""
+        self.scan_btn.setEnabled(True)
+        self.save_pending_csv()
+        self.refresh_table()
+
+        msg = f"✅ Scan complete | Processed: {processed} | Needs Attention: {attention}"
+        self.status_label.setText(msg)
+        self.progress_label.setText("")
+
+        if attention > 0:
+            QMessageBox.information(
+                self, "Scan Complete",
+                f"Processed {processed} screenshots.\n\n"
+                f"{attention} files require manual attention and were moved to:\n"
+                f"{self.screenshot_folder / 'NEEDS_ATTENTION'}"
+            )
+
     def refresh_table(self):
-        """Refresh main table based on current view (pending/completed)"""
-        if self.current_view == "pending":
-            self.show_pending()
-        else:
+        """Refresh table based on current view"""
+        self.table.setRowCount(0)
+
+        if self.toggle_btn.isChecked():
             self.show_completed()
-    
+        else:
+            self.show_pending()
+
     def show_pending(self):
-        """Display pending items with full interactivity and learning system"""
+        """Display pending items with full interactivity"""
         self.table.setRowCount(len(self.pending_data))
+
         for row, item in enumerate(self.pending_data):
-            # Date
-            self.table.setItem(row, 0, QTableWidgetItem(item['date_raw']))
-            
-            # Amount
-            self.table.setItem(row, 1, QTableWidgetItem(item['amount_raw']))
-            
-            # MerchantOCRValue (read-only)
+            # Date (editable)
+            date_item = QTableWidgetItem(item['date_raw'])
+            self.table.setItem(row, 0, date_item)
+
+            # Amount (editable)
+            amount_item = QTableWidgetItem(item['amount_raw'])
+            self.table.setItem(row, 1, amount_item)
+
+            # Merchant (read-only)
             merchant_item = QTableWidgetItem(item['MerchantOCRValue'])
             merchant_item.setFlags(merchant_item.flags() & ~Qt.ItemIsEditable)
             self.table.setItem(row, 2, merchant_item)
-            
-            # Category dropdown with learning system
+
+            # Category dropdown with learning
             category_combo = QComboBox()
             category_combo.addItems([""] + self.categories)
-            
-            # Get pre-selected category from learning system
-            preselected = self.learning_system.get_preselected_category(item['MerchantOCRValue'])
-            if preselected:
-                category_combo.setCurrentText(preselected)
-                logging.info(f"Pre-selected category for {item['MerchantOCRValue']}: {preselected}")
-            else:
-                category_combo.setCurrentText(item['category'])
-            
-            category_combo.currentTextChanged.connect(lambda text, r=row: self.update_category(r, text))
+
+            # Set suggested category if exists
+            current_cat = item.get('category', '')
+            if not current_cat:
+                suggested = self.learning_system.get_suggested_category(
+                    item['MerchantOCRValue'],
+                    self.learning_threshold
+                )
+                if suggested:
+                    current_cat = suggested
+                    item['category'] = suggested
+                    # Auto-update description
+                    item['description'] = self.description_system.format_description(
+                        suggested, "")
+
+            category_combo.setCurrentText(current_cat)
+            category_combo.currentTextChanged.connect(
+                lambda text, r=row: self.update_category(r, text)
+            )
             self.table.setCellWidget(row, 3, category_combo)
-            
-            # Description with dynamic formatting
+
+            # Description (editable)
             desc_item = QTableWidgetItem(item['description'])
             desc_item.setFlags(desc_item.flags() | Qt.ItemIsEditable)
-            desc_item.textChanged.connect(lambda text, r=row: self.update_description(r, text))
             self.table.setItem(row, 4, desc_item)
-            
+
             # Actions
             actions_widget = QWidget()
             actions_layout = QHBoxLayout(actions_widget)
-            actions_layout.setContentsMargins(0, 0, 0, 0)
-            
+            actions_layout.setContentsMargins(2, 2, 2, 2)
+
             view_btn = QPushButton("👁️")
-            view_btn.clicked.connect(lambda _, p=item['filepath']: self.view_image(p))
+            view_btn.setToolTip("View screenshot")
+            view_btn.clicked.connect(
+                lambda _, p=item['filepath']: self.view_image(p))
             actions_layout.addWidget(view_btn)
-            
+
             done_btn = QPushButton("✓ Done")
+            done_btn.setToolTip("Mark as completed")
             done_btn.clicked.connect(lambda _, r=row: self.mark_done(r))
             actions_layout.addWidget(done_btn)
-            
+
             self.table.setCellWidget(row, 5, actions_widget)
-        
-        self.status_label.setText(f"Showing {len(self.pending_data)} pending items")
-    
+
+        self.status_label.setText(
+            f"📋 Showing {len(self.pending_data)} pending items")
+
     def show_completed(self):
-        """Display completed items in read-only mode"""
+        """Display completed items (read-only)"""
         self.table.setRowCount(len(self.completed_data))
+
         for row, item in enumerate(self.completed_data):
             self.table.setItem(row, 0, QTableWidgetItem(item['date_raw']))
             self.table.setItem(row, 1, QTableWidgetItem(item['amount_raw']))
-            self.table.setItem(row, 2, QTableWidgetItem(item['MerchantOCRValue']))
+            self.table.setItem(row, 2, QTableWidgetItem(
+                item['MerchantOCRValue']))
             self.table.setItem(row, 3, QTableWidgetItem(item['category']))
             self.table.setItem(row, 4, QTableWidgetItem(item['description']))
-            # No actions column for completed items
-        
-        self.status_label.setText(f"Showing {len(self.completed_data)} completed items")
-    
-    def update_category(self, row, category):
-        """Update category and handle dynamic description logic"""
+
+            # No actions for completed items
+            self.table.setCellWidget(row, 5, QWidget())
+
+        self.status_label.setText(
+            f"✅ Showing {len(self.completed_data)} completed items")
+
+    def update_category(self, row: int, category: str):
+        """Update category and preserve description user note"""
         if 0 <= row < len(self.pending_data):
             item = self.pending_data[row]
             old_category = item['category']
             item['category'] = category
-            
-            # Handle dynamic description with {Category} - {UserNote} format
-            if not item['description']:
-                # Empty description, set to category only
-                item['description'] = category
-            elif " - " in item['description']:
-                # Has dash, preserve user note
-                _, user_note = self.description_system.extract_parts(item['description'])
-                item['description'] = self.description_system.format_description(category, user_note)
-            else:
-                # No dash, assume current description is user note
-                user_note = item['description']
-                item['description'] = self.description_system.format_description(category, user_note)
-            
-            # Update table display
-            self.table.item(row, 4).setText(item['description'])
-            
-            logging.info(f"Updated category for {item['MerchantOCRValue']}: {old_category} -> {category}")
-            logging.info(f"New description: {item['description']}")
-            
-            self.save_pending_csv_atomic()
-    
-    def update_description(self, row, text):
-        """Handle description editing with {Category} - {UserNote} logic"""
-        if 0 <= row < len(self.pending_data):
-            item = self.pending_data[row]
-            category = item['category']
-            
-            # Handle the {Category} - {UserNote} format
+
+            # Update description preserving user note
             if category:
-                item['description'] = self.description_system.format_description(category, text)
-            else:
-                item['description'] = text
-            
-            logging.info(f"Updated description for {item['MerchantOCRValue']}: {item['description']}")
-    
-    def view_image(self, filepath):
-        """Open screenshot image in default viewer"""
-        if os.path.exists(filepath):
-            os.startfile(filepath)
+                item['description'] = self.description_system.update_description(
+                    item['description'],
+                    category
+                )
+                self.table.item(row, 4).setText(item['description'])
+
+            logging.info(
+                f"🏷️  {item['MerchantOCRValue']}: {old_category} → {category}")
+            self.save_timer.start(500)  # Debounced save
+
+    def view_image(self, filepath: str):
+        """Open image in default viewer (cross-platform)"""
+        path = Path(filepath)
+        if path.exists():
+            if sys.platform == "win32":
+                os.startfile(path)
+            elif sys.platform == "darwin":  # macOS
+                os.system(f"open '{path}'")
+            else:  # Linux
+                os.system(f"xdg-open '{path}'")
         else:
-            self.show_error("Image file not found")
-    
-    def mark_done(self, row):
-        """Mark item as done with learning system integration"""
+            self.show_error(f"Image not found:\n{path}")
+
+    def mark_done(self, row: int):
+        """Mark item as done and trigger learning"""
         if 0 <= row < len(self.pending_data):
+            # Cancel any pending save
+            self.save_timer.stop()
+
             item = self.pending_data.pop(row)
-            
-            # Get current values from table widgets
+
+            # Get final values from UI
             category = self.table.cellWidget(row, 3).currentText()
             description = self.table.item(row, 4).text()
-            
-            # Update item with final values
+
+            # Update item
             item['category'] = category
             item['description'] = description
             item['status'] = 'done'
             item['completed_timestamp'] = datetime.utcnow().isoformat() + 'Z'
-            
-            # Learn from this confirmation
-            self.learning_system.learn_confirmation(item['MerchantOCRValue'], category)
-            
-            # Save to completed with atomic write
-            self.save_completed_csv_atomic(item)
-            
-            # Update pending CSV with atomic write
-            self.save_pending_csv_atomic()
-            
+
+            # Record learning
+            self.learning_system.learn_confirmation(
+                item['MerchantOCRValue'], category)
+
+            # Save to completed
+            self.save_completed(item)
+
+            # Update pending CSV
+            self.save_pending_csv()
+
+            # Refresh table
             self.refresh_table()
-            self.status_label.setText(f"Marked done: {item['filename']} (learned: {item['MerchantOCRValue']} -> {category})")
-    
-    def save_completed_csv_atomic(self, item):
-        """Append to completed.csv with atomic write"""
-        fieldnames = ['file_hash', 'completed_timestamp', 'filename', 'date_raw', 
-                     'amount_raw', 'MerchantOCRValue', 'category', 'description', 'status']
-        
-        # Read existing data
-        existing_data = []
-        if os.path.exists("completed.csv") and os.path.getsize("completed.csv") > 0:
-            with open("completed.csv", 'r', newline='', encoding='utf-8') as f:
+
+            self.status_label.setText(f"✓ Marked done: {item['filename']}")
+
+    def save_pending_csv(self):
+        """Atomic save of pending data"""
+        fieldnames = [
+            'file_hash', 'filename', 'filepath', 'date_raw', 'amount_raw',
+            'MerchantOCRValue', 'category', 'description', 'status'
+        ]
+
+        rows = []
+        for item in self.pending_data:
+            rows.append({
+                'file_hash': item['file_hash'],
+                'filename': item['filename'],
+                'filepath': item['filepath'],
+                'date_raw': item['date_raw'],
+                'amount_raw': item['amount_raw'],
+                'MerchantOCRValue': item['MerchantOCRValue'],
+                'category': item.get('category', ''),
+                'description': item.get('description', ''),
+                'status': 'pending'
+            })
+
+        success = atomic_write_file(self.pending_csv, rows,
+                                    lambda p, d: atomic_serialize_csv(p, d, fieldnames))
+        if not success:
+            self.show_error("Failed to save pending data")
+
+    def save_completed(self, item: dict):
+        """Append completed item atomically"""
+        fieldnames = [
+            'file_hash', 'completed_timestamp', 'filename', 'date_raw',
+            'amount_raw', 'MerchantOCRValue', 'category', 'description', 'status'
+        ]
+
+        # Load existing
+        rows = []
+        if self.completed_csv.exists() and self.completed_csv.stat().st_size > 0:
+            with open(self.completed_csv, 'r', newline='', encoding='utf-8') as f:
                 reader = csv.DictReader(f)
-                existing_data = list(reader)
-        
+                rows = list(reader)
+
         # Add new item
-        existing_data.append({
+        rows.append({
             'file_hash': item['file_hash'],
             'completed_timestamp': item['completed_timestamp'],
             'filename': item['filename'],
@@ -1071,108 +1089,148 @@ class NDISAssistant(QMainWindow):
             'description': item['description'],
             'status': 'done'
         })
-        
-        success = atomic_write_csv("completed.csv", existing_data, fieldnames)
+
+        success = atomic_write_file(self.completed_csv, rows,
+                                    lambda p, d: atomic_serialize_csv(p, d, fieldnames))
         if not success:
             self.show_error("Failed to save completed data")
-    
+
     def toggle_view(self):
         """Toggle between pending and completed view"""
-        self.current_view = "completed" if self.toggle_btn.isChecked() else "pending"
-        self.toggle_btn.setText("Show Pending" if self.toggle_btn.isChecked() else "Show Completed")
+        is_completed = self.toggle_btn.isChecked()
+        self.toggle_btn.setText(
+            "Show Pending" if is_completed else "Show Completed")
         self.refresh_table()
-    
-    def edit_categories(self):
-        """Open dialog to edit category list"""
+
+    def browse_folder(self):
+        """Browse for screenshot folder"""
+        folder = QFileDialog.getExistingDirectory(
+            self, "Select Screenshot Folder", str(self.screenshot_folder)
+        )
+        if folder:
+            self.screenshot_folder = Path(folder)
+            self.folder_label.setText(f"📁 {self.screenshot_folder.name}")
+            self.folder_label.setToolTip(str(self.screenshot_folder))
+            self.save_config()
+            self.status_label.setText(f"📁 Folder changed: {folder}")
+
+    def edit_settings(self):
+        """Edit categories and learning threshold"""
         dialog = QDialog(self)
-        dialog.setWindowTitle("Edit Categories")
-        dialog.resize(400, 300)
-        
+        dialog.setWindowTitle("Settings")
+        dialog.resize(500, 400)
+
         layout = QVBoxLayout(dialog)
-        
-        text_edit = QTextEdit()
-        text_edit.setPlainText("\n".join(self.categories))
-        
+
+        # Categories
         layout.addWidget(QLabel("Categories (one per line):"))
-        layout.addWidget(text_edit)
-        
-        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        categories_edit = QTextEdit()
+        categories_edit.setPlainText("\n".join(self.categories))
+        layout.addWidget(categories_edit)
+
+        # Learning threshold
+        layout.addWidget(
+            QLabel("Learning Threshold (confirmations needed for auto-suggest):"))
+        threshold_edit = QLineEdit(str(self.learning_threshold))
+        layout.addWidget(threshold_edit)
+
+        # Buttons
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
         buttons.accepted.connect(dialog.accept)
         buttons.rejected.connect(dialog.reject)
         layout.addWidget(buttons)
-        
+
         if dialog.exec() == QDialog.Accepted:
-            text = text_edit.toPlainText().strip()
-            self.categories = [c.strip() for c in text.split('\n') if c.strip()]
+            # Save categories
+            text = categories_edit.toPlainText().strip()
+            self.categories = [c.strip()
+                               for c in text.split("\n") if c.strip()]
+
+            # Save threshold
+            try:
+                self.learning_threshold = int(threshold_edit.text())
+            except:
+                self.learning_threshold = 2
+
             self.save_config()
             self.refresh_table()
-    
-    def browse_folder(self):
-        """Change screenshot folder via file dialog"""
-        folder = QFileDialog.getExistingDirectory(self, "Select Screenshot Folder", self.screenshot_folder)
-        if folder:
-            self.screenshot_folder = folder
-            self.folder_label.setText(f"[Folder] {os.path.basename(folder)}")
-            self.folder_label.setToolTip(folder)
-            self.save_config()
-            self.status_label.setText(f"Folder changed to: {folder}")
-    
-    def open_phone_link(self):
-        """Launch Windows Phone Link application"""
-        try:
-            os.startfile("ms-phone-link:")
-            logging.info("Launched Phone Link")
-        except Exception as e:
-            logging.error(f"Failed to launch Phone Link: {e}")
-            self.show_error("Could not launch Phone Link. Please open manually.")
-    
+            self.status_label.setText("⚙️ Settings saved")
+
     def export_history(self):
-        """Export completed.csv to Desktop with timestamp"""
-        if not os.path.exists("completed.csv"):
+        """Export completed.csv to user's home directory"""
+        if not self.completed_csv.exists() or self.completed_csv.stat().st_size == 0:
             self.show_error("No completed data to export")
             return
-        
-        desktop = os.path.join(os.path.expanduser("~"), "Desktop")
+
+        # Cross-platform desktop/home directory
+        if sys.platform == "win32":
+            export_dir = Path(os.path.expanduser("~/Desktop"))
+        else:
+            export_dir = Path.home()
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        export_path = os.path.join(desktop, f"NDIS_Export_{timestamp}.csv")
-        
+        export_path = export_dir / f"NDIS_Export_{timestamp}.csv"
+
         try:
-            shutil.copy2("completed.csv", export_path)
-            QMessageBox.information(self, "Success", 
-                                  f"Exported to Desktop:\n{os.path.basename(export_path)}")
+            shutil.copy2(self.completed_csv, export_path)
+            QMessageBox.information(
+                self, "Export Success",
+                f"📤 Exported to:\n{export_path}\n\n{len(self.completed_data)} records"
+            )
+            logging.info(
+                f"Exported {len(self.completed_data)} records to {export_path}")
         except Exception as e:
-            logging.error(f"Export failed: {e}")
             self.show_error(f"Export failed: {e}")
-    
-    def save_and_exit(self):
-        """Save pending data and exit application"""
-        self.save_pending_csv_atomic()
-        self.learning_system.save_merchant_knowledge_atomic()
-        self.save_ocr_cache()
-        logging.info("Application closing")
-        self.close()
-    
-    def show_error(self, message):
-        """Display error message to user and log it"""
-        logging.error(f"User error: {message}")
+
+    def show_error(self, message: str):
+        """Show error dialog and log"""
+        logging.error(f"❌ User error: {message}")
         QMessageBox.warning(self, "Error", message)
 
+    def save_and_exit(self):
+        """Clean shutdown"""
+        # Stop any pending save
+        self.save_timer.stop()
 
+        # Save current state
+        self.save_pending_csv()
+        self.learning_system.save_knowledge_atomic()
+
+        # Wait for thread
+        if self.scan_thread and self.scan_thread.isRunning():
+            self.scan_worker.stop()
+            self.scan_thread.quit()
+            self.scan_thread.wait()
+
+        logging.info("👋 Application closing normally")
+        self.close()
+
+    def closeEvent(self, event: QCloseEvent):
+        """Handle window close"""
+        self.save_and_exit()
+        event.accept()
+
+
+# === MAIN ENTRY POINT ===
 def main():
     """Application entry point"""
     try:
         app = QApplication(sys.argv)
-        app.setApplicationName("NDIS Assistant v2.0 - Complete")
-        
+        app.setApplicationName("NDIS Expense Assistant v3.0")
+
         window = NDISAssistant()
         window.show()
-        
-        logging.info("Starting NDIS Assistant v2.0 - Complete...")
+
+        logging.info("🚀 Application started")
         sys.exit(app.exec())
     except Exception as e:
-        logging.critical(f"Fatal error: {e}\n{traceback.format_exc()}")
-        QMessageBox.critical(None, "Fatal Error", 
-                           f"Application crashed:\n{e}\n\nCheck app.log for details")
+        logging.critical(f"💥 Fatal error: {e}\n{traceback.format_exc()}")
+        QMessageBox.critical(
+            None,
+            "Fatal Error",
+            f"Application crashed:\n{e}\n\nCheck {LOG_FILE} for details"
+        )
         sys.exit(1)
 
 
