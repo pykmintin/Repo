@@ -41,9 +41,9 @@
       "text": "Get your green tracksuit pants from Scott",
       "priority": "normal",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-11-30T02:46:08.395879Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:15:54.233216Z"
     },
     {
       "id": 105,
@@ -113,18 +113,18 @@
       "text": "Fruit shop",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-01T05:03:50.360339Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:15:54.232323Z"
     },
     {
       "id": 113,
       "text": "integrate disc bot with Google calendar? Multiple task lists, smarter script more options. Multiple commands per msg, other things",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-01T05:06:05.599425Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:15:54.232947Z"
     },
     {
       "id": 114,
@@ -140,9 +140,9 @@
       "text": "Moana shop",
       "priority": "normal",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-01T05:30:39.008082Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:15:54.233321Z"
     },
     {
       "id": 116,
@@ -167,9 +167,9 @@
       "text": "go mums/shave/domweed?",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-03T06:15:17.594811Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:15:54.233106Z"
     },
     {
       "id": 119,
