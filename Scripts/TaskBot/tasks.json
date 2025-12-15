@@ -77,9 +77,9 @@
       "text": "Talk to Tabby about last night and information absorption",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-11-30T02:46:39.646609Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T03:01:29.966956Z"
     },
     {
       "id": 109,
