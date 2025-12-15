@@ -190,7 +190,8 @@ intents.reactions = True
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or(''),
-    intents=intents
+    intents=intents,
+    help_command=None  # Disable default help so we can use our own
 )
 
 
