@@ -68,9 +68,9 @@
       "text": "Buy vial",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-11-30T02:46:29.462019Z",
-      "completed_at": null
+      "completed_at": "2025-12-15T02:39:45.287915Z"
     },
     {
       "id": 108,
