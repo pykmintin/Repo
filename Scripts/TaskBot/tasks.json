@@ -269,6 +269,15 @@
       "completed": false,
       "created_at": "2025-12-15T01:07:27.285343Z",
       "completed_at": null
+    },
+    {
+      "id": 130,
+      "text": "find fuel cap for van",
+      "priority": "high",
+      "type": "personal",
+      "completed": false,
+      "created_at": "2025-12-17T03:51:32.937225Z",
+      "completed_at": null
     }
   ]
 }
