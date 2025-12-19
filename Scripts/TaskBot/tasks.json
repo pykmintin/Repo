@@ -5,9 +5,9 @@
       "text": "look for elephant underwear and present for tabby",
       "priority": "normal",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-09T03:36:35.938489Z",
-      "completed_at": null
+      "completed_at": "2025-12-19T08:04:11.557388Z"
     },
     {
       "id": 101,
@@ -149,9 +149,9 @@
       "text": "Etsy gem necklace + manbag + pouch",
       "priority": "normal",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-01T05:31:23.499828Z",
-      "completed_at": null
+      "completed_at": "2025-12-19T08:04:11.557887Z"
     },
     {
       "id": 117,
@@ -284,9 +284,9 @@
       "text": "Lisa bernie",
       "priority": "high",
       "type": "personal",
-      "completed": false,
+      "completed": true,
       "created_at": "2025-12-18T05:45:39.852918Z",
-      "completed_at": null
+      "completed_at": "2025-12-19T08:04:11.558010Z"
     }
   ]
 }
