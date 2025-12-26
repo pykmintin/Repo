@@ -1,3 +1,13 @@
+=== HARDWARE & OS SPECIFICATIONS ===
+CPU: AMD Ryzen 7 3750H with Radeon Vega Mobile Gfx   | Cores: 4 | Threads: 8 | MaxClockMHz: 2300
+RAM_Total_GB: 7.81
+RAM_Stick: 8GB 2667MHz Hynix
+GPU: NVIDIA GeForce GTX 1650 | VRAM_GB: 4.00
+GPU: AMD Radeon(TM) RX Vega 10 Graphics | VRAM_GB: 0.12
+Disk: HFM256GDJTNG-8310A | Size_GB: 238.47 | Type: Fixed hard disk media
+Motherboard: ASUSTeK COMPUTER INC. FX505DT
+BIOS: American Megatrends Inc. | Version: FX505DT.316 | Release: 01/28/2021 11:00:00
+OS: Windows 10 Home Single Language | Version: 2009 | Build: 26200 | Arch: 64-bit
 PYTHON 3.14 ENVIRONMENT REPORT
 Generated: 2025-12-08 13:53:58
 
